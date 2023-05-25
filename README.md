@@ -10,7 +10,20 @@ Create replit.nix file
     ];
 }
 '''
+Create .replit file
+'''
+run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://informaticagithubio-vangeest.repl.co"
+
+[nix]
+channel = "stable-22_11"
+'''
 Import the repo in replit
+
+Install hugo with de shell command
+'''
+hugo new site --force
+'''
+
 more info https://docs.replit.com/tutorials/replit/build-host-company-blog-on-replit-with-hugo-nix
 
 
