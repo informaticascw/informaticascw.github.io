@@ -38,5 +38,6 @@ more info https://docs.replit.com/tutorials/replit/build-host-company-blog-on-re
 
 
 
-Host de site on github
-more info https://gohugo.io/hosting-and-deployment/hosting-on-github/
+Deploy the de site on github
+- Use github pages. See https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
+- Add a github action that runs hugo to update the site after each change. See https://gohugo.io/hosting-and-deployment/hosting-on-github/
