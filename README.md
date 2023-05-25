@@ -19,9 +19,18 @@ channel = "stable-22_11"
 '''
 Import the repo in replit
 
-Install hugo with de shell command
+Install an empty hugo website with de shell command
 '''
-hugo new site --force
+hugo new site --force .
+'''
+
+Import relearn theme by 
+1.adding files in /themes/hugo-theme-relearn
+2.adding 'theme = "hugo-theme-relearn"' to /config.toml
+
+Create the first file /content/_index.html
+'''
+First page, more content comes later
 '''
 
 more info https://docs.replit.com/tutorials/replit/build-host-company-blog-on-replit-with-hugo-nix
