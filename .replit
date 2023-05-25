@@ -1,4 +1,4 @@
-run = "hugo server"
+run = "hugo"
 
 [nix]
 channel = "stable-22_11"
