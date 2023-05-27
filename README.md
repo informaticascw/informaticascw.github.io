@@ -2,15 +2,16 @@
 # README
 ## Purpose
 This repo contains source code for the website https://informatica.nu/<br>
-The site contains the programme for Computer Science students at Staniscollege Westplantsoen.
+The site contains the programme for Computer Science students at Staniscollege Westplantsoen.<br>
 Teachers are being invited to look at https://informatica.nu/docenten/
 
 ## Edit
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scw-in/scw-in.github.io 
 "Edit de content van deze site in Gitpod, je hebt dan een supersnelle preview van je wijzigingen zonder dat je iets hoeft te installeren")<br>
 
-[![Run on Repl.it](https://replit.com/badge/github/SCW-IN/scw-in.github.io)](https://replit.com/new/github/SCW-IN/scw-in.github.io
+[![Run on Repl.it](https://replit.com/badge/github/SCW-IN/scw-in.github.io)](https://replit.com/github/SCW-IN/scw-in.github.io
 "Edit de content van deze site in replit, je wijzigingen worden binnen een seconde verwerkt, druk op reload in de webview tab en je ziet gelijk het resultaat")<br>
+Kies bij importeren in replit Language "Blank repl"<br>
 
 It is built on gohugo and the relearn theme.<br>
 Content of the site can be found in /content
