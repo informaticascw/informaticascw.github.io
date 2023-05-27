@@ -9,6 +9,9 @@ Teachers are being invited to look at https://informatica.nu/docenten/
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scw-in/scw-in.github.io 
 "Edit de content van deze site in Gitpod, je hebt dan een supersnelle preview van je wijzigingen zonder dat je iets hoeft te installeren")<br>
 
+[![Run on Repl.it](https://replit.com/badge/github/SCW-IN/scw-in.github.io)](https://replit.com/new/github/SCW-IN/scw-in.github.io
+Edit de content van deze site in replit, je wijzigingen worden binnen een seconde verwerkt, druk op reload in de webview tab en je ziet gelijk het resultaat")<br>
+
 It is built on gohugo and the relearn theme.<br>
 Content of the site can be found in /content
 
@@ -29,7 +32,7 @@ Create replit.nix file
 
 Create .replit file
 ```
-run = "hugo server"
+run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --disableLiveReload"
 
 [nix]
 channel = "stable-22_11"
