@@ -1,5 +1,5 @@
 run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --disableLiveReload"
-language = "nix"
+language = "bash"
 
 [nix]
 channel = "stable-22_11"
