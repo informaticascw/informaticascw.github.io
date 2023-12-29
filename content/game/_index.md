@@ -1,5 +1,5 @@
 +++
-title = "Pyhon Game Opdracht"
+title = "Python Game Opdracht"
 weight = 3
 +++
 
