@@ -24,9 +24,9 @@ Codespaces is een codeeromgeving binnen GitHub waar je code kunt wijzigen en uit
 ## Starten met een opdracht
 
 #### Maak een account in GitHub
-1. Ga naar https://www.github.com/ (gebruikt Chrome of Firefox, in 21/22 werkt dit niet in Safari)
+1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome)
 2. Klik op sign-up
-3. Gebruik je email adres van school (1xxxxx@emmauscollege.nl)
+3. Gebruik je email adres van school
 4. Zorg dat je het wachtwoord dat je kiest terug kunt vinden
 5. Kies als username je voornaam met een letter van je achternaam, als die al bezet is voeg je een nummer toe. Bijvoorbeeld jamesb007
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub
