@@ -13,7 +13,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "brew install hugo",
-	"postStartCommand": "hugo server --disableFastRender"
+	"postStartCommand": "hugo server" // --disableFastRender
 
 	// Configure tool-specific properties.
 	// "customizations": {},
