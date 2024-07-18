@@ -9,7 +9,7 @@
 	// "features": {},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo snap install hugo",
+	//"postCreateCommand": "sudo snap install hugo",
 
 	// Use 'postStartCommand' to run commands after the container is started.
 	"postStartCommand": "nohup bash -c 'hugo server --disableFastRender > .nohup_hugoserver.out 2>&1 & rm nohup.out &'", // start webserver without cache on port 8080 nocache and leave it running in background
