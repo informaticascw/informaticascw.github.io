@@ -12,7 +12,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"onCreateCommand": "brew install hugo",
+	"onCreateCommand": "sudo snap install hugo",
 	"postStartCommand": "hugo server --disableFastRender"
 
 	// Configure tool-specific properties.
