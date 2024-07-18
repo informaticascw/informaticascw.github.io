@@ -1,7 +1,7 @@
 +++
 title = "Ontwikkelomgeving"
 weight = 10
-hidden = true
+hidden = false
 +++
 
 Hier vind je informatie voor docenten over de online ontwikkelomgeving. We gebruiken Github met Codespaces en Classroom.
