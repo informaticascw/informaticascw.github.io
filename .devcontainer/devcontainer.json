@@ -8,12 +8,22 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "brew install hugo",
-	"postStartCommand": "hugo server" // --disableFastRender
+	"postCreateCommand": "sudo snap install hugo",
+
+	// Use 'postStartCommand' to run commands after the container is started.
+	"postStartCommand": "nohup bash -c 'hugo server --disableFastRender > .nohup_hugoserver.out 2>&1 & rm nohup.out &'", // start webserver without cache on port 8080 nocache and leave it running in background
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+			8080
+	],
+	"portsAttributes": {
+		"8080": {
+			"label": "Hugoserver",
+			"onAutoForward": "openPreview"
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
