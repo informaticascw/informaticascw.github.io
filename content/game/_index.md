@@ -19,6 +19,12 @@ Hier vind je informatie over de Python Game opdracht. Deze wordt gegeven in peri
 
 public repository op github
 
+### [Chat-bot](https://chatgpt.com/g/g-6784e2c7b38081918862bf8f3b520496-anne-helpt-met-je-game-opdracht)
+
+Vraag hulp aan Chat-bot Anne bij het maken van je game
+- Experimenteel
+- chat-gpt account nodig (gratis, vanaf 13 jaar)
+
 ## Informatie voor docenten
 
 ### [Nakijkmodel](./4.%20Docent%20-%20Nakijkmodel%20Python%20Game.xlsx)
