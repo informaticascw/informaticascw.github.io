@@ -1,5 +1,5 @@
 +++
-title = "GitHub met Codespaces en VSCode"
+title = "GitHub met Codespaces"
 weight = 9
 +++
 
