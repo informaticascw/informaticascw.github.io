@@ -6,24 +6,23 @@ weight = 9
 GitHub is een website waar je code kunt opslaan en delen. Codespaces is een codeeromgeving binnen GitHub waar je code kunt wijzigen en uitvoeren. Codespaces maakt gebruik van de webversie van de editor Visual Studio Code.
 <!--more-->
 
-## Wat zijn GitHub en Codespaces?
+## 1. Wat zijn GitHub en Codespaces?
 GitHub is een website waar je code kunt opslaan en delen.
 - GitHub bewaart alle oude versies van je code.
 - Code op GitHub kun je gemakkelijk delen met anderen.
 - Met GitHub kun je in groepen aan dezelfde code werken.
 - Bestanden in GitHub worden bewaard in repositories. Een repository (ook wel afgekort tot repo) is een soort hoofdmap. Voor elk project maak je een aparte repository.
-- GitHub werkt op basis van Git. Git is open source software.
-- Er zijn veel programmeeromgevingen die via Git kunnen samenwerken met GitHub.
+- GitHub werkt op basis van Git. Git is open source software. Er zijn veel programmeeromgevingen die via Git kunnen samenwerken met GitHub.
 
 Codespaces is een codeeromgeving binnen GitHub waar je code kunt wijzigen en uitvoeren.
-- In Codespaces werkt je met de editor VSCode om je code te wijzigen.
+- In Codespaces werkt je met de editor vscode om je code te wijzigen.
 - Wijzigingen in bestanden in je Codespace kun je bewaren in GitHub.
 - Je kunt code uitvoeren in je Codespace, bijvoorbeeld door commando's te typen in de terminal.
-- Codespaces biedt een Virtual Machine (computer in de cloud) waar je op kunt werken via elke browser. Als je de browser sluit dan wordt de Virtuele Machine op pause gezet.
+- Codespaces biedt een Virtual Machine (computer in de cloud) waar je op kunt werken via elke browser. Als je de browser sluit dan wordt de Virtuele Machine in de slaapstand gezet.
 
-## Starten met een opdracht
+## 2. Starten met een opdracht
 
-#### Maak een account in GitHub
+#### 2.1 Maak een account in GitHub
 1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome)
 2. Klik op sign-up
 3. Gebruik je email adres van school
@@ -31,13 +30,68 @@ Codespaces is een codeeromgeving binnen GitHub waar je code kunt wijzigen en uit
 5. Kies als username je voornaam met een letter van je achternaam, als die al bezet is voeg je een nummer toe. Bijvoorbeeld jamesb007
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub
 
-#### Maak een Codespace met startcode voor je opdracht
+#### 2.2 Maak een Codespace met startcode voor je opdracht
 1. De docent heeft een repository met startcode voor deze opdracht op GitHub gezet. Deze repository is read-only voor leerlingen. De docent vertelt hoe je een kopie van deze repository kunt maken waarin je zelf aanpassingen kunt doen. Sommige docenten delen een link naar GitHub Classroom waarmee jij je kunt inschrijven en automatisch je eigen kopie van de repository krijgt. Andere docenten laten je zelf een kopie maken door de repository met startcode te forken. Gebruik je eigen kopie van de repository voor de volgende stappen.
 2. Klik op de knop "Code", een pop-up-box verschijnt, kies in de pop-up-box de tab "Codespaces", klik op de knop "Create Codespace" om een nieuwe Codespace te maken. De volgende keer kun je de Codespace kiezen die je nu gemaakt hebt.
 3. Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 4. Als je de browser sluit dan wordt je Codespace op pauze gezet. Als je Codespace een maand achter elkaar op pauze staat, dan wordt hij verwijderd.
 
-## In je eentje werken aan je opdracht
+## 3. Werken aan een opdracht
+
+### 3.1 De vscode editor
+In Codespaces werk je met Visual Studio Code (vscode, spreek uit als "vie es koot"). Met vscode kun je
+1. code aanpassen (Engels: edit)
+2. code uitvoeren (Engels: run)
+3. code bewaren (Engels: save) in GitHub
+
+Je kunt de instellingen van vscode naar je eigen smaak aanpassen. Wij gebruiken instellingen om het bewaren van wijzigingen in github gemakkelijker te maken. De functies van vscode kun je uitbreiden met extensions. Wij gebruiken extentions om previews van .pdf en .html bestanden te bekijken.
+
+![vscode screenshot](vscode.png)
+Op bovenstaande plaatje zie je het scherm van vscode met de volgende onderdelen:
+- A) Activity Bar, klik op het bovenste icoon (Explorer) om je mappen en bestanden te zien, klik op het derde icoon (Source Control) van boven om te werken met GitHub
+- C) Editor Groups, hier verschijnen de bestanden die je opent.
+- D) Panel, hierin zit onder andere de Terminal. De terminal geeft toegang tot de virtuele computer, je kunt er commando's intypen.
+
+### 3.2 Code aanpassen
+1. Dubbelklik op een bestand, bijvoorbeeld `index.html` of `main.py`. Het bestand wordt geopend in de editor. 
+2. Je kunt nu het bestand aanpassen.
+
+### 3.3 Code uitvoeren
+Het hangt van de programmeertaal af hoe je code kunt uitvoeren.
+
+html:
+1. Klik met de rechtermuisknop op een .html bestand. Er verschijnt een menu.
+2. Kies `Show Preview` in het menu.
+
+python:
+1. Type in de terminal `python main.py`, het programma start<br>
+2. Als het programma lang duurt, stop het dan met de toetsen `[CRTL]+[C]`
+3. Start het programma opnieuw met de toets `[PIJL OMHOOG]`<br>
+
+### 3.4 Scherm openen
+Sommige programma's werken met tekst, andere met graphics.
+
+Tekst zie je in de terminal waar je je programma gestart hebt.
+
+Graphics kun je zien door de GUI te openen. Soms opent deze vanzelf als het programma gestart is. Soms moet je deze zelf openen. De GUI open je zo:
+1. Klik op ports
+2. Beweeg je muis naar een regel, bijvoorbeeld port 6080 (GUI).
+3. Klik op "Open in Browser" (wereldbol) of "Preview in Editor" (rechts van wereldbol)
+
+### 3.5 Wijzigingen bewaren in GitHub
+1. Klik in de activity bar op het Source Control icoon.
+2. Voer een beschrijving van de wijziging in
+3. Druk op de groen knop "Commit & Sync". Je wijzigingen worden nu bewaard in GitHub. Je kunt controleren op github.com of het is gelukt.
+
+### 3.6 Documentatie
+- de editor vscode:<br>
+[https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
+- werken met GitHub en Codespaces:<br>
+[https://stanislas.informatica.nu/help/codespaces/](https://stanislas.informatica.nu/help/codespaces/)
+
+## 4. Samenwerken
+
+### 4.1 Een team van één persoon
 Bewaar nieuwe versies van je code steeds in Github. Dan heb heb je een backup als er iets misgaat in Codespaces.
 
 De laatste versie van je code uit je Codespace bewaren op GitHub doe je zo:
@@ -49,7 +103,7 @@ Het werkt het best als je aanpassingen doet in kleine stapjes.
 - Type steeds een paar regels code en test dan of het doet wat je verwacht had.
 - Maak per lesuur één of enkele commits en bewaar dit in GitHub. Een commit is een versie met een aantal kleine wijzigingen die samen iets nieuws toevoegen. Het is niet handig om elke minuut een commit te maken, maar minimaal één commit per les zou wel moeten.
 
-## Met zijn tweeën of drieën werken aan je opdracht
+### 4.2 Een team van twee of drie
 
 Elk teamlid heeft zijn eigen kopie van de code in zijn eigen Codespace. In GitHub staat de gezamenlijke code.
 
@@ -68,12 +122,12 @@ Stap 2, 3, 4, en 5 worden direct achter elkaar gedaan als je klikt op de knop "C
 
 Als je langer dan een dag niet aan je code gewerkt hebt, dan is het handig om de laatste wijzigingen van jullie gezamenlijke code in GitHub binnen te halen. Dat heet "Pull". Onze Codespace is zo ingesteld, dat je op het pijltje naast "Commit & Sync" kunt drukken om te pullen. Pullen kan alleen als je na je laatste commit geen wijzigingen meer hebt gedaan. 
 
-## Met zijn vieren of meer werken aan je opdracht
+## 4.3 Een team van vier of meer
 In grotere teams worden er heel veel veranderingen tegelijk doorgevoerd. De gezamenlijke code wijzigt daardoor heel vaak. Dat is onhandig. 
 
 Het werkt in grote teams handiger als je het werk verdeelt in branches. Vraag hierover uitleg aan je docent, als jullie daaraan toe zijn.
 
-## Veelgestelde vragen
+## 5. Veelgestelde vragen
 
 #### GitHub 404 fout
 
