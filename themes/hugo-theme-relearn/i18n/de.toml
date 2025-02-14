@@ -7,6 +7,9 @@ other = "Suchen"
 [Search-placeholder]
 other = "Suchen..."
 
+[Clear-search]
+other = "Suche löschen"
+
 [No-results-found]
 other = "Keine Ergebnisse gefunden für \"{0}\""
 
@@ -16,11 +19,17 @@ other = "{1} Ergebnisse gefunden für \"{0}\""
 [Clear-History]
 other = "Verlauf löschen"
 
+[Reset-view]
+other = "Ansicht zurücksetzen"
+
+[View-reset]
+other = "Ansicht zurückgesetzt!"
+
 [Attachments-label]
 other = "Anhänge"
 
 [title-404]
-other = "Fehler"
+other = "Nicht gefunden"
 
 [message-404]
 other = "Huch. Diese Seite scheint nicht zu existieren ¯\\_(ツ)_/¯."
@@ -31,10 +40,19 @@ other = "Gehe zur Homepage"
 [Edit-this-page]
 other = "Bearbeiten"
 
+[Show-Markdown]
+other = "Markdown anzeigen"
+
+[Show-source]
+other = "Quelldatei anzeigen"
+
 [Print-this-chapter]
 other = "Ganzes Kapitel drucken"
 
-[Shortcuts-Title]
+[More-action]
+other = "Mehr"
+
+[shortcuts-menuTitle]
 other = "Mehr"
 
 [Expand-title]
@@ -55,11 +73,17 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "Anmerkung"
+[caution]
+other = "Vorsicht"
+
+[important]
+other = "Wichtig"
 
 [info]
 other = "Info"
+
+[note]
+other = "Anmerkung"
 
 [tip]
 other = "Tipp"
@@ -105,3 +129,6 @@ other = "Kategorien"
 
 [category]
 other = "Kategorie"
+
+[Details]
+other = "Details"

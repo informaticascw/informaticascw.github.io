@@ -7,6 +7,9 @@ other = "Zoeken"
 [Search-placeholder]
 other = "Zoeken..."
 
+[Clear-search]
+other = "Zoekopdracht wissen"
+
 [No-results-found]
 other = "Geen resultaten gevonden voor \"{0}\""
 
@@ -16,11 +19,17 @@ other = "{1} resultaten gevonden voor \"{0}\""
 [Clear-History]
 other = "Wis geschiedenis"
 
+[Reset-view]
+other = "Weergave opnieuw instellen"
+
+[View-reset]
+other = "Opnieuw instellen weergeven!"
+
 [Attachments-label]
 other = "Bijlagen"
 
 [title-404]
-other = "Error"
+other = "Niet gelokaliseerd"
 
 [message-404]
 other = "Blijkbaar bestaat deze pagina niet ¯\\_(ツ)_/¯."
@@ -31,10 +40,19 @@ other = "Naar startpagina"
 [Edit-this-page]
 other = "Bewerken"
 
+[Show-Markdown]
+other = "Afprijzing weergeven"
+
+[Show-source]
+other = "Broncode weergeven"
+
 [Print-this-chapter]
 other = "Het hele hoofdstuk afdrukken"
 
-[Shortcuts-Title]
+[More-action]
+other = "Snelkoppelingen"
+
+[shortcuts-menuTitle]
 other = "Snelkoppelingen"
 
 [Expand-title]
@@ -55,11 +73,17 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "Notitie"
+[caution]
+other = "Let op"
+
+[important]
+other = "Belangrijk"
 
 [info]
 other = "Info"
+
+[note]
+other = "Notitie"
 
 [tip]
 other = "Fooi"
@@ -105,3 +129,6 @@ other = "Categorieën"
 
 [category]
 other = "Categorie"
+
+[Details]
+other = "Details"

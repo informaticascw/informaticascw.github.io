@@ -46,7 +46,7 @@ In Codespaces werk je met Visual Studio Code (vscode, spreek uit als "vie es koo
 
 Je kunt de instellingen van vscode naar je eigen smaak aanpassen. Wij gebruiken instellingen om het bewaren van wijzigingen in github gemakkelijker te maken. De functies van vscode kun je uitbreiden met extensions. Wij gebruiken extentions om previews van .pdf en .html bestanden te bekijken.
 
-![vscode screenshot](vscode.png)
+![vscode screenshot](../vscode.png)
 Op bovenstaande plaatje zie je het scherm van vscode met de volgende onderdelen:
 - (A) Activity Bar, klik op het bovenste icoon (Explorer) om je mappen en bestanden te zien, klik op het derde icoon (Source Control) van boven om te werken met GitHub
 - (C) Editor Groups, hier verschijnen de bestanden die je opent.

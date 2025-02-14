@@ -7,6 +7,9 @@ other = "البحث"
 [Search-placeholder]
 other = "...البحث"
 
+[Clear-search]
+other = "مسح البحث"
+
 [No-results-found]
 other = "لم يتم العثور على نتائج لـ \"{0}\""
 
@@ -16,11 +19,17 @@ other = "تم العثور على {1} نتيجة لـ \"{0}\""
 [Clear-History]
 other = "مسح السجل"
 
+[Reset-view]
+other = "إعادة تعيين طريقة العرض"
+
+[View-reset]
+other = "عرض إعادة تعيين!"
+
 [Attachments-label]
 other = "مرفقات"
 
 [title-404]
-other = "خطأ"
+other = "غير محدد"
 
 [message-404]
 other = ".¯\\_(ツ)_/¯أوبس. يبدو أن هذه الصفحة غير موجودة"
@@ -31,10 +40,19 @@ other = "الذهاب إلى الصفحة الرئيسية"
 [Edit-this-page]
 other = "حرر"
 
+[Show-Markdown]
+other = "إظهار Markdown"
+
+[Show-source]
+other = "إظهار شفرة المصدر"
+
 [Print-this-chapter]
 other = "طباعة الفصل بأكمله"
 
-[Shortcuts-Title]
+[More-action]
+other = "المزيد"
+
+[shortcuts-menuTitle]
 other = "المزيد"
 
 [Expand-title]
@@ -55,14 +73,20 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "ملاحظه"
+[caution]
+other = "الحذر"
+
+[important]
+other = "مهم"
 
 [info]
 other = "معلومات"
 
+[note]
+other = "ملاحظة"
+
 [tip]
-other = "بقشيش"
+other = "نصيحة"
 
 [warning]
 other = "تحذير"
@@ -71,13 +95,13 @@ other = "تحذير"
 other = "نسخ إلى الحافظة"
 
 [Copied-to-clipboard]
-other = "نسخت إلى الحافظة!"
+other = "نسخ إلى الحافظة!"
 
 [Copy-link-to-clipboard]
 other = "نسخ الرابط إلى الحافظة"
 
 [Link-copied-to-clipboard]
-other = "رابط نسخت إلى الحافظة!"
+other = "تم نسخ الرابط إلى الحافظة!"
 
 [Chapter]
 other = "{{.}} الفصل"
@@ -98,10 +122,13 @@ other = "{{.}} الأقسام الفرعية"
 other = "الكلمات الدالة"
 
 [tag]
-other = "كلمة رئيسية"
+other = "وسم"
 
 [categories]
 other = "فئات"
 
 [category]
 other = "فئة"
+
+[Details]
+other = "التفاصيل"

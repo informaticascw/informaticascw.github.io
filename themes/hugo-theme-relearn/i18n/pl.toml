@@ -7,6 +7,9 @@ other = "Szukaj"
 [Search-placeholder]
 other = "Szukaj..."
 
+[Clear-search]
+other = "Wyczyść wyszukiwanie"
+
 [No-results-found]
 other = "Nie znaleziono wyników dla \"{0}\""
 
@@ -16,11 +19,17 @@ other = "Znaleziono {1} wyników dla \"{0}\""
 [Clear-History]
 other = "Wyczyść historię"
 
+[Reset-view]
+other = "Resetowanie widoku"
+
+[View-reset]
+other = "Widok zresetowany!"
+
 [Attachments-label]
 other = "Załączniki"
 
 [title-404]
-other = "Błąd"
+other = "Niezlokalizowany"
 
 [message-404]
 other = "Ups. Wygląda na to, że strona nie istnieje ¯\\_(ツ)_/¯."
@@ -31,10 +40,19 @@ other = "Idź do strony paczątkowej"
 [Edit-this-page]
 other = "Edycja"
 
+[Show-Markdown]
+other = "Pokaż język Markdown"
+
+[Show-source]
+other = "Pokaż kod źródłowy"
+
 [Print-this-chapter]
 other = "Drukowanie całego rozdziału"
 
-[Shortcuts-Title]
+[More-action]
+other = "Więcej"
+
+[shortcuts-menuTitle]
 other = "Więcej"
 
 [Expand-title]
@@ -55,11 +73,17 @@ other = "KB"
 [Megabyte-symbol]
 other = "MB"
 
-[note]
-other = "Uwaga"
+[caution]
+other = "Ostrożność"
+
+[important]
+other = "Ważne"
 
 [info]
 other = "Info"
+
+[note]
+other = "Uwaga"
 
 [tip]
 other = "Porada"
@@ -105,3 +129,6 @@ other = "Kategorie"
 
 [category]
 other = "Kategoria"
+
+[Details]
+other = "Szczegóły"
