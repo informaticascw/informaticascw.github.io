@@ -83,12 +83,6 @@ Graphics kun je zien door de GUI te openen. Soms opent deze vanzelf als het prog
 2. Voer een beschrijving van de wijziging in
 3. Druk op de groen knop "Commit & Sync". Je wijzigingen worden nu bewaard in GitHub. Je kunt controleren op github.com of het is gelukt.
 
-### 3.6 Documentatie
-- de editor vscode:<br>
-[https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
-- werken met GitHub en Codespaces:<br>
-[https://stanislas.informatica.nu/help/codespaces/](https://stanislas.informatica.nu/help/codespaces/)
-
 ## 4. Samenwerken
 
 ### 4.1 Een team van één persoon
@@ -129,13 +123,13 @@ Het werkt in grote teams handiger als je het werk verdeelt in branches. Vraag hi
 
 ## 5. Veelgestelde vragen
 
-#### GitHub 404 fout
+### GitHub 404 fout
 
 *Ik heb via email een link ontvangen om toegang te krijgen tot een repo, maar als ik op de link druk dan krijg ik een 404 fout. Wat moet ik doen?*
 
 Login op GitHub en druk daarna nogmaals op de link.
 
-#### Merge conflict
+### Merge conflict
 
 *Ik heb een merge conflict, hoe los ik dat op?*
 
@@ -148,7 +142,7 @@ Als je er met de video niet uitkomt en er is niemand in de buurt die je kan help
 - Test of je code het doet, haal de fouten eruit. 
 - Bewaar je wijzigingen in GitHub door in je nieuwe Codespace op Commit en Sync te klikken.
 
-#### Scherm delen
+### Scherm delen
 
 *Ik wil mijn scherm delen met iemand anders, hoe doe ik dat?*
 
@@ -156,7 +150,7 @@ In de iconenbalk links op je scherm zie een soort gebogen pijl. Dit is de extens
 
 Deze functie is bedoeld om samen snel een klein probleem op te lossen. Gebruik hem niet meer dan een paar minuten per les. Echte programmeurs verdelen het werk, maken elk hun eigen stuk code in hun eigen Codespace en delen het dan via GitHub. Dat moet jij ook leren.
 
-#### Werken met bestanden in Codespaces
+### Werken met bestanden in Codespaces
 
 *Ik wil een nieuw bestand maken, de naam van een bestand veranderen, een bestand uploaden, bestanden downloaden of andere dingen met bestanden of mappen doen. Hoe doe ik dat?*
 
@@ -175,7 +169,7 @@ Ga op een map staan, klik op de rechtermuisknop, een pull-down menu verschijnt, 
 - Meerdere bestanden selecteren:<br>
 Klik op het bovenste bestand. Beweeg je muis naar een bestand verder naar onderen. Houdt SHIFT ingedrukt terwijl je op het onderste bestand klikt.
 
-#### De Github website gebruiken
+### De Github website gebruiken
 *Waarvoor heb ik de GitHub website nodig, code aanpassen en uitvoeren doe ik toch in Codespaces?*
 
 Dat klopt, je gebruikt de GitHub website vaak alleen om in te loggen en je Codespace te starten. Code aanpassen en uitvoeren doe je in je Codespace. Toch zijn er een aantal handige functies op de GitHub website.
@@ -187,3 +181,9 @@ Je kunt snel zien wat er in een repo zit door op de bestanden of mappen in de re
 Je kunt alle wijzigingen in een repo terugzien. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". Van elke commit kun je zien wat er is gewijzigd, klik daarvoor op het nummer van de commit aan het einde van de regel.
 - Alle bestanden uit een repo downloaden:<br>
 Je kunt alle bestanden in een repo downloaden in een zip-bestand. klik op de groene knop "Code" en kies in het menu dat verschijnt voor "Download ZIP".
+
+### Meer documentatie
+*Waar vind ik meer documentatie?*
+
+- Documentatie over de editor vscode:<br>
+[https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
