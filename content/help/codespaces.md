@@ -48,9 +48,9 @@ Je kunt de instellingen van vscode naar je eigen smaak aanpassen. Wij gebruiken 
 
 ![vscode screenshot](vscode.png)
 Op bovenstaande plaatje zie je het scherm van vscode met de volgende onderdelen:
-- A) Activity Bar, klik op het bovenste icoon (Explorer) om je mappen en bestanden te zien, klik op het derde icoon (Source Control) van boven om te werken met GitHub
-- C) Editor Groups, hier verschijnen de bestanden die je opent.
-- D) Panel, hierin zit onder andere de Terminal. De terminal geeft toegang tot de virtuele computer, je kunt er commando's intypen.
+- (A) Activity Bar, klik op het bovenste icoon (Explorer) om je mappen en bestanden te zien, klik op het derde icoon (Source Control) van boven om te werken met GitHub
+- (C) Editor Groups, hier verschijnen de bestanden die je opent.
+- (D) Panel, hierin zit onder andere de Terminal. De terminal geeft toegang tot de virtuele computer, je kunt er commando's intypen.
 
 ### 3.2 Code aanpassen
 1. Dubbelklik op een bestand, bijvoorbeeld `index.html` of `main.py`. Het bestand wordt geopend in de editor. 
