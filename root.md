@@ -1,7 +1,8 @@
-# Informatica
+---
+title: Informatica
+subtitle: Informatica-opdrachten voor leerlingen van het Stanislascollege Westplantsoen in Delft
+---
 
-Informatica-opdrachten voor leerlingen van het Stanislascollege Westplantsoen in Delft
-
-```{toc} Op deze site vind je
+```{toc} Inhoud
 :depth: 1
 ```

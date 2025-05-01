@@ -33,7 +33,10 @@ site:
   template: book-theme
   options:
   #  hide_outline: true # hide document navigation column on the right side of the contents, unfortunatelly the content doesn't go wider
-    folders: true # keeps folder names in URL, works with myst-server, doesn't work with static if you you index.md as root, but works using root.md
+  #  folders: true # keeps folder names in URL, 
+  #     works with myst-server, 
+  #     doesn't work with static if you you index.md as root, but works using root.md
+  #     doesn't work with static if you you use {toc} in you .md files (links don't work)
   #  hide_title_block: true # prevent header 1 on top of page being displayed
     favicon: images/informatica-logo.ico
     logo: images/informatica-logo.svg

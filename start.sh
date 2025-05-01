@@ -27,7 +27,6 @@ done
 npx -y http-server _build/html -c-1 &
 
 # Rebuild site after each file change, including debounce
-echo "Watching files (ignoring hidden and _ folders)..."
 
 while true; do
 
