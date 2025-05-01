@@ -1,32 +1,44 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
-	"name": "Static webhosting with hugo",
+	"name": "MySTmd",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
-
+	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	//"postCreateCommand": "brew install hugo", // hugo is already installed in the ubuntu image we use
-
-	// Use 'postStartCommand' to run commands after the container is started.
-	"postStartCommand": "nohup bash -c 'hugo server --disableFastRender > .nohup_hugoserver.out 2>&1 & rm nohup.out &'", // start hugoserver on port 1313 and leave it running in background
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-			1313
-	],
-	"portsAttributes": {
-		"1313": {
-			"label": "Hugoserver",
-			"onAutoForward": "openPreview"
-		}
-	}
+	 "forwardPorts": [3000, 3100, 8080],
+	 "portsAttributes": {
+		"3000": {
+		  "label": "myst-server-html",
+		  "onAutoForward": "ignore"
+		},
+		"3100": {
+		  "label": "myst-server-json",
+		  "onAutoForward": "ignore"
+		},
+		"8080": {
+			"label": "myst-static",
+			"onAutoForward": "notify"
+		  }
+	  },
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip install --no-input mystmd",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ExecutableBookProject.myst-highlight", // add mystmd highlightinh and preview
+				"ms-vsliveshare.vsliveshare", // add google-docs like typing in same file, click on live-share button in left icon pane
+				"mhutchie.git-graph", // add graphical viewer for branches and commits, click on button in Source-Code tab
+				"ms-python.python" // add common functionallity for python (syntax checking, autocomplete, debugging etc)
+		]
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"

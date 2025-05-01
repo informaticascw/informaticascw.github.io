@@ -1,0 +1,40 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: f4b93bd6-ffe3-44bc-9231-9f5d0f8c1d71
+  license: MIT
+  title: "Informatica"
+  description: "Informatica-opdrachten voor leerlingen van het Stanislascollege Westplantsoen in Delft"
+  keywords: ["informatica","python","sql"]
+  # authors: ["Sander van Geest"] # this is displayed on the top of every page
+  github: https://github.com/informaticascw/informaticascw.github.io
+
+  # To autogenerate a Table of Contents, run "myst init --write-toc"  
+  # a toc is neccessary to show root-pages
+  toc:
+    - file: root.md
+    - file: 1-game/root.md
+      children:
+        - pattern: 1-game/*-*.md
+    - file: 2-webshop/root.md
+      children:
+        - pattern: 2-webshop/*-*.md
+    - file: 3-gdevelop/root.md
+      #children:
+        #- pattern: 3-gdevelop/*-*.md
+    - file: 10-help/root.md
+      children:
+        - pattern: 10-help/*-*.md
+    - file: 100-docenten/root.md
+      children:
+        - pattern: 100-docenten/*-*.md
+
+site:
+  template: book-theme
+  options:
+  #  hide_outline: true # hide document navigation column on the right side of the contents, unfortunatelly the content doesn't go wider
+    folders: true # keeps folder names in URL, works with myst-server, doesn't work with static if you you index.md as root, but works using root.md
+  #  hide_title_block: true # prevent header 1 on top of page being displayed
+    favicon: images/informatica-logo.ico
+    logo: images/informatica-logo.svg
+    logo_text: Informatica

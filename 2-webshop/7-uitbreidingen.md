@@ -1,0 +1,11 @@
+# 7. Uitbreidingen
+- 1 pagina per product toevoegen (nieuw entrypoint :id, nieuwe static webpagina, aangepast javascript, linkje op oude webpagina)
+- 1 bestelpagina (nieuwe static webpagina)
+- meer tabellen en producten
+- wie dit kocht kocht ook dat / dit product past bij deze producten 
+- sorteren
+- meerdere plaatjes per product
+- verschillende eigenschappen per soort (1:1)
+- varianten, zoals maten
+- prijs range filter 
+- ...

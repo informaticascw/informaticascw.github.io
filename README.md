@@ -1,91 +1,33 @@
+# mystmd
+Repository to start developing a book with MySTmd in a Codespace
 
-# README
-## Purpose
-This repo contains source code for the website https://stanislas.informatica.nu/<br>
-The site contains some parts of the programme for Computer Science students at Staniscollege Westplantsoen.<br>
-Teachers are being invited to look at https://stanisalas.informatica.nu/docenten/
+## quickstart with this repo
+1. Create Codespace from this repository
+2. In terminal execute command `./start.sh`
+4. Confirm popup to MyST-static files in browser
 
-## Edit
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/informaticascw/informaticascw.github.io?quickstart=1
-"Edit de content van deze site in Codespaces, je hebt dan een supersnelle preview van je wijzigingen zonder dat je iets hoeft te installeren")<br>
+After editing files a reload of the webpages shows the result, `start.sh` automatically rebuilds html.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scw-in/scw-in.github.io 
-"Edit de content van deze site in Gitpod, je hebt dan een supersnelle preview van je wijzigingen zonder dat je iets hoeft te installeren")<br>
+Output is shown in terminal. In case anything crashed, manually start `./start.sh` again, old processed will be killed.
 
-It is built on gohugo and the relearn theme.<br>
-Content of the site can be found in /content
+## quickstart with this repo (old version)
+1. Create Codespace from this repository
+2. In terminal execute command `cd my-book`
+3. In terminal execute command `myst start`
+4. Confirm popup to show rendered book in browser with MyST-server
+5. Edit files in /my-book to edit the book
+6. Check output in preview of VSCode (many MyST features not supported)
+7. Check output in browser with MyST-server
+8. Double check output in browser with MyST-static by executing `myst build --html` and `npx -y http-server _build/html -c-1`
+9. Push to github will deploy on github pages using `myst build --html`
 
-# How we created this site
+## how this repo was created
+1. Create repository
+2. Add devcontainer
+3. Follow MyST Quickstart on https://mystmd.org/guide
+4. Add deployment on github pages using terminal command `myst init --gh-pages` (first move book from subdir to root of repo)
 
-## Create repo in github 
-Create repo scw-in.github.io in github organisation scw-in and add any file (README.md is a good start)
+Not done yet:
+1. add LaTex for pdf (this can be done by adding a feature to the devcontainer)
+2. add settings to make is easier for students (see examples in the github organisations StanislasSCW and Emmauscollege)
 
-Create replit.nix file
-```
-{ pkgs }: {
-    deps = [
-        pkgs.cowsay
-        pkgs.hugo
-    ];
-}
-```
-
-Create .replit file
-```
-run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --disableLiveReload"
-
-[nix]
-channel = "stable-22_11"
-```
-
-Create .gitpod.yml file
-```
-tasks:
-  - before: brew install hugo
-    command: hugo server
-```
-
-The command `hugo server` starts a webserver and continuously rebuilds the pages when one of the files is updated.
-
-##  Import the repo in replit or gitpod
-- `https://gitpod.nl/#https://github.com/SCW-IN/scw-in.github.io`
-- `https://replit.nl/github/SCW-IN/scw-in.github.io`<br>
-For replit, use the "blank repl"
-
-## Create empty site with hugo
-Install an empty hugo website with de shell command
-```
-hugo new site --force .
-```
-
-## Install relearn theme
-Add relearn theme by 
-1. adding files in /themes/hugo-theme-relearn
-2. adding `theme = "hugo-theme-relearn"` to /config.toml
-
-## Create first page on site
-Editing this repo works better in gitpod than in replit.
-
-Create the first file /content/_index.md
-```
-First page, more content comes later
-```
-
-## Host the site
-Deploy the de site on github
-- Add an action in github that runs hugo to update the site after each change. <br>
-See https://gohugo.io/hosting-and-deployment/hosting-on-github/
-
-## Host the site on other domain
-A bit of a hassle with github and the DNS records of your domain. This may take multiple hours because the DNS changes need time to propagate through internet.<br>
-See https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
-
-Don't forget:
-1. add an A record (or cname record when you are using a subdomain) in the DNS of your domain.
-2. add the domain to your repo (github -> repo -> settings -> pages)
-3. add CNAME file in /content/static
-4. add txt record in you DNS (github -> organisation -> settings ...) to verify your domain and thereby prevent other github organisations to use your domain
-
-## Documentation
-- more info on using hugo in replit: <br>
-https://docs.replit.com/tutorials/replit/build-host-company-blog-on-replit-with-hugo-nix
