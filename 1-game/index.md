@@ -1,5 +1,5 @@
 ---
-title: Game
+title: Game index
 subtitle: Game maken met python en pygame
 date: 2025-05-01
 authors:
