@@ -9,12 +9,11 @@ project:
   # authors: ["Sander van Geest"] # this is displayed on the top of every page
   github: https://github.com/informaticascw/informaticascw.github.io
 
-
   # To autogenerate a Table of Contents, run "myst init --write-toc"  
   # a toc is neccessary to show root-pages
   toc:
-    - file: README.md
-    - file: 1-game/index.md
+    - file: root.md
+    - file: 1-game/root.md
       children:
         - pattern: 1-game/*-*.md
     - file: 2-webshop/root.md
@@ -34,7 +33,7 @@ site:
   template: book-theme
   options:
   #  hide_outline: true # hide document navigation column on the right side of the contents, unfortunatelly the content doesn't go wider
-    folders: true # keeps folder names in URL, 
+  #  folders: true # keeps folder names in URL, 
   #     works with myst-server, 
   #     doesn't work with static if you you index.md as root, but works using root.md
   #     doesn't work with static if you you use {toc} in you .md files (links don't work)
