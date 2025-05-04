@@ -52,10 +52,10 @@ while true; do
     echo "Waiting for changes..."
 
     # wait for change 
-    inotifywait -r -e close_write --exclude '(/\.|/_).*' . --quiet --format '%w%f'
+    inotifywait -r -e close_write --exclude '(/\.|/_build).*' . --quiet --format '%w%f'
 
     # wait untill there are no more changes for 10 seconds
-    while inotifywait -r -e close_write --exclude '(/\.|/_).*' . --quiet --format '%w%f' -t $DEBOUNCE; do
+    while inotifywait -r -e close_write --exclude '(/\.|/_build).*' . --quiet --format '%w%f' -t $DEBOUNCE; do
         :
     done
 
