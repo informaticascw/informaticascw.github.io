@@ -16,7 +16,7 @@ Uitbreiding: Beter kaats-algoritme voor plankje 🌜🌞
 : In het basisspel kaatst de bal erg eenvoudig tegen de plank. Als je de horizontale snelheid waarmee de bal de plank verlaat, laat afhangen van de plek waar de bal de plank raakt, dan wordt het spel beter speelbaar.
 
 Uitbreiding: Uitlegscherm en gameoverscherm🌜🌞
-: Maak een scherm met uitleg voordat je het spel start en/of een game-over-scherm als je gewonnen of verloren hebt. Dit kan bijvoorbeeld door een variabele game_status erbij te maken. Je kunt je gameloop opdelen in een stuk voor uitleg, spelen, winnen en verliezen. De waarde van de variabele game_status bepaalt dan welk stuk van de game-loop wordt uitgevoerd.
+: Maak een scherm met uitleg voordat je het spel start en/of een game-over-scherm als je gewonnen of verloren hebt. Dit kan bijvoorbeeld door een variabele `game_status` erbij te maken. Je kunt je gameloop opdelen in een stuk voor uitleg, spelen, winnen en verliezen. De waarde van de variabele `game_status` bepaalt dan welk stuk van de game-loop wordt uitgevoerd.
 
 Uitbreiding: Animaties als een blok verdwijnt 🌜🌞
 : Laat een blok niet in één keer verdwijnen, maar toon een effect als het blok verdwijnt. Een effect kan bijvoorbeeld zijn dat het blok snel naar boven uit het scherm vliegt. Het lastige is dat je game moet doorgaan terwijl het effect getoond wordt. Je zult dus elke keer in je game-loop een stukje effect moeten tonen.

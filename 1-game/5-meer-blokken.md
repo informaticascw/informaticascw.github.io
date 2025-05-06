@@ -10,7 +10,7 @@ Schermafdruk van spelletje met basisstap 15 t/m 19.
 ## 5.1 Stap 15: Maak een tweede blok
 
 ````{note} Opdracht
-Maak een tweede blok. Gebruik daarvoor de waarden van de variabelen brick_x2 en brick_y2. In dit spel zien alle blokken er hetzelfde uit, daardoor kun je brick_img, BRICK_WIDTH en BRICK-HEIGHT gebruiken voor alle blokken.
+Maak een tweede blok. Gebruik daarvoor de waarden van de variabelen `brick_x2` en `brick_y2`. In dit spel zien alle blokken er hetzelfde uit, daardoor kun je `brick_img`, `BRICK_WIDTH` en `BRICK-HEIGHT` gebruiken voor alle blokken.
 ````
 
 ````{attention} Toelichting
@@ -39,8 +39,8 @@ screen.blit(brick_img, (brick_x, brick_y))
 
 ````{hint} Tips
 :class: dropdown
--	Verander eerst overal in de code brick_x en brick_y door brick_x1 en brick_y1. Als je dat goed doet, dan werkt je code nog hetzelfde. Dit helpt je om te zien waar je allemaal extra code moet toevoegen voor een tweede blok.  
--	Begin met het maken van variabelen brick_x2 en brick_y2.
+-	Verander eerst overal in de code `brick_x` en `brick_y` door `brick_x1` en `brick_y1`. Als je dat goed doet, dan werkt je code nog hetzelfde. Dit helpt je om te zien waar je allemaal extra code moet toevoegen voor een tweede blok.  
+-	Begin met het maken van variabelen `brick_x2` en `brick_y2`.
 -	Voeg een regel toe om het nieuwe blok te tekenen
 -	Kopieer de code die de botsing tussen bal en blok afhandelt. Pas de kopie aan zodat hij werkt met het tweede blok.
 ````
@@ -48,7 +48,7 @@ screen.blit(brick_img, (brick_x, brick_y))
 ## 5.2 Stap 16: Zet blokken in genummerde lijsten
 
 ````{note} Opdracht
-Gebruik een lijst met de naam bricks_x voor de variabelen brick_x1 en brick_x2. Gebruik een genummerde lijst met de naam bricks_y voor de variabelen brick_y1 en brick_y2. Deze stap is een voorbereiding op het gebruik van loops. Die ga je gebruiken in de volgende stap. Met loops verdwijnt de dubbele code die je in de vorige stap voor het tweede blok gemaakt hebt.
+Gebruik een lijst met de naam bricks_x voor de variabelen `brick_x1` en `brick_x2`. Gebruik een genummerde lijst met de naam `bricks_y` voor de variabelen `brick_y1` en `brick_y2`. Deze stap is een voorbereiding op het gebruik van loops. Die ga je gebruiken in de volgende stap. Met loops verdwijnt de dubbele code die je in de vorige stap voor het tweede blok gemaakt hebt.
 ````
 
 ````{attention} Toelichting
@@ -62,9 +62,9 @@ Code om een element uit een lijst te gebruiken:
 ```python
 bricks_x[1] 
 ```
-Het eerste element van de lijst bricks_x heeft als index het getal nul, het tweede element heeft als index één, het derde element heeft index twee enzovoort. Deze code geeft de waarde van het tweede element uit de lijst. Die waarde is 192.
+Het eerste element van de lijst `bricks_x` heeft als index het getal nul, het tweede element heeft als index één, het derde element heeft index twee enzovoort. Deze code geeft de waarde van het tweede element uit de lijst. Die waarde is 192.
 
-Maak een lijst bricks_y op dezelfde manier als je bricks_x hebt gemaakt.
+Maak een lijst `bricks_y` op dezelfde manier als je `bricks_x` hebt gemaakt.
 ````
 
 ````{hint} Tips
@@ -75,7 +75,7 @@ Maak een lijst bricks_y op dezelfde manier als je bricks_x hebt gemaakt.
 ## 5.3 Stap 17: Gebruik for-loop bij blokken tekenen
 
 ````{note} Opdracht
-Maak met het commando for een loop die alle blokken tekent. 
+Maak met het commando `for` een loop die alle blokken tekent. 
 ````
 
 ````{attention} Toelichting
@@ -120,10 +120,10 @@ Voeg 20 nieuwe blokken toe, zodat je een veld krijgt met 24 blokken.
 ````
 
 ````{attention} Toelichting
-In de vorige stap wordt het aantal elementen in de lijst berekend met len(bricks_x). Daardoor hoef je nu maar heel weinig aan te passen om blokken toe te voegen. Je hoeft alleen elementen toe te voegen aan de definities van de lijsten.
+In de vorige stap wordt het aantal elementen in de lijst berekend met `len(bricks_x)`. Daardoor hoef je nu maar heel weinig aan te passen om blokken toe te voegen. Je hoeft alleen elementen toe te voegen aan de definities van de lijsten.
 
 ````{hint} Tips
 :class: dropdown
--	De lijsten bricks_x en bricks_y moeten evenveel elementen bevatten.
+-	De lijsten `bricks_x` en `bricks_y` moeten evenveel elementen bevatten.
 -	De definitie van lijsten kun je over meerdere regels verdelen. Op alle plaatsen waar een spatie is toegestaan, mag je op een nieuwe regel beginnen.
 ````

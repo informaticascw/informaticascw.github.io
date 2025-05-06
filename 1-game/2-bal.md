@@ -27,9 +27,10 @@ Voor deze opdracht krijg je startcode. De startcode beweegt een bal bovenin het 
 
 ```{hint} Tips
 :class: dropdown
--	Wijzig de screen.fill('black') in het bestand main.py om de achtergrondkleur te veranderen.
--	Bij de startcode zit een README.md bestand. Hierin staat hoe je code kunt starten, stoppen, wijzigingen en opslaan.
--	Meer informatie over de ontwikkelomgeving GitHub Codespaces vind je op https://stanislas.informatica.nu/help/codespaces/
+-	Wijzig de `screen.fill('black')` in het bestand `main.py` om de achtergrondkleur te veranderen.
+-	Bij de startcode zit een `README.md` bestand. Hierin staat hoe je code kunt starten, stoppen, wijzigingen en opslaan.
+-	Meer informatie over de ontwikkelomgeving GitHub Codespaces vind je op\
+  https://stanislas.informatica.nu/help/codespaces/
 ```
 
 ## 2.2 Stap 1: Voeg commentaar toe 
@@ -39,7 +40,7 @@ Breid het commentaar in je startcode uit. In de toelichting vind je voorbeelden 
 ````
 
 ````{attention} Toelichting
-Stukje code uit main.py die constanten en variabelen maakt:
+Stukje code uit `main.py` die constanten en variabelen maakt:
 ```python
 # definitions 
 FPS = 30 # Frames Per Second
@@ -51,7 +52,7 @@ ball_x = 0           # x-position of ball in pixels
 ball_speed_x = 6     # speed of ball in x-direction in pixels per frame
 ```
 
-Stukje code uit main.py die game te initialiseert:
+Stukje code uit `main.py` die game te initialiseert:
 ```python
 # init game
 pygame.init()
@@ -60,7 +61,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREE
 fps_clock = pygame.time.Clock()
 ```
 
-Stukje code uit main.py die plaatjes inleest:
+Stukje code uit `main.py` die plaatjes inleest:
 ```python
 # read images
 
@@ -76,7 +77,7 @@ ball_img.blit(spritesheet, (0, 0), (1403, 652, 64, 64))
 ball_img = pygame.transform.scale(ball_img, (BALL_WIDTH, BALL_HEIGHT)) 
 ```
 
-Gameloop in main.py op hoofdlijnen, de code in de gameloop wordt steeds herhaalt:
+Gameloop in `main.py` op hoofdlijnen, de code in de gameloop wordt steeds herhaalt:
 ```python
 running = True
 while running:
@@ -138,7 +139,7 @@ Stukje code uit gameloop die frame-snelheid regelt:
 
 ````{hint} Tips
 :class: dropdown
--	Alles tussen # en het einde van de regel, wordt door de computer overgeslagen.
+-	Alles tussen `#` en het einde van de regel, wordt door de computer overgeslagen.
 -	Hoe werkt het tekenen op het scherm in de pygame-library? In welke regels code worden de plaatjes ingelezen? In welke regels code worden plaatjes op het scherm gezet? In welke regel wordt het nieuwe scherm op de monitor getoond? 
 -	Hoe wordt het aantal frames per seconde geregeld?
 -	Wat moet je veranderen aan de code om de bal op een andere plek te laten starten?
@@ -147,7 +148,7 @@ Stukje code uit gameloop die frame-snelheid regelt:
 ## 2.3 Stap 2: Beweeg de bal schuin
 
 ````{note} Opdracht
-De bal beweegt nu horizontaal over het scherm. Voeg code toe die ervoor zorgt dat de bal diagonaal (schuin) over het scherm beweegt. Voeg de variabelen ball_y en ball_speed_y toe.
+De bal beweegt nu horizontaal over het scherm. Voeg code toe die ervoor zorgt dat de bal diagonaal (schuin) over het scherm beweegt. Voeg de variabelen `ball_y` en `ball_speed_y` toe.
 ````
 
 ````{attention} Toelichting
@@ -166,10 +167,10 @@ screen.blit(ball_img, (ball_x, 0))
 
 ````{hint} Tips
 :class: dropdown
--	Maak een variabele ball_y en geef die een waarde, bijvoorbeeld 100.
--	Gebruik de waarde van ball_y bij de functie die de bal op het scherm zet. Dit is de functie screen.blit. 
--	Maak een variabele ball_speed_y en geef die een waarde ongelijk aan 0, bijvoorbeeld 10.
--	Kopieer de regel code waarin steeds de waarde van ball_x wordt berekend. Pas de kopie aan, zodat de waarde van ball_y wordt berekend. Gebruik daarbij variabele ball_speed_y.
+-	Maak een variabele `ball_y` en geef die een waarde, bijvoorbeeld 100.
+-	Gebruik de waarde van `ball_y` bij de functie die de bal op het scherm zet. Dit is de functie `screen.blit`. 
+-	Maak een variabele `ball_speed_y` en geef die een waarde ongelijk aan 0, bijvoorbeeld 10.
+-	Kopieer de regel code waarin steeds de waarde van `ball_x` wordt berekend. Pas de kopie aan, zodat de waarde van `ball_y` wordt berekend. Gebruik daarbij variabele `ball_speed_y`.
 ````
 
 ## 2.4 Stap 3: Stuiter de bal tegen de onder- en bovenkant van het scherm
@@ -187,11 +188,11 @@ Code die zorgt dat bal stuitert tegen zijkant van scherm:
       ball_speed_x = abs(ball_speed_x) * -1 # negative x-speed = move left
 ```
 
--	De functie abs(getal) geeft als resultaat een getal zonder min. Dus abs(-2) is 2 en abs(2) is ook 2. Dus abs(ball_speed_x) geeft de positieve waarde van de x-snelheid. abs(ball_speed_x) * -1 geeft de negatieve waarde van de x-snelheid.
+-	De functie `abs(getal)` geeft als resultaat een getal zonder min. Dus `abs(-2)` is 2 en `abs(2)` is ook 2. Dus `abs(ball_speed_x)` geeft de positieve waarde van de x-snelheid. `abs(ball_speed_x) * -1` geeft de negatieve waarde van de x-snelheid.
 ````
 
 ````{hint} Tips
 :class: dropdown
 -	Zoek de regels code die ervoor zorgen dat de bal tegen de zijkanten van het scherm kaatst. Kopieer dat stukje code en pas het aan zodat dat de bal ook tegen de bovenkant en onderkant van het scherm kaatst.
--	Gebruik BALL_HEIGHT om rekening te houden met de hoogte van de bal.
+-	Gebruik `BALL_HEIGHT` om rekening te houden met de hoogte van de bal.
 ````

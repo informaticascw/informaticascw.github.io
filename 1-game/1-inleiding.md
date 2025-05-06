@@ -31,7 +31,9 @@ Een voorbeeld van een spel dat je kon spelen is Arkanoid. Arkanoid is een game w
 
 ## 1.3 Voorkennis en naslagmateriaal
 
-Voor deze opdracht heb je basiskennis nodig van programmeren in Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten. Je kunt deze onderwerpen nog eens nakijken in Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python.
+Voor deze opdracht heb je basiskennis nodig van programmeren in Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
+
+ Je kunt deze onderwerpen nog eens nakijken in Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python.
 
 ```{image} pygame.png
 ```
@@ -39,6 +41,10 @@ Deze opdracht maakt gebruik van Pygame. Pygame is een package voor Python waarme
 
 ```{seealso} Python en Pygame
 Als je meer over Python of Pygame wilt weten, dan kun je de volgende naslagwerken gebruiken:
+
+Lesmateriaal met basiskennis over Python
+: Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python (inloggen nodig)
+https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=10500
 
 Uitgebreide informatie over Python
 : Begin bij de Tutorial, daarna kun je de Library Reference bekijken, als je alles wilt weten dan bekijk je daarna de Language Reference\
@@ -57,7 +63,6 @@ Algoritmes in games
 (niet meer onderhouden, maar nog steeds heel goed)\
 https://cs50.harvard.edu/games/2018/
 
-
 Plaatjes
 : Je kunt meer plaatjes halen van Game Art\
 https://opengameart.org/content/breakout-brick-breaker-tile-set-free
@@ -69,15 +74,18 @@ Voordat je kunt programmeren moet je bekend zijn met het gereedschap (de tools) 
 
 Je kunt deze opdracht maken in GitHub Codespaces. Dit is een professionele online omgeving die door veel programmeurs gebruikt wordt. GitHub CodeSpaces werkt ook op Chromebooks. Een account op GitHub is gratis en daarmee kun je 60 uur per maand gebruik maken van Codespaces. 
 
-```{seealso} GitHub Codespaces 
-Meer informatie over GitHub Codespaces vind je in 
-[de bijlage over Codespaces](https://stanislas.informatica.nu/game/codespaces/)
-
-Versiebeheer in GitHub is gebaseerd op Git. Als je met Git wilt oefenen, dan kun je dat doen op 
-[Fundament - Kernprogramma  A: Vaardigheden  9. Versiebeheer met Git](https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=11352)
-```
-
 Je docent geeft misschien aan dat je een andere programmeeromgeving moet gebruiken voor deze opdracht. Er zijn veel andere programmeeromgevingen die geschikt zijn om deze opdracht op te maken. Bijvoorbeeld op een computer waar Python en het Pygame package lokaal zijn geïnstalleerd. Op Replit kan deze opdracht niet gemaakt worden. De gratis versie van Replit biedt niet voldoende CPU-capaciteit om een aktiespel dat in Python en Pygame gemaakt is soepel te spelen.
+
+```{seealso} GitHub en Codespaces 
+Leerlinghandleiding Codespaces
+: Meer informatie over GitHub, Codespaces en VSCode vind je in de bijlage over Codespaces\
+https://stanislas.informatica.nu/game/codespaces
+
+Lesmateriaal over Git versiebeheer
+: Versiebeheer in GitHub is gebaseerd op Git. Als je met Git wilt oefenen, dan kun je dat doen op
+Fundament - Kernprogramma  A: Vaardigheden  9. Versiebeheer met Git (inloggen nodig)\
+https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=11352
+```
 
 ## 1.5 Werkwijze
 

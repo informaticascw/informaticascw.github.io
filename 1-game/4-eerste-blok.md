@@ -10,7 +10,7 @@ Schermafdruk van spelletje met basisstap 10 t/m 14.
 ## 4.1 Stap 10: Teken een blok in het veld
 
 ````{note} Opdracht
-Teken een blok op het scherm. Gebruik de variabele brick_img om het plaatje van het blok op te slaan. Maak en gebruik de constanten BRICK_WIDTH en BRICK_HEIGHT voor de breedte en hoogte van het blok. Het blok is 96 pixels breed en 32 pixels hoog. Maak en gebruik de variabelen brick_x en brick_y voor de linkerbovenhoek van het blok. Kies zelf op welke plaats je het blok op het scherm wilt zetten.
+Teken een blok op het scherm. Gebruik de variabele `brick_img` om het plaatje van het blok op te slaan. Maak en gebruik de constanten `BRICK_WIDTH` en `BRICK_HEIGHT` voor de breedte en hoogte van het blok. Het blok is 96 pixels breed en 32 pixels hoog. Maak en gebruik de variabelen `brick_x` en `brick_y` voor de linkerbovenhoek van het blok. Kies zelf op welke plaats je het blok op het scherm wilt zetten.
 ````
 
 ````{hint} Tips
@@ -34,8 +34,9 @@ print('brick touched at ball_x = ' + str(ball_x) + ' and ball_y = ' + str(ball_y
 ````{hint} Tips
 :class: dropdown
 -	Bekijk “Stap 7. Stuiter de bal tegen de plank” als je niet meer weet hoe je kunt zien dat twee voorwerpen elkaar raken.
--	Python plakt teksten aan elkaar als je ze optelt. De functie str zet een getal om in een string. Deze functie heb je nodig, omdat Python getallen en strings niet automatisch bij elkaar optelt; je krijgt dan een foutmelding.
--	Meer informatie over het printen van tekst vind je op https://www.freecodecamp.org/news/python-print-variable-how-to-print-a-string-and-variable/
+-	Python plakt teksten aan elkaar als je ze optelt. De functie `str` zet een getal om in een string. Deze functie heb je nodig, omdat Python getallen en strings niet automatisch bij elkaar optelt; je krijgt dan een foutmelding.
+-	Meer informatie over het printen van tekst vind je op\
+  https://www.freecodecamp.org/news/python-print-variable-how-to-print-a-string-and-variable/
 -	Je vraagt je misschien af hoe je het blok weghaalt. Dat leer je in “Stap 20, Haal een blok weg als de bal een blok raakt”.
 ````
 
@@ -62,10 +63,10 @@ Er zit twee keer “als” in de pseudo-code. De tweede “als” wordt alleen u
 
 ````{hint} Tips
 :class: dropdown
--	Met if ball_speed_y > 0 : kun je kijken of de bal naar onder beweegt.
--	De bovenkant van de bal is ball_y.
--	De bovenkant van het blok is brick_y.
--	maak snelheid_y omhoog betekent dat snelheid_y een negatief getal (een getal kleiner dan 0) moet zijn. Gebruik daarvoor de functie abs(). Kijk in stap 7 en stap 3 als je niet meer weet hoe je abs() kunt gebruiken
+-	Met `if ball_speed_y > 0 :` kun je kijken of de bal naar onder beweegt.
+-	De bovenkant van de bal is `ball_y`.
+-	De bovenkant van het blok is `brick_`y.
+-	`maak snelheid_y omhoog` betekent dat snelheid_y een negatief getal (een getal kleiner dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in stap 7 en stap 3 als je niet meer weet hoe je `abs()` kunt gebruiken
 -	Kun je uitleggen waarom de code bij de tweede “als” kijkt of er een stukje bal buiten het blok zit, in plaats van te kijken of er een stukje bal binnen het blok zit?
 ````
 
@@ -93,10 +94,10 @@ De schuingedrukte regels heb je al gemaakt in de vorige stap. De rest moet je no
 
 ````{hint} Tips
 :class: dropdown
--	Met elif ball_speed_y < 0 : kun je kijken of de bal naar boven beweegt.
--	De onderkant van de bal is ball_y + BALL_HEIGHT.
--	De onderkant van het blok is brick_y + BRICK_HEIGHT.
--	maak snelheid_y omlaag betekent dat snelheid_y een positief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie abs(). Kijk in stap 7 en stap 3 als je niet meer weet hoe je abs() kunt gebruiken
+-	Met `elif ball_speed_y < 0 :` kun je kijken of de bal naar boven beweegt.
+-	De onderkant van de bal is `ball_y + BALL_HEIGHT`.
+-	De onderkant van het blok is `brick_y + BRICK_HEIGHT`.
+-	`maak snelheid_y omlaag` betekent dat snelheid_y een positief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in stap 7 en stap 3 als je niet meer weet hoe je `abs()` kunt gebruiken
 ````
 
 ## 4.5 Stap 14: Stuiter de bal links of rechts als hij het blok raakt
@@ -130,6 +131,6 @@ De schuingedrukte regels heb je al gemaakt in de vorige stap. De rest moet je no
 ````{hint} Tips
 :class: dropdown
 -	Kijk naar de vorige 2 stappen, kopieer de code en pas hem aan zodat hij voor x werkt in plaats van voor y.
--	maak snelheid_x links betekent dat snelheid_x een negatief getal (een getal kleiner dan 0) moet zijn. maak snelheid_x rechts betekent dat snelheid_x een postief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie abs(). Kijk in de vorige stap als je niet meer weet hoe je deze functie gebruikt.
+-	`maak snelheid_x` links betekent dat snelheid_x een negatief getal (een getal kleiner dan 0) moet zijn. `maak snelheid_x rechts` betekent dat snelheid_x een postief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in de vorige stap als je niet meer weet hoe je deze functie gebruikt.
 -	Er zijn andere pseudo-codes mogelijk die een bal die ergens tegenaan botst laten stuiteren. Kun jij er eentje bedenken? Wat zijn de voor- en nadelen ten opzichte van de code uit deze stap?
 ````
