@@ -116,7 +116,7 @@ Maak met het commando for een loop die botsingen van de bal met alle blokken afh
 ## 5.5 Stap 19: Maak een veld met 24 blokken
 
 ````{note} Opdracht
-Voeg 20 nieuwe blokken toe, zodat je een veld krijgt met 24 blokken.
+Voeg 22 nieuwe blokken toe, zodat je een veld krijgt met 24 blokken.
 ````
 
 ````{attention} Toelichting
