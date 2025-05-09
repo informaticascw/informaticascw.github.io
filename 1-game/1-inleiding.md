@@ -33,8 +33,6 @@ Een voorbeeld van een spel dat je kon spelen is Arkanoid. Arkanoid is een game w
 
 Voor deze opdracht heb je basiskennis nodig van programmeren in Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
 
- Je kunt deze onderwerpen nog eens nakijken in Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python.
-
 ```{image} pygame.png
 ```
 Deze opdracht maakt gebruik van Pygame. Pygame is een package voor Python waarmee je gemakkelijker grafische spelletjes kunt programmeren. Je hoeft niet eerder met Pygame geoefend te hebben om deze opdracht te kunnen maken.
