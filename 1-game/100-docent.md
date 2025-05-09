@@ -1,4 +1,9 @@
-# 0. Voor de docent
+---
+numbering:
+    heading_2:
+        enabled: false
+---
+# Voor de docent
 
 ## [Lespresentatie](Lespresentatie%20Python%20Game%20basisstappen.pptx)
 

@@ -1,4 +1,4 @@
-# 6. Stap 20-21: winnen
+# Stap 20-21: winnen
 ```{pull-quote}
 Om het spel uit te kunnen spelen, moeten de blokken verdwijnen. Laten we dat gaan toevoegen.
 ```
@@ -7,7 +7,7 @@ Om het spel uit te kunnen spelen, moeten de blokken verdwijnen. Laten we dat gaa
 Schermafdruk van spelletje met basisstap 20 t/m 21.
 ```
 
-## 6.1 Stap 20: Haal een blok weg als de bal een blok raakt
+## Stap 20: Haal een blok weg als de bal een blok raakt
 
 ````{note} Opdracht
 Verwijder een blok dat geraakt is uit de lijst, zodat het uit het veld verdwijnt. Stop de for-loop met `break`, zodra er een blok verwijderd is. 
@@ -32,7 +32,7 @@ Code om het 2e element te verwijderen uit een lijst:
 -	Als je nadat je een blok verwijderd hebt, het commando `break` gebruikt, dan wordt er maar één blok per frame verwijdert. De bal kan twee blokken tegelijk raken, maar elk frame gaat zo snel, dat je daar niks van ziet. Als je geen `break` gebruikt, dan krijg je een “index out of range” foutmelding, omdat je verderop in de for-loop probeert een element uit de lijst te gebruiken dat er niet meer is.
 ````
 
-## 6.2 Stap 21: Toon bericht als je wint
+## Stap 21: Toon bericht als je wint
 
 ````{note} Opdracht
 Als alle blokken weg zijn, dan heb je het level uitgespeeld. Stop de beweging van de bal en toon een bericht dat het level is uitgespeeld.

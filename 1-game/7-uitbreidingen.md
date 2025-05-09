@@ -1,4 +1,4 @@
-# 7. Uitbreidingen
+# Uitbreidingen
 
 ```{figure} scherm7.png
 Voorbeeld van een spelletje met uitbreidingen.

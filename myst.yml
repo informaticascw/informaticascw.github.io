@@ -29,6 +29,20 @@ project:
       children:
         - pattern: 100-docenten/*-*.md
 
+  numbering:
+    outline:
+      enabled: true
+    title:
+      enabled: true
+    heading_1:
+      enabled: false
+    heading_2:
+      enabled: true
+    heading_3:
+      enabled: true
+    heading_4:
+      enabled: false
+
 site:
   template: book-theme
   options:

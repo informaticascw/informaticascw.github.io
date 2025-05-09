@@ -1,4 +1,4 @@
-# 2. Producten aanpassen
+# Producten aanpassen
 
 ## Verander de naam van producten (database)
 Gegevens aanpassen

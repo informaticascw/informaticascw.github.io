@@ -1,4 +1,4 @@
-# 2. Stap 0-3: bal
+# Stap 0-3: bal
 ```{pull-quote}
 We beginnen met een bal die stuitert.
 ```
@@ -9,7 +9,7 @@ Schermafdruk van spelletje met basisstap 0 t/m 3.
 
 De basisstappen zijn genummerd van stap 0 tot en met stap 21. In elke basisstap staat onder ‘opdracht’ wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De toelichting geeft aan hoe je de opdracht kunt maken. De tips kun je bekijken als je er niet uitkomt. 
 
-## 2.1 Stap 0: Run de startcode 
+## Stap 0: Run de startcode 
 
 In ‘de opdracht’ staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De toelichting geeft aan hoe je de opdracht kunt maken. De tips kun je bekijken als je er niet uitkomt.
 
@@ -33,7 +33,7 @@ Voor deze opdracht krijg je startcode. De startcode beweegt een bal bovenin het 
   https://stanislas.informatica.nu/help/codespaces/
 ```
 
-## 2.2 Stap 1: Voeg commentaar toe 
+## Stap 1: Voeg commentaar toe 
 
 ````{note} Opdracht
 Breid het commentaar in je startcode uit. In de toelichting vind je voorbeelden van stukjes code met extra commentaar. Het gaat er bij deze opdracht om dat je de startcode leert begrijpen.
@@ -145,7 +145,7 @@ Stukje code uit gameloop die frame-snelheid regelt:
 -	Wat moet je veranderen aan de code om de bal op een andere plek te laten starten?
 ````
 
-## 2.3 Stap 2: Beweeg de bal schuin
+## Stap 2: Beweeg de bal schuin
 
 ````{note} Opdracht
 De bal beweegt nu horizontaal over het scherm. Voeg code toe die ervoor zorgt dat de bal diagonaal (schuin) over het scherm beweegt. Voeg de variabelen `ball_y` en `ball_speed_y` toe.
@@ -173,7 +173,7 @@ screen.blit(ball_img, (ball_x, 0))
 -	Kopieer de regel code waarin steeds de waarde van `ball_x` wordt berekend. Pas de kopie aan, zodat de waarde van `ball_y` wordt berekend. Gebruik daarbij variabele `ball_speed_y`.
 ````
 
-## 2.4 Stap 3: Stuiter de bal tegen de onder- en bovenkant van het scherm
+## Stap 3: Stuiter de bal tegen de onder- en bovenkant van het scherm
 
 ````{note} Opdracht
 De bal verdwijnt nu uit het scherm als hij aan de bovenkant of de onderkant komt. Zorg dat de bal tegen de onderrand en bovenrand van het scherm stuitert, net zoals hij dat doet aan de zijkanten.

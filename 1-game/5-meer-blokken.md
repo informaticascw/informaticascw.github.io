@@ -1,4 +1,4 @@
-# 5. Stap 15-19: meer blokken
+# Stap 15-19: meer blokken
 ```{pull-quote}
 Eén blok is leuk, maar meer blokken is nog leuker! We gaan stap voor stap blokken toevoegen.
 ```
@@ -7,7 +7,7 @@ Eén blok is leuk, maar meer blokken is nog leuker! We gaan stap voor stap blokk
 Schermafdruk van spelletje met basisstap 15 t/m 19.
 ```
 
-## 5.1 Stap 15: Maak een tweede blok
+## Stap 15: Maak een tweede blok
 
 ````{note} Opdracht
 Maak een tweede blok. Gebruik daarvoor de waarden van de variabelen `brick_x2` en `brick_y2`. In dit spel zien alle blokken er hetzelfde uit, daardoor kun je `brick_img`, `BRICK_WIDTH` en `BRICK-HEIGHT` gebruiken voor alle blokken.
@@ -45,7 +45,7 @@ screen.blit(brick_img, (brick_x, brick_y))
 -	Kopieer de code die de botsing tussen bal en blok afhandelt. Pas de kopie aan zodat hij werkt met het tweede blok.
 ````
 
-## 5.2 Stap 16: Zet blokken in genummerde lijsten
+## Stap 16: Zet blokken in genummerde lijsten
 
 ````{note} Opdracht
 Gebruik een lijst met de naam bricks_x voor de variabelen `brick_x1` en `brick_x2`. Gebruik een genummerde lijst met de naam `bricks_y` voor de variabelen `brick_y1` en `brick_y2`. Deze stap is een voorbereiding op het gebruik van loops. Die ga je gebruiken in de volgende stap. Met loops verdwijnt de dubbele code die je in de vorige stap voor het tweede blok gemaakt hebt.
@@ -72,7 +72,7 @@ Maak een lijst `bricks_y` op dezelfde manier als je `bricks_x` hebt gemaakt.
 -	Let op de index van de elementen uit de lijst. Het 1e element heeft index 0, het 2e element heeft index 1, het 3e element heeft index 2 enzovoort. 
 ````
 
-## 5.3 Stap 17: Gebruik for-loop bij blokken tekenen
+## Stap 17: Gebruik for-loop bij blokken tekenen
 
 ````{note} Opdracht
 Maak met het commando `for` een loop die alle blokken tekent. 
@@ -101,7 +101,7 @@ Deze code doorloopt de lijst van voor naar achter en slaat het nummer van het el
 -	Vergeet de oude regels die de blokken tekende niet te verwijderen.
 ````
 
-## 5.4 Stap 18: Gebruik for-loop bij botsing tegen blokken
+## Stap 18: Gebruik for-loop bij botsing tegen blokken
 
 ````{note} Opdracht
 Maak met het commando for een loop die botsingen van de bal met alle blokken afhandelt.
@@ -113,7 +113,7 @@ Maak met het commando for een loop die botsingen van de bal met alle blokken afh
 -	Let op dat je goed inspringt.
 ````
 
-## 5.5 Stap 19: Maak een veld met 24 blokken
+## Stap 19: Maak een veld met 24 blokken
 
 ````{note} Opdracht
 Voeg 22 nieuwe blokken toe, zodat je een veld krijgt met 24 blokken.

@@ -1,4 +1,4 @@
-# 4. Stap 10-14: eerste blok
+# Stap 10-14: eerste blok
 ```{pull-quote}
 Het spel bevat alleen nog maar een plank en een bal, maar geen blokken… Het wordt tijd om het eerste blok toe te voegen!
 ```
@@ -7,7 +7,7 @@ Het spel bevat alleen nog maar een plank en een bal, maar geen blokken… Het wo
 Schermafdruk van spelletje met basisstap 10 t/m 14.
 ```
 
-## 4.1 Stap 10: Teken een blok in het veld
+## Stap 10: Teken een blok in het veld
 
 ````{note} Opdracht
 Teken een blok op het scherm. Gebruik de variabele `brick_img` om het plaatje van het blok op te slaan. Maak en gebruik de constanten `BRICK_WIDTH` en `BRICK_HEIGHT` voor de breedte en hoogte van het blok. Het blok is 96 pixels breed en 32 pixels hoog. Maak en gebruik de variabelen `brick_x` en `brick_y` voor de linkerbovenhoek van het blok. Kies zelf op welke plaats je het blok op het scherm wilt zetten.
@@ -18,7 +18,7 @@ Teken een blok op het scherm. Gebruik de variabele `brick_img` om het plaatje va
 -	Bekijk “Stap 4. Teken de plank” als je er niet uitkomt.
 ````
 
-## 4.2 Stap 11: Detecteer als de bal het blok raakt
+## Stap 11: Detecteer als de bal het blok raakt
 
 ````{note} Opdracht
 Druk een tekst af in de terminal als de bal het blok raakt.
@@ -40,7 +40,7 @@ print('brick touched at ball_x = ' + str(ball_x) + ' and ball_y = ' + str(ball_y
 -	Je vraagt je misschien af hoe je het blok weghaalt. Dat leer je in “Stap 20, Haal een blok weg als de bal een blok raakt”.
 ````
 
-## 4.3 Stap 12: Stuiter de bal omhoog als hij het blok raakt
+## Stap 12: Stuiter de bal omhoog als hij het blok raakt
 
 ````{note} Opdracht
 Stuiter de bal omhoog als hij van boven aankomt en een blok raakt. Ga ervan uit dat de beweging van de bal in de x- en y-richting minder pixels per frame is dan de breedte en hoogte van de bal. Dat betekent dat er altijd een stukje van de bal buiten het blok is. De stuiter vanaf beneden, links en rechts ga je in de volgende stappen toevoegen.
@@ -70,7 +70,7 @@ Er zit twee keer “als” in de pseudo-code. De tweede “als” wordt alleen u
 -	Kun je uitleggen waarom de code bij de tweede “als” kijkt of er een stukje bal buiten het blok zit, in plaats van te kijken of er een stukje bal binnen het blok zit?
 ````
 
-## 4.4 Stap 13: Stuiter de bal omlaag als hij het blok raakt
+## Stap 13: Stuiter de bal omlaag als hij het blok raakt
 
 ````{note} Opdracht
 Voeg code toe die de bal omlaag stuitert als hij van beneden aankomt en een blok raakt. 
@@ -100,7 +100,7 @@ De schuingedrukte regels heb je al gemaakt in de vorige stap. De rest moet je no
 -	`maak snelheid_y omlaag` betekent dat snelheid_y een positief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in stap 7 en stap 3 als je niet meer weet hoe je `abs()` kunt gebruiken
 ````
 
-## 4.5 Stap 14: Stuiter de bal links of rechts als hij het blok raakt
+## Stap 14: Stuiter de bal links of rechts als hij het blok raakt
 
 ````{note} Opdracht
 Voeg code toe die de bal stuitert als hij van links of rechts aankomt en een blok raakt. 

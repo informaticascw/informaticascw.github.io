@@ -1,4 +1,4 @@
-# 7. Uitbreidingen
+# Uitbreidingen
 - 1 pagina per product toevoegen (nieuw entrypoint :id, nieuwe static webpagina, aangepast javascript, linkje op oude webpagina)
 - 1 bestelpagina (nieuwe static webpagina)
 - meer tabellen en producten

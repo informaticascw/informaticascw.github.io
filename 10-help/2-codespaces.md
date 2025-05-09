@@ -2,26 +2,26 @@
 
 GitHub is een website waar je code kunt opslaan en delen. Codespaces is een codeeromgeving binnen GitHub waar je code kunt wijzigen en uitvoeren. Codespaces maakt gebruik van de webversie van de editor Visual Studio Code.
 
-## 1. Wat zijn GitHub, Codespaces en VS Code?
+## Wat zijn GitHub, Codespaces en VS Code?
 
 | Screenshot van Github | Screenshot van Codespace |
 | --- | --- |
 | ![github.png](../10-help/github.png) | ![codespace.png](../10-help/codespace.png) |
 
-##### GitHub is een website waar je code kunt opslaan en delen.
+### GitHub is een website waar je code kunt opslaan en delen.
 - GitHub bewaart alle oude versies van je code.
 - Code op GitHub kun je gemakkelijk delen met anderen.
 - Met GitHub kun je in groepen aan dezelfde code werken.
 - Bestanden in GitHub worden bewaard in repositories. Een repository (ook wel afgekort tot repo) is een soort hoofdmap. Voor elk project maak je een aparte repository.
 - GitHub werkt op basis van Git. Git is open source software. Er zijn veel programmeeromgevingen die via Git kunnen samenwerken met GitHub.
 
-##### Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren.
+### Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren.
 - Codespaces biedt een devcontainer (computer in de cloud) waar je op kunt werken via een browser.
 - In je browser zie je VS Code. VS Code "praat" met Codespaces.
 - Wijzigingen in bestanden in je Codespace kun je bewaren in GitHub.
 - Je kunt code uitvoeren in je Codespace, bijvoorbeeld door commando's te typen in de terminal.
 
-##### VS Code is de editor die in Codespaces wordt gebruikt.
+### VS Code is de editor die in Codespaces wordt gebruikt.
 - VS Code gebruik je voor het wijzigen en runnen van code in Codespaces.
 - VS Code is geschikt voor alle populaire programmeertalen 
 - VS Code is meer dan een editor, zo verzorgt VS Code ook de verbinding met je Codespace en GitHub
@@ -29,11 +29,11 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 - De functies van VS Code kun je uitbreiden met extensions. Wij gebruiken extentions om previews van .pdf en .html bestanden te bekijken.
 - VS Code (spreek uit als "vie es koot") is een veelgebruikte afkorting voor Visual Studio Code.
 
-## 2. Starten met een opdracht
+## Starten met een opdracht
 
 ![inschrijven.png](../10-help/inschrijven.png)
 
-### 2.1 Maak een account in GitHub
+### Maak een account in GitHub
 1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome).
 2. Klik op sign-up.
 3. Gebruik je email adres van school.
@@ -41,14 +41,14 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 5. Kies als username je voornaam met de eerste letter van je achternaam, als die al bezet is voeg je een nummer toe. Bijvoorbeeld jamesb007
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 
-### 2.2 Maak een Codespace met startcode voor je opdracht
+### Maak een Codespace met startcode voor je opdracht
 1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
 3. Je maakt je eigen Codespace door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 
-## 3. Werken aan een opdracht
+## Werken aan een opdracht
 
-### 3.1 Codespace starten
+### Codespace starten
 
 Als je een Codespace start, dan zie je het scherm van VS Code in je browser.
 
@@ -58,11 +58,11 @@ Op bovenstaande plaatje zie je het scherm van VS Code met de volgende onderdelen
 - (C) Editor Groups, hier verschijnen de bestanden die je opent.
 - (D) Panel, hierin zit onder andere de Terminal. De terminal geeft toegang tot de virtuele computer, je kunt er commando's intypen.
 
-### 3.2 Code aanpassen
+### Code aanpassen
 1. Dubbelklik op een bestand, bijvoorbeeld `index.html` of `main.py`. Het bestand wordt geopend in de editor. 
 2. Je kunt nu het bestand aanpassen.
 
-### 3.3 Resultaat bekijken
+### Resultaat bekijken
 Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor resultaat geeft. In het `README.md` bestand van de startcode staat beschreven hoe dit moet. Voor een aantal veelgebruikte programmeertalen vind je hier een korte samenvattig
 
 ##### html (eventueel met css en/of javascript):
@@ -78,16 +78,16 @@ Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor result
 1. Type in de terminal `python main.py`, het programma start<br>
 2. Open een browser-venster dat via novnc is verbonden met het grafische scherm dat pygame gebruikt. Klik hiervoor op Ports, klik daarna op de link met het adres van de novnc-server.
 
-### 3.4 Wijzigingen bewaren in GitHub
+### Wijzigingen bewaren in GitHub
 1. Klik in de activity bar op het Source Control icoon.
 2. Voer een beschrijving van de wijziging in
 3. Druk op de groen knop "Commit & Sync". Je wijzigingen worden nu bewaard in GitHub. Je kunt controleren op github.com of het is gelukt.
 
-## 4. Samenwerken
+## Samenwerken
 
 ![samenwerken.png](../10-help/samenwerken.png)
 
-### 4.1 Een team van één persoon
+### Een team van één persoon
 Bewaar nieuwe versies van je code steeds in Github. Dan heb heb je een backup als er iets misgaat in Codespaces.
 
 De laatste versie van je code uit je Codespace bewaren op GitHub doe je zo:
@@ -99,7 +99,7 @@ Het werkt het best als je aanpassingen doet in kleine stapjes.
 - Type steeds een paar regels code en test dan of het doet wat je verwacht had.
 - Maak per lesuur één of enkele commits en bewaar dit in GitHub. Een commit is een versie met een aantal kleine wijzigingen die samen iets nieuws toevoegen. Het is niet handig om elke minuut een commit te maken, maar minimaal één commit per les zou wel moeten.
 
-### 4.2 Een team van twee of drie
+### Een team van twee of drie
 
 Elk teamlid heeft zijn eigen kopie van de code in zijn eigen Codespace. In GitHub staat de gezamenlijke code.
 
@@ -118,14 +118,14 @@ Stap 2, 3, 4, en 5 worden direct achter elkaar gedaan als je klikt op de knop "C
 
 Als je langer dan een dag niet aan je code gewerkt hebt, dan is het handig om de laatste wijzigingen van jullie gezamenlijke code in GitHub binnen te halen. Dat heet "Pull". Onze Codespace is zo ingesteld, dat je op het pijltje naast "Commit & Sync" kunt drukken om te pullen. Pullen kan alleen als je na je laatste commit geen wijzigingen meer hebt gedaan. 
 
-## 4.3 Een team van vier of meer
+### Een team van vier of meer
 In grotere teams worden er heel veel veranderingen tegelijk doorgevoerd. De gezamenlijke code wijzigt daardoor heel vaak. Dat is onhandig. 
 
 Het werkt in grote teams handiger als je het werk verdeelt in branches. Vraag hierover uitleg aan je docent, als jullie daaraan toe zijn.
 
-## 5. Howto's en veelgestelde vragen
+## Howto's en veelgestelde vragen
 
-### 5.1 Bestanden en mappen
+### Bestanden en mappen
 
 *Ik wil een nieuw bestand maken, de naam van een bestand veranderen, een bestand uploaden, bestanden downloaden of andere dingen met bestanden of mappen doen. Hoe doe ik dat?*
 
@@ -181,7 +181,7 @@ Als stap 3 niet werkt, probeer dan stap 4.
 3. Dubbelklik op het gedownloade zip-bestand om alle bestanden uit te pakken.
 ```
 
-### 5.2 github.com gebruiken
+### github.com gebruiken
 
 ```{tip} Hoe open ik mijn laatste Codespace?
 :class: dropdown
@@ -220,7 +220,7 @@ Als stap 3 niet werkt, probeer dan stap 4.
 3. Klik op `<>` achter een commit naar keuze. Je ziet nu de versie van de repository op het moment van de commit.
 ```
 
-### 5.3 Overige vragen en problemen
+### Overige vragen en problemen
 
 ```{tip} GitHub 404 fout oplossen
 :class: dropdown
@@ -287,8 +287,9 @@ Je kunt 3 dingen doen:
 - Verder werken in een lokaal geïnstalleerde VS Code met Docker, hiervoor heb je een PC of laptop nodig en moet je handig zijn met VS Code en Docker.
 ```
 
-### 5.4 Documentatie
+### Documentatie
 *Waar vind ik meer documentatie?*
 
-#### Documentatie over VS Code
+```{seealso} Documentatie over VS Code
 - [https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
+```

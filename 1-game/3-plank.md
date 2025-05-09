@@ -1,4 +1,4 @@
-# 3. Stap 4-9: plank
+# Stap 4-9: plank
 ```{pull-quote}
 De bal beweegt, maar je kunt het spel nog niet spelen. Daarom gaan we een plank toevoegen.
 ````
@@ -7,7 +7,7 @@ De bal beweegt, maar je kunt het spel nog niet spelen. Daarom gaan we een plank 
 Schermafdruk van spelletje met basisstap 4 t/m 9.
 ```
 
-## 3.1 Stap 4: Teken de plank
+## Stap 4: Teken de plank
 
 ````{note} Opdracht
 Teken de plank (Engels: paddle) op het scherm. Gebruik de variabele `paddle_img` om het plaatje van de plank in op te slaan. Gebruik de variabelen `paddle_x` en `paddle_y` om de linkerbovenhoek van de plank aan te geven. Maak de startpositie van de plank ongeveer midden onder op het scherm. Gebruik de constanten `PADDLE_WIDTH` en `PADDLE_HEIGHT` voor de breedte en hoogte van de plank. Maak je plank 144 pixels breed en 32 pixels hoog.
@@ -43,7 +43,7 @@ screen.blit(ball_img, (ball_x, ball_y))
 -	Maak de variabelen `paddle_x` en `paddle_y` om bij te houden waar de paddle staat. Geef ze een startwaarde, bijvoorbeeld `SCREEN_WIDTH / 2` en `SCREEN_HEIGHT – 100`. Gebruik `paddle_x` en `paddle_y` om de plank op de goede plaats op het scherm te zetten. 
 ````
 
-## 3.2 Stap 5: Beweeg de plank
+## Stap 5: Beweeg de plank
 
 ````{note} Opdracht
 Beweeg de plank als de D-toets (rechts) of A-toets (links) is ingedrukt. Beweeg de plank met één pixel per frame. Gebruik `keys` uit de startcode om te zien welke toets momenteel worden ingedrukt.
@@ -61,7 +61,7 @@ if keys[pygame.K_d] : # key d is down
 -	Gebruik maar één keer de regel `keys = pygame.key.get_pressed()` om de stand van de toetsen te lezen
 ````
 
-## 3.3 Stap 6: Stop de plank aan de randen van het scherm
+## Stap 6: Stop de plank aan de randen van het scherm
 
 ````{note} Opdracht
 Zorg dat de plank niet verder beweegt als hij de rand van het scherm raakt. Gebruik `paddle_x` en `SCREEN_WIDTH` om te kijken of de plank aan de rand is. Gebruik `PADDLE_WIDTH` om rekening te houden met de breedte van de plank.
@@ -84,7 +84,7 @@ Pseudo-code om de plank te laten stoppen aan de linkerkant van het scherm kun je
     `plank_breedte` uit de pseudo-code is `PADDLE_WIDTH` in je code. 
 ````
 
-## 3.4 Stap 7: Stuiter de bal tegen de plank
+## Stap 7: Stuiter de bal tegen de plank
 
 ````{note} Opdracht
 Zorg dat de bal kaatst tegen je plank. Hiervoor zijn veel algoritmen te bedenken. Het algoritme uit deze stap kijkt of een stukje van de bal op dezelfde plek is als een stukje van de plank. Als dat zo is dan wordt de y-richting van de bal negatief gemaakt, zodat de bal omhoog beweegt. 
@@ -118,7 +118,7 @@ if (x > 100 and
 -	Hou het algoritme voor nu simpel, je kunt het bij de uitbreidingen nog aanpassen. 
 ````
 
-## 3.5 Stap 8: Stop het spel als je af bent
+## Stap 8: Stop het spel als je af bent
 
 ````{note} Opdracht
 Zorg dat je af bent als de bal de onderkant van het scherm raakt. Voeg daarvoor code toe die kijkt of de onderkant van de bal voorbij de onderkant van de plank is. Als dat waar is, dan zet je code de snelheid van de bal op 0. Op die manier stopt het spel zodra je de bal langs de plank hebt laten gaan.
@@ -144,7 +144,7 @@ Een logische plek voor je nieuwe code is onder afhandelen van botsingen en voor 
 -	Wat gebeurt er met de code die de bal tegen de onderkant van het scherm laat stuiteren? Wordt die code nog uitgevoerd? 
 ````
 
-## 3.6 Stap 9: Toon een bericht als je af bent
+## Stap 9: Toon een bericht als je af bent
 
 ````{note} Opdracht
 Zet een bericht op het scherm als de speler af is. Dat is duidelijker voor de speler.

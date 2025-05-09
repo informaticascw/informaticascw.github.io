@@ -1,6 +1,6 @@
-# 5. Filters maken
+# Filters maken
 
-## 5.1 REST API (uitleg)
+## REST API (uitleg)
 
 :::{note} Uitleg
 ### REST
@@ -83,7 +83,7 @@ Houd het consistent
 
 ## Maak filters voor kleur
 
-## 5.4 Extra gegevens in een request (uitleg)
+## Extra gegevens in een request (uitleg)
 
 Bij het gebruiken van een REST API kun je informatie op verschillende manieren meegeven in een request. Hier zijn de drie meest gebruikte manieren:
 

@@ -1,14 +1,14 @@
-# 6. front end aanpassingen
+# Frontend aanpassingen
 
 ## Pas kleuren aan (css)
 
 ## Maak aparte bestelpagina (html)
 
-## 6.3 DOM
+## DOM
 
 :::{note} Uitleg
 
-### Wat is de DOM?
+### Wat is het DOM?
 
 De DOM (Document Object Model) is een boomstructuur die je browser maakt van een HTML-pagina.  
 Elke tag in de HTML (zoals `<h1>`, `<div>`, `<p>`) wordt een object in die boom. 

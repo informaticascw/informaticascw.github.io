@@ -1,6 +1,6 @@
-# 1. Inleiding
+# Inleiding
 
-## 1.1 Leeswijzer
+## Leeswijzer
 
 Dit is een opdracht waar je één of twee maanden aan gaat werken. De opdracht bestaat uit basisstappen en uitbreidingen. Met de basisstappen maak je een eenvoudig spel waarin je één level kunt spelen. Daarna ga je verder met de uitbreidingen. Je kunt zelf kiezen welke uitbreidingen je gaat maken.
 
@@ -12,7 +12,7 @@ Elke basisstap bestaat uit een opdracht, toelichting en tips. In de opdracht sta
 
 Bij de uitbreidingen heb je meer vrijheid. Ze zijn minder ver uitgewerkt. Daardoor zijn die moeilijker dan de basisstappen. Je leert zelfstandig kleine of grotere uitbreidingen toe te voegen aan bestaande code. Hoe beter je daarin wordt, hoe meer functies uit je eigen fantasie jij kunt maken!
 
-## 1.2 Geschiedenis
+## Geschiedenis
 
 ### Arcadekasten
 ```{figure} arcade.jpg
@@ -29,7 +29,7 @@ Schermafdruk van https://www.youtube.com/watch?v=QCfnri9hefQ
 
 Een voorbeeld van een spel dat je kon spelen is Arkanoid. Arkanoid is een game waarbij je blokjes moet wegstoten met een bal. De bal kaatst tegen een plank. De speler beweegt de plank. Als de bal langs de plank schiet, dan ben je af.
 
-## 1.3 Voorkennis en naslagmateriaal
+## Voorkennis en naslagmateriaal
 
 Voor deze opdracht heb je basiskennis nodig van programmeren in Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
 
@@ -68,7 +68,7 @@ Plaatjes
 https://opengameart.org/content/breakout-brick-breaker-tile-set-free
 ```
 
-## 1.4 Tools
+## Tools
 
 Voordat je kunt programmeren moet je bekend zijn met het gereedschap (de tools) die je voor deze opdracht gaat gebruiken. 
 
@@ -87,7 +87,7 @@ Fundament - Kernprogramma  A: Vaardigheden  9. Versiebeheer met Git (inloggen no
 https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=11352
 ```
 
-## 1.5 Werkwijze
+## Werkwijze
 
 -	Je maakt deze opdracht in een team van twee personen. Je docent geeft aan hoe de teams gemaakt worden.
 -	Je gebruikt de startcode die je voor deze opdracht krijgt van je docent. 
@@ -95,14 +95,14 @@ https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=11352
 -	Jullie verdelen het werk eerlijk over de teamleden. Elk teamlid codeert evenveel. Als je samen achter één computer zit, dan wissel je elke stap wie er typt. Elke leerling typt op zijn eigen GitHub-account.
 -	Problemen binnen het team meld je zo snel mogelijk bij je docent.
 
-## 1.6 Inleveren
+## Inleveren
 
 -	De deadline staat in de lesplanner.
 -	De versie van de main branche van je opdracht die op het moment van de deadline in GitHub staat wordt gebruikt voor de beoordeling. Zorg dat je ruim op tijd klaar bent. 
 -	Uit de commit-historie van de main branche in GitHub blijkt wie wanneer wat gedaan heeft.
 -	Je kunt vragen stellen tot de laatste les voor de deadline.
 
-## 1.7 Beoordeling
+## Beoordeling
 
 Je krijgt één cijfer per team, maar je docent kan hiervan afwijken als teamleden geen gelijkwaardige bijdrage hebben geleverd. 
 
