@@ -1,5 +1,5 @@
 ---
-title: PhysicalComputing
+title: Physical Computing
 subtitle: Microbit programmeren met toestandsdiagrammen
 date: 2025-05-01
 authors:

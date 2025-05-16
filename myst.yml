@@ -19,9 +19,9 @@ project:
     - file: 2-webshop/_webshop.md
       children:
         - pattern: 2-webshop/*-*.md
-    - file: 3-physical-computing/_physical-computing.md
+    - file: 3-physicalcomputing/_physicalcomputing.md
       children:
-        - pattern: 3-physical-computing/*-*.md
+        - pattern: 3-physicalcomputing/*-*.md
     - file: 4-gdevelop/_gdevelop.md
       #children:
         #- pattern: 4-gdevelop/*-*.md
