@@ -92,7 +92,8 @@ Zorg dat de bal kaatst tegen je plank. Hiervoor zijn veel algoritmen te bedenken
 
 ````{attention} Toelichting
 Pseudo-code:
-```pseudo  als rechter_kant_bal is groter dan   linker_kant_paddle en 
+```pseudo
+  als rechter_kant_bal is groter dan   linker_kant_paddle en 
       linker_kant_bal  is kleiner dan  rechter_kant_paddle en
       onderkant_kant_bal is groter dan boven_kant_paddle en 
       boven_kant_bal  is kleiner dan   onder_kant_paddle dan
