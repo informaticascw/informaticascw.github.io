@@ -65,16 +65,16 @@ Op bovenstaande plaatje zie je het scherm van VS Code met de volgende onderdelen
 ### Resultaat bekijken
 Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor resultaat geeft. In het `README.md` bestand van de startcode staat beschreven hoe dit moet. Voor een aantal veelgebruikte programmeertalen vind je hier een korte samenvattig
 
-##### html (eventueel met css en/of javascript):
+#### html (eventueel met css en/of javascript):
 1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de html-bestanden uit de Codespace door een browser op je computer kunne worden geladen.
 2. Open een browser-venster met het `index.html` bestand uit je Codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de webserver.
 
-##### python:
+#### python:
 1. Type in de terminal `python main.py`, het programma start<br>
 2. Als het programma lang duurt, stop het dan met de toetsen `[CRTL]+[C]`
 3. Start het programma opnieuw met de toets `[PIJL OMHOOG]`<br>
 
-##### python met pygame:
+#### python met pygame:
 1. Type in de terminal `python main.py`, het programma start<br>
 2. Open een browser-venster dat via novnc is verbonden met het grafische scherm dat pygame gebruikt. Klik hiervoor op Ports, klik daarna op de link met het adres van de novnc-server.
 
