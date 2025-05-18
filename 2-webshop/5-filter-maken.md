@@ -50,7 +50,9 @@ Een response bevat:
   - 500 Internal Server Error – Fout aan serverzijde
 - Headers: Extra info over het antwoord, zoals het dataformaat
 - Body: De gegevens die teruggestuurd worden (bijv. een lijst, een bevestiging of een foutmelding)
+:::
 
+:::{note} uitleg
 ### Structuur van endpoints
 
 Een goede structuur van je endpoints zorgt ervoor dat je API bruikbaar blijft als iemand een nieuwe frontend maakt. Er zijn geen regels die een goed structuur garanderen. Er zijn wel richtlijnen die helpen bij het maken van een goede structuur. Hier zijn enkele veelgebruikte richtlijnen.
@@ -85,6 +87,9 @@ Houd het consistent
 
 ## Extra gegevens in een request (uitleg)
 
+:::{note} Uitleg
+### Extra gegevens in een request
+
 Bij het gebruiken van een REST API kun je informatie op verschillende manieren meegeven in een request. Hier zijn de drie meest gebruikte manieren:
 
 -  Informatie in het endpoint zelf (path parameters)
@@ -114,5 +119,6 @@ Bij het gebruiken van een REST API kun je informatie op verschillende manieren m
         - `POST /leerlingen` → nieuwe leerling toevoegen
         - `PUT /gebruikers/42` → gebruiker met ID 42 aanpassen
     - De data staat niet in de link, maar wordt meegestuurd in de inhoud van het verzoek.
+:::
 
 ## Zorg dat filters werken (copy code)
