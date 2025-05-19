@@ -7,7 +7,8 @@
 
 In deze module leer je te werken met toestandsdiagrammen. Als introductie daarop kun je met de gehele klas de volgende opdracht doen.
 
-```{note} Opdracht: Toestanden in games
+```{exercise} Toestanden in games
+:label: opdracht3game
 Bekijk gezamenlijk het volgende fragment uit een game waarin de hoofdrolspeler een bewaker moet proberen uit te schakelen. Kijk goed naar de bewaker en beschrijf in welke toestanden de bewaker kan zijn. Beschrijf ook hoe de bewaker in elk van die toestanden terecht komt. Met andere woorden: wat moet er gebeuren voordat de bewaker in een bepaalde toestand terecht komt.
 ```
 
@@ -37,7 +38,8 @@ In de bovenstaande uitwerking zie je totaal 5 toestanden en 6 toestandsovergange
 
 Het losse pijltje naar toestand 1 betekent dat dit de begintoestand is, oftewel de initiële toestand.
 
-```{note} Opdracht: Unplugged Nooddienstregeling bij de spoorwegen
+```{exercise} Unplugged Nooddienstregeling bij de spoorwegen
+:label: opdracht3unplugged
 Je kunt ook als inleiding ook de unplugged activiteit doen die je via de onderstaande link vindt.
 
 [Nooddienstregeling bij de spoorwegen](http://www.informaticaunplugged.nl/de-werkvormen/nooddienstregeling-bij-de-spoorwegen/)
@@ -61,7 +63,8 @@ Je kunt er zelf even mee oefenen. Klik op het plaatje hieronder om te activeren.
 
 Een toestandsovergang wordt meestal uitgevoerd op basis van informatie uit één van de sensoren. Als iemand één euro in de frisdrankautomaat doet, wordt dat door één of meerdere sensoren gedetecteerd. Hoe dat precies werkt is hierbij niet belangrijk. Uit de toestandsdiagram kun je opmaken naar welke toestand de automaat moet gaan als iemand die euromunt inwerpt.
 
-```{note} Opdracht: Frisdrankautomaat
+```{exercise} Frisdrankautomaat
+:label: opdracht3fris
 Vul in. In welke toestand komt de automaat als iemand de volgende munten ingooit: 50 cent en nog eens 50 cent? Dat is toestand
 `______`
 . In welke toestand komt de automaat als iemand de volgende munten ingoot: 50 cent, 1 euro, 1 euro? Dat is toestand
@@ -71,7 +74,7 @@ Vul in. In welke toestand komt de automaat als iemand de volgende munten ingooit
 mogelijkheid dat de automaat van de toestand ‘2 euro’ nog in een andere toestand komt.
 ```
 
-```{tip} Antwoord: Frisdrankautomaat
+```{solution} opdracht3fris
 :class: dropdown
 - `1`
 - `2`
@@ -94,11 +97,12 @@ In deze module gebruiken we steeds een dubbele punt om het onderscheid te maken 
 <toestandsovergang> : <actie>
 ```
 
-```{note} Opdracht: Werking frisdrankautomaat
+```{exercise} Werking frisdrankautomaat
+:label: opdracht3werkfris
 Beschrijf de werking van deze frisdrankautomaat in 2 of 3 zinnen.
 ```
 
-```{tip} Antwoord: Werking frisdrankautomaat
+```{solution} opdracht3werkfris
 :class: dropdown
 **Uitleg**
 
@@ -143,11 +147,12 @@ Het is echter wel verstandig om goed na te denken over wat er in alle gevallen g
 
 In de bovenstaande tabel zie je alle toestanden in de linker kolom. Je ziet ook alle mogelijke gebeurtenissen in de bovenste rij. Voor iedere combinatie moet de tabel beschrijven wat de nieuwe toestand wordt. Dit kan dus ook dezelfde toestand blijven. De tabel hierboven is nog niet volledig ingevuld.
 
-```{note} Opdracht: Tabel toestandsdiagram
+```{exercise} Tabel toestandsdiagram
+:label: opdracht3tabel
 Maak de tabel hierboven af.
 ```
 
-````{tip} Antwoord: Tabel toestandsdiagram
+````{solution} opdracht3tabel
 :class: dropdown
 **Uitleg**
 
