@@ -7,6 +7,7 @@ Het spel bevat alleen nog maar een plank en een bal, maar geen blokken… Het wo
 Schermafdruk van spelletje met basisstap 10 t/m 14.
 ```
 
+(game-stap-10)=
 ## Stap 10: Teken een blok in het veld
 
 ````{note} Opdracht
@@ -15,9 +16,10 @@ Teken een blok op het scherm. Gebruik de variabele `brick_img` om het plaatje va
 
 ````{hint} Tips
 :class: dropdown
--	Bekijk “Stap 4. Teken de plank” als je er niet uitkomt.
+-	Bekijk “[Stap 4. Teken de plank](#game-stap-4)” als je er niet uitkomt.
 ````
 
+(game-stap-11)=
 ## Stap 11: Detecteer als de bal het blok raakt
 
 ````{note} Opdracht
@@ -33,13 +35,14 @@ print('brick touched at ball_x = ' + str(ball_x) + ' and ball_y = ' + str(ball_y
 
 ````{hint} Tips
 :class: dropdown
--	Bekijk “Stap 7. Stuiter de bal tegen de plank” als je niet meer weet hoe je kunt zien dat twee voorwerpen elkaar raken.
+-	Bekijk “[Stap 7. Stuiter de bal tegen de plank](#game-stap-7)” als je niet meer weet hoe je kunt zien dat twee voorwerpen elkaar raken.
 -	Python plakt teksten aan elkaar als je ze optelt. De functie `str` zet een getal om in een string. Deze functie heb je nodig, omdat Python getallen en strings niet automatisch bij elkaar optelt; je krijgt dan een foutmelding.
 -	Meer informatie over het printen van tekst vind je op\
   https://www.freecodecamp.org/news/python-print-variable-how-to-print-a-string-and-variable/
--	Je vraagt je misschien af hoe je het blok weghaalt. Dat leer je in “Stap 20, Haal een blok weg als de bal een blok raakt”.
+-	Je vraagt je misschien af hoe je het blok weghaalt. Dat leer je in “[Stap 20, Haal een blok weg als de bal een blok raakt](#game-stap-20)”.
 ````
 
+(game-stap-12)=
 ## Stap 12: Stuiter de bal omhoog als hij het blok raakt
 
 ````{note} Opdracht
@@ -68,10 +71,11 @@ Er zit twee keer “als” in de pseudo-code. De tweede “als” wordt alleen u
 -	Met `if ball_speed_y > 0 :` kun je kijken of de bal naar onder beweegt.
 -	De bovenkant van de bal is `ball_y`.
 -	De bovenkant van het blok is `brick_`y.
--	`maak snelheid_y omhoog` betekent dat snelheid_y een negatief getal (een getal kleiner dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in stap 7 en stap 3 als je niet meer weet hoe je `abs()` kunt gebruiken
+-	`maak snelheid_y omhoog` betekent dat snelheid_y een negatief getal (een getal kleiner dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in [stap 7](#game-stap-7) en [stap 3](#game-stap-3) als je niet meer weet hoe je `abs()` kunt gebruiken
 -	Kun je uitleggen waarom de code bij de tweede “als” kijkt of er een stukje bal buiten het blok zit, in plaats van te kijken of er een stukje bal binnen het blok zit?
 ````
 
+(game-stap-13)=
 ## Stap 13: Stuiter de bal omlaag als hij het blok raakt
 
 ````{note} Opdracht
@@ -101,9 +105,10 @@ Regel 1 tot en met 5 heb je al gemaakt in de vorige stap. De rest moet je nog to
 -	Met `elif ball_speed_y < 0 :` kun je kijken of de bal naar boven beweegt.
 -	De onderkant van de bal is `ball_y + BALL_HEIGHT`.
 -	De onderkant van het blok is `brick_y + BRICK_HEIGHT`.
--	`maak snelheid_y omlaag` betekent dat snelheid_y een positief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in stap 7 en stap 3 als je niet meer weet hoe je `abs()` kunt gebruiken
+-	`maak snelheid_y omlaag` betekent dat snelheid_y een positief getal (een getal groter dan 0) moet zijn. Gebruik daarvoor de functie `abs()`. Kijk in [stap 7](#game-stap-7) en [stap 3](#game-stap-3) als je niet meer weet hoe je `abs()` kunt gebruiken
 ````
 
+(game-stap-14)=
 ## Stap 14: Stuiter de bal links of rechts als hij het blok raakt
 
 ````{note} Opdracht

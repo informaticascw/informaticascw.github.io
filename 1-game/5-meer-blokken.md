@@ -7,6 +7,7 @@ Eén blok is leuk, maar meer blokken is nog leuker! We gaan stap voor stap blokk
 Schermafdruk van spelletje met basisstap 15 t/m 19.
 ```
 
+(game-stap-15)=
 ## Stap 15: Maak een tweede blok
 
 ````{note} Opdracht
@@ -45,6 +46,7 @@ screen.blit(brick_img, (brick_x, brick_y))
 -	Kopieer de code die de botsing tussen bal en blok afhandelt. Pas de kopie aan zodat hij werkt met het tweede blok.
 ````
 
+(game-stap-16)=
 ## Stap 16: Zet blokken in genummerde lijsten
 
 ````{note} Opdracht
@@ -72,6 +74,7 @@ Maak een lijst `bricks_y` op dezelfde manier als je `bricks_x` hebt gemaakt.
 -	Let op de index van de elementen uit de lijst. Het 1e element heeft index 0, het 2e element heeft index 1, het 3e element heeft index 2 enzovoort. 
 ````
 
+(game-stap-17)=
 ## Stap 17: Gebruik for-loop bij blokken tekenen
 
 ````{note} Opdracht
@@ -101,6 +104,7 @@ Deze code doorloopt de lijst van voor naar achter en slaat het nummer van het el
 -	Vergeet de oude regels die de blokken tekende niet te verwijderen.
 ````
 
+(game-stap-18)=
 ## Stap 18: Gebruik for-loop bij botsing tegen blokken
 
 ````{note} Opdracht
@@ -113,6 +117,7 @@ Maak met het commando for een loop die botsingen van de bal met alle blokken afh
 -	Let op dat je goed inspringt.
 ````
 
+(game-stap-19)=
 ## Stap 19: Maak een veld met 24 blokken
 
 ````{note} Opdracht

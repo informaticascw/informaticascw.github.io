@@ -9,6 +9,7 @@ Schermafdruk van spelletje met basisstap 0 t/m 3.
 
 De basisstappen zijn genummerd van stap 0 tot en met stap 21. In elke basisstap staat onder ‘opdracht’ wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De toelichting geeft aan hoe je de opdracht kunt maken. De tips kun je bekijken als je er niet uitkomt. 
 
+(game-stap-0)=
 ## Stap 0: Run de startcode 
 
 In ‘de opdracht’ staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De toelichting geeft aan hoe je de opdracht kunt maken. De tips kun je bekijken als je er niet uitkomt.
@@ -33,6 +34,7 @@ Voor deze opdracht krijg je startcode. De startcode beweegt een bal bovenin het 
   https://stanislas.informatica.nu/help/codespaces/
 ```
 
+(game-stap-1)=
 ## Stap 1: Voeg commentaar toe 
 
 ````{note} Opdracht
@@ -145,6 +147,7 @@ Stukje code uit gameloop die frame-snelheid regelt:
 -	Wat moet je veranderen aan de code om de bal op een andere plek te laten starten?
 ````
 
+(game-stap-2)=
 ## Stap 2: Beweeg de bal schuin
 
 ````{note} Opdracht
@@ -173,6 +176,7 @@ screen.blit(ball_img, (ball_x, 0))
 -	Kopieer de regel code waarin steeds de waarde van `ball_x` wordt berekend. Pas de kopie aan, zodat de waarde van `ball_y` wordt berekend. Gebruik daarbij variabele `ball_speed_y`.
 ````
 
+(game-stap-3)=
 ## Stap 3: Stuiter de bal tegen de onder- en bovenkant van het scherm
 
 ````{note} Opdracht

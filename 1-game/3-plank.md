@@ -7,6 +7,7 @@ De bal beweegt, maar je kunt het spel nog niet spelen. Daarom gaan we een plank 
 Schermafdruk van spelletje met basisstap 4 t/m 9.
 ```
 
+(game-stap-4)=
 ## Stap 4: Teken de plank
 
 ````{note} Opdracht
@@ -43,6 +44,7 @@ screen.blit(ball_img, (ball_x, ball_y))
 -	Maak de variabelen `paddle_x` en `paddle_y` om bij te houden waar de paddle staat. Geef ze een startwaarde, bijvoorbeeld `SCREEN_WIDTH / 2` en `SCREEN_HEIGHT – 100`. Gebruik `paddle_x` en `paddle_y` om de plank op de goede plaats op het scherm te zetten. 
 ````
 
+(game-stap-5)=
 ## Stap 5: Beweeg de plank
 
 ````{note} Opdracht
@@ -61,6 +63,7 @@ if keys[pygame.K_d] : # key d is down
 -	Gebruik maar één keer de regel `keys = pygame.key.get_pressed()` om de stand van de toetsen te lezen
 ````
 
+(game-stap-6)=
 ## Stap 6: Stop de plank aan de randen van het scherm
 
 ````{note} Opdracht
@@ -86,6 +89,7 @@ Pseudo-code om de plank te laten stoppen aan de linkerkant van het scherm kun je
     `plank_breedte` uit de pseudo-code is `PADDLE_WIDTH` in je code. 
 ````
 
+(game-stap-7)=
 ## Stap 7: Stuiter de bal tegen de plank
 
 ````{note} Opdracht
@@ -122,6 +126,7 @@ if (x > 100 and
 -	Hou het algoritme voor nu simpel, je kunt het bij de uitbreidingen nog aanpassen. 
 ````
 
+(game-stap-8)=
 ## Stap 8: Stop het spel als je af bent
 
 ````{note} Opdracht
@@ -148,6 +153,7 @@ Een logische plek voor je nieuwe code is onder afhandelen van botsingen en voor 
 -	Wat gebeurt er met de code die de bal tegen de onderkant van het scherm laat stuiteren? Wordt die code nog uitgevoerd? 
 ````
 
+(game-stap-9)=
 ## Stap 9: Toon een bericht als je af bent
 
 ````{note} Opdracht
