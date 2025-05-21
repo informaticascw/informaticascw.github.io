@@ -76,8 +76,7 @@ Je docent geeft misschien aan dat je een andere programmeeromgeving moet gebruik
 
 ```{seealso} GitHub en Codespaces 
 Leerlinghandleiding Codespaces
-: Meer informatie over GitHub, Codespaces en VSCode vind je in de bijlage over Codespaces\
-https://stanislas.informatica.nu/game/codespaces
+: Meer informatie over GitHub, Codespaces en VSCode vind je in de [bijlage over Codespaces](#game-codespaces)
 
 Lesmateriaal over Git versiebeheer
 : Versiebeheer in GitHub is gebaseerd op Git. Als je met Git wilt oefenen, dan kun je dat doen op
