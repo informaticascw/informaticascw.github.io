@@ -69,7 +69,9 @@ Zorg dat de plank niet verder beweegt als hij de rand van het scherm raakt. Gebr
 
 ````{attention} Toelichting
 Pseudo-code om de plank te laten stoppen aan de rechterkant van het scherm.
-```pseudo
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
 als plank_x + plank_breedte > breedte_van_scherm dan
     plank_x = breedte_van_scherm – plank_breedte
 ```
@@ -91,8 +93,9 @@ Zorg dat de bal kaatst tegen je plank. Hiervoor zijn veel algoritmen te bedenken
 ````
 
 ````{attention} Toelichting
-Pseudo-code:
-```pseudo
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
   als rechter_kant_bal is groter dan   linker_kant_paddle en 
       linker_kant_bal  is kleiner dan  rechter_kant_paddle en
       onderkant_kant_bal is groter dan boven_kant_paddle en 

@@ -47,8 +47,10 @@ Stuiter de bal omhoog als hij van boven aankomt en een blok raakt. Ga ervan uit 
 ````
 
 ````{attention} Toelichting
-Pseudo-code
-```pseudo
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
+:emphasize-lines: 3,4,5
 als de bal het blok raakt :
     druk een tekst af
     als ( de bal naar onder beweegt en 
@@ -56,7 +58,7 @@ als de bal het blok raakt :
         maak snelheid_y omhoog
 ```
 
-De schuingedrukte regels heb je al gemaakt in de vorige stap. De rest moet je nog toevoegen.
+Regel 1 en 2 heb je al gemaakt in de vorige stap. De rest moet je nog toevoegen.
 
 Er zit twee keer “als” in de pseudo-code. De tweede “als” wordt alleen uitgevoerd als de eerste “als” waar is. Je kunt deze code combineren in één “als”, door de condities uit beide “als”-en aan elkaar te knopen met “and”. In de volgende stappen ga je zien dat dat in dit geval minder duidelijk is, omdat er dan dubbele code ontstaat.
 ````
@@ -77,8 +79,10 @@ Voeg code toe die de bal omlaag stuitert als hij van beneden aankomt en een blok
 ````
 
 ````{attention} Toelichting
-Pseudo-code
-```pseudo
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
+:emphasize-lines: 6,7,8
 als de bal het blok raakt :
     druk een tekst af
     als ( de bal naar onder beweegt en 
@@ -89,7 +93,7 @@ als de bal het blok raakt :
         maak snelheid_y omlaag
 ```
 
-De schuingedrukte regels heb je al gemaakt in de vorige stap. De rest moet je nog toevoegen. Bij de vorige stap checkt je code of er een stuk van de bal binnen het blok zat. De code die je in deze stap toevoegt checkt welk stuk van de bal buiten het blok zit.
+Regel 1 tot en met 5 heb je al gemaakt in de vorige stap. De rest moet je nog toevoegen. Bij de vorige stap checkt je code of er een stuk van de bal binnen het blok zat. De code die je in deze stap toevoegt checkt welk stuk van de bal buiten het blok zit.
 ````
 
 ````{hint} Tips
@@ -107,8 +111,10 @@ Voeg code toe die de bal stuitert als hij van links of rechts aankomt en een blo
 ````
 
 ````{attention} Toelichting
-Pseudo-code
-```pseudo
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
+:emphasize-lines: 9,10,11,12,13,14
 als de bal het blok raakt :
     druk een tekst af
     als ( de bal naar onder beweegt en 
@@ -125,7 +131,7 @@ als de bal het blok raakt :
         maak snelheid_x naar rechts
 ```
 
-De schuingedrukte regels heb je al gemaakt in de vorige stap. De rest moet je nog toevoegen. {xxx-check-xxx}
+Regel 1 tot en met 8 heb je al gemaakt in de vorige stap. De rest moet je nog toevoegen.
 ````
 
 ````{hint} Tips
