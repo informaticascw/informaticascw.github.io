@@ -1,6 +1,22 @@
 # Producten aanpassen
 
+## Uitleg: Architectuur
+:::{note} Uitleg
+```{figure} 2-architecture.jpg
+Architectuur van de webshop
+```
+The basic idea is that a webpage of the shop is loaded by the browser and information on the articles in the shop are added to that depending on what the user selects.
 
+1. You open a browser and navigate to the webshop.
+2. The browser downloads the html and css files from the server. It also downloads a piece of javascript code.
+3. The javascript code is being executed by the browser. The javascript code connects to a link on the server that is connected to the api. This is called a REST-interface. Through the REST interface, the javascript code in the browser request information on the articles it needs to display.
+4. The api is a programm on the server which connects to the database. It requests information from the database and sends it back to the browser. The result is sent in json-format.
+5. The javascript programm in the browser looks at the json-file and adds elements containing products in the shop to the DOM. The DOM is the model of the html files that the browser keeps in it memory and shows to the user. These elements added are displayed by the browser.
+6. The browser downloads images for which a link was added to the product in the DOM.
+
+An alternative approach would be to have the server build complete web-pages including all information on articles. This is the idea behind the php programming language. The REST-interface is gaining popularity. An advantage of REST above php is that REST allows for more responsive (interfactive) websites.
+
+:::
 
 ## Voeg een product toe (database)
 
