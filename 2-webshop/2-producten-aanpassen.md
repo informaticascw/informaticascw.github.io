@@ -2,7 +2,7 @@
 
 ## Uitleg: Architectuur
 :::{note} Uitleg
-```{figure} 2-architecture.jpg
+```{figure} 2-architecture.svg
 Architectuur van de webshop
 ```
 The basic idea is that a webpage of the shop is loaded by the browser and information on the articles in the shop are added to that depending on what the user selects.
