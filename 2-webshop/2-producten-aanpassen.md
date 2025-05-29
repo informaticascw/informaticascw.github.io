@@ -27,7 +27,7 @@ Het geheel van linken, API, database en JSON dat op de server staat is een **RES
 
 Een voordeel van REST ten opzichte van de traditionele aanpak is dat REST meer interactieve websites mogelijk maakt. Een ander voordeel is dat een REST-interface gemakkelijk door andere programma's dan browsers gebruikt kan worden. Zo kun je bijvoorbeeld zelf een Python-programma schrijven dat gebruik maakt van de REST-interface van chatgpt. 
 
-Je leert meer over REST in volgende hoofdstukken.
+Je leert meer over REST in de volgende hoofdstukken.
 ```
 
 :::
