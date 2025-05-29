@@ -22,7 +22,13 @@ Het laden van de artikelen gebeurt in de volgende stappen.
 5. Het antwoord van de database wordt door de API omgezet in **JSON**-formaat en teruggestuurd naar de client waarop de browser draait. 
 6. Het JavaScript-programma in de browser leest het JSON-bestand en voegt elementen toe aan de DOM. Die elementen zijn stukjes HTML met informatie over de artikelen. In die informatie zit ook een link naar het plaatje van het artikel. De browser downloadt de afbeeldingen en toont alle elementen die aan de DOM zijn toegevoegd op het scherm.
 
-Het geheel van linken, API, database en JSON dat op de server staat is een **REST**-interface. De REST-interface zorgt er dus voor dat de JavaScript-code in de browser informatie op kan vragen over artikelen in onze winkel. De REST-interface wint aan populariteit vanaf ongeveer 2010. Voor die tijd werd vaak gekozen voor een server die complete webpagina’s maakte, inclusief alle informatie over de artikelen. Een voordeel van REST ten opzichte van de traditionele aanpak is dat REST meer interactieve websites mogelijk maakt. Een ander voordeel is dat een REST-interface gemakkelijk door andere programma's dan browsers gebruikt kan worden. Zo kun je bijvoorbeeld zelf een Python-programma schrijven dat gebruik maakt van de REST-interface van chatgpt. Je leert meer over REST in volgende hoofdstukken.
+```{seealso} REST 
+Het geheel van linken, API, database en JSON dat op de server staat is een **REST**-interface. De REST-interface zorgt er dus voor dat de JavaScript-code in de browser informatie op kan vragen over artikelen in onze winkel. De REST-interface wint aan populariteit vanaf ongeveer 2010. Voor die tijd werd vaak gekozen voor een server die complete webpagina’s maakte, inclusief alle informatie over de artikelen. 
+
+Een voordeel van REST ten opzichte van de traditionele aanpak is dat REST meer interactieve websites mogelijk maakt. Een ander voordeel is dat een REST-interface gemakkelijk door andere programma's dan browsers gebruikt kan worden. Zo kun je bijvoorbeeld zelf een Python-programma schrijven dat gebruik maakt van de REST-interface van chatgpt. 
+
+Je leert meer over REST in volgende hoofdstukken.
+```
 
 :::
 
