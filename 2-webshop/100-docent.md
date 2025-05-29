@@ -86,7 +86,3 @@ Docentenhandleiding
 https://stanislas.informatica.nu/docenten/codespaces
 - Een uitgebreide handleiding, toegespitst op docenten die hun leerlingen deze opdracht willen laten maken, is (nog) niet beschikbaar. 
 - Er is veel informatie te vinden op internet, maar het vergt tijd om bekend te raken met de ontwikkelomgeving.
-
-## Bronnen
-- iconen\
-https://uxwing.com/
