@@ -56,7 +56,8 @@ insert
 
 ## Maak tabel die producten en kleuren koppelt (database)
 
-## Beschrijf cardinaliteit (database)
+voeg tabel toe met velden
+
 voeg constraint toe
 
 ## Geef aan welke producten en kleuren bij elkaar horen (database)

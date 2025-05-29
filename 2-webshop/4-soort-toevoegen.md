@@ -49,14 +49,13 @@ In dit voorbeeld:
 create table
 insert
 
-## maak veld dat product aan soort koppelt (database)
+## koppel de tabellen producten en soorten (database)
 voeg verwijzende sleutel toe
 laat de naam eindigen op _id, dan kan onze website er goed mee omgaan
 
-## beschrijf cardinaliteit (database)
 voeg constraint toe
 
-## koppel producten aan soort (database)
+## koppel de gegevens (database)
 vul verwijzingen in
 
 ## api (uitleg)
