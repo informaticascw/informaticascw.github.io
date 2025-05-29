@@ -3,7 +3,7 @@
 1:n relaties toevoegen
 
 
-## 1:N-relatie maken (uitleg)
+## Tabellen met 1:N-relatie maken (uitleg)
 
 :::{note} uitleg
 Een _1:N-relatie_ (spreek uit als "één op en relatie") betekent:  
@@ -65,7 +65,7 @@ front end: website
 
 webserver voor static files, bij ons in de api, bij grotere projecten vaak op aparte servers. Database draait ook vaak op één of meerdere aparte servers.
 
-## 1:N-relatie vragen (uitleg)
+## Query met 1:N-relatie maken (uitleg)
 :::{note} uitleg
 Bij een _1:N-relatie_ kun je een query maken om gegevens uit beide tabellen te combineren.  
 Je gebruikt dan het sleutelveld waarop ze gekoppeld zijn.

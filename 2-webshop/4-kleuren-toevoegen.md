@@ -1,7 +1,7 @@
 # Kleuren aan product toevoegen
 In ons voorbeeld bestaat een product uit één of meer kleuren en een kleur wordt gebruikt in één of meerdere producten. Dat betekent dat er een n:m (spreek uit als "en op em") relatie tussen producten en kleuren. Andere voorbeelden van een n:m relatie zijn materialen of ingrediënten.
 
-## N:M-relatie maken (uitleg)
+## Tabellen met N:M-relatie maken (uitleg)
 
 :::{note} uitleg
 Een _N:M-relatie_ (spreek uit als "en op em relatie") betekent:  
@@ -66,7 +66,7 @@ api geeft resultaten in de vorm van json
 - list
 voorbeeld
 
-## N:M-relatie vragen (uitleg)
+## Query met N:M-relatie maken (uitleg)
 :::{note} uitleg
 Bij een _N:M-relatie_ combineer je drie tabellen:
 - de koppeltabel (bijv. `product_colors`)

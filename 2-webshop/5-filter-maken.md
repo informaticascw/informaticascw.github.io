@@ -1,6 +1,6 @@
 # Filters maken
 
-## REST API (uitleg)
+## REST-API (uitleg)
 
 :::{note} Uitleg
 ### REST

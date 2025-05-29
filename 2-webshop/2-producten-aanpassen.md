@@ -8,24 +8,24 @@ Architectuur van de webshop
 
 Als je de webshop bezoekt dan laadt de browser eerst de een kale webpagina zonder producten. Daarna worden de artikelen geladen. Dat gaat zo snel, dat je het bijna niet ziet.
 
-Het laden van de kale webpagina gebeurt in de volgende stappen.
+Het laden van de kale webpagina gaat met de volgende stappen.
 1. Je opent een browser op je client en navigeert naar de webshop.
 2. De browser downloadt het index.html bestand van de server. 
 3. In het index.html bestand ziet de browser dat hij de bestanden style.css en script.js moet laden.
-4. De bestanden index.html en style.css bevatten de startpagina van de webshop, zonder producten. De informatie uit die bestanden wordt door de browser opgeslagen in een Document Object Model (**DOM**). De DOM staat in het geheugen van de browser en bepaalt wat de browser op het scherm toont.
+4. De bestanden index.html en style.css bevatten de startpagina van de webshop, zonder producten. De informatie uit die bestanden wordt door de browser opgeslagen in een Document Object Model (_DOM_). De DOM staat in het geheugen van de browser en bepaalt wat de browser op het scherm toont.
 
 Het laden van de artikelen gebeurt in de volgende stappen.
 1. In script.js staat een JavaScript-programma. De browser voert dat programma uit.
-2. De JavaScript-code maakt via een link verbinding met de server. 
-3. De link is gekoppeld aan een programma op de server. Dit programma is een Application Programming Interface (**API**). Onze API is geschreven in de programmeertaal Python. 
+2. De JavaScript-code maakt via een link verbinding met de server.
+3. De link is gekoppeld aan een programma op de server. Dit programma is een Application Programming Interface (_API_, spreek uit als ee-pie-aai). De API in deze webshop is geschreven in de programmeertaal Python. 
 4. De API vraagt via het SQL-commando `select` informatie over artikelen op uit de database. 
-5. Het antwoord van de database wordt door de API omgezet in **JSON**-formaat en teruggestuurd naar de client waarop de browser draait. 
-6. Het JavaScript-programma in de browser leest het JSON-bestand en voegt elementen toe aan de DOM. Die elementen zijn stukjes HTML met informatie over de artikelen. In die informatie zit ook een link naar het plaatje van het artikel. De browser downloadt de afbeeldingen en toont alle elementen die aan de DOM zijn toegevoegd op het scherm.
+5. Het antwoord van de database wordt door de API omgezet in _JSON_-formaat (spreek uit als djee-sun-formaat) en teruggestuurd naar de client waarop de browser draait. 
+6. Het JavaScript-programma in de browser leest het JSON-bestand en voegt elementen toe aan de DOM. Die elementen zijn stukjes HTML met informatie over de artikelen. In die informatie zit ook een link naar het plaatje van het artikel. De browser downloadt de plaatjes en toont alle elementen die aan de DOM zijn toegevoegd op het scherm.
 
 ```{seealso} REST 
-Het geheel van linken, API, database en JSON dat op de server staat is een **REST**-interface. De REST-interface zorgt er dus voor dat de JavaScript-code in de browser informatie op kan vragen over artikelen in onze winkel. De REST-interface wint aan populariteit vanaf ongeveer 2010. Voor die tijd werd vaak gekozen voor een server die complete webpagina’s maakte, inclusief alle informatie over de artikelen. 
+Het geheel van linken, API, database en JSON dat op de server staat is een _REST_-API. De REST-API zorgt ervoor dat de JavaScript-code in de browser informatie op kan vragen over artikelen uit de webshop. De REST-API wint aan populariteit vanaf ongeveer 2010. Voor die tijd werd vaak gekozen voor een server die complete webpagina’s maakt, inclusief alle informatie over de artikelen. 
 
-Een voordeel van REST ten opzichte van de traditionele aanpak is dat REST meer interactieve websites mogelijk maakt. Een ander voordeel is dat een REST-interface gemakkelijk door andere programma's dan browsers gebruikt kan worden. Zo kun je bijvoorbeeld zelf een Python-programma schrijven dat gebruik maakt van de REST-interface van chatgpt. 
+Een voordeel van REST ten opzichte van de traditionele aanpak is dat REST interactievere websites mogelijk maakt. Dat komt omdat het laden van extra informatie via een REST-API sneller gaat dan het herladen van de hele webpagina. Een ander voordeel is dat een REST-API gemakkelijk door andere programma's dan browsers gebruikt kan worden. Zo kun je bijvoorbeeld zelf een Python-programma schrijven dat gebruik maakt van de REST-interface van chatgpt. 
 
 Je leert meer over REST in de volgende hoofdstukken.
 ```
@@ -49,7 +49,7 @@ Veelgebruikte gegevenstypen:
 - TEXT → een stuk tekst (zoals "Smurfin")
 - REAL → een kommagetal (zoals 9.50 of 14.95)
 - INTEGER → een heel getal (zoals 1, 25, 100)
-- INTEGER PRIMARY KEY is een bijzonder vorm van een INTEGER, het is een heel getal en elke waarde in de kolom mag maar één keer gebruikt worden.
+- INTEGER PRIMARY KEY is een bijzondere soort INTEGER, het is een heel getal en elke waarde in de kolom mag maar één keer gebruikt worden.
 
 Voorbeeld om een tabel te maken in SQL:
 
@@ -67,8 +67,10 @@ Er staan drie kolommen in:
 - name: de naam van het product, dit is een tekst
 - price: de prijs van het product, dit is een kommagetal
 
-```{tip} komma's en puntkomma's
+```{tip} komma's, punten en puntkomma's
 De komma `,` wordt gebruikt als **scheiding** tussen kolommen. Na de laatste kolom komt dus geen komma meer. Als je een kolom aan het einde van de tabel toevoegt, dan moet je niet vergeten de komma toe te voegen achter de één na laatste kolom.
+
+De punt `.` wordt gebruikt als **decimaalteken**. Dus een prijs van 4 euro en 99 cent wordt genoteerdn als `4.99`. Als je per ongeluk een komma gebruikt in plaats van een punt, dan denkt de computer dat het twee gehele getallen zijn.
 
 De puntkomma `;` wordt gebruikt als **afsluiting** van elk commando. Het maken van een tabel is een commando. Er staat een puntkomma na elke tabel die je maakt, dus ook na de laatste tabel.
 ```
