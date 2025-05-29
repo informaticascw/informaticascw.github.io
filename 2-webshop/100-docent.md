@@ -35,12 +35,13 @@ Leerdoelen in meer detail
 Hoofdstuk|Aantal lessen|Basis of optioneel
 --|--|--
 1 Inleiding | 1 | basis
-2 Aanpassen | 2 | basis
-3 1:n | 2 | basis
-4 n:m | 2 | basis
-5 Filters | 2 | optioneel
-6 Front end | 2 | optioneel
-7 Uitbreidingen | 2 tot 8 | optioneel
+2 Opbouw webshop | 1 | basis
+2 Producten toevoegen | 1 | basis
+4 1:N | 2 | basis
+5 N:M | 2 | basis
+6 Filters | 2 | optioneel
+7 Front end | 2 | optioneel
+8 Uitbreidingen | 2 tot 8 | optioneel
 Totaal | 7 tot 19 |
 
 Opmerkingen:

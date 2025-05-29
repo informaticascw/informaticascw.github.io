@@ -21,7 +21,7 @@ Hoe maak je deze relatie in SQL?
   - één die verwijst naar de eerste tabel  
   - één die verwijst naar de tweede tabel
 
-### SQL voorbeeld:
+### SQL voorbeeld van tabellen met N:M-relatie
 
 ```sql
 CREATE TABLE products (
@@ -128,6 +128,8 @@ Dit voorbeeld bevat een lijst met producten.
 
 ## Query met N:M-relatie maken (uitleg)
 :::{note} uitleg
+
+### Query met SELECT FROM JOIN JOIN voor N:M-relatie
 Bij een _N:M-relatie_ combineer je drie tabellen:
 - de koppeltabel (bijv. `product_colors`)
 - de eerste tabel (bijv. `products`)

@@ -2,18 +2,22 @@
 
 ## Uitleg: Architectuur
 :::{note} Uitleg
+
+### Onderdelen van de webshop
 ```{figure} 2-architecture.svg
 Architectuur van de webshop
 ```
 
 Als je de webshop bezoekt dan laadt de browser eerst de een kale webpagina zonder producten. Daarna worden de artikelen geladen. Dat gaat zo snel, dat je het bijna niet ziet.
 
+### Webpagina laden
 Het laden van de kale webpagina gaat met de volgende stappen.
 1. Je opent een browser op je client en navigeert naar de webshop.
 2. De browser downloadt het index.html bestand van de server. 
 3. In het index.html bestand ziet de browser dat hij de bestanden style.css en script.js moet laden.
 4. De bestanden index.html en style.css bevatten de startpagina van de webshop, zonder producten. De informatie uit die bestanden wordt door de browser opgeslagen in een Document Object Model (_DOM_). De DOM staat in het geheugen van de browser en bepaalt wat de browser op het scherm toont.
 
+### Producten laden
 Het laden van de artikelen gebeurt in de volgende stappen.
 1. In script.js staat een JavaScript-programma. De browser voert dat programma uit.
 2. De JavaScript-code maakt via een link verbinding met de server.

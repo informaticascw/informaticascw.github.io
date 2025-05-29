@@ -52,35 +52,6 @@ Een response bevat:
 - Body: De gegevens die teruggestuurd worden (bijv. een lijst, een bevestiging of een foutmelding)
 :::
 
-:::{note} Uitleg
-### Structuur van endpoints
-
-Een goede structuur van je endpoints zorgt ervoor dat je API bruikbaar blijft als iemand een nieuwe frontend maakt. Er zijn geen regels die een goed structuur garanderen. Er zijn wel richtlijnen die helpen bij het maken van een goede structuur. Hier zijn enkele veelgebruikte richtlijnen.
-
-Gebruik hiërarchie
-: Geef aan dat iets *onderdeel* is van iets anders:
-: ✅ /gebruikers/42/boeken → alle boeken van gebruiker 42  
-: ✅ /klassen/5v/leerlingen → alle leerlingen in klas 5v
-
-Gebruik queryparameters 
-: Bijvoorbeeld voor filters, sorteren of paginering
-: ✅ /boeken?jaar=2024  
-: ✅ /gebruikers?rol=docent&sort=naam  
-
-Gebruik zelfstandige naamwoorden in meervoud, geen werkwoorden
-: ✅ /gebruikers
-: ❌ /gebruiker
-: ❌ /getGebruiker
-
-Gebruik koppelstreepjes tussen woorden, geen hoofdletters
-: ✅ /middelbare-scholen
-: ❌ /middelbare_scholen
-: ❌ /Middelbare-Scholen
-
-Houd het consistent
-: Gebruik een duidelijke en eenduidige structuur door je hele API. Als je bijvoorbeeld `/producten` gebruikt, noem het dan niet ergens anders `/artikelen`.
-:::
-
 ## Maak filters voor soort
 
 ## Maak filters voor kleur
@@ -92,33 +63,26 @@ Houd het consistent
 
 Bij het gebruiken van een REST API kun je informatie op verschillende manieren meegeven in een request. Hier zijn de drie meest gebruikte manieren:
 
--  Informatie in het endpoint zelf (path parameters)
+Informatie in het endpoint zelf (path parameters)
+: Je stopt informatie direct in de link, als onderdeel van het pad.
+: Dit gebruik je voor het opvragen van een specifiek item.
+: Voorbeeld: `/leerlingen/42` → vraag leerling met ID 42 op
+: Voorbeeld: `/boeken/9783` → vraag boek met ISBN 9783 op
+: Het getal of woord in de link wordt herkend als een parameter.
 
-    - Je stopt informatie direct in de link, als onderdeel van het pad.
-    - Dit gebruik je voor het opvragen van een specifiek item.
-    - Bijvoorbeeld:
-        - `/leerlingen/42` → vraag leerling met ID 42 op
-        - `/boeken/9783` → vraag boek met ISBN 9783 op
-    - Het getal of woord in de link wordt herkend als een parameter.
+Informatie achter het endpoint met `?` (query parameters)
+: Je zet parameters achter een vraagteken in de link.
+: Dit wordt gebruikt om informatie mee te geven voor filteren, zoeken, sorteren of pagineren.
+: Voorbeeld: `/leerlingen?klas=5V`
+: Voorbeeld: `/producten?categorie=boeken&sort=prijs`
+: Meerdere parameters worden gescheiden met een `&`, meerdere waarden voor dezelfde parameter worden gescheiden door een `,`.
 
-
-- Informatie achter het endpoint met `?` (query parameters)
-
-    - Je zet parameters achter een vraagteken in de link.
-    - Dit wordt gebruikt om informatie mee te geven voor filteren, zoeken, sorteren of pagineren.
-    - Bijvoorbeeld:
-        - `/leerlingen?klas=5V`
-        - `/producten?categorie=boeken&sort=prijs`
-    - Meerdere parameters worden gescheiden met een `&`, meerdere waarden voor dezelfde parameter worden gescheiden door een `,`.
-
-- Informatie in de body (bij POST en PUT)
-
-    - Stuur de gegevens mee in de body van de request, meestal in JSON-formaat.
-    - Dit gebruik je als je gegevens aanmaakt of bijwerkt.
-    - Dit zie bijvoorbeeld bij:
-        - `POST /leerlingen` → nieuwe leerling toevoegen
-        - `PUT /gebruikers/42` → gebruiker met ID 42 aanpassen
-    - De data staat niet in de link, maar wordt meegestuurd in de inhoud van het verzoek.
+Informatie in de body (bij POST en PUT)
+: Stuur de gegevens mee in de body van de request, meestal in JSON-formaat.
+: Dit gebruik je als je gegevens aanmaakt of bijwerkt.
+: Dit zie bijvoorbeeld bij: `POST /leerlingen` → nieuwe leerling toevoegen
+: en bij `PUT /gebruikers/42` → gebruiker met ID 42 aanpassen
+: De data staat niet in de link, maar wordt meegestuurd in de inhoud van het verzoek.
 :::
 
 ## Zorg dat filters werken (copy code)
