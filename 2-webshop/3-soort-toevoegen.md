@@ -6,6 +6,8 @@
 ## Tabellen met 1:N-relatie maken (uitleg)
 
 :::{note} uitleg
+### Wat is een 1:N-relatie?
+
 Een _1:N-relatie_ (spreek uit als "één op en relatie") betekent:  
 - één rij in de eerste tabel hoort bij nul, één of meer rijen in de tweede tabel **en**
 - één rij in de tweede tabel hoort bij nul of één rijen in de eerste tabel.
@@ -18,7 +20,7 @@ Hoe maak je deze relatie in SQL?
 - Je zet een _verwijzende sleutel_ (Engels: foreign key) in de tweede tabel. De verwijzende sleutel staat dus in de tabel van de N.  
 - Je geeft aan dat die verwijst naar de _primaire sleutel_ (Engels: primary key) van de eerste tabel.  
 
-Voorbeeld:
+### SQL voorbeeld
 
 ```sql
 CREATE TABLE brands (
@@ -66,7 +68,8 @@ front end: website
 webserver voor static files, bij ons in de api, bij grotere projecten vaak op aparte servers. Database draait ook vaak op één of meerdere aparte servers.
 
 ## Query met 1:N-relatie maken (uitleg)
-:::{note} uitleg
+:::{note} Uitleg
+
 Bij een _1:N-relatie_ kun je een query maken om gegevens uit beide tabellen te combineren.  
 Je gebruikt dan het sleutelveld waarop ze gekoppeld zijn.
 

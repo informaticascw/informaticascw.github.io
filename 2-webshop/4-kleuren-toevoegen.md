@@ -3,7 +3,10 @@ In ons voorbeeld bestaat een product uit één of meer kleuren en een kleur word
 
 ## Tabellen met N:M-relatie maken (uitleg)
 
-:::{note} uitleg
+:::{note} Uitleg
+
+### Wat is een N:M-relatie?
+
 Een _N:M-relatie_ (spreek uit als "en op em relatie") betekent:  
 - één rij in de eerste tabel hoort bij nul, één of meer rijen in de tweede tabel **en**
 - één rij in de tweede tabel hoort bij nul, één of meer rijen in de eerste tabel.
@@ -18,7 +21,7 @@ Hoe maak je deze relatie in SQL?
   - één die verwijst naar de eerste tabel  
   - één die verwijst naar de tweede tabel
 
-Voorbeeld:
+### SQL voorbeeld:
 
 ```sql
 CREATE TABLE products (
@@ -59,12 +62,68 @@ voeg constraint toe
 ## Geef aan welke producten en kleuren bij elkaar horen (database)
 vul verwijzingen in
 
-## Json (uitleg)
-api geeft resultaten in de vorm van json
-- key value pairs
-- dict
-- list
-voorbeeld
+## JSON (uitleg)
+
+:::{note} Uitleg
+### Wat is JSON?
+
+_JSON_ (Spreek uit als djee-sun) is een formaat om gegevens op te slaan of door te geven tussen systemen. JSON is gemakkelijk te lezen voor mensen en gemakkelijk te gebruiken in veel programmeertalen zoals Python en JavaScript. Het wordt veel gebruikt bij informatieuitwisseling tussen systemen die via het het internet met elkaar zijn verbonden. De schrijfwijze van JSON lijkt een beetje op Python, maar is bedoeld voor uitwisseling van gegevens in plaats van code.
+
+### Structuur van JSON
+
+JSON kent dictionaries, lists en key-value pairs.
+- Een _dictionary_ (_woordenboek_) is een set key-value pairs. Elke key is uniek binnen de dictionary en de volgorde van de keys maakt niet uit. Een dict begint met `{` en eindigt met `}` (spreek uit als krulhaken of curly brackets), daartussen staan de key-value pairs. Key-value pairs worden gescheiden door `,` (spreek uit als komma of comma).
+- Een _key-value pair_ bestaat uit een sleutel en een waarde, gescheiden door `:` (spreek uit als dubbele punt of collon).
+- Een _key_ (_sleutel_) is een stukje tekst. Sleutels worden geschreven tussen `"` en `"` (spreek uit als dubbele quotes of double quotes). De dubbele quotes zijn één karakter, dus niet twee enkele quotes achter elkaar. Verder zijn de quotes recht, daardoor is er geen verschil tussen de quotes aan het begin en het einde van een tekst.
+- Een _value_ (_waarde_) kan true of false, een enkel getal of stuk tekst zijn. Maar op de plek van een waarde kan ook weer een nieuwe dictionary of list staan.
+- Een _list_ (_lijst_) is een geordende lijst met waarden. Elke waarde mag meer dan één keer voorkomen en de volgorde van de waarden doet er toe. Een list begint met `[` en eindigt met `]` (spreek uit als vierkante haken of square brackets), daartussen staan de waarden. Waarden worden gescheiden door `,` (komma of comma).
+
+```{note} JSON in JavaScript
+In JavaScript is de notatie van JSON exact gelijk aan de notatie van JSON in Python. De terminologie is wel anders. In Python worden de termen dictionary en list gebruikt, terwijl in JavaScript de termen object en array worden gebruikt. Keys met meerdere woorden worden in JavaScript vaak geschreven als firstSecond (camelCase) en in Python als first_second (snake_case). Maar beide manieren werken in beide talen. Wij kiezen voor snake_case.
+```
+
+### Voorbeeld van JSON
+
+Hieronder zie je een voorbeeld van JSON:
+
+```json
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Smurfin",
+      "merk": "Smurf Toys Inc.",
+      "kleur": [
+        "Geel",
+        "Blauw",
+        "Wit"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Grote smurf",
+      "merk": "Smurf Toys Inc.",
+      "kleur": [
+        "Rood",
+        "Blauw",
+        "Wit"
+      ]
+    }
+  ]
+}
+```
+
+Dit voorbeeld bevat een lijst met producten. 
+- Het hoogste niveau is een list met één key `"products"`.
+- De waarde van `"products"` is een **list** van producten.
+- Elk product is een **dict** met key values pairs:
+  - een `id` met als waarde een getal
+  - een `name` met als waarde een tekst
+  - een `merk` met as waarde een tekst
+  - een `kleur` met als waarde een list
+
+:::
+
 
 ## Query met N:M-relatie maken (uitleg)
 :::{note} uitleg

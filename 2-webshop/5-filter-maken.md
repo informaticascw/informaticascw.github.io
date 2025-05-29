@@ -52,7 +52,7 @@ Een response bevat:
 - Body: De gegevens die teruggestuurd worden (bijv. een lijst, een bevestiging of een foutmelding)
 :::
 
-:::{note} uitleg
+:::{note} Uitleg
 ### Structuur van endpoints
 
 Een goede structuur van je endpoints zorgt ervoor dat je API bruikbaar blijft als iemand een nieuwe frontend maakt. Er zijn geen regels die een goed structuur garanderen. Er zijn wel richtlijnen die helpen bij het maken van een goede structuur. Hier zijn enkele veelgebruikte richtlijnen.
