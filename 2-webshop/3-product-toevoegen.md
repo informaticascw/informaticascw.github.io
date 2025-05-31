@@ -39,7 +39,22 @@ INSERT INTO products (id, name, price) VALUES
 ```
 :::
 
-## Voeg een product toe (database)
+## Voeg artikelen toe (database)
+
+:::{exercise} Voeg artikelen toe
+Voeg twee artikelen toe aan de database.
+
+Je hoeft hiervoor alleen de database aan te passen.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Aanpassingen in de database doe je in het bestand `/data/init.sql`. Na een aanpassing moet je de database opnieuw maken met het terminal-commando `bash start.sh`.
+- Als je helemaal geen artikelen meer ziet, dan heb je waarschijnlijk een fout gemaakt in de sql. Foutmeldingen verschijnen in de terminal als je de database opnieuw aanmaakt.
+- Voeg elk artikel toe met een apart INSERT INTO commando. 
+- Als de artikelen zichtbaar zijn, probeer dan de leesbaarheid van je code te verbeteren door alle artikelen in één INSERT INTO commando te zetten.
+- Er staat een komma tussen elke artikel in een INSERT INTO commando, er staat geen komma na het laatste artikel in INSERT INTO.
+```
 
 ## Uitleg: Een tabel maken in SQL
 :::{note} Uitleg
@@ -83,8 +98,34 @@ De puntkomma `;` wordt gebruikt als **afsluiting** van elk commando. Het maken v
 ```
 :::
 
-## Voeg een beschrijving toe (database)
-Maak een extra veld `description`
+## Voeg artikel-beschrijvingen toe (database)
 
-## Voeg een prijs toe (database)
-Maak een extra veld `price`
+:::{exercise} Voeg artikel-beschrijvingen toe
+Voeg aan elk artikel een beschrijving toe.
+
+Maak in de database een extra veld in de tabel product. Geef het veld de naam `beschrijving` en geef aan dat er tekst in staat. Voeg de beschrijvingen toe aan de database door het `INSERT INTO` commando aan te passen.
+
+Je hoeft alleen de database aan te passen. De API en de front-end (het static-deel) zijn zo gemaakt, dat alle extra velden die je maakt automatisch worden getoond.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Aanpassingen in de database doe je in het bestand `/data/init.sql`. Na een aanpassing moet je de database opnieuw maken met het terminal-commando `bash start.sh`.
+- Let op foutmeldingen in de terminal als je de database opnieuw aanmaakt.
+```
+
+## Voeg artikel-prijzen toe (database)
+
+:::{exercise} Voeg artikel-prijzen toe
+Voeg aan elk artikel een beschrijving toe.
+
+Maak in de database een extra veld met de naam `price`. Geef aan dat er een kommagetal in staat. Voeg de prijzen toe aan de database door het `INSERT INTO` commando aan te passen.
+
+De front-end is zo gemaakt dat een veld met de naam `price` speciaal wordt behandeld. De prijzen worden automatisch voorzien van een euro-teken en afgerond op twee cijfers achter de komma.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Denk aan het juiste gebruik van komma en punt, zie de uitleg hierboven.
+- Zie tips bij de vorige exercise.
+```
