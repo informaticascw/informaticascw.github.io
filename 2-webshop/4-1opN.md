@@ -3,7 +3,7 @@
 In dit hoofdstuk ga je een soort toevoegen aan elk product. Soort is een voorbeeld van een 1:N-relatie.
 
 
-## Tabellen met 1:N-relatie maken (uitleg)
+## Uitleg: Tabellen met 1:N-relatie maken
 
 :::{note} uitleg
 ### Wat is een 1:N-relatie?
@@ -45,28 +45,53 @@ In dit voorbeeld:
 
 :::
 
-## maak tabel met soorten (database)
-create table
-insert
+## Opdracht: Voeg soort artikel toe aan de database
 
-## koppel de tabellen producten en soorten (database)
-voeg verwijzende sleutel toe
+:::{note}Opdracht a)
+### Tabel met soorten toevoegen
+create table
+:::
+
+```{hint} Tips
+:class: dropdown
+- xxxxxx
+```
+
+:::{note}Opdracht b)
+### Soorten toevoegen aan de tabel
+insert
+:::
+
+```{hint} Tips
+:class: dropdown
+- xxxxxx
+```
+
+:::{note}Opdracht c)
+### Koppel tabellen
+verwijzende sleutel
 laat de naam eindigen op _id, dan kan onze website er goed mee omgaan
 
 voeg constraint toe
+FOREIGN KEY
+:::
 
-## koppel de gegevens (database)
-vul verwijzingen in
+```{hint} Tips
+:class: dropdown
+- xxxxxx
+```
 
-## api (uitleg)
-api verbindt de database met de website
+:::{note}Opdracht d)
+### Voeg toe welke soort elk artikel is
+INSERT
+:::
 
-back end: api en database
-front end: website
+```{hint} Tips
+:class: dropdown
+- xxxxxx
+```
 
-webserver voor static files, bij ons in de api, bij grotere projecten vaak op aparte servers. Database draait ook vaak op één of meerdere aparte servers.
-
-## Query met 1:N-relatie maken (uitleg)
+## Uitleg: Query met 1:N-relatie maken
 :::{note} Uitleg
 
 ### Query met SELECT FROM JOIN voor 1:N-relatie
@@ -94,12 +119,32 @@ Je krijgt dan een lijst van producten, met daarbij het merk waar ze bij horen.
 
 :::
 
-## voeg soort toe aan query (api)
-api aanpassing: query met join
+## Opdracht: Maak soort artikel zichtbaar in de webshop
 
-## niet benodigde velden verwijderen (niet nodig, verwijderen) / namen van velden aanpassen (api)
+:::{note}Opdracht a)
+### Voeg soort toe aan query (api)
+api aanpassing: query met join
+:::
+
+```{hint} Tips
+:class: dropdown
+- De aanpassing moet je doen in de API, in het bestand `/app/main.py`
+- De query die je moet aanpassen is `SELECT * FROM Products;`
+- Voeg aan de query een `JOIN` toe tussen de tabellen `Products` en `Categories`.
+```
+
+:::{note}Opdracht b)
+### Verwijder overbodige velden
+INSERT
+
 speciale velden: name, price, description uit de tabel products worden herkend in de html en op speciale wijze getoond
 het veld id de tabel products en velden die eindigen op _id worden herkend in de html en niet getoond, deze zijn wel handig om erin te houden
 
 de website gebruikt de naam van de velden, meestal zijn die Engelstalig. Het is handig om die in de api aan te passen
 AS gebruiken
+:::
+
+```{hint} Tips
+:class: dropdown
+- xxxxxx
+```
