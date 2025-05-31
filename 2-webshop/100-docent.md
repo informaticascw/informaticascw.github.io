@@ -36,7 +36,7 @@ Hoofdstuk|Aantal lessen|Basis of optioneel
 --|--|--
 1 Inleiding | 1 | basis
 2 Opbouw webshop | 1 | basis
-2 Producten toevoegen | 1 | basis
+3 Producten toevoegen | 1 | basis
 4 1:N | 2 | basis
 5 N:M | 2 | basis
 6 Filters | 2 | optioneel
@@ -46,9 +46,11 @@ Totaal | 7 tot 19 |
 
 Opmerkingen:
 - We gaan uit van een lesduur van 45 tot 60 minuten per les.
-- Hoofdstuk 1, 2, 3 en 4 bouwen op. 
-- Hoofdstukken 5 en 6 staan los van elkaar maar bouwen door op hoofdstuk 1, 2, 3 en 4.
-- Hoofdstuk 7 kan worden gedaan als 5 en 6 zijn overgeslagen, maar niet alle voorgestelde extra's zullen voor alle leerlingen haalbaar zijn.
+- Hoofdstuk 1 (Inleiding) dekt geen leerdoelen, wellicht dat je die wilt aanpassen naar eigen smaak.
+- Hoofdstuk 2, 3, 4 en 5 bouwen op. 
+- Hoofdstuk 6 vereist hoofdstuk 2 t/m 5
+- Hoofdstuk 7 vereist hoofdstuk 2 t/m 5, maar het is logisch om eveneens hoofdstuk 6 te doen als je voor hoofdstuk 7 kiest.
+- Hoofdstuk 8 kan worden gedaan als 6 en 7 zijn overgeslagen, maar niet alle voorgestelde extra's zullen voor alle leerlingen haalbaar zijn.
 
 ## Startcode en uitwerking
 
