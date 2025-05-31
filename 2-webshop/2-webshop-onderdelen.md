@@ -1,4 +1,4 @@
-# De eerste aanpassingen
+# Webshop-onderdelen
 
 ## Uitleg: Architectuur
 :::{note} Uitleg

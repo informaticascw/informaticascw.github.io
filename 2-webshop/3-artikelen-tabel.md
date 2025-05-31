@@ -1,4 +1,4 @@
-# Producten aanpassen
+# Artikelen-tabel
 
 ## Uitleg: Gegevens toevoegen
 :::{note} Uitleg

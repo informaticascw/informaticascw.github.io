@@ -1,4 +1,4 @@
-# Frontend aanpassingen
+# Front-end
 
 ## Pas kleuren aan (css)
 

@@ -1,4 +1,4 @@
-# Kleuren aan product toevoegen
+# N:M-relatie
 In ons voorbeeld bestaat een product uit één of meer kleuren en een kleur wordt gebruikt in één of meerdere producten. Dat betekent dat er een n:m (spreek uit als "en op em") relatie tussen producten en kleuren. Andere voorbeelden van een n:m relatie zijn materialen of ingrediënten.
 
 ## Tabellen met N:M-relatie maken (uitleg)

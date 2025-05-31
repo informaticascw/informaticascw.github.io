@@ -1,5 +1,5 @@
 
-# Soort aan product toevoegen
+# 1:N-relatie
 1:n relaties toevoegen
 
 

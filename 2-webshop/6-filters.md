@@ -1,4 +1,4 @@
-# Filters maken
+# Filters
 
 ## REST-API (uitleg)
 
