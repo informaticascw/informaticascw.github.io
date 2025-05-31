@@ -52,10 +52,11 @@ In deze opdracht ga je een soort (Engels: category) toevoegen aan elk artikel in
 De soort wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
 
 :::{note}Opdracht a)
-### Tabel met soorten toevoegen
+### Soorten-tabel toevoegen
 Maak een nieuwe tabel waarin we de soorten kunnen opslaan. Noem de tabel `categories`, noem het primaire sleutelveld `id` en maak een tekstveld `name` voor de naam van de soort.
 :::
 
+(webshop-section4-opdracht1a-tips)=
 ```{hint} Tips
 :class: dropdown
 - Gebruik de SQL-opdracht `CREATE TABLE`
@@ -68,6 +69,7 @@ Maak een nieuwe tabel waarin we de soorten kunnen opslaan. Noem de tabel `catego
 Voeg de soorten die je in je winkel hebt toe aan de tabel die je zojuist gemaakt hebt. Twee bijvoorbeelden van soorten zijn Huisje en Beestje.
 :::
 
+(webshop-section4-opdracht1b-tips)=
 ```{hint} Tips
 :class: dropdown
 - gebruik de SQL-opdracht `INSERT INTO`
@@ -78,6 +80,7 @@ Voeg de soorten die je in je winkel hebt toe aan de tabel die je zojuist gemaakt
 Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constraint. Gebruik `category_id` als naam voor je verwijzende sleutel. In de constraint zet je aan welke primaire sleutel de verwijzende sleutel is gekoppeld.
 :::
 
+(webshop-section4-opdracht1c-tips)=
 ```{hint} Tips
 :class: dropdown
 - Voeg de verwijzende sleutel en de constraint toe aan de tabel `products`.
@@ -91,9 +94,10 @@ Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constra
 Voeg aan elk artikel toe welke soort erbij hoort.
 :::
 
+(webshop-section4-opdracht1d-tips)=
 ```{hint} Tips
 :class: dropdown
-- Pas de `INSERT INTO` opdracht die de `products`-tabel vult aan. 
+- Pas de `INSERT INTO`-opdracht die de `products`-tabel vult aan. 
 - Voeg het veld `category_id` toe aan `INSERT INTO products` en geef voor elk product het nummer van de soort op.
 ```
 

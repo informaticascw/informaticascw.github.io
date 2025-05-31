@@ -1,7 +1,7 @@
 # N:M-relatie
 In dit hoofdstuk ga je kleuren toevoegen aan elk product. Product is een voorbeeld van een N:M-relatie.
 
-## Tabellen met N:M-relatie maken (uitleg)
+## Uitleg: Tabellen met N:M-relatie maken
 
 :::{note} Uitleg
 
@@ -21,6 +21,7 @@ Hoe maak je deze relatie in SQL?
   - één die verwijst naar de eerste tabel  
   - één die verwijst naar de tweede tabel
 
+(webshop-section4-uitleg-SQLvoorbeeldNMrelatie)=
 ### SQL voorbeeld van tabellen met N:M-relatie
 
 ```sql
@@ -50,20 +51,57 @@ In dit voorbeeld:
 
 :::
 
-## Maak tabel met kleuren (database)
-create table
-insert
+## Opdracht: Voeg artikel-kleuren toe aan de database
 
-## Maak tabel die producten en kleuren koppelt (database)
+In deze opdracht ga je kleuren (Engels: colors) toevoegen aan elk artikel in de database. Elk artikel heeft één of meer kleuren. Een kleur wordt gebruikt in één of meer artikelen.
 
-voeg tabel toe met velden
+De kleur wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
 
-voeg constraint toe
+:::{note}Opdracht a)
+### Kleuren-tabel toevoegen
+Maak een nieuwe tabel waarin we de kleuren kunnen opslaan. Noem de tabel `colors`, noem het primaire sleutelveld `id` en maak een tekstveld `name` voor de naam van de kleur.
+:::
 
-## Geef aan welke producten en kleuren bij elkaar horen (database)
-vul verwijzingen in
+```{hint} Tips
+:class: dropdown
+- Zie de [tips bij de opdracht soorten-tabel toevoegen](#webshop-section4-opdracht1a-tips) uit het vorige hoofdstuk.
+```
 
-## JSON (uitleg)
+:::{note}Opdracht b)
+### Kleuren toevoegen aan de tabel
+Voeg kleuren toe aan de tabel die je zojuist gemaakt hebt. Voorbeelden van kleuren zijn Blauw, Rood, Geel en Wit.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Zie de [tips bij de opdracht soorten toevoegen aan de tabel](#webshop-section4-opdracht1b-tips) uit het vorige hoofdstuk.
+```
+
+:::{note}Opdracht c)
+### Maak koppel-tabel
+Omdat kleuren en artikelen een N:M relatie (veel op veel) hebben, moeten we een extra tabel maken om de kleuren aan de artikelen te koppelen. Maak daarvoor de tabel `product_color`. Voeg aan de tabel een primaire sleutel, twee verwijzende sleutels en twee constraints toe. Gebruik `product_id` en `color_id` als namen voor je verwijzende sleutels. In de constraints zet je aan welke primaire sleutel elk van de verwijzende sleutels is gekoppeld.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Voeg de verwijzende sleutels en de constraints toe aan de tabel `product_color`.
+- De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `product_color` moet je na de tabellen `products` en `colors` maken, anders dan kun je er niet naar verwijzen in je constraints in de tabel `product_color`.
+- Als je niet meer weet hoe je een constraint toevoegt, bekijk dan [Uitleg SQL voorbeeld N:M-relatie](#webshop-section4-uitleg-SQLvoorbeeldNMrelatie)
+```
+
+:::{note}Opdracht d)
+### Voeg toe welke kleuren elk artikel heeft
+Voeg aan elk artikel toe welke kleuren erin zitten.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Maak een `INSERT INTO`-opdracht die de `product_color`-tabel vult.
+- Gebruik in de `INSERT INTO`-opdracht de velden `product_id` en `color_id`.
+- Geef in je `INSERT INTO`-opdracht de nummers van de producten en kleuren die bij elkaar passen op. Elke conmbinatie is een nieuwe rij in de tabel.
+````
+
+## Uitleg: JSON
 
 :::{note} Uitleg
 ### Wat is JSON?
@@ -126,7 +164,7 @@ Dit voorbeeld bevat een lijst met producten.
 :::
 
 
-## Query met N:M-relatie maken (uitleg)
+## Uitleg: Query met N:M-relatie maken
 :::{note} uitleg
 
 ### Query met SELECT FROM JOIN JOIN voor N:M-relatie
@@ -158,8 +196,62 @@ Je krijgt dan een lijst van combinaties van kleur en product.
 
 :::
 
-## Maak query voor kleuren per product (api)
-api aanpassing: query met join
-juiste velden selecteren
+## Opdracht: Maak kleuren per artikel zichtbaar in de webshop
+Je hebt in de vorige opdracht kleur-informatie aan alle artikelen toegevoegd in de database. Maar deze informatie is nog niet te zien op de webshop. Dat komt omdat de API de kleuren niet opvraagt uit de database. Omdat er meerdere kleuren per product kunnen zijn, moeten we de kleuren in een aparte query opvragen. In deze opdracht ga je de API aanpassen, zodat de informatie over kleuren wordt toegevoegd aan de informatie over artikelen die wordt opgestuurd naar de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
 
-## Voeg kleurinformatie toe aan producten (api)
+:::{note}Opdracht
+### Maak kleuren-query en voeg die toe aan artikel-informatie in JSON-formaat
+De onderstaande code vraagt voor elk artikel de kleuren op uit de database en voegt deze toe aan de artikelinformatie (`product_rows`). De API stuurt `product_rows` in JSON-formaat naar de client. 
+
+Maak de query in de code af door op de plekken met `<maak af>` de juiste stukje query in te vullen. De query eindigt met een vraagteken `?`. Op die plek wordt steeds het `product_id` ingevuld van het product waarvan we de kleuren opvragen.
+
+```{code}python
+    # Add values for n:m property (e.g., colors) to products
+    for product in product_rows:
+        # Fetch colors for the product
+        color_query = """
+            SELECT <maak af>
+            FROM <maak af>
+            JOIN <maak af>
+            WHERE product_id = ?
+        """
+        # Execute the query to fetch colors for the current product
+        color_rows = db_connection.execute(color_query, (product["id"],)).fetchall()
+
+        # Add fetched colors to product
+        colors = []
+        for row in color_rows:
+            colors.append(row["name"])
+        product["kleur"] = colors
+```
+
+Kopieer de code op de juiste plek in de API en test of hij het doet.
+
+De front-end hoef je niet aan te passen, die is zo gemaakt dat hij alle informatie die hij van de API ontvangt automatisch toont.
+
+```{note} Performance
+:class: dropdown
+We gebruiken voor elk product een aparte query om de kleuren uit de database op te vragen. Dit is niet heel efficient, maar wel eenvoudig. In een webshop met veel meer artikelen zouden programmeurs ervoor kiezen om de kleuren van alle producten tegelijk in één query op te vragen.
+```
+
+```{note} SQL-injection
+:class: dropdown
+In onze code wordt de `execute` functie gebruikt om de query uit te voeren. De `execute`-functie vult ook de parameters in, zoals `product_id`. We hadden die parameter ook gewoon met `+` aan de query kunnen toevoegen,maar dat doen we bewust niet. 
+
+Tijdens het invullen controleert de `execute`-functie of er geen rare dingen in het `product_id` staan. In deze code komt de waarde van `product_id` uit de database waar alleen ontwikkelaars bij kunnen. Bij het hoofdstuk over filters zul je zien dat parameters ook door de client (de computer van bezoekers) opgestuurd kunnen worden. Deze parameters zouden bezoekers kunnen veranderen voordat ze ze opsturen. 
+
+Door de waarde van de parameter slim te kiezen kunnen gebruikers informatie uit de database halen die niet voor hen bedoeld is. Denk bijvoorbeeld aan een parameter `product_id` met de waarde `1; SELECT * FROM passwords;`. De database denkt dan dat hij twee opdrachten moet uitvoeren waarvan de laatste de wachtwoorden geeft. Deze truuk heet _SQL-injectie_. 
+
+In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met SQL-injectie, onder andere omdat wachtwoorden niet zomaar in een database worden gezet. Maar als je Googlet op SQL-injection, dan zie je dat het een veelvoorkomend probleem is. In onze database kan dit niet gebeuren, omdat we alle parameters door de `execute`-functie laten controlere.
+```
+
+:::
+
+```{hint} Tips
+:class: dropdown
+- De aanpassing moet je doen in de API, in het bestand `/app/main.py` bij de functie voor het endpoint `/api/products/`.
+- Let op de commentaarregel om te zien naar welke plek je de code exact moet kopieren.
+- Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
+- Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
+- Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
+```
