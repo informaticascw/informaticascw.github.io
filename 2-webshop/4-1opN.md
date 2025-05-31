@@ -47,48 +47,54 @@ In dit voorbeeld:
 
 ## Opdracht: Voeg soort artikel toe aan de database
 
+In deze opdracht ga je een soort (Engels: category) toevoegen aan elk artikel in de database. Elk artikel is van één soort. Een soort heeft één of meer artikelen.
+
+De soort wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
+
 :::{note}Opdracht a)
 ### Tabel met soorten toevoegen
-create table
+Maak een nieuwe tabel waarin we de soorten kunnen opslaan. Noem de tabel `categories`, noem het primaire sleutelveld `id` en maak een tekstveld `name` voor de naam van de soort.
 :::
 
 ```{hint} Tips
 :class: dropdown
-- xxxxxx
+- Gebruik de SQL-opdracht `CREATE TABLE`
+- Na een aanpassing moet je de database opnieuw maken met het terminal-commando `bash start.sh`. Let op of er foutmeldingen in de terminal verschijnen.
+- Als je geen producten meer ziet in je shop, dan heb je waarschijnlijk een fout gemaakt waardoor de webshop de database niet opnieuw kan maken. Bekijk de foutmeldingen in de terminal.
 ```
 
 :::{note}Opdracht b)
 ### Soorten toevoegen aan de tabel
-insert
+Voeg de soorten die je in je winkel hebt toe aan de tabel die je zojuist gemaakt hebt. Twee bijvoorbeelden van soorten zijn Huisje en Beestje.
 :::
 
 ```{hint} Tips
 :class: dropdown
-- xxxxxx
+- gebruik de SQL-opdracht `INSERT INTO`
 ```
 
 :::{note}Opdracht c)
 ### Koppel tabellen
-verwijzende sleutel
-laat de naam eindigen op _id, dan kan onze website er goed mee omgaan
-
-voeg constraint toe
-FOREIGN KEY
+Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constraint. Gebruik `category_id` als naam voor je verwijzende sleutel. In de constraint zet je aan welke primaire sleutel de verwijzende sleutel is gekoppeld.
 :::
 
 ```{hint} Tips
 :class: dropdown
-- xxxxxx
+- Voeg de verwijzende sleutel en de constraint toe aan de tabel `products`.
+- De verwijzende sleutel heeft het datatype `INTEGER`.
+- De contraint is van de vorm met `FOREIGN KEY(`_verwijzende_sleutel_`) REFERENCES(`_tabel_`.`_primaire_sleutel_`)`
+- De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `categories` moet je eerder maken dan de tabel `products`, anders dan kent de computer de tabel `categories` nog niet als je ernaar wilt verwijzen in je constraint.
 ```
 
 :::{note}Opdracht d)
 ### Voeg toe welke soort elk artikel is
-INSERT
+Voeg aan elk artikel toe welke soort erbij hoort.
 :::
 
 ```{hint} Tips
 :class: dropdown
-- xxxxxx
+- Pas de `INSERT INTO` opdracht die de `products`-tabel vult aan. 
+- Voeg het veld `category_id` toe aan `INSERT INTO products` en geef voor elk product het nummer van de soort op.
 ```
 
 ## Uitleg: Query met 1:N-relatie maken
@@ -120,22 +126,23 @@ Je krijgt dan een lijst van producten, met daarbij het merk waar ze bij horen.
 :::
 
 ## Opdracht: Maak soort artikel zichtbaar in de webshop
+Je hebt in de vorige opdracht informatie over de soort aan alle artikelen toegevoegd in de database. Maar deze informatie is nog niet te zien op de webshop. Dat komt omdat de API niks doet met de extra informatie uit de database. In deze opdracht ga je de API aanpassen, zodat de informatie over soort wordt doorgeven aan de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
 
 :::{note}Opdracht a)
-### Voeg soort toe aan query (api)
-api aanpassing: query met join
+### Voeg soort toe aan query
+Zoek in de API de query die de artikelen (`products`) opvraagt. Voeg hier een `JOIN` aan toe, zodat de informatie over soorten ook wordt opgevraagd uit de database.
 :::
 
 ```{hint} Tips
 :class: dropdown
 - De aanpassing moet je doen in de API, in het bestand `/app/main.py`
-- De query die je moet aanpassen is `SELECT * FROM Products;`
-- Voeg aan de query een `JOIN` toe tussen de tabellen `Products` en `Categories`.
+- De query die je moet aanpassen is `SELECT * FROM products;`
+- Voeg aan de query een `JOIN` toe tussen de tabellen `products` en `categories`.
 ```
 
 :::{note}Opdracht b)
-### Verwijder overbodige velden
-INSERT
+### Verwijder overbodige velden -> XXXX deze nog testen en aanvullen
+In de webshop zie je 
 
 speciale velden: name, price, description uit de tabel products worden herkend in de html en op speciale wijze getoond
 het veld id de tabel products en velden die eindigen op _id worden herkend in de html en niet getoond, deze zijn wel handig om erin te houden
