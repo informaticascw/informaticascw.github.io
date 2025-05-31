@@ -38,13 +38,26 @@ Je leert meer over REST in de volgende hoofdstukken.
 
 ## Verander het onderwerp
 
+:::{exercise} Verander het onderwerp
+Start de webshop met het commando `bash start.sh` in de terminal
+De webshop verschijnt op je scherm.
+Bovenaan de webshoppagina staat de naam van de webshop (Smurfsjop). 
+
+Verzin zelf een naam voor jouw webshop en pas de code aan, zodat jouw naam getoond wordt.
+:::
+
 ```{hint} Tips
 :class: dropdown
 - Kijk in het bestand `/static/index.html`.
 - Zoek naar de `h1` tag
 ```
 
-## Verander de achtergrond-kleur
+## Verander de kleur
+:::{exercise} Verander de kleur
+De webshop gebruikt zwarte letters op een bijna witte achtergrond en witte letters op een smurfblauwe achtergrond. 
+
+Verander de smurfblauwe kleur in een kleur die past bij jouw webshop.
+:::
 
 ```{hint} Tips
 :class: dropdown
@@ -52,16 +65,27 @@ Je leert meer over REST in de volgende hoofdstukken.
 ```
 
 ## Verander de artikelnamen
+:::{exercise} Verander de artikelnaam
+Bovenaan de plaatjes staan de namen van de artikelen die je verkoopt. 
+
+Verander de namen van artikelen in artikelen die jij wilt verkopen.
+:::
 
 ```{hint} Tips
 :class: dropdown
-- Kijk in het bestand `/data/init.sql`.
-- Start de webshop opnieuw.
+- Kijk in het bestand `/data/init.sql` en pas daar de inhoud van de juiste velden aan.
+- Start de webshop opnieuw met het terminal-commando `bash start.sh`. Tijdens het starten wordt de database opnieuw gemaakt met de commando's in het bestand init.sql
 ```
 
 ## Verander een plaatje
+:::{exercise} Verander de artikelnaam
+Voeg een nieuw plaatje toe en geef het een naam die past bij het artikel.
+:::
 
 ```{hint} Tips
 :class: dropdown
-- Kijk in de map `/static/images`.
+- Er is [meer uitleg over de ontwikkelomgeving Codespaces](#webshop-codespaces), daarin staat hoe je bestanden kunt uploaden. 
+- De bestanden met plaatjes staan in de map `/static/images`.
+- De namen van de bestanden staan in de database `/data/init.sql`.
+- Na aanpassen van het bestand `/data/init.sql` moet je de database opnieuw maken met het terminal-commando `bash start.sh`.
 ```
