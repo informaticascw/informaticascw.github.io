@@ -36,9 +36,9 @@ Je leert meer over REST in de volgende hoofdstukken.
 
 :::
 
-## Verander het onderwerp
+## Opdracht: Verander het onderwerp
 
-:::{exercise} Verander het onderwerp
+:::{note} Opdracht
 Start de webshop met het commando `bash start.sh` in de terminal
 De webshop verschijnt op je scherm.
 Bovenaan de webshoppagina staat de naam van de webshop (Smurfsjop). 
@@ -52,8 +52,8 @@ Verzin zelf een naam voor jouw webshop en pas de code aan, zodat jouw naam getoo
 - Zoek naar de `h1` tag
 ```
 
-## Verander de kleur
-:::{exercise} Verander de kleur
+## Opdracht: Verander de kleur
+:::{note} Opdracht
 De webshop gebruikt zwarte letters op een bijna witte achtergrond en witte letters op een smurfblauwe achtergrond. 
 
 Verander de smurfblauwe kleur in een kleur die past bij jouw webshop.
@@ -64,8 +64,8 @@ Verander de smurfblauwe kleur in een kleur die past bij jouw webshop.
 - Kijk in het bestand `/static/style.css`.
 ```
 
-## Verander de artikelnamen
-:::{exercise} Verander de artikelnaam
+## Opdracht: Verander de artikelnamen
+:::{note} Opdracht
 Bovenaan de plaatjes staan de namen van de artikelen die je verkoopt. 
 
 Verander de namen van artikelen in artikelen die jij wilt verkopen.
@@ -77,8 +77,8 @@ Verander de namen van artikelen in artikelen die jij wilt verkopen.
 - Start de webshop opnieuw met het terminal-commando `bash start.sh`. Tijdens het starten wordt de database opnieuw gemaakt met de commando's in het bestand init.sql
 ```
 
-## Verander een plaatje
-:::{exercise} Verander de artikelnaam
+## Opdracht: Verander een plaatje
+:::{note} Opdracht
 Voeg een nieuw plaatje toe en geef het een naam die past bij het artikel.
 :::
 

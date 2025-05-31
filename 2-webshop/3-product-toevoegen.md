@@ -39,9 +39,9 @@ INSERT INTO products (id, name, price) VALUES
 ```
 :::
 
-## Voeg artikelen toe (database)
+## Opdracht: Voeg artikelen toe
 
-:::{exercise} Voeg artikelen toe
+:::{note} Opdracht
 Voeg twee artikelen toe aan de database.
 
 Je hoeft hiervoor alleen de database aan te passen.
@@ -98,9 +98,9 @@ De puntkomma `;` wordt gebruikt als **afsluiting** van elk commando. Het maken v
 ```
 :::
 
-## Voeg artikel-beschrijvingen toe (database)
+## Opdracht: Voeg artikel-beschrijvingen toe
 
-:::{exercise} Voeg artikel-beschrijvingen toe
+:::{note} Opdracht
 Voeg aan elk artikel een beschrijving toe.
 
 Maak in de database een extra veld in de tabel product. Geef het veld de naam `beschrijving` en geef aan dat er tekst in staat. Voeg de beschrijvingen toe aan de database door het `INSERT INTO` commando aan te passen.
@@ -114,9 +114,9 @@ Je hoeft alleen de database aan te passen. De API en de front-end (het static-de
 - Let op foutmeldingen in de terminal als je de database opnieuw aanmaakt.
 ```
 
-## Voeg artikel-prijzen toe (database)
+## Opdracht: Voeg artikel-prijzen toe
 
-:::{exercise} Voeg artikel-prijzen toe
+:::{note} Opdracht
 Voeg aan elk artikel een beschrijving toe.
 
 Maak in de database een extra veld met de naam `price`. Geef aan dat er een kommagetal in staat. Voeg de prijzen toe aan de database door het `INSERT INTO` commando aan te passen.
