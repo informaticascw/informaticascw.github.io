@@ -1,4 +1,5 @@
 # Front-end
+In dit hoofdstuk ga je aanpassingen doen aan de front-end van je webshop. De front-end is het statische gedeelte van de webshop, dat draait in de browser van de bezoekers van je webshop. 
 
 ## Pas kleuren aan (css)
 

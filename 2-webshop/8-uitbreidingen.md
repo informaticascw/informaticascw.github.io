@@ -1,4 +1,5 @@
 # Uitbreidingen
+In dit hoofdstuk staan suggesties voor uitbreidingen die je kunt maken. Natuurlijk kun je ook zelf uitbreidingen verzinnen.
 
 ## Ideeen voor uitbreidingen
 - 1 pagina per product toevoegen (nieuw entrypoint :id, nieuwe static webpagina, aangepast javascript, linkje op oude webpagina)

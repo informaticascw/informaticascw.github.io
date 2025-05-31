@@ -1,4 +1,5 @@
 # Webshop-onderdelen
+In dit hoofdstuk ga je kleine aanpassingen doen in je webshop, zoals teksten, kleuren en plaatjes aanpassen. Je maakt kennis met alle onderdelen van de webshop en leert hoe die samenwerken.
 
 ## Uitleg: Architectuur
 :::{note} Uitleg

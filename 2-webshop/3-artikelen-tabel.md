@@ -1,4 +1,5 @@
 # Artikelen-tabel
+In dit hoofdstuk ga je meer artikelen toevoegen en krijgen je artikelen meer velden, zoals een beschrijving en een prijs.
 
 ## Uitleg: Gegevens toevoegen
 :::{note} Uitleg

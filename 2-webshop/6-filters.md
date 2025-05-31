@@ -1,4 +1,5 @@
 # Filters
+In dit hoofdstuk ga je filters toevoegen aan je webshop. Met filters kun je selecteren welke artikelen getoond worden.
 
 ## REST-API (uitleg)
 

@@ -1,6 +1,6 @@
 
 # 1:N-relatie
-1:n relaties toevoegen
+In dit hoofdstuk ga je een soort toevoegen aan elk product. Soort is een voorbeeld van een 1:N-relatie.
 
 
 ## Tabellen met 1:N-relatie maken (uitleg)
