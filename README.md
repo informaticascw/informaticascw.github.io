@@ -2,24 +2,15 @@
 Repository to start developing a book with MySTmd in a Codespace
 
 ## quickstart with this repo
-1. Create Codespace from this repository
-2. In terminal execute command `./start.sh`
-4. Confirm popup to MyST-static files in browser
+1. Open this repositoy in Codespaces\
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/informaticascw/informaticascw.github.io?quickstart=1)
+2. In the terminal, execute the command\
+`bash start.sh`
+3. Confirm popup to MyST-static files in browser
 
 After editing files a reload of the webpages shows the result, `start.sh` automatically rebuilds html.
 
-Output is shown in terminal. In case anything crashed, manually start `./start.sh` again, old processed will be killed.
-
-## quickstart with this repo (old version)
-1. Create Codespace from this repository
-2. In terminal execute command `cd my-book`
-3. In terminal execute command `myst start`
-4. Confirm popup to show rendered book in browser with MyST-server
-5. Edit files in /my-book to edit the book
-6. Check output in preview of VSCode (many MyST features not supported)
-7. Check output in browser with MyST-server
-8. Double check output in browser with MyST-static by executing `myst build --html` and `npx -y http-server _build/html -c-1`
-9. Push to github will deploy on github pages using `myst build --html`
+Output is shown in terminal. In case anything crashed, manually start `bash start.sh` again, old processed will be killed.
 
 ## how this repo was created
 1. Create repository
