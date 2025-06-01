@@ -151,4 +151,71 @@ Informatie in de body (bij POST en PUT)
 : De data staat niet in de link, maar wordt meegestuurd in de inhoud van het verzoek.
 :::
 
-## Zorg dat filters werken (copy code)
+## Opdracht: Filter op soort en kleur
+
+De front-end in de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. In deze opdracht gaan we aan het endpoint `/api/products` code toevoegen die zorgt dat alleen de artikelen die voldoen aan het filter worden verstuurd. 
+
+We doen dit in drie stappen, bij elke stap maken we ons filter beter. Bekijk de voorbeelden om te zien hoe het filter uiteindelijk moet gaan werken
+
+soort1 | soort2 | kleur1 | kleur 2 | getoonde artikelen
+--- | --- | --- | --- | ---
+
+
+:::{note}Opdracht a)
+### 1 soort en 1 kleur
+JOIN JOIN
+WHERE soort = ? AND kleur = ?
+:::
+
+:::{note}Opdracht b)
+### 1 of 0 soorten en 1 of 0 kleuren
+
+python:
+geen where
+wel where geen and
+where en and
+:::
+
+:::{note}Opdracht c)
+### meer soorten en meer kleuren
+WHERE IN of ( OR )
+GROUP BY
+:::
+
+
+Bij opdracht a) heb je filters gemaakt. Maar als je een artikel met een nieuwe kleur aan je database toevoegt, dan moet je het filter aanpassen voordat je op die kleur kunt filteren. Voor nu is dat misschien okee, maar in een grote webshop is dat erg onhandig. In deze opdracht ga het filter zo maken dat hij de waarden van soort en kleur uit de database haalt.
+
+Maak de twee queries in onderstaande code af. De eerts query moet alle soorten in de database geven en de tweede query alle kleuren.
+
+Kopieer de code op de juiste plek in de API en test of hij het doet.
+
+Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
+
+```{code}python
+    # Fetch all distinct categories
+    categories_query = "SELECT <maak af>"
+    categories_result = db_connection.execute(categories_query).fetchall()
+    categories = [row["name"] for row in categories_result]
+
+    # Fetch all distinct colors
+    colors_query = "SELECT <maak af>"
+    colors_result = db_connection.execute(colors_query).fetchall()
+    colors = [row["name"] for row in colors_result]
+
+    # Construct the response
+    filters = {
+        "soort": categories,
+        "kleur": colors
+    }
+```
+
+:::
+
+```{hint} Tips (XXXXXX)
+:class: dropdown
+- De aanpassing moet je doen in de API, in het bestand `/app/main.py` bij de functie voor het endpoint `/api/products/`.
+- Let op de commentaarregel om te zien naar welke plek je de code exact moet kopieren.
+- Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
+- Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
+- Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
+```

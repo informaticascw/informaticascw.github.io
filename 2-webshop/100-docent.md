@@ -51,6 +51,7 @@ Opmerkingen:
 - Hoofdstuk 6 vereist hoofdstuk 2 t/m 5
 - Hoofdstuk 7 vereist hoofdstuk 2 t/m 5, maar het is logisch om eveneens hoofdstuk 6 te doen als je voor hoofdstuk 7 kiest.
 - Hoofdstuk 8 kan worden gedaan als 6 en 7 zijn overgeslagen, maar niet alle voorgestelde extra's zullen voor alle leerlingen haalbaar zijn.
+- Hoofdstuk 6 en 7 zijn complexer, voor havo kun je die facultatief maken
 
 ## Startcode en uitwerking
 
