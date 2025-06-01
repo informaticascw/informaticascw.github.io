@@ -53,13 +53,16 @@ Een response bevat:
 - Body: De gegevens die teruggestuurd worden (bijv. een lijst, een bevestiging of een foutmelding)
 :::
 
-## Maak filters voor soort en kleur
+## Toon filters voor soort en kleur
+De front-end is al voorbereid voor het werken met filters, maar de API nog niet. In deze opdracht ga je zorgen dat de filters zichtbaar worden in de webshop. In de volgende opdracht zorg je dat alleen de artikelen worden getoond die in het filter zijn ingesteld.
 
 :::{note}Opdracht
-### Maak filters 
-XXXXXXDe onderstaande code vraagt voor elk artikel de kleuren op uit de database en voegt deze toe aan de artikelinformatie (`product_rows`). De API stuurt `product_rows` in JSON-formaat naar de client. 
+### Maak filters a)
+De front-end vraagt via het endpoint `/api/filters` de lijst met filters op. In de API is het eindpoint al gemaakt, maar het geeft een lege lijst terug. De front-end geeft alleen filters weer als de lijst niet leeg is.
 
-XXXXXXMaak de query in de code af door op de plekken met `<maak af>` de juiste stukje query in te vullen. De query eindigt met een vraagteken `?`. Op die plek wordt steeds het `product_id` ingevuld van het product waarvan we de kleuren opvragen.
+Maak een lijst met filters door onderstaande code op de juiste plaats in de API te zetten en test of het werkt.
+
+Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. De knop "Filter toepassen" werkt nog niet, dat komt in een volgende opdracht.
 
 ```{code}python
     # Construct the response
@@ -68,10 +71,6 @@ XXXXXXMaak de query in de code af door op de plekken met `<maak af>` de juiste s
         "kleur": ["rood","wit","blauw"]
     }
 ```
-
-Kopieer de code op de juiste plek in de API en test of hij het doet.
-
-Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
 
 :::
 
@@ -84,20 +83,24 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 - Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
 ```
 
-:::{note}Opdracht
+:::{note}Opdracht b)
 ### Maak filters automatisch
-XXXXXXDe onderstaande code vraagt voor elk artikel de kleuren op uit de database en voegt deze toe aan de artikelinformatie (`product_rows`). De API stuurt `product_rows` in JSON-formaat naar de client. 
+Bij opdracht a) heb je filters gemaakt. Maar als je een artikel met een nieuwe kleur aan je database toevoegt, dan moet je het filter aanpassen voordat je op die kleur kunt filteren. Voor nu is dat misschien okee, maar in een grote webshop is dat erg onhandig. In deze opdracht ga het filter zo maken dat hij de waarden van soort en kleur uit de database haalt.
 
-XXXXXXMaak de query in de code af door op de plekken met `<maak af>` de juiste stukje query in te vullen. De query eindigt met een vraagteken `?`. Op die plek wordt steeds het `product_id` ingevuld van het product waarvan we de kleuren opvragen.
+Maak de twee queries in onderstaande code af. De eerts query moet alle soorten in de database geven en de tweede query alle kleuren.
+
+Kopieer de code op de juiste plek in de API en test of hij het doet.
+
+Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
 
 ```{code}python
     # Fetch all distinct categories
-    categories_query = "SELECT name FROM categories"
+    categories_query = "SELECT <maak af>"
     categories_result = db_connection.execute(categories_query).fetchall()
     categories = [row["name"] for row in categories_result]
 
     # Fetch all distinct colors
-    colors_query = "SELECT name FROM colors"
+    colors_query = "SELECT <maak af>"
     colors_result = db_connection.execute(colors_query).fetchall()
     colors = [row["name"] for row in colors_result]
 
@@ -107,10 +110,6 @@ XXXXXXMaak de query in de code af door op de plekken met `<maak af>` de juiste s
         "kleur": colors
     }
 ```
-
-Kopieer de code op de juiste plek in de API en test of hij het doet.
-
-Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
 
 :::
 
