@@ -165,7 +165,7 @@ Dit voorbeeld bevat een lijst met producten.
 
 
 ## Uitleg: Query met N:M-relatie maken
-:::{note} uitleg
+:::{note} Uitleg
 
 ### Query met SELECT FROM JOIN JOIN voor N:M-relatie
 Bij een _N:M-relatie_ combineer je drie tabellen:
@@ -227,14 +227,12 @@ Maak de query in de code af door op de plekken met `<maak af>` de juiste stukje 
 
 Kopieer de code op de juiste plek in de API en test of hij het doet.
 
-De front-end hoef je niet aan te passen, die is zo gemaakt dat hij alle informatie die hij van de API ontvangt automatisch toont.
-
-```{note} Performance
+```{attention} Performance
 :class: dropdown
 We gebruiken voor elk product een aparte query om de kleuren uit de database op te vragen. Dit is niet heel efficient, maar wel eenvoudig. In een webshop met veel meer artikelen zouden programmeurs ervoor kiezen om de kleuren van alle producten tegelijk in één query op te vragen.
 ```
 
-```{note} SQL-injection
+```{attention} SQL-injection
 :class: dropdown
 In onze code wordt de `execute` functie gebruikt om de query uit te voeren. De `execute`-functie vult ook de parameters in, zoals `product_id`. We hadden die parameter ook gewoon met `+` aan de query kunnen toevoegen,maar dat doen we bewust niet. 
 
