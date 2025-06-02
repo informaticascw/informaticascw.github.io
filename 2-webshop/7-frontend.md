@@ -1,11 +1,10 @@
 # Front-end
 In dit hoofdstuk ga je aanpassingen doen aan de front-end van je webshop. De front-end is het statische gedeelte van de webshop, dat draait in de browser van de bezoekers van je webshop. 
 
-## Pas kleuren aan (css)
+## Opdracht: Maak aparte bestelpagina
+In deze opdracht ga je een HTML-pagina toevoegen.
 
-## Maak aparte bestelpagina (html)
-
-## DOM
+## Uitleg: DOM
 
 :::{note} Uitleg
 
@@ -54,4 +53,5 @@ Dit verandert de echte knop op de pagina, want `knop` wijst naar het originele o
 
 :::
 
-## Maak aparte pagina per product (javascript)
+## Opdracht: Maak aparte pagina per product
+In deze opdracht ga je een HTML-pagina met JavaScript toevoegen en een nieuw entry-point aan de API toevoegen.
