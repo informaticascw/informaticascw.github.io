@@ -10,7 +10,7 @@ In deze opdracht ga je een HTML-pagina toevoegen.
 
 ### Wat is het DOM?
 
-De DOM (Document Object Model) is een boomstructuur die je browser maakt van een HTML-pagina.  
+De DOM (Document Object Model) is een boomstructuur die je browser maakt van een HTML-pagina.
 Elke tag in de HTML (zoals `<h1>`, `<div>`, `<p>`) wordt een object in die boom. 
 JavaScript kan via de DOM elementen zoeken, toevoegen, of aanpassen.
 
@@ -20,7 +20,7 @@ JavaScript is een programmeertaal die elke browser begrijpt. Veel webpagina's be
 
 Met JavaScript kun je bestaande elementen op verschillenden manieren in de DOM zoeken, bijvoorbeeld:
 
-```javascript
+```{code} javascript
 element = document.getElementById("mijn-lijst");
 anotherElement = document.querySelector(".knop");
 ```
@@ -29,7 +29,7 @@ anotherElement = document.querySelector(".knop");
 
 Je kunt nieuwe elementen maken en aan de DOM toevoegen:
 
-```javascript
+```{code} javascript
 parent = document.getElementById("mijn-lijst");
 let newChild = document.createElement("li");
 newChild.textContent = "Hallo!";
@@ -44,7 +44,7 @@ Je kunt een DOM-element aanpassen door het in een variabele te stoppen en vervol
 
 Voorbeeld:
 
-```javascript
+```{code} javascript
 let knop = document.querySelector(".knop");
 knop.textContent = "Klik hier!";
 ```
