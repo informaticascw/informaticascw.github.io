@@ -69,7 +69,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 :linenos:
     # Construct the response
     filters = {
-        "soort": ["mooi","lelijk"],
+        "soort": ["poppetje","huisje"],
         "kleur": ["rood","wit","blauw"]
     }
 ```
