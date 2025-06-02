@@ -64,7 +64,9 @@ Maak een lijst met filters door onderstaande code op de juiste plaats in de API 
 
 Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. De knop "Filter toepassen" werkt nog niet, dat komt in een volgende opdracht.
 
-```{code}python
+```{code} python
+:caption: Python-code
+:linenos:
     # Construct the response
     filters = {
         "soort": ["mooi","lelijk"],
@@ -93,7 +95,9 @@ Kopieer de code op de juiste plek in de API en test of hij het doet.
 
 Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
 
-```{code}python
+```{code} python
+:caption: Python-code
+:linenos:
     # Fetch all distinct categories
     categories_query = "SELECT <maak af>"
     categories_result = db_connection.execute(categories_query).fetchall()
@@ -153,72 +157,115 @@ Informatie in de body (bij POST en PUT)
 
 ## Opdracht: Laat filters op soort en kleur werken
 
-De front-end in de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. In deze opdracht gaan we aan het endpoint `/api/products` code toevoegen die zorgt dat alleen de artikelen die voldoen aan het filter worden verstuurd. 
+De front-end in de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. Om alleen de artikelen terug te sturen die aan het filter voldoen, moet je in de API een `WHERE`-clausule toe voegen aan het `SELECT`-commando dat de artikel-informatie uit de database ophaalt. Bekijk de tabel om te zien hoe het filter uiteindelijk moet gaan werken.
 
-We doen dit in vier stappen, bij elke stap maken we ons filter beter. Bekijk de voorbeelden om te zien hoe het filter uiteindelijk moet gaan werken
+:::{table} Werking van filter
 
-soort1 | soort2 | kleur1 | kleur 2 | getoonde artikelen
---- | --- | --- | --- | ---
+poppetje | huisje | rood | wit | blauw | getoonde artikelen | WHERE-clausule
+:---: | :---: | :---: | :---: | :---: | --- | ---
+☐ | ☐ | ☐ | ☐ | ☐ | alle artikelen | geen
+☑ | ☐ | ☐ | ☐ | ☐ | artikelen met poppetje, de kleur maakt niet uit | `WHERE soort IN["poppetje"]`
+☑ | ☑ | ☐ | ☐ | ☐ | artikelen met (poppetje of huisje), de kleur maakt niet uit | `WHERE soort IN["poppetje", "huisje"]`
+☐ | ☐ | ☑ | ☐ | ☐ | artikelen met rood, de soort maakt niet uit | `WHERE kleur IN["rood"]`
+☑ | ☐ | ☑ | ☐ | ☐ | artikelen met poppetje en rood | `WHERE soort IN["huisje"] AND kleur IN["rood"]`
+☑ | ☑ | ☐ | ☑ | ☑ | artikelen met (poppetje of huisje) en (wit of blauw) | `WHERE soort IN["poppetje", "huisje"] AND kleur IN["wit", "blauw"]`
 
+:::
+
+
+Je gaat het filter stap voor stap maken in a) tot en met d) van deze opdracht. Je moet daarbij Python-code toevoegen aan de API.
 
 :::{note}Opdracht a)
-### 1 soort
-::::
+### filter op 0 of 1 soorten
+
+0 of 1 soorten
+```{code} pseudo 
+:caption: Pseudo-code
+:linenos:
+    als aantal_soorten > 0
+        plak ` WHERE ` aan query
+        
+    als aantal_soorten > 0
+        plak `soorten IN [1e_soort ` aan query
+        plak 1e_soort aan parameter-list
+        plak `]` aan query         
+```
+
+xxxxxx code must be changed a little to make it fit 100% with pseudocode
+```{code} python
+:caption: Python-code
+:linenos:
+    # Filter soort (category in database)
+    category_params = soort
+    category_filters = []
+    if len(category_params) > 0:
+        placeholders = "?"
+        for i in range(1, len(category_params)):
+            placeholders = placeholders + ", ?"
+        category_filters = ["cat.name IN (" + placeholders + ")"]
+```
+:::
 
 :::{note}Opdracht b)
-### 1 soort en 1 kleur
-JOIN JOIN
-WHERE soort = ? AND kleur = ?
+### filter op 0, 1 of meer soorten
+
+0,1 of meer soorten
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
+:emphasize-lines: 7,8,9
+    als aantal_soorten > 0
+        plak ` WHERE ` aan query
+
+    als aantal soorten > 0
+        plak `soorten IN [1e_soort ` aan query
+        plak 1e_soort aan parameter-list
+    voor de 2e tot en met de laatste soort
+        plak `, volgende_soort` aan query
+        plak volgende_soort aan parameter-list 
+    als aantal_soorten > 0
+        plak `]` aan query       
+```
 :::
 
 :::{note}Opdracht c)
-### 1 of 0 soorten en 1 of 0 kleuren
+### Voorbereiding voor filteren op kleuren
 
-python:
-geen where
-wel where geen and
-where en and
+
+kleuren toevoegen met JOIN JOIN
+
+dubbele artikelnummers voorkomen met GROUP BY
+
 :::
 
 :::{note}Opdracht d)
-### meer soorten en meer kleuren
-WHERE IN of ( OR )
-GROUP BY
+### filter op 0, 1 of meer soorten en 0, 1 of meer kleuren
+
+```{code} pseudo
+:caption: Pseudo-code
+:linenos:
+:emphasize-lines: 1,13,14,15,16,17,18,19,20,21,22
+    als aantal_soorten > 0 of aantal_kleuren > 0
+        plak ` WHERE ` aan query
+
+    als aantal soorten > 0
+        plak `soorten IN [1e_soort ` aan query
+        plak 1e_soort aan parameter-list
+    voor de 2e tot en met de laatste soort
+        plak `, volgende_soort` aan query
+        plak volgende_soort aan parameter-list 
+    als aantal_soorten > 0
+        plak `]` aan query
+
+    als aantal_soorten > 0 en aantal_kleuren > 0
+        plak ` AND ` aan query     
+    als aantal kleuren > 0
+        plak `kleuren IN [1e_kleur ` aan query
+        plak 1e_kleur aan parameter-list
+    voor de 2e tot en met de laatste kleur
+        plak `, volgende_kleur` aan query
+        plak volgende_kleur aan parameter-list 
+    als aantal_kleuren > 0
+        plak `]` aan query   
+```
 :::
-
-
-### oud spul -> weghalen (XXXXXXX)
-Bij opdracht a) heb je filters gemaakt. Maar als je een artikel met een nieuwe kleur aan je database toevoegt, dan moet je het filter aanpassen voordat je op die kleur kunt filteren. Voor nu is dat misschien okee, maar in een grote webshop is dat erg onhandig. In deze opdracht ga het filter zo maken dat hij de waarden van soort en kleur uit de database haalt.
-
-Maak de twee queries in onderstaande code af. De eerts query moet alle soorten in de database geven en de tweede query alle kleuren.
-
-Kopieer de code op de juiste plek in de API en test of hij het doet.
-
-Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
-
-```{code}python
-    # Fetch all distinct categories
-    categories_query = "SELECT <maak af>"
-    categories_result = db_connection.execute(categories_query).fetchall()
-    categories = [row["name"] for row in categories_result]
-
-    # Fetch all distinct colors
-    colors_query = "SELECT <maak af>"
-    colors_result = db_connection.execute(colors_query).fetchall()
-    colors = [row["name"] for row in colors_result]
-
-    # Construct the response
-    filters = {
-        "soort": categories,
-        "kleur": colors
-    }
-```
-
-```{hint} Tips (XXXXXX)
-:class: dropdown
-- De aanpassing moet je doen in de API, in het bestand `/app/main.py` bij de functie voor het endpoint `/api/products/`.
-- Let op de commentaarregel om te zien naar welke plek je de code exact moet kopieren.
-- Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
-- Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
-- Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
-```
