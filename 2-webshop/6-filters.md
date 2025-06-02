@@ -56,8 +56,8 @@ Een response bevat:
 ## Opdracht: Toon filters voor soort en kleur
 De front-end is al voorbereid voor het werken met filters, maar de API nog niet. In deze opdracht ga je zorgen dat de filters zichtbaar worden in de webshop. In de volgende opdracht zorg je dat alleen de artikelen worden getoond die in het filter zijn ingesteld.
 
-:::{note}Opdracht
-### Maak filters a)
+:::{note}Opdracht a)
+### Maak filters
 De front-end vraagt via het endpoint `/api/filters` de lijst met filters op. In de API is het eindpoint al gemaakt, maar het geeft een lege lijst terug. De front-end geeft alleen filters weer als de lijst niet leeg is.
 
 Maak een lijst met filters door onderstaande code op de juiste plaats in de API te zetten en test of het werkt.
@@ -78,11 +78,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 ```{hint} Tips (XXXXXX)
 :class: dropdown
-- De aanpassing moet je doen in de API, in het bestand `/app/main.py` bij de functie voor het endpoint `/api/products/`.
-- Let op de commentaarregel om te zien naar welke plek je de code exact moet kopieren.
-- Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
-- Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
-- Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
+- xxxxxx
 ```
 
 :::{note}Opdracht b)
@@ -119,11 +115,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 ```{hint} Tips (XXXXXX)
 :class: dropdown
-- De aanpassing moet je doen in de API, in het bestand `/app/main.py` bij de functie voor het endpoint `/api/products/`.
-- Let op de commentaarregel om te zien naar welke plek je de code exact moet kopieren.
-- Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
-- Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
-- Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
+- xxxxxx
 ```
 
 ## Uitleg: Extra gegevens in een request
