@@ -164,21 +164,24 @@ De front-end in de webshop stuurt het filter als query-parameter mee naar het en
 poppetje | huisje | rood | wit | blauw | getoonde artikelen | WHERE-clausule
 :---: | :---: | :---: | :---: | :---: | --- | ---
 ☐ | ☐ | ☐ | ☐ | ☐ | alle artikelen | geen
-☑ | ☐ | ☐ | ☐ | ☐ | artikelen met poppetje, de kleur maakt niet uit | `WHERE soort IN["poppetje"]`
-☑ | ☑ | ☐ | ☐ | ☐ | artikelen met (poppetje of huisje), de kleur maakt niet uit | `WHERE soort IN["poppetje", "huisje"]`
-☐ | ☐ | ☑ | ☐ | ☐ | artikelen met rood, de soort maakt niet uit | `WHERE kleur IN["rood"]`
-☑ | ☐ | ☑ | ☐ | ☐ | artikelen met poppetje en rood | `WHERE soort IN["huisje"] AND kleur IN["rood"]`
-☑ | ☑ | ☐ | ☑ | ☑ | artikelen met (poppetje of huisje) en (wit of blauw) | `WHERE soort IN["poppetje", "huisje"] AND kleur IN["wit", "blauw"]`
+☑ | ☐ | ☐ | ☐ | ☐ | artikelen met poppetje, de kleur maakt niet uit | `WHERE soort IN ("poppetje")`
+☑ | ☑ | ☐ | ☐ | ☐ | artikelen met (poppetje of huisje), de kleur maakt niet uit | `WHERE soort IN ("poppetje", "huisje")`
+☐ | ☐ | ☑ | ☐ | ☐ | artikelen met rood, de soort maakt niet uit | `WHERE kleur IN ("rood")`
+☑ | ☐ | ☑ | ☐ | ☐ | artikelen met poppetje en rood | `WHERE soort IN ("poppetje") AND kleur IN ("rood")`
+☑ | ☑ | ☐ | ☑ | ☑ | artikelen met (poppetje of huisje) en (wit of blauw) | `WHERE soort IN ("poppetje", "huisje") AND kleur IN ("wit", "blauw")`
 
 :::
 
 
-Je gaat het filter stap voor stap maken in a) tot en met d) van deze opdracht. Je moet daarbij Python-code toevoegen aan de API.
+Je gaat het filter stap voor stap maken in a) tot en met d) van deze opdracht. Je moet daarbij SQL en Python-code toevoegen aan de API.
 
 :::{note}Opdracht a)
-### filter op 0 of 1 soorten
+### Filter op 0 of 1 soorten
 
-0 of 1 soorten
+Onderstaande pseudo-code en bijpassende python-code zorgen ervoor dat het filter werkt als er nul, één of meerdere soorten geselecteerd zijn. Bestudeer de pseudo-code en de Python-code. 
+
+Knip en plak de Python-code op de juiste plek in de API en controleer of de eerste twee voorbeelden uit de tabel goed werken.
+
 ```{code} pseudo 
 :caption: Pseudo-code
 :linenos:
@@ -186,9 +189,9 @@ Je gaat het filter stap voor stap maken in a) tot en met d) van deze opdracht. J
         plak ` WHERE ` aan query
         
     als aantal_soorten > 0
-        plak `soorten IN [1e_soort ` aan query
+        plak `soorten IN (1e_soort ` aan query
         plak 1e_soort aan parameter-list
-        plak `]` aan query         
+        plak `)` aan query         
 ```
 
 xxxxxx code must be changed a little to make it fit 100% with pseudocode
@@ -207,9 +210,12 @@ xxxxxx code must be changed a little to make it fit 100% with pseudocode
 :::
 
 :::{note}Opdracht b)
-### filter op 0, 1 of meer soorten
+### Filter op 0, 1 of meer soorten
 
-0,1 of meer soorten
+Onderstaande pseudo-code is een uitbreiding op de pseudo-code uit onderdeel a). De nieuwe regels zijn gemarkeerd. 
+
+Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in de pseudo-code. Controleer of de eerste drie voorbeelden uit de tabel goed werken.
+
 ```{code} pseudo
 :caption: Pseudo-code
 :linenos:
@@ -218,28 +224,49 @@ xxxxxx code must be changed a little to make it fit 100% with pseudocode
         plak ` WHERE ` aan query
 
     als aantal soorten > 0
-        plak `soorten IN [1e_soort ` aan query
+        plak `soorten IN (1e_soort ` aan query
         plak 1e_soort aan parameter-list
     voor de 2e tot en met de laatste soort
         plak `, volgende_soort` aan query
         plak volgende_soort aan parameter-list 
     als aantal_soorten > 0
-        plak `]` aan query       
+        plak `)` aan query       
 ```
 :::
 
 :::{note}Opdracht c)
 ### Voorbereiding voor filteren op kleuren
 
+In onderdeel a) en b) heb je met `WHERE` gefilterd op het veld `soort`. Dat kon omdat in de query stond 
+- `SELECT` ... `category.name AS soort` en 
+- `JOIN categories ON product.category_id = category.id`
 
-kleuren toevoegen met JOIN JOIN
+Voeg de kleuren toe aan het resultaat van de query. Dit kan met de volgende drie regels.
+```{code} SQL
+SELECT <velden die er al staan>, color.name AS kleur
+LEFT JOIN product_color ON <maak af>
+LEFT JOIN color ON <maak af>
+```
 
-dubbele artikelnummers voorkomen met GROUP BY
+Omdat kleur een N:M relatie is, wordt elk artikel zoveel keer in het resultaat genoemd als er kleuren van dat artikel zijn. Dus een artikel de kleuren `wit` en `blauw` heeft, dan wordt het twee keer opgenomen in de ongefilterde lijst met artikelen. Dat is nodig om met `WHERE` op meerdere kleuren te kunnen filteren. In de artikelen-lijst die verzonden wordt mag elk artikel maximaal één keer voorkomen.
 
+Voeg de volgende regel toe aan de query, zodat gefilterde artikelen maximaal één keer in de lijst voorkomen. Controleer of de eerste drie regels uit de tabel het nog goed doen.
+```{code} SQL
+GROUP BY product.id
+```
+
+```{hint} Tips
+:class: dropdown
+- `GROUP BY` komt na `WHERE`, voeg `GROUP BY` dus helemaal aan het einde van de query toe.
+```
 :::
 
 :::{note}Opdracht d)
-### filter op 0, 1 of meer soorten en 0, 1 of meer kleuren
+### Filter op 0, 1 of meer soorten en 0, 1 of meer kleuren
+
+Onderstaande pseudo-code is een uitbreiding op de pseudo-code uit onderdeel b). De gewijzigde en nieuwe regels zijn gemarkeerd. 
+
+Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in de pseudo-code. Controleer of alle voorbeelden uit de tabel goed werken.
 
 ```{code} pseudo
 :caption: Pseudo-code
@@ -249,23 +276,23 @@ dubbele artikelnummers voorkomen met GROUP BY
         plak ` WHERE ` aan query
 
     als aantal soorten > 0
-        plak `soorten IN [1e_soort ` aan query
+        plak `soorten IN (1e_soort ` aan query
         plak 1e_soort aan parameter-list
     voor de 2e tot en met de laatste soort
         plak `, volgende_soort` aan query
         plak volgende_soort aan parameter-list 
     als aantal_soorten > 0
-        plak `]` aan query
+        plak `)` aan query
 
     als aantal_soorten > 0 en aantal_kleuren > 0
         plak ` AND ` aan query     
     als aantal kleuren > 0
-        plak `kleuren IN [1e_kleur ` aan query
+        plak `kleuren IN (1e_kleur ` aan query
         plak 1e_kleur aan parameter-list
     voor de 2e tot en met de laatste kleur
         plak `, volgende_kleur` aan query
         plak volgende_kleur aan parameter-list 
     als aantal_kleuren > 0
-        plak `]` aan query   
+        plak `)` aan query   
 ```
 :::
