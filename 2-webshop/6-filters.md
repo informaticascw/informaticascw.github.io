@@ -1,7 +1,7 @@
 # Filters
 In dit hoofdstuk ga je filters toevoegen aan je webshop. Met filters kun je selecteren welke artikelen getoond worden.
 
-## REST-API (uitleg)
+## Uitleg: REST-API
 
 :::{note} Uitleg
 ### REST
@@ -53,7 +53,7 @@ Een response bevat:
 - Body: De gegevens die teruggestuurd worden (bijv. een lijst, een bevestiging of een foutmelding)
 :::
 
-## Toon filters voor soort en kleur
+## Opdracht: Toon filters voor soort en kleur
 De front-end is al voorbereid voor het werken met filters, maar de API nog niet. In deze opdracht ga je zorgen dat de filters zichtbaar worden in de webshop. In de volgende opdracht zorg je dat alleen de artikelen worden getoond die in het filter zijn ingesteld.
 
 :::{note}Opdracht
@@ -151,23 +151,27 @@ Informatie in de body (bij POST en PUT)
 : De data staat niet in de link, maar wordt meegestuurd in de inhoud van het verzoek.
 :::
 
-## Opdracht: Filter op soort en kleur
+## Opdracht: Laat filters op soort en kleur werken
 
 De front-end in de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. In deze opdracht gaan we aan het endpoint `/api/products` code toevoegen die zorgt dat alleen de artikelen die voldoen aan het filter worden verstuurd. 
 
-We doen dit in drie stappen, bij elke stap maken we ons filter beter. Bekijk de voorbeelden om te zien hoe het filter uiteindelijk moet gaan werken
+We doen dit in vier stappen, bij elke stap maken we ons filter beter. Bekijk de voorbeelden om te zien hoe het filter uiteindelijk moet gaan werken
 
 soort1 | soort2 | kleur1 | kleur 2 | getoonde artikelen
 --- | --- | --- | --- | ---
 
 
 :::{note}Opdracht a)
+### 1 soort
+::::
+
+:::{note}Opdracht b)
 ### 1 soort en 1 kleur
 JOIN JOIN
 WHERE soort = ? AND kleur = ?
 :::
 
-:::{note}Opdracht b)
+:::{note}Opdracht c)
 ### 1 of 0 soorten en 1 of 0 kleuren
 
 python:
@@ -176,13 +180,14 @@ wel where geen and
 where en and
 :::
 
-:::{note}Opdracht c)
+:::{note}Opdracht d)
 ### meer soorten en meer kleuren
 WHERE IN of ( OR )
 GROUP BY
 :::
 
 
+### oud spul -> weghalen (XXXXXXX)
 Bij opdracht a) heb je filters gemaakt. Maar als je een artikel met een nieuwe kleur aan je database toevoegt, dan moet je het filter aanpassen voordat je op die kleur kunt filteren. Voor nu is dat misschien okee, maar in een grote webshop is dat erg onhandig. In deze opdracht ga het filter zo maken dat hij de waarden van soort en kleur uit de database haalt.
 
 Maak de twee queries in onderstaande code af. De eerts query moet alle soorten in de database geven en de tweede query alle kleuren.
@@ -208,8 +213,6 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
         "kleur": colors
     }
 ```
-
-:::
 
 ```{hint} Tips (XXXXXX)
 :class: dropdown
