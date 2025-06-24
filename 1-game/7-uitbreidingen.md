@@ -4,7 +4,23 @@
 Voorbeeld van een spelletje met uitbreidingen.
 ```
 
-Nu je basisgame af is kan het echte werk beginnen. Voeg een aantal uitbreidingen toe aan je game. Gebruik je creativiteit en laat zien dat je complexere code aankunt. Een aantal voorbeelden van uitbreidingen zijn hieronder aangeven, maar je kunt ook uitbreidingen toevoegen die je zelf hebt bedacht. Het aantal 🌜(maan) geeft aan hoe moeilijk de code voor de uitbreiding is. Het aantal 🌞 (zon) geeft aan hoeveel functionaliteit het toevoegt. Overleg met je docent welke uitbreidingen je kunt gaan maken.
+Nu je basisgame af is kan het echte werk beginnen. Voeg een aantal uitbreidingen toe aan je game. Gebruik je creativiteit en laat zien dat je complexere code aankunt. 
+
+## Arcadekast
+
+Als je wilt dat je spel gespeeld kan worden in de arcadekast op school, dan moet je aan de volgende eisen voldoen:
+
+1. Je spel gebruikt de toetsen uit de onderstaande toetsenbord-mapping.
+2. Het bestand `metadata.json` in de hoofdmap van je startcode heb je aangepast.
+3. De inhoud van het bestand `screenshot.jpg` heb je vervangen door een schermafdruk van jouw spel (maximaal 300 Kb).
+
+```{figure} arcade-keys.png
+Toetsenbord-mapping van de arcadekast.
+```
+
+## Voorbeelden
+
+Een aantal voorbeelden van uitbreidingen zijn hieronder aangeven, maar je kunt ook uitbreidingen toevoegen die je zelf hebt bedacht. Het aantal 🌜(maan) geeft aan hoe moeilijk de code voor de uitbreiding is. Het aantal 🌞 (zon) geeft aan hoeveel functionaliteit het toevoegt. Overleg met je docent welke uitbreidingen je kunt gaan maken.
 
 Uitbreiding: Bal die steeds sneller gaat 
 : Een eenvoudige manier om dit te doen, is telkens als er een blok verwijderd wordt, de snelheid van het blok in de x en y richting te vermenigvuldigen met een kommagetal dat groter is dan 1.0. Op deze manier kan het met twee regels code en maakt je spelletje een heel klein beetje spannender. Dit is een makkelijke uitbreiding, nog niet genoeg om een maantje of zonnetje te verdienen.
