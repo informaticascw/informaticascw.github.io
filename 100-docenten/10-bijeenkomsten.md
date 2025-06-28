@@ -16,7 +16,7 @@ Emmauscollege Rotterdam
 : [games spelen in je browser](https://informatica.emmauscollege.nl/arcade)
 : [github repository](https://github.com/emmauscollege/arcade)
 
-Stanislascollege Delft 
+Stanislascollege Westplantsoen Delft 
 : [github repository](https://github.com/informaticascw/arcade)
 
 Walburg College Zwijdrecht 
