@@ -19,7 +19,7 @@ Emmauscollege Rotterdam
 Stanislascollege Westplantsoen Delft 
 : [github repository](https://github.com/informaticascw/arcade)
 
-Walburg College Zwijdrecht 
+Walburg College Zwijndrecht 
 : [games spelen in je browser](https://adriaangijssen.nl/arcade/)
 
 Lek en Linge
