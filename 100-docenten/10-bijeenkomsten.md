@@ -12,14 +12,14 @@ Locatie: Universiteit Utrecht
 
 ### Scholen met een Arcade
 
-Emmauscollege Rotterdam
+Emmauscollege, Rotterdam
 : [games spelen in je browser](https://informatica.emmauscollege.nl/arcade)
 : [github repository](https://github.com/emmauscollege/arcade)
 
-Stanislascollege Westplantsoen Delft 
+Stanislascollege Westplantsoen, Delft 
 : [github repository](https://github.com/informaticascw/arcade)
 
-Walburg College Zwijndrecht 
+Guide de Brès, Rotterdam 
 : [games spelen in je browser](https://adriaangijssen.nl/arcade/)
 
 Lek en Linge
