@@ -10,6 +10,6 @@ authors:
 
 Hier vind je alle informatie over de Python Game opdracht.
 
-```{figure} cover.png
+```{figure} 1-game/cover.png
 Plaatje van https://openai.com/chatgpt/
 ```

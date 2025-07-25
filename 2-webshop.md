@@ -10,7 +10,7 @@ authors:
 
 Hier vind je alle informatie over de SQL Webshop opdracht.
 
-```{figure} cover.png
+```{figure} 2-webshop/cover.png
 Plaatje van webshop.
 ```
 
