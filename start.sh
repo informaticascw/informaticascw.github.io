@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Version 1.6.0 introduced a bug for static hosting where the menu continuously collopases
+# untill this bug is fixed, we re-install version 1.5.0 of mystmd
+pip install --force-reinstall -v mystmd==1.5.0 
+
 DEBOUNCE=5 # number of seconds after last file change to start building
 
 # Stop script as soon as any command returns error
