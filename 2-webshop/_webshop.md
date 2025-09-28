@@ -17,7 +17,8 @@ Plaatje van webshop.
 ```{warning} Work in progress
 In het schooljaar 25/26 gaan we starten met deze opdracht, tot die tijd zijn we bezig met de ontwikkeling. 
 
-Status (last updated 2 juni)
+Status (last updated 29 sept 2025)
+2do: uitleg volgorde wisselen (bijv json na maken tabellen)
 - hoofdstuk 1 inleiding 50%
 - hoofdstuk 2 100% gereed
 - hoofdstuk 3 100% gereed
