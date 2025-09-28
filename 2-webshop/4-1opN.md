@@ -142,20 +142,28 @@ Zoek in de API de query die de artikelen (`products`) opvraagt. Voeg hier een `J
 - De aanpassing moet je doen in de API, in het bestand `/app/main.py`
 - De query die je moet aanpassen is `SELECT * FROM products;`
 - Voeg aan de query een `JOIN` toe tussen de tabellen `products` en `categories`.
+- Als je op de plaats van de naam van je product de naam van de soort ziet, dan komt dat omdat onze client `products.name` met `categories.name` overschrijft. Laat dat voor nu even zo, in de volgende opdracht leer je hoe je dit oplost.
 ```
 
 :::{note}Opdracht b)
-### Verwijder overbodige velden -> XXXX deze nog testen en aanvullen
-In de webshop zie je 
+### Veldnamen opschonen
+De website gebruikt de namen van de velden uit de database. Dit geeft twee schoonheidsproblemen in de website.
 
-speciale velden: name, price, description uit de tabel products worden herkend in de html en op speciale wijze getoond
-het veld id de tabel products en velden die eindigen op _id worden herkend in de html en niet getoond, deze zijn wel handig om erin te houden
+1. De webpagina toont alle velden uit de database. De velden met verwijzende sleutels worden getoond, maar die zijn niet nuttig voor gebruikers.
+2. De veldnamen in de database zijn Engelstalig. Dat is handig voor programmeurs, maar onze gebruikers zijn vaak Nederlandstalig. 
 
-de website gebruikt de naam van de velden, meestal zijn die Engelstalig. Het is handig om die in de api aan te passen
-AS gebruiken
+Pas de query in de api aan op de volgende punten.
+
+1. Vervang `*` (dit betekent: alle velden) uit de query door de namen van de velden die je nodig hebt.
+2. Gebruik `AS` om velden een Nederlandse naam te geven.
+3. Velden met de naam `name`, `image_link` en `price` uit de tabel products moet je in je query opnemen zonder de naam te veranderen. Deze veldnamen worden door de website herkent en speciaal behandeld.
 :::
 
 ```{hint} Tips
 :class: dropdown
-- xxxxxx
+- De query die je moet aanpassen is `SELECT * FROM products JOIN ...`
+- In de query moet je `SELECT * FROM` vervangen door `SELECT products.name, products.image_link, products.price ... FROM`. Op de puntjes vul je de overige veldnamen in.
+- Je kunt velden een andere naam in de website geven met `AS`. Bijvoorbeeld `SELECT description` vervangen door `SELECT description AS beschrijving`.
+- In de database kun je dezelfde veldnamen in meerdere tabellen gebruiken. Onze api stuurt de namen van de velden zonder tabelnaam naar de client. De client ziet daardoor het verschil niet tussen velden met dezelfde naam uit verschillende tabellen. Je kunt dat oplossen in de query die je in de api gebruikt. Daar kun je de velden met dezelfde naam een unieke naam geven.
+Bijvoorbeeld: `SELECT product.name, category.name` wordt `SELECT product.name, category.naam AS soort`
 ```
