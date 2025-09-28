@@ -64,7 +64,7 @@ Maak een nieuwe tabel waarin we de kleuren kunnen opslaan. Noem de tabel `colors
 
 ```{hint} Tips
 :class: dropdown
-- Zie de [tips bij de opdracht soorten-tabel toevoegen](#webshop-section4-opdracht1a-tips) uit het vorige hoofdstuk.
+- Zie de [tips bij de opdracht merken-tabel toevoegen](#webshop-section4-opdracht1a-tips) uit het vorige hoofdstuk.
 ```
 
 :::{note}Opdracht b)
@@ -74,7 +74,7 @@ Voeg kleuren toe aan de tabel die je zojuist gemaakt hebt. Voorbeelden van kleur
 
 ```{hint} Tips
 :class: dropdown
-- Zie de [tips bij de opdracht soorten toevoegen aan de tabel](#webshop-section4-opdracht1b-tips) uit het vorige hoofdstuk.
+- Zie de [tips bij de opdracht merken toevoegen aan de tabel](#webshop-section4-opdracht1b-tips) uit het vorige hoofdstuk.
 ```
 
 :::{note}Opdracht c)

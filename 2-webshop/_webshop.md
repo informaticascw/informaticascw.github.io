@@ -23,7 +23,7 @@ Status (last updated 2 juni)
 - hoofdstuk 3 100% gereed
 - hoofdstuk 4 100% gereed
 - hoofdstuk 5 100% gereed
-- hoofdstuk 6 70% gereed
+- hoofdstuk 6 70% gereed => 2do: client ipv frontend, initiele filters conform eerder hoofdstukken, uibreidingen conform game, bij inleiding of uitbreidingen toevoegen dat er een bestandje moet zijn met uitbreidingen (en dat bestand in repo zetten)
 - hoofdstuk 7 30% gereed
 - hoofdstuk 8 30% gereed
 - hoofdstuk 9 80% gereed
