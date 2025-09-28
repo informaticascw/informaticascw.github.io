@@ -19,8 +19,10 @@ In het schooljaar 25/26 gaan we starten met deze opdracht, tot die tijd zijn we 
 
 Status (last updated 2 juni)
 - hoofdstuk 1 inleiding 50%
-- hoofdstuk 2, 3, 4 100% gereed
-- hoofdstuk 5 80% gereed
+- hoofdstuk 2 100% gereed
+- hoofdstuk 3 100% gereed
+- hoofdstuk 4 100% gereed
+- hoofdstuk 5 100% gereed
 - hoofdstuk 6 70% gereed
 - hoofdstuk 7 30% gereed
 - hoofdstuk 8 30% gereed
