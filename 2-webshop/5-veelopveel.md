@@ -1,17 +1,17 @@
-# N:M-relatie
-In dit hoofdstuk ga je kleuren toevoegen aan elk product. Product is een voorbeeld van een N:M-relatie.
+# n:m-relatie
+In dit hoofdstuk ga je kleuren toevoegen aan elk product. Kleur en product hebben een n:m-relatie.
 
-## Uitleg: Tabellen met N:M-relatie maken
+## Uitleg: Tabellen met n:m-relatie maken
 
 :::{note} Uitleg
 
-### Wat is een N:M-relatie?
+### Wat is een n:m-relatie?
 
-Een _N:M-relatie_ (spreek uit als "en op em relatie") betekent:  
+Een _n:m-relatie_ (spreek uit: _en op em relatie_) wordt ook wel een _veel-op-veel-relatie_ (Engels: _many to many relationship_) genoemd. Twee tabellen hebben een een n:m relatie als:  
 - één rij in de eerste tabel hoort bij nul, één of meer rijen in de tweede tabel **en**
 - één rij in de tweede tabel hoort bij nul, één of meer rijen in de eerste tabel.
 
-Voorbeeld: een N:M-relatie tussen product en kleur  
+Voorbeeld: een n:m-relatie tussen product en kleur  
 - één product kan meerdere kleuren hebben  
 - één kleur kan bij meerdere producten horen
 
@@ -22,7 +22,7 @@ Hoe maak je deze relatie in SQL?
   - één die verwijst naar de tweede tabel
 
 (webshop-section4-uitleg-SQLvoorbeeldNMrelatie)=
-### SQL voorbeeld van tabellen met N:M-relatie
+### SQL voorbeeld van tabellen met n:m-relatie
 
 ```sql
 CREATE TABLE products (
@@ -35,7 +35,7 @@ CREATE TABLE colors (
   name TEXT
 );
 
-CREATE TABLE product_colors (
+CREATE TABLE product_color (
   product_id INTEGER,
   color_id INTEGER,
   FOREIGN KEY(product_id) REFERENCES products(id),
@@ -44,7 +44,7 @@ CREATE TABLE product_colors (
 ```
 
 In dit voorbeeld:
-- De tabel `product_colors` koppelt producten aan kleuren  
+- De tabel `product_color` koppelt producten aan kleuren  
 - `product_id` verwijst naar een rij in `products`  
 - `color_id` verwijst naar een rij in `colors`  
 - Zo kun je aangeven dat één product meerdere kleuren heeft, en één kleur bij meerdere producten hoort
@@ -79,14 +79,14 @@ Voeg kleuren toe aan de tabel die je zojuist gemaakt hebt. Voorbeelden van kleur
 
 :::{note}Opdracht c)
 ### Maak koppel-tabel
-Omdat kleuren en artikelen een N:M relatie (veel op veel) hebben, moeten we een extra tabel maken om de kleuren aan de artikelen te koppelen. Maak daarvoor de tabel `product_color`. Voeg aan de tabel een primaire sleutel, twee verwijzende sleutels en twee constraints toe. Gebruik `product_id` en `color_id` als namen voor je verwijzende sleutels. In de constraints zet je aan welke primaire sleutel elk van de verwijzende sleutels is gekoppeld.
+Omdat kleuren en artikelen een n:m-relatie (veel op veel) hebben, moeten we een extra tabel maken om de kleuren aan de artikelen te koppelen. Maak daarvoor de tabel `product_color`. Voeg aan de tabel een primaire sleutel, twee verwijzende sleutels en twee constraints toe. Gebruik `product_id` en `color_id` als namen voor je verwijzende sleutels. In de constraints zet je aan welke primaire sleutel elk van de verwijzende sleutels is gekoppeld.
 :::
 
 ```{hint} Tips
 :class: dropdown
 - Voeg de verwijzende sleutels en de constraints toe aan de tabel `product_color`.
 - De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `product_color` moet je na de tabellen `products` en `colors` maken, anders dan kun je er niet naar verwijzen in je constraints in de tabel `product_color`.
-- Als je niet meer weet hoe je een constraint toevoegt, bekijk dan [Uitleg SQL voorbeeld N:M-relatie](#webshop-section4-uitleg-SQLvoorbeeldNMrelatie)
+- Als je niet meer weet hoe je een constraint toevoegt, bekijk dan [Uitleg SQL voorbeeld n:m-relatie](#webshop-section4-uitleg-SQLvoorbeeldNMrelatie)
 ```
 
 :::{note}Opdracht d)
@@ -129,9 +129,9 @@ Hieronder zie je een voorbeeld van JSON:
 {
   "products": [
     {
-      "id": 3,
+      "id": 1,
       "name": "Smurfin",
-      "merk": "Smurf Toys Inc.",
+      "merk": "Smurf Mania",
       "kleur": [
         "Geel",
         "Blauw",
@@ -139,9 +139,9 @@ Hieronder zie je een voorbeeld van JSON:
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Grote smurf",
-      "merk": "Smurf Toys Inc.",
+      "merk": "Smurf Mania",
       "kleur": [
         "Rood",
         "Blauw",
@@ -164,12 +164,12 @@ Dit voorbeeld bevat een lijst met producten.
 :::
 
 
-## Uitleg: Query met N:M-relatie maken
+## Uitleg: Query met n:m-relatie maken
 :::{note} Uitleg
 
-### Query met SELECT FROM JOIN JOIN voor N:M-relatie
-Bij een _N:M-relatie_ combineer je drie tabellen:
-- de koppeltabel (bijv. `product_colors`)
+### Query met SELECT FROM JOIN JOIN voor n:m-relatie
+Bij een _n:m-relatie_ combineer je drie tabellen:
+- de koppeltabel (bijv. `product_color`)
 - de eerste tabel (bijv. `products`)
 - de tweede tabel (bijv. `colors`)
 
@@ -179,16 +179,16 @@ Voorbeeld: producten met hun kleuren
 
 ```sql
 SELECT colors.name, products.name
-FROM product_colors
-JOIN colors ON product_colors.color_id = colors.id
-JOIN products ON product_colors.product_id = products.id;
+FROM product_color
+JOIN colors ON product_color.color_id = colors.id
+JOIN products ON product_color.product_id = products.id;
 ```
 
 Wat gebeurt er in deze query?
 - `SELECT` kiest de kolommen die je wilt zien:
   - de naam van de kleur
   - de naam van het product
-- `FROM product_colors` betekent dat je begint in de koppeltabel
+- `FROM product_color` betekent dat je begint in de koppeltabel
 - `JOIN colors` koppelt elke `color_id` aan een rij in `colors`
 - `JOIN products` koppelt elke `product_id` aan een rij in `products`
 

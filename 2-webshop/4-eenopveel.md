@@ -1,18 +1,18 @@
 
-# 1:N-relatie
-In dit hoofdstuk ga je een soort toevoegen aan elk product. Soort is een voorbeeld van een 1:N-relatie.
+# 1:n-relatie
+In dit hoofdstuk ga je een merk toevoegen aan elk product. Merk en product hebben een 1:n-relatie.
 
 
-## Uitleg: Tabellen met 1:N-relatie maken
+## Uitleg: Tabellen met 1:n-relatie maken
 
 :::{note} uitleg
-### Wat is een 1:N-relatie?
+### Wat is een 1:n-relatie?
 
-Een _1:N-relatie_ (spreek uit als "één op en relatie") betekent:  
+Een _1:n-relatie_ (spreek uit: _één op en relatie_) wordt ook wel een _één-op-veel-relatie_ (Engels: _one to many relationship_) genoemd. Twee tabellen hebben een 1:n-relatie als:  
 - één rij in de eerste tabel hoort bij nul, één of meer rijen in de tweede tabel **en**
 - één rij in de tweede tabel hoort bij nul of één rijen in de eerste tabel.
 
-Voorbeeld: een 1:N-relatie tussen merk en product  
+Voorbeeld: een 1:n-relatie tussen merk en product  
 - één merk kan nul, één of meer producten hebben  
 - elk product hoort bij nul of één merk
 
@@ -20,7 +20,7 @@ Hoe maak je deze relatie in SQL?
 - Je zet een _verwijzende sleutel_ (Engels: foreign key) in de tweede tabel. De verwijzende sleutel staat dus in de tabel van de N.  
 - Je geeft aan dat die verwijst naar de _primaire sleutel_ (Engels: primary key) van de eerste tabel.  
 
-### SQL voorbeeld van tabellen met 1:N-relatie
+### SQL voorbeeld van tabellen met 1:n-relatie
 
 ```sql
 CREATE TABLE brands (
@@ -39,21 +39,21 @@ CREATE TABLE products (
 
 In dit voorbeeld:
 - `brands.id` is de primaire sleutel (1-kant)  
-- `products.brand_id` is een foreign key (N-kant)  
+- `products.brand_id` is een foreign key (n-kant)  
 - Bij een product dat niet aan een merk gekoppeld is, heeft de verwijzende sleutel de waarde `NULL`
 - Een merk **kan** aan een product gekoppeld zijn, maar dat **hoeft niet**
 
 :::
 
-## Opdracht: Voeg soort artikel toe aan de database
+## Opdracht: Voeg merk toe aan de database
 
-In deze opdracht ga je een soort (Engels: category) toevoegen aan elk artikel in de database. Elk artikel is van één soort. Een soort heeft één of meer artikelen.
+In deze opdracht ga je een merk (Engels: brand) toevoegen aan elk artikel in de database. Elk artikel is van één merk. Een merk heeft één of meer artikelen.
 
-De soort wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
+Her merk wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
 
 :::{note}Opdracht a)
-### Soorten-tabel toevoegen
-Maak een nieuwe tabel waarin we de soorten kunnen opslaan. Noem de tabel `categories`, noem het primaire sleutelveld `id` en maak een tekstveld `name` voor de naam van de soort.
+### Merken-tabel toevoegen
+Maak een nieuwe tabel waarin we de merken kunnen opslaan. Noem de tabel `brands`, noem het primaire sleutelveld `id` en maak een tekstveld `name` voor de naam van het merk.
 :::
 
 (webshop-section4-opdracht1a-tips)=
@@ -65,8 +65,8 @@ Maak een nieuwe tabel waarin we de soorten kunnen opslaan. Noem de tabel `catego
 ```
 
 :::{note}Opdracht b)
-### Soorten toevoegen aan de tabel
-Voeg de soorten die je in je winkel hebt toe aan de tabel die je zojuist gemaakt hebt. Twee bijvoorbeelden van soorten zijn Huisje en Beestje.
+### Merken toevoegen aan de tabel
+Voeg de merken die je in je winkel verkoopt toe aan de tabel die je zojuist gemaakt hebt. Twee voorbeelden van merken zijn Smurf Mania en Totally Smurf.
 :::
 
 (webshop-section4-opdracht1b-tips)=
@@ -77,7 +77,7 @@ Voeg de soorten die je in je winkel hebt toe aan de tabel die je zojuist gemaakt
 
 :::{note}Opdracht c)
 ### Koppel tabellen
-Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constraint. Gebruik `category_id` als naam voor je verwijzende sleutel. In de constraint zet je aan welke primaire sleutel de verwijzende sleutel is gekoppeld.
+Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constraint. Gebruik `brand_id` als naam voor je verwijzende sleutel. In de constraint zet je aan welke primaire sleutel de verwijzende sleutel is gekoppeld.
 :::
 
 (webshop-section4-opdracht1c-tips)=
@@ -86,11 +86,11 @@ Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constra
 - Voeg de verwijzende sleutel en de constraint toe aan de tabel `products`.
 - De verwijzende sleutel heeft het datatype `INTEGER`.
 - De contraint is van de vorm met `FOREIGN KEY(`_verwijzende_sleutel_`) REFERENCES(`_tabel_`.`_primaire_sleutel_`)`
-- De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `categories` moet je eerder maken dan de tabel `products`, anders dan kent de computer de tabel `categories` nog niet als je ernaar wilt verwijzen in je constraint.
+- De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `brandss` moet je eerder maken dan de tabel `products`, anders dan kent de computer de tabel `brands` nog niet als je ernaar wilt verwijzen in je constraint.
 ```
 
 :::{note}Opdracht d)
-### Voeg toe welke soort elk artikel is
+### Voeg toe van welk melk elk artikel is
 Voeg aan elk artikel toe welke soort erbij hoort.
 :::
 
@@ -98,14 +98,14 @@ Voeg aan elk artikel toe welke soort erbij hoort.
 ```{hint} Tips
 :class: dropdown
 - Pas de `INSERT INTO`-opdracht die de `products`-tabel vult aan. 
-- Voeg het veld `category_id` toe aan `INSERT INTO products` en geef voor elk product het nummer van de soort op.
+- Voeg het veld `brand_id` toe aan `INSERT INTO products` en geef voor elk product het nummer van de soort op.
 ```
 
-## Uitleg: Query met 1:N-relatie maken
+## Uitleg: Query met 1:n-relatie maken
 :::{note} Uitleg
 
-### Query met SELECT FROM JOIN voor 1:N-relatie
-Bij een _1:N-relatie_ kun je een query maken om gegevens uit beide tabellen te combineren.  
+### Query met SELECT FROM JOIN voor 1:n-relatie
+Bij een _1:n-relatie_ kun je een query maken om gegevens uit beide tabellen te combineren.  
 Je gebruikt dan het sleutelveld waarop ze gekoppeld zijn.
 
 Voorbeeld: producten met hun merknaam
@@ -129,20 +129,20 @@ Je krijgt dan een lijst van producten, met daarbij het merk waar ze bij horen.
 
 :::
 
-## Opdracht: Maak soort artikel zichtbaar in de webshop
-Je hebt in de vorige opdracht informatie over de soort aan alle artikelen toegevoegd in de database. Maar deze informatie is nog niet te zien op de webshop. Dat komt omdat de API niks doet met de extra informatie uit de database. In deze opdracht ga je de API aanpassen, zodat de informatie over soort wordt doorgeven aan de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
+## Opdracht: Maak merk zichtbaar in de webshop
+Je hebt in de vorige opdracht het merk aan alle artikelen in de database toegevoegd. Maar de naamm van het merk is nog niet te zien op de webshop. Dat komt omdat de API niks doet met de merken-tabel de database. In deze opdracht ga je de API aanpassen, zodat de informatie uit de merken-tabel wordt doorgeven aan de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
 
 :::{note}Opdracht a)
-### Voeg soort toe aan query
-Zoek in de API de query die de artikelen (`products`) opvraagt. Voeg hier een `JOIN` aan toe, zodat de informatie over soorten ook wordt opgevraagd uit de database.
+### Voeg merk toe aan query
+Zoek in de API de query die de artikelen (`products`) opvraagt. Voeg hier een `JOIN` aan toe, zodat de informatie uit de merken-tabel wordt toegevoegd.
 :::
 
 ```{hint} Tips
 :class: dropdown
 - De aanpassing moet je doen in de API, in het bestand `/app/main.py`
 - De query die je moet aanpassen is `SELECT * FROM products;`
-- Voeg aan de query een `JOIN` toe tussen de tabellen `products` en `categories`.
-- Als je op de plaats van de naam van je product de naam van de soort ziet, dan komt dat omdat onze client `products.name` met `categories.name` overschrijft. Laat dat voor nu even zo, in de volgende opdracht leer je hoe je dit oplost.
+- Voeg aan de query een `JOIN` toe tussen de tabellen `products` en `brands`.
+- Als je op de plaats van de naam van je product de naam van het merk ziet, dan komt dat omdat onze client `products.name` met `brands.name` overschrijft. Laat dat voor nu even zo, in de volgende opdracht leer je hoe je dit oplost.
 ```
 
 :::{note}Opdracht b)
@@ -165,5 +165,5 @@ Pas de query in de api aan op de volgende punten.
 - In de query moet je `SELECT * FROM` vervangen door `SELECT products.name, products.image_link, products.price ... FROM`. Op de puntjes vul je de overige veldnamen in.
 - Je kunt velden een andere naam in de website geven met `AS`. Bijvoorbeeld `SELECT description` vervangen door `SELECT description AS beschrijving`.
 - In de database kun je dezelfde veldnamen in meerdere tabellen gebruiken. Onze api stuurt de namen van de velden zonder tabelnaam naar de client. De client ziet daardoor het verschil niet tussen velden met dezelfde naam uit verschillende tabellen. Je kunt dat oplossen in de query die je in de api gebruikt. Daar kun je de velden met dezelfde naam een unieke naam geven.
-Bijvoorbeeld: `SELECT product.name, category.name` wordt `SELECT product.name, category.naam AS soort`
+Bijvoorbeeld: `SELECT products.name, brands.name` wordt `SELECT products.name, brands.name AS merk`
 ```
