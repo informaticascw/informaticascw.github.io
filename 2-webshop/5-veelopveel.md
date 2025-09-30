@@ -11,6 +11,8 @@ Een _n:m-relatie_ (spreek uit: _en op em relatie_) wordt ook wel een _veel-op-ve
 - één rij in de eerste tabel hoort bij nul, één of meer rijen in de tweede tabel **en**
 - één rij in de tweede tabel hoort bij nul, één of meer rijen in de eerste tabel.
 
+Een n:m-relatie zou je kunnen zien als een combinatie van een n:1-relatie met n:1-relatie.
+
 Voorbeeld: een n:m-relatie tussen product en kleur  
 - één product kan meerdere kleuren hebben  
 - één kleur kan bij meerdere producten horen
@@ -69,7 +71,7 @@ Maak een nieuwe tabel waarin we de kleuren kunnen opslaan. Noem de tabel `colors
 
 :::{note}Opdracht b)
 ### Kleuren toevoegen aan de tabel
-Voeg kleuren toe aan de tabel die je zojuist gemaakt hebt. Voorbeelden van kleuren zijn Blauw, Rood, Geel en Wit.
+Voeg kleuren toe aan de tabel die je zojuist gemaakt hebt. Gebruik minimaal de kleuren `rood`, `geel` en `blauw`.
 :::
 
 ```{hint} Tips
@@ -100,6 +102,38 @@ Voeg aan elk artikel toe welke kleuren erin zitten.
 - Gebruik in de `INSERT INTO`-opdracht de velden `product_id` en `color_id`.
 - Geef in je `INSERT INTO`-opdracht de nummers van de producten en kleuren die bij elkaar passen op. Elke conmbinatie is een nieuwe rij in de tabel.
 ````
+
+## Uitleg: Query met n:m-relatie maken
+:::{note} Uitleg
+
+### Query met SELECT FROM JOIN JOIN voor n:m-relatie
+Bij een _n:m-relatie_ combineer je drie tabellen:
+- de koppeltabel (bijv. `product_color`)
+- de eerste tabel (bijv. `products`)
+- de tweede tabel (bijv. `colors`)
+
+Het maakt in sql niet uit met welke tabel je begint. Wij beginnen met de **koppeltabel** en leggen van daaruit maak je verbinding met de andere twee tabellen.
+
+Voorbeeld: producten met hun kleuren
+
+```sql
+SELECT colors.name, products.name
+FROM product_color
+JOIN colors ON product_color.color_id = colors.id
+JOIN products ON product_color.product_id = products.id;
+```
+
+Wat gebeurt er in deze query?
+- `SELECT` kiest de kolommen die je wilt zien:
+  - de naam van de kleur
+  - de naam van het product
+- `FROM product_color` betekent dat je begint in de koppeltabel
+- `JOIN colors` koppelt elke `color_id` aan een rij in `colors`
+- `JOIN products` koppelt elke `product_id` aan een rij in `products`
+
+Je krijgt dan een lijst van combinaties van kleur en product.
+
+:::
 
 ## Uitleg: JSON
 
@@ -133,9 +167,8 @@ Hieronder zie je een voorbeeld van JSON:
       "name": "Smurfin",
       "merk": "Smurf Mania",
       "kleur": [
-        "Geel",
-        "Blauw",
-        "Wit"
+        "geel",
+        "blauw"
       ]
     },
     {
@@ -143,9 +176,8 @@ Hieronder zie je een voorbeeld van JSON:
       "name": "Grote smurf",
       "merk": "Smurf Mania",
       "kleur": [
-        "Rood",
-        "Blauw",
-        "Wit"
+        "rood",
+        "blauw"
       ]
     }
   ]
@@ -163,38 +195,6 @@ Dit voorbeeld bevat een lijst met producten.
 
 :::
 
-
-## Uitleg: Query met n:m-relatie maken
-:::{note} Uitleg
-
-### Query met SELECT FROM JOIN JOIN voor n:m-relatie
-Bij een _n:m-relatie_ combineer je drie tabellen:
-- de koppeltabel (bijv. `product_color`)
-- de eerste tabel (bijv. `products`)
-- de tweede tabel (bijv. `colors`)
-
-Het maakt in sql niet uit met welke tabel je begint. Wij beginnen met de **koppeltabel** en leggen van daaruit maak je verbinding met de andere twee tabellen.
-
-Voorbeeld: producten met hun kleuren
-
-```sql
-SELECT colors.name, products.name
-FROM product_color
-JOIN colors ON product_color.color_id = colors.id
-JOIN products ON product_color.product_id = products.id;
-```
-
-Wat gebeurt er in deze query?
-- `SELECT` kiest de kolommen die je wilt zien:
-  - de naam van de kleur
-  - de naam van het product
-- `FROM product_color` betekent dat je begint in de koppeltabel
-- `JOIN colors` koppelt elke `color_id` aan een rij in `colors`
-- `JOIN products` koppelt elke `product_id` aan een rij in `products`
-
-Je krijgt dan een lijst van combinaties van kleur en product.
-
-:::
 
 ## Opdracht: Maak kleuren per artikel zichtbaar in de webshop
 Je hebt in de vorige opdracht kleur-informatie aan alle artikelen toegevoegd in de database. Maar deze informatie is nog niet te zien op de webshop. Dat komt omdat de API de kleuren niet opvraagt uit de database. Omdat er meerdere kleuren per product kunnen zijn, moeten we de kleuren in een aparte query opvragen. In deze opdracht ga je de API aanpassen, zodat de informatie over kleuren wordt toegevoegd aan de informatie over artikelen die wordt opgestuurd naar de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
@@ -229,7 +229,12 @@ Kopieer de code op de juiste plek in de API en test of hij het doet.
 
 ```{attention} Performance
 :class: dropdown
-We gebruiken voor elk product een aparte query om de kleuren uit de database op te vragen. Dit is niet heel efficient, maar wel eenvoudig. In een webshop met veel meer artikelen zouden programmeurs ervoor kiezen om de kleuren van alle producten tegelijk in één query op te vragen.
+In deze opdracht vraag je met een query de kleuren van één product uit de database op. Voor elk product voer je de query opnieuw uit. Dit is niet heel efficient, maar wel eenvoudig. In een webshop met veel meer artikelen zouden programmeurs ervoor kiezen om de kleuren van meerdere producten tegelijk in één query op te vragen.
+
+Omdat we voor het product alleen `product_id` nodig hebben om de kleuren uit de database op te vragen, hoeven we maar twee tabellen te gebruiken: `product_color` en `colors`. Die tabellen hebben een 1:n-relatie. Dit is vergelijkbaar met de manier waarop het staat in [Uitleg SQL voorbeeld 1:n-relatie](#webshop-section4-uitleg-SQLvoorbeeld1Nrelatie).
+
+Wanneer je meerdere kleuren van meerdere producten opvraagt in één query, dan gebruik je de n:m-relatie tussen producten en kleuren. Daarvoor heb je drie tabellen nodig: `products`, `colors` en de koppeltabel `product_color`. Dit is zoals het staat in [Uitleg SQL voorbeeld n:m-relatie](#webshop-section4-uitleg-SQLvoorbeeldNMrelatie).
+
 ```
 
 ```{attention} SQL-injection

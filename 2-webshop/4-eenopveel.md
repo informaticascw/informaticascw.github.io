@@ -20,6 +20,7 @@ Hoe maak je deze relatie in SQL?
 - Je zet een _verwijzende sleutel_ (Engels: foreign key) in de tweede tabel. De verwijzende sleutel staat dus in de tabel van de N.  
 - Je geeft aan dat die verwijst naar de _primaire sleutel_ (Engels: primary key) van de eerste tabel.  
 
+(webshop-section4-uitleg-SQLvoorbeeld1Nrelatie)=
 ### SQL voorbeeld van tabellen met 1:n-relatie
 
 ```sql
@@ -66,7 +67,7 @@ Maak een nieuwe tabel waarin we de merken kunnen opslaan. Noem de tabel `brands`
 
 :::{note}Opdracht b)
 ### Merken toevoegen aan de tabel
-Voeg de merken die je in je winkel verkoopt toe aan de tabel die je zojuist gemaakt hebt. Twee voorbeelden van merken zijn Smurf Mania en Totally Smurf.
+Voeg de merken die je in je winkel verkoopt toe aan de tabel die je zojuist gemaakt hebt. Gebruik de merken `Smurf Mania` en `Totally Smurf`.
 :::
 
 (webshop-section4-opdracht1b-tips)=

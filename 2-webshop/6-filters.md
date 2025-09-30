@@ -53,7 +53,7 @@ Een response bevat:
 - Body: De gegevens die teruggestuurd worden (bijv. een lijst, een bevestiging of een foutmelding)
 :::
 
-## Opdracht: Toon filters voor soort en kleur
+## Opdracht: Toon filters voor merk en kleur
 De front-end is al voorbereid voor het werken met filters, maar de API nog niet. In deze opdracht ga je zorgen dat de filters zichtbaar worden in de webshop. In de volgende opdracht zorg je dat alleen de artikelen worden getoond die in het filter zijn ingesteld.
 
 :::{note}Opdracht a)
@@ -69,8 +69,8 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 :linenos:
     # Construct the response
     filters = {
-        "soort": ["poppetje","huisje"],
-        "kleur": ["rood","wit","blauw"]
+        "merk": ["Smurf Mania","Totally Smurf"],
+        "kleur": ["rood","blauw"]
     }
 ```
 
@@ -83,9 +83,9 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 :::{note}Opdracht b)
 ### Maak filters automatisch
-Bij opdracht a) heb je filters gemaakt. Maar als je een artikel met een nieuwe kleur aan je database toevoegt, dan moet je het filter aanpassen voordat je op die kleur kunt filteren. Voor nu is dat misschien okee, maar in een grote webshop is dat erg onhandig. In deze opdracht ga het filter zo maken dat hij de waarden van soort en kleur uit de database haalt.
+Bij opdracht a) heb je filters gemaakt. Maar als je een artikel met een nieuwe kleur aan je database toevoegt, dan moet je het filter aanpassen voordat je op die kleur kunt filteren. Voor nu is dat misschien okee, maar in een grote webshop is dat erg onhandig. In deze opdracht ga het filter zo maken dat hij de waarden van merk en kleur uit de database haalt.
 
-Maak de twee queries in onderstaande code af. De eerts query moet alle soorten in de database geven en de tweede query alle kleuren.
+Maak de twee queries in onderstaande code af. De eerste query moet alle merken in de database geven en de tweede query alle kleuren.
 
 Kopieer de code op de juiste plek in de API en test of hij het doet.
 
@@ -94,10 +94,10 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 ```{code} python
 :caption: Python-code
 :linenos:
-    # Fetch all distinct categories
-    categories_query = "SELECT <maak af>"
-    categories_result = db_connection.execute(categories_query).fetchall()
-    categories = [row["name"] for row in categories_result]
+    # Fetch all distinct brands
+    brands_query = "SELECT <maak af>"
+    brands_result = db_connection.execute(brands_query).fetchall()
+    brands = [row["name"] for row in brands_result]
 
     # Fetch all distinct colors
     colors_query = "SELECT <maak af>"
@@ -106,7 +106,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
     # Construct the response
     filters = {
-        "soort": categories,
+        "merk": brands,
         "kleur": colors
     }
 ```
@@ -147,42 +147,41 @@ Informatie in de body (bij POST en PUT)
 : De data staat niet in de link, maar wordt meegestuurd in de inhoud van het verzoek.
 :::
 
-## Opdracht: Laat filters op soort en kleur werken
+## Opdracht: Laat filters op merk en kleur werken
 
 De front-end in de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. Om alleen de artikelen terug te sturen die aan het filter voldoen, moet je in de API een `WHERE`-clausule toe voegen aan het `SELECT`-commando dat de artikel-informatie uit de database ophaalt. Bekijk de tabel om te zien hoe het filter uiteindelijk moet gaan werken.
 
 :::{table} Werking van filter
 
-poppetje | huisje | rood | wit | blauw | getoonde artikelen | WHERE-clausule
+Smurf Mania | Totally Smurf | rood | geel | blauw | getoonde artikelen | WHERE-clausule
 :---: | :---: | :---: | :---: | :---: | --- | ---
 ☐ | ☐ | ☐ | ☐ | ☐ | alle artikelen | geen
-☑ | ☐ | ☐ | ☐ | ☐ | artikelen met poppetje, de kleur maakt niet uit | `WHERE soort IN ("poppetje")`
-☑ | ☑ | ☐ | ☐ | ☐ | artikelen met (poppetje of huisje), de kleur maakt niet uit | `WHERE soort IN ("poppetje", "huisje")`
-☐ | ☐ | ☑ | ☐ | ☐ | artikelen met rood, de soort maakt niet uit | `WHERE kleur IN ("rood")`
-☑ | ☐ | ☑ | ☐ | ☐ | artikelen met poppetje en rood | `WHERE soort IN ("poppetje") AND kleur IN ("rood")`
-☑ | ☑ | ☐ | ☑ | ☑ | artikelen met (poppetje of huisje) en (wit of blauw) | `WHERE soort IN ("poppetje", "huisje") AND kleur IN ("wit", "blauw")`
+☑ | ☐ | ☐ | ☐ | ☐ | artikelen van Smurf Mania, de kleur maakt niet uit | `WHERE merk IN ("Smurf Mania")`
+☑ | ☑ | ☐ | ☐ | ☐ | artikelen van (Smurf Mania of Totally Smurf), de kleur maakt niet uit | `WHERE merk IN ("Smurf Mania", "Totally Smurf")`
+☐ | ☐ | ☑ | ☐ | ☐ | artikelen met rood, het merk maakt niet uit | `WHERE kleur IN ("rood")`
+☑ | ☐ | ☑ | ☐ | ☐ | artikelen van Smurf Mania met rood | `WHERE merk IN ("Smurf Mania") AND kleur IN ("rood")`
+☑ | ☑ | ☐ | ☑ | ☑ | artikelen van (Smurf Mania of Totally Smurf) met (geel of blauw) | `WHERE merk IN ("Smurf Mania", "Totally Smurf") AND kleur IN ("geel", "blauw")`
 
 :::
 
-
-Je gaat het filter stap voor stap maken in a) tot en met d) van deze opdracht. Je moet daarbij SQL en Python-code toevoegen aan de API.
+Je gaat het filter stap voor stap maken in a) tot en met d) van deze opdracht. Je moet daarbij SQL en Python-code toevoegen aan de API. Breidt je database uit als dat nodig is om alle combinaties te kunnen testen.
 
 :::{note}Opdracht a)
-### Filter op 0 of 1 soorten
+### Filter op 0 of 1 merken
 
-Onderstaande pseudo-code en bijpassende python-code zorgen ervoor dat het filter werkt als er nul, één of meerdere soorten geselecteerd zijn. Bestudeer de pseudo-code en de Python-code. 
+Onderstaande pseudo-code en bijpassende python-code zorgen ervoor dat het filter werkt als er nul, één of meerdere merken geselecteerd zijn. Bestudeer de pseudo-code en de Python-code. 
 
 Knip en plak de Python-code op de juiste plek in de API en controleer of de eerste twee voorbeelden uit de tabel goed werken.
 
 ```{code} pseudo 
 :caption: Pseudo-code
 :linenos:
-    als aantal_soorten > 0
+    als aantal_merken > 0
         plak ` WHERE ` aan query
         
-    als aantal_soorten > 0
-        plak `soorten IN (1e_soort ` aan query
-        plak 1e_soort aan parameter-list
+    als aantal_merken > 0
+        plak `merken IN (1e_merk ` aan query
+        plak 1e_merk aan parameter-list
         plak `)` aan query         
 ```
 
@@ -190,19 +189,19 @@ xxxxxx code must be changed a little to make it fit 100% with pseudocode
 ```{code} python
 :caption: Python-code
 :linenos:
-    # Filter soort (category in database)
-    category_params = soort
-    category_filters = []
-    if len(category_params) > 0:
+    # Filter merk (brand in database)
+    brand_params = merk
+    brand_filters = []
+    if len(brand_params) > 0:
         placeholders = "?"
-        for i in range(1, len(category_params)):
+        for i in range(1, len(brand_params)):
             placeholders = placeholders + ", ?"
-        category_filters = ["cat.name IN (" + placeholders + ")"]
+        brand_filters = ["cat.name IN (" + placeholders + ")"]
 ```
 :::
 
 :::{note}Opdracht b)
-### Filter op 0, 1 of meer soorten
+### Filter op 0, 1 of meer merken
 
 Onderstaande pseudo-code is een uitbreiding op de pseudo-code uit onderdeel a). De nieuwe regels zijn gemarkeerd. 
 
@@ -212,16 +211,16 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
 :caption: Pseudo-code
 :linenos:
 :emphasize-lines: 7,8,9
-    als aantal_soorten > 0
+    als aantal_merken > 0
         plak ` WHERE ` aan query
 
-    als aantal soorten > 0
-        plak `soorten IN (1e_soort ` aan query
-        plak 1e_soort aan parameter-list
-    voor de 2e tot en met de laatste soort
-        plak `, volgende_soort` aan query
-        plak volgende_soort aan parameter-list 
-    als aantal_soorten > 0
+    als aantal merken > 0
+        plak `merken IN (1e_merk ` aan query
+        plak 1e_merk aan parameter-list
+    voor de 2e tot en met de laatste merk
+        plak `, volgende_merk` aan query
+        plak volgende_merk aan parameter-list 
+    als aantal_merken > 0
         plak `)` aan query       
 ```
 :::
@@ -229,9 +228,9 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
 :::{note}Opdracht c)
 ### Voorbereiding voor filteren op kleuren
 
-In onderdeel a) en b) heb je met `WHERE` gefilterd op het veld `soort`. Dat kon omdat in de query stond 
-- `SELECT` ... `category.name AS soort` en 
-- `JOIN categories ON product.category_id = category.id`
+In onderdeel a) en b) heb je met `WHERE` gefilterd op het veld `brand`. Dat kon omdat in de query stond 
+- `SELECT` ... `brands.name AS merk` en 
+- `JOIN brands ON product.brand_id = brands.id`
 
 Voeg de kleuren toe aan het resultaat van de query. Dit kan met de volgende drie regels.
 ```{code} SQL
@@ -240,7 +239,7 @@ LEFT JOIN product_color ON <maak af>
 LEFT JOIN color ON <maak af>
 ```
 
-Omdat kleur een N:M relatie is, wordt elk artikel zoveel keer in het resultaat genoemd als er kleuren van dat artikel zijn. Dus een artikel de kleuren `wit` en `blauw` heeft, dan wordt het twee keer opgenomen in de ongefilterde lijst met artikelen. Dat is nodig om met `WHERE` op meerdere kleuren te kunnen filteren. In de artikelen-lijst die verzonden wordt mag elk artikel maximaal één keer voorkomen.
+Omdat kleur een n:m-relatie is, wordt elk artikel zoveel keer in het resultaat genoemd als er kleuren van dat artikel zijn. Dus als een artikel de kleuren `geel` en `blauw` heeft, dan wordt het twee keer opgenomen in de ongefilterde lijst met artikelen. Dat is nodig om met `WHERE` op meerdere kleuren te kunnen filteren. In de artikelen-lijst die verzonden wordt mag elk artikel maximaal één keer voorkomen.
 
 Voeg de volgende regel toe aan de query, zodat gefilterde artikelen maximaal één keer in de lijst voorkomen. Controleer of de eerste drie regels uit de tabel het nog goed doen.
 ```{code} SQL
@@ -254,7 +253,7 @@ GROUP BY product.id
 :::
 
 :::{note}Opdracht d)
-### Filter op 0, 1 of meer soorten en 0, 1 of meer kleuren
+### Filter op 0, 1 of meer merken en 0, 1 of meer kleuren
 
 Onderstaande pseudo-code is een uitbreiding op de pseudo-code uit onderdeel b). De gewijzigde en nieuwe regels zijn gemarkeerd. 
 
@@ -264,19 +263,19 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
 :caption: Pseudo-code
 :linenos:
 :emphasize-lines: 1,13,14,15,16,17,18,19,20,21,22
-    als aantal_soorten > 0 of aantal_kleuren > 0
+    als aantal_merken > 0 of aantal_kleuren > 0
         plak ` WHERE ` aan query
 
-    als aantal soorten > 0
-        plak `soorten IN (1e_soort ` aan query
-        plak 1e_soort aan parameter-list
-    voor de 2e tot en met de laatste soort
-        plak `, volgende_soort` aan query
-        plak volgende_soort aan parameter-list 
-    als aantal_soorten > 0
+    als aantal merken > 0
+        plak `merken IN (1e_merk ` aan query
+        plak 1e_merk aan parameter-list
+    voor de 2e tot en met de laatste merk
+        plak `, volgende_merk` aan query
+        plak volgende_merk aan parameter-list 
+    als aantal_merken > 0
         plak `)` aan query
 
-    als aantal_soorten > 0 en aantal_kleuren > 0
+    als aantal_merken > 0 en aantal_kleuren > 0
         plak ` AND ` aan query     
     als aantal kleuren > 0
         plak `kleuren IN (1e_kleur ` aan query
