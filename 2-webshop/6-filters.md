@@ -76,9 +76,10 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 :::
 
-```{hint} Tips (XXXXXX)
+```{hint} Tips
 :class: dropdown
-- xxxxxx
+- De code moet worden ingevoeg in de functie `get_filters()` uit de api. 
+- Let op het commentaar om de exacte plek te vinden waarnaar je de code moet kopieren.
 ```
 
 :::{note}Opdracht b)
@@ -89,7 +90,7 @@ Maak de twee queries in onderstaande code af. De eerste query moet alle merken i
 
 Kopieer de code op de juiste plek in de API en test of hij het doet.
 
-Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan zou de lijst met artikelen gefiltered moeten worden, maar dat ga je in de volgende opdracht doen.
+Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkjes zetten. Als je op de knop "Filter toepassen" klik, dan gebeurt er niets. In de volgende opdracht ga je zorgen dat het filter wordt toegepast.
 
 ```{code} python
 :caption: Python-code
@@ -113,9 +114,11 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 :::
 
-```{hint} Tips (XXXXXX)
+```{hint} Tips
 :class: dropdown
-- xxxxxx
+- De code moet worden ingevoeg in de functie `get_filters()` uit de api. 
+- Let op het commentaar om de exacte plek te vinden waarnaar je de code moet kopieren.
+- Maak beide SQL-queries in de code af.
 ```
 
 ## Uitleg: Extra gegevens in een request
@@ -196,9 +199,15 @@ xxxxxx code must be changed a little to make it fit 100% with pseudocode
         placeholders = "?"
         for i in range(1, len(brand_params)):
             placeholders = placeholders + ", ?"
-        brand_filters = ["cat.name IN (" + placeholders + ")"]
+        brand_filters = ["brands.name IN (" + placeholders + ")"]
 ```
 :::
+
+```{hint} Tips XXX
+:class: dropdown
+- een
+- twee
+```
 
 :::{note}Opdracht b)
 ### Filter op 0, 1 of meer merken
@@ -225,6 +234,12 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
 ```
 :::
 
+```{hint} Tips XXX
+:class: dropdown
+- een
+- twee
+```
+
 :::{note}Opdracht c)
 ### Voorbereiding voor filteren op kleuren
 
@@ -232,16 +247,18 @@ In onderdeel a) en b) heb je met `WHERE` gefilterd op het veld `brand`. Dat kon 
 - `SELECT` ... `brands.name AS merk` en 
 - `JOIN brands ON product.brand_id = brands.id`
 
-Voeg de kleuren toe aan het resultaat van de query. Dit kan met de volgende drie regels.
+Voeg de kleuren toe aan het resultaat van de query. Dit kan door de query te veranderen naar de code hieronder.
 ```{code} SQL
 SELECT <velden die er al staan>, color.name AS kleur
-LEFT JOIN product_color ON <maak af>
-LEFT JOIN color ON <maak af>
+FROM products
+JOIN brands ON product.brand_id = brands.id
+JOIN product_color ON <maak af>
+JOIN color ON <maak af>
 ```
 
 Omdat kleur een n:m-relatie is, wordt elk artikel zoveel keer in het resultaat genoemd als er kleuren van dat artikel zijn. Dus als een artikel de kleuren `geel` en `blauw` heeft, dan wordt het twee keer opgenomen in de ongefilterde lijst met artikelen. Dat is nodig om met `WHERE` op meerdere kleuren te kunnen filteren. In de artikelen-lijst die verzonden wordt mag elk artikel maximaal één keer voorkomen.
 
-Voeg de volgende regel toe aan de query, zodat gefilterde artikelen maximaal één keer in de lijst voorkomen. Controleer of de eerste drie regels uit de tabel het nog goed doen.
+Voeg de volgende regel toe aan de query (XXX dit moet iets uitgebreider en wellicht met meer tipsXXX), zodat gefilterde artikelen maximaal één keer in de lijst voorkomen. Controleer of je webshop de producten nog laat zien.
 ```{code} SQL
 GROUP BY product.id
 ```
@@ -262,7 +279,7 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
 ```{code} pseudo
 :caption: Pseudo-code
 :linenos:
-:emphasize-lines: 1,13,14,15,16,17,18,19,20,21,22
+:emphasize-lines: 1,13,14,15,16,17,18,19,20,21,22,23
     als aantal_merken > 0 of aantal_kleuren > 0
         plak ` WHERE ` aan query
 
@@ -276,7 +293,8 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
         plak `)` aan query
 
     als aantal_merken > 0 en aantal_kleuren > 0
-        plak ` AND ` aan query     
+        plak ` AND ` aan query
+
     als aantal kleuren > 0
         plak `kleuren IN (1e_kleur ` aan query
         plak 1e_kleur aan parameter-list
@@ -287,3 +305,9 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
         plak `)` aan query   
 ```
 :::
+
+```{hint} Tips XXX
+:class: dropdown
+- een
+- twee
+```
