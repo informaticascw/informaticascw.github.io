@@ -55,6 +55,7 @@ site:
   #     doesn't work with static if you you index.md as root, but works using root.md
   #     doesn't work with static if you you use {toc} in you .md files (links don't work)
   #  hide_title_block: true # prevent header 1 on top of page being displayed
+    outline_maxdepth: 1
     favicon: images/informatica-logo.ico
     logo: images/informatica-logo.svg
     logo_text: Informatica
