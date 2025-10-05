@@ -14,7 +14,7 @@ Platform-onafhankelijk
 : REST werkt via standaardprotocollen zoals HTTP en maakt gebruik van eenvoudige dataformaten zoals JSON. Daardoor kunnen verschillende systemen zoals Windows, Linux, iOS en Android probleemloos met elkaar communiceren.
 
 Client-Server scheiding
-: De client (zoals een app of website) en de server (waar de gegevens staan) werken onafhankelijk van elkaar. De client weet alleen wat hij nodig heeft, niet hoe de server dat regelt. Dit maakt onderhoud en ontwikkeling eenvoudiger: de client-zijde (frontend) en server-zijde (backend) kunnen apart worden aangepast.
+: De client (zoals een app of website) en de server (waar de gegevens staan) werken onafhankelijk van elkaar. De client weet alleen wat hij nodig heeft, niet hoe de server dat regelt. Dit maakt onderhoud en ontwikkeling eenvoudiger: de client-zijde (wordt ook genoemd: front end) en server-zijde (wordt ook genoemd: back end) kunnen apart worden aangepast.
 
 Statusloos
 : Elke aanvraag (request) van de client bevat alle informatie die de server nodig heeft. De server bewaart geen gegevens over vorige aanvragen. Daardoor zijn REST API’s gemakkelijk uit te breiden en te beheren.
@@ -54,11 +54,11 @@ Een response bevat:
 :::
 
 ## Opdracht: Toon filters voor merk en kleur
-De front-end is al voorbereid voor het werken met filters, maar de API nog niet. In deze opdracht ga je zorgen dat de filters zichtbaar worden in de webshop. In de volgende opdracht zorg je dat alleen de artikelen worden getoond die in het filter zijn ingesteld.
+De client is al voorbereid voor het werken met filters, maar de API nog niet. In deze opdracht ga je zorgen dat de filters zichtbaar worden in de webshop. In de volgende opdracht zorg je dat alleen de artikelen worden getoond die in het filter zijn ingesteld.
 
 :::{note}Opdracht a)
 ### Maak filters
-De front-end vraagt via het endpoint `/api/filters` de lijst met filters op. In de API is het eindpoint al gemaakt, maar het geeft een lege lijst terug. De front-end geeft alleen filters weer als de lijst niet leeg is.
+De client vraagt via het endpoint `/api/filters` de lijst met filters op. In de API is het eindpoint al gemaakt, maar het geeft een lege lijst terug. De client geeft alleen filters weer als de lijst niet leeg is.
 
 Maak een lijst met filters door onderstaande code op de juiste plaats in de API te zetten en test of het werkt.
 
@@ -152,7 +152,7 @@ Informatie in de body (bij POST en PUT)
 
 ## Opdracht: Laat filters op merk en kleur werken
 
-De front-end in de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. Om alleen de artikelen terug te sturen die aan het filter voldoen, moet je in de API een `WHERE`-clausule toe voegen aan het `SELECT`-commando dat de artikel-informatie uit de database ophaalt. Bekijk de tabel om te zien hoe het filter uiteindelijk moet gaan werken.
+De client van de webshop stuurt het filter als query-parameter mee naar het endpoint `/api/products` als op de knop `Filter toepassen` geklikt wordt. Om alleen de artikelen terug te sturen die aan het filter voldoen, moet je in de API een `WHERE`-clausule toe voegen aan het `SELECT`-commando dat de artikel-informatie uit de database ophaalt. Bekijk de tabel om te zien hoe het filter uiteindelijk moet gaan werken.
 
 :::{table} Werking van filter
 
