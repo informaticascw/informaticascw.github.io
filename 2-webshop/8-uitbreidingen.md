@@ -1,4 +1,14 @@
 # Uitbreidingen
+
+
+```{pull-quote}
+
+```
+
+```{figure} scherm6.png
+Schermafdruk van een voorbeeld van een webshop aan het einde van dit hoofdstuk.
+```
+
 In dit hoofdstuk staan suggesties voor uitbreidingen die je kunt maken. Natuurlijk kun je ook zelf uitbreidingen verzinnen.
 
 ## Ideeen voor uitbreidingen

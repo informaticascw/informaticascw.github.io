@@ -1,4 +1,13 @@
 # Filters
+
+```{pull-quote}
+De keuze is reuze.
+```
+
+```{figure} scherm5.png
+Schermafdruk van webshop aan het einde van dit hoofdstuk.
+```
+
 In dit hoofdstuk ga je filters toevoegen aan je webshop. Met filters kun je selecteren welke artikelen getoond worden.
 
 ## Uitleg: REST-API

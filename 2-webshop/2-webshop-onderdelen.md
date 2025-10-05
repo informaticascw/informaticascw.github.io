@@ -1,4 +1,13 @@
 # Webshop-onderdelen
+
+```{pull-quote}
+We beginnen met drie smurfen.
+```
+
+```{figure} scherm1.png
+Schermafdruk van webshop aan het begin van dit hoofdstuk.
+```
+
 In dit hoofdstuk ga je kleine aanpassingen doen in je webshop, zoals teksten, kleuren en plaatjes aanpassen. Je maakt kennis met alle onderdelen van de webshop en leert hoe die samenwerken.
 
 ## Uitleg: Architectuur

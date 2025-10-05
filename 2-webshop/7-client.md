@@ -1,4 +1,13 @@
 # Client
+
+```{pull-quote}
+
+```
+
+```{figure} scherm6.png
+Schermafdruk van een voorbeeld van een webshop aan het einde van dit hoofdstuk.
+```
+
 In de vorige hoofdstukken heb je aanpassingen gedaan aan de server-zijde van je webshop. Dit zijn de database en de api. In dit hoofdstuk ga je aanpassingen doen aan de client-zijde van je webshop. De client is het gedeelte van de webshop dat wordt uitgevoerd in de browser van de bezoekers van je webshop. Dit bevat html, css en javascript. Deze bestanden vind je in de map `static`.
 
 ## Opdracht: Maak aparte bestelpagina

@@ -1,4 +1,12 @@
 # Artikelen-tabel
+```{pull-quote}
+We maken vriendjes en een plek om te wonen.
+```
+
+```{figure} scherm2.png
+Schermafdruk van webshop aan het einde van dit hoofdstuk.
+```
+
 In dit hoofdstuk ga je meer artikelen toevoegen en krijgen je artikelen meer velden, zoals een beschrijving en een prijs.
 
 ## Uitleg: Gegevens toevoegen

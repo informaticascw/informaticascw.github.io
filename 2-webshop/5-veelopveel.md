@@ -1,4 +1,13 @@
 # n:m-relatie
+
+```{pull-quote}
+Colors make the world more beautiful.
+```
+
+```{figure} scherm4.png
+Schermafdruk van webshop aan het einde van dit hoofdstuk.
+```
+
 In dit hoofdstuk ga je kleuren toevoegen aan elk product. Kleur en product hebben een n:m-relatie.
 
 ## Uitleg: Tabellen met n:m-relatie maken

@@ -1,5 +1,14 @@
 
 # 1:n-relatie
+
+```{pull-quote}
+It's all about branding.
+```
+
+```{figure} scherm3.png
+Schermafdruk van webshop aan het einde van dit hoofdstuk.
+```
+
 In dit hoofdstuk ga je een merk toevoegen aan elk product. Merk en product hebben een 1:n-relatie.
 
 
