@@ -183,30 +183,30 @@ Knip en plak de Python-code op de juiste plek in de API en controleer of de eers
         plak ` WHERE ` aan query
         
     als aantal_merken > 0
-        plak `merken IN (1e_merk ` aan query
-        plak 1e_merk aan parameter-list
+        plak `merken IN (? ` aan query
+        plak 1e_merk aan parameter-lijst
         plak `)` aan query         
 ```
 
-xxxxxx code must be changed a little to make it fit 100% with pseudocode
 ```{code} python
 :caption: Python-code
 :linenos:
-    # Filter merk (brand in database)
-    brand_params = merk
-    brand_filters = []
-    if len(brand_params) > 0:
-        placeholders = "?"
-        for i in range(1, len(brand_params)):
-            placeholders = placeholders + ", ?"
-        brand_filters = ["brands.name IN (" + placeholders + ")"]
+    # add WHERE to query if applicable
+    if len(brand_filter_values) > 0 :
+        query = query +  " WHERE "
+
+    # add BRANDS IN to query if applicable
+    if len(brand_filter_values) > 0:
+        query = query +  "brands.name IN ( ?"
+        query_params.append(brand_filter_values[0])
+        query = query +  ")"
 ```
 :::
 
-```{hint} Tips XXX
+```{hint} Tips
 :class: dropdown
-- een
-- twee
+- De code moet net als bij de vorige opdracht worden ingevoeg in de functie `get_filters()` uit de api. 
+- De exacte plek voor de code is nadat de basis query met `SELECT` wordt gemaakt en vóórdat de query wordt uitgevoerd (execute)
 ```
 
 :::{note}Opdracht b)
@@ -224,20 +224,20 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
         plak ` WHERE ` aan query
 
     als aantal merken > 0
-        plak `merken IN (1e_merk ` aan query
-        plak 1e_merk aan parameter-list
+        plak `merken IN (? ` aan query
+        plak 1e_merk aan parameter-lijst
     voor de 2e tot en met de laatste merk
-        plak `, volgende_merk` aan query
-        plak volgende_merk aan parameter-list 
+        plak `, ?` aan query
+        plak volgende_merk aan parameter-lijst 
     als aantal_merken > 0
         plak `)` aan query       
 ```
 :::
 
-```{hint} Tips XXX
+```{hint} Tips
 :class: dropdown
-- een
-- twee
+- gebruik de volgene for-loop voor het tweede tot en met het laatste merk: \
+`for i in range(1, len(brand_filter_values)):`
 ```
 
 :::{note}Opdracht c)
@@ -247,20 +247,21 @@ In onderdeel a) en b) heb je met `WHERE` gefilterd op het veld `brand`. Dat kon 
 - `SELECT` ... `brands.name AS merk` en 
 - `JOIN brands ON product.brand_id = brands.id`
 
-Voeg de kleuren toe aan het resultaat van de query. Dit kan door de query te veranderen naar de code hieronder.
-```{code} SQL
-SELECT <velden die er al staan>, color.name AS kleur
-FROM products
-JOIN brands ON product.brand_id = brands.id
-JOIN product_color ON <maak af>
-JOIN color ON <maak af>
+Voeg de kleuren toe aan het resultaat van de query. Dit kan door de query aan te passen met de code hieronder. Voeg deze code toe na de basis query met `SELECT` en vóór de code met `WHERE` die je in de vorige opdracht hebt toegevoegd. Controleer of je webshop artikelen meerdere keren toont.
+```{code} python
+  # Add JOIN JOIN to query before filtering to ensure each product-color combination results in a line (e.q. multiple lines per product)
+    query = query + """
+        LEFT JOIN product_color ON products.id = product_color.product_id
+        LEFT JOIN colors ON product_color.color_id = colors.id
+    """
 ```
 
-Omdat kleur een n:m-relatie is, wordt elk artikel zoveel keer in het resultaat genoemd als er kleuren van dat artikel zijn. Dus als een artikel de kleuren `geel` en `blauw` heeft, dan wordt het twee keer opgenomen in de ongefilterde lijst met artikelen. Dat is nodig om met `WHERE` op meerdere kleuren te kunnen filteren. In de artikelen-lijst die verzonden wordt mag elk artikel maximaal één keer voorkomen.
+Omdat artikel een n:m-relatie met kleur heeft, wordt elk artikel zoveel keer in het resultaat opgenomen als er kleuren van dat artikel zijn. Dus als een artikel de kleuren `geel` en `blauw` heeft, dan wordt het artikel twee keer opgenomen in de ongefilterde lijst met artikelen. Dat is nodig om met `WHERE` op meerdere kleuren te kunnen filteren. In de artikelen-lijst die verzonden wordt mag elk artikel maximaal één keer voorkomen.
 
-Voeg de volgende regel toe aan de query (XXX dit moet iets uitgebreider en wellicht met meer tipsXXX), zodat gefilterde artikelen maximaal één keer in de lijst voorkomen. Controleer of je webshop de producten nog laat zien.
-```{code} SQL
-GROUP BY product.id
+Voeg de volgende code toe om dubbele artikelen uit het resultaat te verwijderen. Deze code voeg je toe na de code met `WHERE` uit de vorige opdracht en vóór de code die de query uitvoert (execute). Controleer of je webshop alle artikelen één keer toont.
+```{code} python
+    # Add GROUP BY to query after filter to remove duplicate products (e.q. one line per product)
+    query = query + " GROUP BY products.id"
 ```
 
 ```{hint} Tips
@@ -284,11 +285,11 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
         plak ` WHERE ` aan query
 
     als aantal merken > 0
-        plak `merken IN (1e_merk ` aan query
-        plak 1e_merk aan parameter-list
+        plak `merken IN (? ` aan query
+        plak 1e_merk aan parameter-lijst
     voor de 2e tot en met de laatste merk
-        plak `, volgende_merk` aan query
-        plak volgende_merk aan parameter-list 
+        plak `, ?` aan query
+        plak volgende_merk aan parameter-lijst 
     als aantal_merken > 0
         plak `)` aan query
 
@@ -296,18 +297,19 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
         plak ` AND ` aan query
 
     als aantal kleuren > 0
-        plak `kleuren IN (1e_kleur ` aan query
-        plak 1e_kleur aan parameter-list
+        plak `kleuren IN (? ` aan query
+        plak 1e_kleur aan parameter-lijst
     voor de 2e tot en met de laatste kleur
-        plak `, volgende_kleur` aan query
-        plak volgende_kleur aan parameter-list 
+        plak `, ?` aan query
+        plak volgende_kleur aan parameter-lijst 
     als aantal_kleuren > 0
         plak `)` aan query   
 ```
 :::
 
-```{hint} Tips XXX
+```{hint} Tips
 :class: dropdown
-- een
-- twee
+- kopieer de code voor merken en pas de variabelen aan, zodat het werkt voor kleuren.
+- vergeet de aanpassing in regel 1 niet
+- let op het verschil tussen regel 1 (`or`) en regel 13 (`and`)
 ```

@@ -215,9 +215,10 @@ Maak de query in de code af door op de plekken met `<maak af>` de juiste stukje 
             JOIN <maak af>
             WHERE product_id = ?
         """
+        color_query_params= [product["id"]] # what comes at the place of the questionmark in the query
         # Execute the query to fetch colors for the current product
-        color_rows = db_connection.execute(color_query, (product["id"],)).fetchall()
-
+        color_rows = db_connection.execute(color_query, color_query_params).fetchall()
+        
         # Add fetched colors to product
         colors = []
         for row in color_rows:
