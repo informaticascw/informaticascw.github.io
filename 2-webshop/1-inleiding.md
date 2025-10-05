@@ -22,9 +22,6 @@ Een hoofdstuk bevat uitleg en opdrachten. In de opdracht staat wat je code moet 
 
 
 ## Webshop XXXfixenXXX
-```{figure} scherm1.png
-Voorbeeld van een webshop.
-```
 
 Je webshop bevat een plaatje en informatie over wat je verkoopt. Bezoekers kunnen filteren welke producten ze willen zien. Ze kunnen bestellen door je een mailtje te sturen.
 
