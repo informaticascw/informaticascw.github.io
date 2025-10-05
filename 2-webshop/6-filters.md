@@ -70,7 +70,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
     # Construct the response
     filters = {
         "merk": ["Smurf Mania","Totally Smurf"],
-        "kleur": ["rood","blauw"]
+        "kleur": ["rood","geel","blauw"]
     }
 ```
 
