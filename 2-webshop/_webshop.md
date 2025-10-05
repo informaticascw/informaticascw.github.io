@@ -19,7 +19,7 @@ In het schooljaar 25/26 gaan we starten met deze opdracht, tot die tijd zijn we 
 
 Status (last updated 29 sept 2025)
 2do: uitleg volgorde wisselen (bijv json na maken tabellen)
-- hoofdstuk 1 inleiding 50% 
+- hoofdstuk 1 inleiding 70% 
 - hoofdstuk 2 100% gereed
 - hoofdstuk 3 100% gereed
 - hoofdstuk 4 100% gereed
@@ -32,6 +32,9 @@ uibreidingen conform game, bij inleiding of uitbreidingen toevoegen dat er een b
 - hoofdstuk docenten
 - uitwerking 95% gereed (werkt 100%, op een enkele plek wellicht nog stijlaanpassing nodig)
 - startcode nog maken door uitkleden van uitwerking
+
 Er zitten over nog te veel kleine tekstuele fouten in => van begin tot eind nalopen als alles gereed is.
+
+Zet bij elk hoofdstuk een plaatje hoe de webshop er aan het einde uit gaat zien
 ```
 

@@ -37,6 +37,29 @@ Je leert meer over REST in de volgende hoofdstukken.
 
 :::
 
+## Opdracht: Run de startcode 
+
+In ‘de opdracht’ staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De tips kun je bekijken als je er niet uitkomt.
+
+:::{note} Opdracht
+- Start de server (database en api) van je webshop. Gebruikt daarvoor het commando `bash start.sh`.
+- Open een client van je webshop. Doe dat door een webpagina te openen op poort 8000 van je webserver.
+
+Als het gelukt is, dan zie je een webshop met drie smurfen.
+:::
+
+```{attention} Toelichting
+Voor deze opdracht krijg je startcode. De startcode bevat een webshop met drie surfen. De startcode moet je aanpassen in een ontwikkelomgeving. Je docent vertelt hoe je aan de startcode komt en welke ontwikkelomgeving je mag gebruiken.
+```
+
+```{hint} Tips
+:class: dropdown
+- 
+- Bij de startcode zit een `README.md` bestand. Hierin staat hoe je code kunt starten, stoppen, wijzigingen en opslaan.
+- Meer informatie over de ontwikkelomgeving GitHub Codespaces vind je op\
+  https://stanislas.informatica.nu/help/codespaces/
+```
+
 ## Opdracht: Verander het onderwerp
 
 :::{note} Opdracht
