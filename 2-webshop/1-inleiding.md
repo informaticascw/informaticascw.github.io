@@ -1,27 +1,14 @@
 # Inleiding
 
-## Leeswijzer XXXafmakenXXX
+## Leeswijzer
 
-Dit is een opdracht waar je één of twee maanden aan gaat werken. De opdracht bestaat uit 
-- hoofdwtuk 2 tm 5
-- hoofdstuk 6
-- hoofdstuk 7
-- h8
-Wie doet wat.
+Dit is een opdracht waar je één of twee maanden aan gaat werken. De opdracht bestaat uit meerdere hoofdstukken. Je docent vertelt welke hoofdstukken je moet maken.
 
-XXX nog afmaken XXX
+Een hoofdstuk bevat uitleg en opdrachten. In de opdracht staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. Bij een opdracht staan tips die je kunt gebruiken als je er niet uitkomt. Bekijk de tips één voor één van boven naar beneden en probeer na elke tip of je verder met de opdracht komt.
 
- en uitbreidingen. Met de basisstappen maak je een eenvoudig spel waarin je één level kunt spelen. Daarna ga je verder met de uitbreidingen. Je kunt zelf kiezen welke uitbreidingen je gaat maken.
+De eerste hoofdstukken werk je aan functionaliteit voor je webshop. Je maakt daarvoor gebruik van de producten (smurfen) die al in de startcode zijn opgenomen. Als je toe bent aan de uitbreidingen, dan kun je zelf kiezen welke producten je in je webshop aanbiedt. Denk aan kleding, sieraden, clubshirts, telefoons, auto's, eten of iets anders dat jij leuk vindt. Zorg ervoor dat het netjes blijft, vraag het aan je docent als je twijfelt.
 
-
-Bij de uitbreidingen heb je meer vrijheid. Ze zijn minder ver uitgewerkt. Daardoor zijn die moeilijker dan de basisstappen. Je leert zelfstandig kleine of grotere uitbreidingen toe te voegen aan bestaande code. Hoe beter je daarin wordt, hoe meer functies uit je eigen fantasie jij kunt maken!
-
-iets over moeilijkheid
-
-Een hoofdstuk bevat uitleg en opdrachten. In de opdracht staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. Bij een opdracht staan tips die je kunt gebruiken als je er niet uitkomt. Bekijk de tips één voor één van boven naar beneden en probeer na elke tip of je verder met de opdracht komt. 
-
-
-## Webshop XXXfixenXXX
+## Webshop
 
 Je webshop bevat een plaatje en informatie over wat je verkoopt. Bezoekers kunnen filteren welke producten ze willen zien. Ze kunnen bestellen door je een mailtje te sturen.
 
@@ -29,9 +16,7 @@ Bezoekers kunnen niet inloggen op je webshop en er zit geen betaalmogelijkheid i
 
 Je webshop maak je in een ontwikkelomgeving. Zodra je de ontwikkelomgeving afsluit, is je webshop niet meer bereikbaar. Als je wilt dat je webshop altijd bereikbaar is, dan moet je je code neerzetten op een server die altijd bereikbaar is. Dat noemen ze hosten. Je kunt een oude server gebruiken die je thuis hebt, of er eentje bij een bedrijf huren. Je webshop heeft een server met het Unix-besturingssysteem nodig. Als je dit wilt doen dan heb je handigheid met Unix nodig. Het hosten van je webshop is geen onderdeel van deze opdracht. 
 
-De eerste hoofdstukken werk je aan functionaliteit voor je webshop. Je maakt daarvoor gebruik van de producten (smurfen) die al in de startcode zijn opgenomen. Als je toe bent aan de uitbreidingen, dan kun je zelf kiezen welke producten je in je webshop aanbiedt. Denk aan kleding, sieraden, clubshirts, telefoons, auto's, eten of iets anders dat jij leuk vindt. Zorg ervoor dat het netjes blijft, vraag het aan je docent als je twijfelt.
-
-## Voorkennis en naslagmateriaal XXXaanvullenXXX
+## Voorkennis en naslagmateriaal
 
 Voor deze opdracht heb je basiskennis nodig van SQL. Basiskennis van SQL betekent dat je opdrachten gemaakt hebt met `SELECT`, `WHERE`, `JOIN` en `GROUP BY`. 
 
@@ -42,15 +27,24 @@ Voor hoofdstuk 7 (client) heb je tevens basiskennis nodig van html en css. Je ko
 ```{seealso} Naslagmateriaal
 Als je meer over de gebruikte technieken wilt weten, dan kun je de volgende naslagwerken gebruiken:
 
+Lesmateriaal met basiskennis over SQL
+: Fundament Kernprogramma, Domein C: Informatie -> C5 Databases en SQL (inloggen nodig)\
+https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=10497
+
 Lesmateriaal met basiskennis over Python
-: Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python (inloggen nodig)
+: Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python (inloggen nodig)\
 https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=10500
 
 Uitgebreide informatie over Python
 : Begin bij de Tutorial, daarna kun je de Library Reference bekijken, als je alles wilt weten dan bekijk je daarna de Language Reference\
 https://docs.python.org/3/
 
-XXX aanvullen XXX
+Uitgebreide informatie over HTML, CSS en Javascript
+: W3schools biedt uitgebreide en tegelijk praktische informatie over html, css en javascript
+: html op https://www.w3schools.com/html/default.asp 
+: css op https://www.w3schools.com/css/default.asp
+: javascript op https://www.w3schools.com/js/default.asp
+
 ```
 
 ## Tools
@@ -87,7 +81,7 @@ Je werkt op de volgende manier aan de opdrachten.
 - Als je uitbreidingen op de opdracht hebt gemaakt, dan zijn die toegevoegd aan het lijstje in het bestand `uitbreidingen.md`
 - Je kunt vragen stellen tot de laatste les voor de deadline.
 
-## Beoordeling XXXafmakenXXX
+## Beoordeling
 
 Je krijgt één cijfer per team, maar je docent kan hiervan afwijken als teamleden geen gelijkwaardige bijdrage hebben geleverd. 
 
@@ -101,7 +95,11 @@ Een netjes uitgevoerde opdracht met alle basisstappen zal in de meeste gevallen 
 
 Een concept beoordelingsmodel staat hieronder. Je docent kan tijdens het nakijken aanpassingen doen aan het beoordelingsmodel of de berekening van het cijfer.
 
-XXX dit is een voorbeeld van een andere opdracht, dit moet nog worden aangepast, er moeten ook puntne voor een toetsje (ook toevoegen aan planner) worden toegevoegd XXX
+```{attention} Beoordelingsmodel
+
+Dit beoordelingsmodel is een voorbeeld van een andere opdracht, je krijgt meer informatie van je docent. Hou er rekening mee dat je eigen creatieve uitbreidingen moet maken om een hoog cijfer te halen. Om een voldoende te halen zul je ook een korte toets met multiple choice vragen moeten maken om te kijken of je de opdrachten begrepen hebt. 
+
+```
 
 Onderdeel|Punten havo|Punten vwo|Toelichting 
 -|-|-|-
