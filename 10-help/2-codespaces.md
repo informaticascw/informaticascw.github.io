@@ -9,25 +9,34 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 | ![github.png](../10-help/github.png) | ![codespace.png](../10-help/codespace.png) |
 
 ### GitHub is een website waar je code kunt opslaan en delen.
+```{note} Wat kun je met GitHub?
+:class: dropdown
 - GitHub bewaart alle oude versies van je code.
 - Code op GitHub kun je gemakkelijk delen met anderen.
 - Met GitHub kun je in groepen aan dezelfde code werken.
 - Bestanden in GitHub worden bewaard in repositories. Een repository (ook wel afgekort tot repo) is een soort hoofdmap. Voor elk project maak je een aparte repository.
 - GitHub werkt op basis van Git. Git is open source software. Er zijn veel programmeeromgevingen die via Git kunnen samenwerken met GitHub.
+```
 
-### Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren.
+### Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren
+```{note} Wat kun je met Codespaces?
+:class: dropdown
 - Codespaces biedt een devcontainer (computer in de cloud) waar je op kunt werken via een browser.
 - In je browser zie je VS Code. VS Code "praat" met Codespaces.
 - Wijzigingen in bestanden in je Codespace kun je bewaren in GitHub.
 - Je kunt code uitvoeren in je Codespace, bijvoorbeeld door commando's te typen in de terminal.
+```
 
 ### VS Code is de editor die in Codespaces wordt gebruikt.
+```{note} Wat kun je met VS Code?
+:class: dropdown
 - VS Code gebruik je voor het wijzigen en runnen van code in Codespaces.
 - VS Code is geschikt voor alle populaire programmeertalen 
 - VS Code is meer dan een editor, zo verzorgt VS Code ook de verbinding met je Codespace en GitHub
 - Je kunt de instellingen van VS Code naar je eigen smaak aanpassen. Wij gebruiken instellingen om het bewaren van wijzigingen in github gemakkelijker te maken. 
 - De functies van VS Code kun je uitbreiden met extensions. Wij gebruiken extentions om previews van .pdf en .html bestanden te bekijken.
 - VS Code (spreek uit als "vie es koot") is een veelgebruikte afkorting voor Visual Studio Code.
+```
 
 ## Starten met een opdracht
 
