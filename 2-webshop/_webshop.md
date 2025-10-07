@@ -17,8 +17,7 @@ Plaatje van webshop.
 ```{warning} Work in progress
 In het schooljaar 25/26 gaan we starten met deze opdracht, tot die tijd zijn we bezig met de ontwikkeling. 
 
-Status (last updated 29 sept 2025)
-2do: uitleg volgorde wisselen (bijv json na maken tabellen)
+Status (last updated 8 oktober 2025)
 - hoofdstuk 1 inleiding 70% 
 - hoofdstuk 2 100% gereed
 - hoofdstuk 3 100% gereed
@@ -27,14 +26,12 @@ Status (last updated 29 sept 2025)
 - hoofdstuk 6 100% gereed  
 - hoofdstuk 7 30% gereed
 - hoofdstuk 8 30% gereed 
-uibreidingen conform game, bij inleiding of uitbreidingen toevoegen dat er een bestandje moet zijn met uitbreidingen (en dat bestand in repo zetten
+uibreidingen conform game, bij inleiding of uitbreidingen toevoegen dat er een bestandje moet zijn met uitbreidingen 
 - hoofdstuk 9 80% gereed
-- hoofdstuk docenten
-- uitwerking 95% gereed (werkt 100%, op een enkele plek wellicht nog stijlaanpassing nodig)
-- startcode nog maken door uitkleden van uitwerking
+- hoofdstuk docenten 100% gereed
+- uitwerking 100% gereed
+- startcode gemaakt door uitkleden van uitwerking 100% gereed
 
 Er zitten over nog te veel kleine tekstuele fouten in => van begin tot eind nalopen als alles gereed is.
-
-Zet bij elk hoofdstuk een plaatje hoe de webshop er aan het einde uit gaat zien
 ```
 

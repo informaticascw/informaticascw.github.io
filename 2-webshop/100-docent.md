@@ -40,7 +40,7 @@ Hoofdstuk|Aantal lessen|Basis of optioneel
 4 1:N | 2 | basis
 5 N:M | 2 | basis
 6 Filters | 2 | optioneel
-7 Front end | 2 | optioneel
+7 Client | 2 | optioneel
 8 Uitbreidingen | 2 tot 8 | optioneel
 Totaal | 7 tot 19 |
 
@@ -55,16 +55,17 @@ Opmerkingen:
 
 ## Startcode en uitwerking
 
-Startcode volgt
+Startcode
+:  [https://github.com/informaticascw/h5v5-sql-webshop-template](https://github.com/informaticascw/h5v5-sql-webshop-template)
+: Deze startcode kan met leerlingen worden gedeeld.
 
-Uitwerking volgt
-
-Een concept (work in progress) van de code staat op 
-[https://github.com/informaticascw/h5v5-sql-webshop-template](https://github.com/informaticascw/h5v5-sql-webshop-template)
+Uitwerking 
+: [https://github.com/informaticascw/h5v5-sql-webshop-uitwerking](https://github.com/informaticascw/h5v5-sql-webshop-uitwerking) 
+: Docenten kunnen mailen naar gees_at_stanislascollege_punt_nl om toegang te krijgen. Vermeld daarbij je github account.
 
 ## Beoordelingsmodel
 
-volgt
+Een beoordelingsmodel is opgenomen in de inleiding van de opdrachtbeschrijving voor leerlingen
 
 ## Ontwikkelomgeving inrichten
 
@@ -85,8 +86,9 @@ Aanbevolen variant voor docenten die ervaring hebben met GitHub Classroom.
 - Opdracht met startcode aanmaken in Github Classroom.
 - Inschrijflink verspreiden onder leerlingen.
 
-Docentenhandleiding
-- Een eerste aanzet vind je op\
-https://stanislas.informatica.nu/docenten/codespaces
+```{seealso} Docentenhandleiding
+- Een eerste aanzet voor het gebruik van Codespaces gericht op docenten vind je op\
+[https://stanislas.informatica.nu](docenten-codespaces)
 - Een uitgebreide handleiding, toegespitst op docenten die hun leerlingen deze opdracht willen laten maken, is (nog) niet beschikbaar. 
 - Er is veel informatie te vinden op internet, maar het vergt tijd om bekend te raken met de ontwikkelomgeving.
+```

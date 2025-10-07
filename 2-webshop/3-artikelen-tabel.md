@@ -98,6 +98,8 @@ Er staan drie kolommen in:
 - name: de naam van het product, dit is een tekst
 - price: de prijs van het product, dit is een kommagetal
 
+:::
+
 ```{tip} komma's, punten en puntkomma's
 De komma `,` wordt gebruikt als **scheiding** tussen kolommen. Na de laatste kolom komt dus geen komma meer. Als je een kolom aan het einde van de tabel toevoegt, dan moet je niet vergeten de komma toe te voegen achter de één na laatste kolom.
 
@@ -105,7 +107,6 @@ De punt `.` wordt gebruikt als **decimaalteken**. Dus een prijs van 4 euro en 99
 
 De puntkomma `;` wordt gebruikt als **afsluiting** van elk commando. Het maken van een tabel is een commando. Er staat een puntkomma na elke tabel die je maakt, dus ook na de laatste tabel.
 ```
-:::
 
 ## Opdracht: Voeg artikel-beschrijvingen toe
 
