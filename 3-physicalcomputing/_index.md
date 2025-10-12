@@ -3,7 +3,7 @@ title: Physical Computing
 subtitle: Microbit programmeren met toestandsdiagrammen
 date: 2025-05-01
 ---
-
+(physicalcomputing-homepage)=
 Deze module is een bewerkte versie van het keuzethema Physical Computing dat ontwikkeld is door SLO.
 
 ```{seealso} Keuzethema Physical Computing van SLO

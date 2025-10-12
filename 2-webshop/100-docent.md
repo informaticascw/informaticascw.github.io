@@ -88,7 +88,7 @@ Aanbevolen variant voor docenten die ervaring hebben met GitHub Classroom.
 
 ```{seealso} Docentenhandleiding
 - Een eerste aanzet voor het gebruik van Codespaces gericht op docenten vind je op\
-[https://stanislas.informatica.nu](docenten-codespaces)
+[https://stanislas.informatica.nu](#docenten-codespaces)
 - Een uitgebreide handleiding, toegespitst op docenten die hun leerlingen deze opdracht willen laten maken, is (nog) niet beschikbaar. 
 - Er is veel informatie te vinden op internet, maar het vergt tijd om bekend te raken met de ontwikkelomgeving.
 ```

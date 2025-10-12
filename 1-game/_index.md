@@ -7,7 +7,7 @@ authors:
     affiliations:
       - Stanislascollege Westplantsoen
 ---
-
+(game-homepage)=
 Hier vind je alle informatie over de Python Game opdracht.
 
 ```{figure} cover.png

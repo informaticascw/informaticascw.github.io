@@ -12,23 +12,23 @@ project:
   # To autogenerate a Table of Contents, run "myst init --write-toc"  
   # a toc is neccessary to show root-pages
   toc:
-    - file: _informatica.md
-    - file: 1-game/_game.md
+    - file: _index.md
+    - file: 1-game/_index.md
       children:
         - pattern: 1-game/*-*.md
-    - file: 2-webshop/_webshop.md
+    - file: 2-webshop/_index.md
       children:
         - pattern: 2-webshop/*-*.md
-    - file: 3-physicalcomputing/_physicalcomputing.md
+    - file: 3-physicalcomputing/_index.md
       children:
         - pattern: 3-physicalcomputing/*-*.md
-    - file: 4-gdevelop/_gdevelop.md
+    - file: 4-gdevelop/_index.md
       #children:
         #- pattern: 4-gdevelop/*-*.md
-    - file: 10-help/_help.md
+    - file: 10-help/_index.md
       children:
         - pattern: 10-help/*-*.md
-    - file: 100-docenten/_docenten.md
+    - file: 100-docenten/_index.md
       children:
         - pattern: 100-docenten/*-*.md
 
@@ -50,7 +50,7 @@ site:
   template: book-theme
   options:
   #  hide_outline: true # hide document navigation column on the right side of the contents, unfortunatelly the content doesn't go wider
-  #  folders: true # keeps folder names in URL, 
+    folders: true # keeps folder names in URL, 
   #     works with myst-server, 
   #     doesn't work with static if you you index.md as root, but works using root.md
   #     doesn't work with static if you you use {toc} in you .md files (links don't work)

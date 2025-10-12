@@ -1,4 +1,5 @@
 # G-develop
+(gdevelop-homepage)=
 Hier vind je informatie over de G-develop game opdracht. 
 
 ## Informatie voor leerlingen
