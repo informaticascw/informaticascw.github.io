@@ -87,7 +87,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 ```{hint} Tips
 :class: dropdown
-- De code moet worden ingevoeg in de functie `get_filters()` uit de api. 
+- De code moet worden ingevoegd in de functie `get_filters()` uit de api. 
 - Let op het commentaar om de exacte plek te vinden waarnaar je de code moet kopieren.
 ```
 
@@ -125,7 +125,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 ```{hint} Tips
 :class: dropdown
-- De code moet worden ingevoeg in de functie `get_filters()` uit de api. 
+- De code moet worden ingevoegd in de functie `get_filters()` uit de api. 
 - Let op het commentaar om de exacte plek te vinden waarnaar je de code moet kopieren.
 - Maak beide SQL-queries in de code af.
 ```
@@ -214,7 +214,7 @@ Knip en plak de Python-code op de juiste plek in de API en controleer of de eers
 
 ```{hint} Tips
 :class: dropdown
-- De code moet net als bij de vorige opdracht worden ingevoeg in de functie `get_filters()` uit de api. 
+- De code moet worden ingevoegd in de functie `get_products()` uit de api.
 - De exacte plek voor de code is nadat de basis query met `SELECT` wordt gemaakt en vóórdat de query wordt uitgevoerd (execute)
 ```
 
@@ -245,7 +245,7 @@ Breidt de Python-code in de API uit, zodat het werkt zoals beschreven staat in d
 
 ```{hint} Tips
 :class: dropdown
-- gebruik de volgene for-loop voor het tweede tot en met het laatste merk: \
+- gebruik de volgende for-loop voor het tweede tot en met het laatste merk: \
 `for i in range(1, len(brand_filter_values)):`
 ```
 
