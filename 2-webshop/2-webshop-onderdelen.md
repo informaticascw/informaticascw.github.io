@@ -18,7 +18,7 @@ In dit hoofdstuk ga je kleine aanpassingen doen in je webshop, zoals teksten, kl
 Architectuur van de webshop
 ```
 
-Als je de webshop bezoekt dan laadt de browser eerst de een kale webpagina zonder producten. Daarna worden de artikelen geladen. Dat gaat zo snel, dat je het bijna niet ziet.
+Als je de webshop bezoekt dan laadt de browser eerst een kale webpagina zonder producten. Daarna worden de artikelen geladen. Dat gaat zo snel, dat je het bijna niet ziet.
 
 ### Webpagina laden
 Het laden van de kale webpagina gaat met de volgende stappen.
@@ -113,7 +113,7 @@ Verander de namen van artikelen in artikelen die jij wilt verkopen.
 - Start de webshop opnieuw met het terminal-commando `bash start.sh`. Tijdens het starten wordt de database opnieuw gemaakt met de commando's in het bestand init.sql
 ```
 
-:::{note} Opdracht de
+:::{note} Opdracht e)
 ### Verander een plaatje
 
 Voeg een nieuw plaatje toe en geef het een naam die past bij het artikel.

@@ -109,7 +109,7 @@ Voeg aan elk artikel toe welke kleuren erin zitten.
 :class: dropdown
 - Maak een `INSERT INTO`-opdracht die de `product_color`-tabel vult.
 - Gebruik in de `INSERT INTO`-opdracht de velden `product_id` en `color_id`.
-- Geef in je `INSERT INTO`-opdracht de nummers van de producten en kleuren die bij elkaar passen op. Elke conmbinatie is een nieuwe rij in de tabel.
+- Geef in je `INSERT INTO`-opdracht de nummers van de producten en kleuren die bij elkaar passen op. Elke combinatie is een nieuwe rij in de tabel.
 ````
 
 ## Uitleg: Query met n:m-relatie maken
@@ -129,7 +129,7 @@ Voorbeeld: producten met hun kleuren
 SELECT colors.name, products.name
 FROM product_color
 JOIN colors ON product_color.color_id = colors.id
-JOIN products ON product_color.product_id = products.id;
+JOIN products ON product_color.product_id = products.id
 ```
 
 Wat gebeurt er in deze query?
@@ -255,7 +255,7 @@ Tijdens het invullen controleert de `execute`-functie of er geen rare dingen in 
 
 Door de waarde van de parameter slim te kiezen kunnen gebruikers informatie uit de database halen die niet voor hen bedoeld is. Denk bijvoorbeeld aan een parameter `product_id` met de waarde `1; SELECT * FROM passwords;`. De database denkt dan dat hij twee opdrachten moet uitvoeren waarvan de laatste de wachtwoorden geeft. Deze truuk heet _SQL-injectie_. 
 
-In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met SQL-injectie, onder andere omdat wachtwoorden niet zomaar in een database worden gezet. Maar als je Googlet op SQL-injection, dan zie je dat het een veelvoorkomend probleem is. In onze database kan dit niet gebeuren, omdat we alle parameters door de `execute`-functie laten controlere.
+In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met SQL-injectie, onder andere omdat wachtwoorden niet zomaar in een database worden gezet. Maar als je Googlet op SQL-injection, dan zie je dat het een veelvoorkomend probleem is. In onze database kan dit niet gebeuren, omdat we alle parameters door de `execute`-functie laten controleren.
 ```
 
 :::

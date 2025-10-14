@@ -14,7 +14,7 @@ In dit hoofdstuk ga je een merk toevoegen aan elk product. Merk en product hebbe
 
 ## Uitleg: Tabellen met 1:n-relatie maken
 
-:::{note} uitleg
+:::{note} Uitleg
 ### Wat is een 1:n-relatie?
 
 Een _1:n-relatie_ (spreek uit: _één op en relatie_) wordt ook wel een _één-op-veel-relatie_ (Engels: _one to many relationship_) genoemd. Twee tabellen hebben een 1:n-relatie als:  
@@ -59,7 +59,7 @@ In dit voorbeeld:
 
 In deze opdracht ga je een merk (Engels: brand) toevoegen aan elk artikel in de database. Elk artikel is van één merk. Een merk heeft één of meer artikelen.
 
-Her merk wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
+Het merk wordt niet automatisch zichtbaar in je webshop, dat doen we in de volgende opdracht.
 
 :::{note}Opdracht a)
 ### Merken-tabel toevoegen
@@ -95,8 +95,8 @@ Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constra
 :class: dropdown
 - Voeg de verwijzende sleutel en de constraint toe aan de tabel `products`.
 - De verwijzende sleutel heeft het datatype `INTEGER`.
-- De contraint is van de vorm met `FOREIGN KEY(`_verwijzende_sleutel_`) REFERENCES(`_tabel_`.`_primaire_sleutel_`)`
-- De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `brandss` moet je eerder maken dan de tabel `products`, anders dan kent de computer de tabel `brands` nog niet als je ernaar wilt verwijzen in je constraint.
+- De constraint is van de vorm met `FOREIGN KEY(`_verwijzende_sleutel_`) REFERENCES(`_tabel_`.`_primaire_sleutel_`)`
+- De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `brands` moet je eerder maken dan de tabel `products`, anders dan kent de computer de tabel `brands` nog niet als je ernaar wilt verwijzen in je constraint.
 ```
 
 :::{note}Opdracht d)
@@ -140,7 +140,7 @@ Je krijgt dan een lijst van producten, met daarbij het merk waar ze bij horen.
 :::
 
 ## Opdracht: Maak merk zichtbaar in de webshop
-Je hebt in de vorige opdracht het merk aan alle artikelen in de database toegevoegd. Maar de naamm van het merk is nog niet te zien op de webshop. Dat komt omdat de API niks doet met de merken-tabel de database. In deze opdracht ga je de API aanpassen, zodat de informatie uit de merken-tabel wordt doorgeven aan de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
+Je hebt in de vorige opdracht het merk aan alle artikelen in de database toegevoegd. Maar de naamm van het merk is nog niet te zien op de webshop. Dat komt omdat de API niks doet met de merken-tabel de database. In deze opdracht ga je de API aanpassen, zodat de informatie uit de merken-tabel wordt doorgegeven aan de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
 
 :::{note}Opdracht a)
 ### Voeg merk toe aan query
