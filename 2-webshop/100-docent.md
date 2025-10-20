@@ -56,7 +56,7 @@ Opmerkingen:
 ## Startcode en uitwerking
 
 Startcode
-:  [https://github.com/informaticascw/h5v5-sql-webshop-template](https://github.com/informaticascw/h5v5-sql-webshop-template)
+: [https://github.com/informaticascw/h5v5-sql-webshop-template](https://github.com/informaticascw/h5v5-sql-webshop-template)
 : Deze startcode kan met leerlingen worden gedeeld.
 
 Uitwerking 
@@ -65,7 +65,11 @@ Uitwerking
 
 ## Beoordelingsmodel
 
-Een beoordelingsmodel is opgenomen in de inleiding van de opdrachtbeschrijving voor leerlingen
+Leerlingen
+: Voor leerlingen staat er een [beoordelingsmodel in de opdrachtbeschrijving](webshop-beoordeling).
+
+Docenten
+: Voor docenten is er een [Excel-versie van het beoordelingsmodel](Docent-Nakijkmodel-Webshop.xlsx).
 
 ## Ontwikkelomgeving inrichten
 

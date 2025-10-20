@@ -107,6 +107,7 @@ Er gelden minimale eisen waaraan je opdracht moet voldoen:
 -	Je hebt je gehouden aan de voorgeschreven werkwijze.
 -	Je opdracht is fatsoenlijk, dus vrij van beledigende of illegale elementen.
 -	Je hebt de opdracht helemaal zelf gemaakt, als richtlijn kun je aanhouden dat je maximaal vijf regels code overneemt van anderen of van een tutorial. 
+
 Opdrachten die niet voldoen aan de minimale eisen krijgen het cijfer 1,0.
 
 Een netjes uitgevoerde opdracht met alle basisstappen zal in de meeste gevallen beoordeeld worden met een voldoende. Om een hoog cijfer te halen moet je creatieve en complexe uitbreidingen toevoegen.

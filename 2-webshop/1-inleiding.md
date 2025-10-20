@@ -81,36 +81,33 @@ Je werkt op de volgende manier aan de opdrachten.
 - Als je uitbreidingen op de opdracht hebt gemaakt, dan zijn die toegevoegd aan het lijstje in het bestand `uitbreidingen.md`
 - Je kunt vragen stellen tot de laatste les voor de deadline.
 
+(webshop-beoordeling)=
 ## Beoordeling
 
-Je krijgt één cijfer per team, maar je docent kan hiervan afwijken als teamleden geen gelijkwaardige bijdrage hebben geleverd. 
+De meeste onderdelen worden per team beoordeeld, maar je docent kan hiervan afwijken als teamleden geen gelijkwaardige bijdrage hebben geleverd. Voor de test krijg je altijd een individuele beoordeling. Je docent geeft aan op welke momenten je de test kunt doen.
 
 Er gelden minimale eisen waaraan je opdracht moet voldoen:
 -	Je hebt je gehouden aan de voorgeschreven werkwijze.
 -	Je opdracht is fatsoenlijk, dus vrij van beledigende of illegale elementen.
--	Je hebt de opdracht helemaal zelf gemaakt, als richtlijn kun je aanhouden dat je maximaal vijf regels code overneemt van anderen of van een tutorial. 
+-	Je hebt de opdracht helemaal zelf gemaakt, als richtlijn kun je aanhouden dat je maximaal vijf regels code overneemt van anderen of van een tutorial.
+
 Opdrachten die niet voldoen aan de minimale eisen krijgen het cijfer 1,0.
 
 Een netjes uitgevoerde opdracht met alle basisstappen zal in de meeste gevallen beoordeeld worden met een voldoende. Om een hoog cijfer te halen moet je creatieve en complexe uitbreidingen toevoegen.
 
 Een concept beoordelingsmodel staat hieronder. Je docent kan tijdens het nakijken aanpassingen doen aan het beoordelingsmodel of de berekening van het cijfer.
 
-```{attention} Beoordelingsmodel
-
-Dit beoordelingsmodel is een voorbeeld van een andere opdracht, je krijgt meer informatie van je docent. Hou er rekening mee dat je eigen creatieve uitbreidingen moet maken om een hoog cijfer te halen. Om een voldoende te halen zul je ook een korte toets met multiple choice vragen moeten maken om te kijken of je de opdrachten begrepen hebt. 
-
-```
-
 Onderdeel|Punten havo|Punten vwo|Toelichting 
 -|-|-|-
 **Code**
 Stijl|5|5|- Netjes uitgelijnd,<br> - helder commentaar, <br>- logische naamgeving van variabelen, <br>- logische volgorde van opdrachten, <br>- consistente code.
-Basiscode|20|15|- If-opdrachten goed toegepast, vergelijkingsoperatoren </>/== gebruikt, logische operatoren and/or gebruikt, <br>- lijsten toegepast, <br>- for (of while)-opdrachten toegepast, <br>- code kan omgaan met verschillende lengtes van lijsten (len goed gebruikt),<br>- code wijzigt aantal elementen in lijst tijdens het runnen.
-Uitbreidingen (maantjes)|15|20|- Uitbreidingen gemaakt met technieken die in de opdracht behandeld zijn, zoals meer loops, meer lijsten, meer functies (1 maantje)<br>- uitbreidingen gemaakt met technieken die niet in de opdracht behandeld zijn en je je zelfstandig hebt eigen gemaakt, zoals dicts, geneste loop, lijst in lijst (2 maantjes).
-**Functionaliteit**	 	 
-Speelbaarheid|5|5|- geen glitches<br>- soepele bediening
-Basisfunctionaliteit|20|15|- Bal stuitert tegen randen,<br>- plank beweegt en stopt aan de rand van het scherm en laat bal stuiteren, <br>- 1 blok waartegen bal stuitert,<br>- meer dan 10 blokken waartegen bal stuitert,<br>- blokken verdwijnen, je kunt af gaan en winnen.
-Uitbreidingen (zonnetjes)|15|20|Uitbreidingen in het spel die zorgen voor diversiteit en hoe beter je wordt hoe leuker of moeilijker het wordt, <br>- voorbeelden van kleine uitbreidingen (1 zonnetje) zijn steeds snellere bal, verschillende kleuren blokken,<br>- voorbeelden van grotere uitbreidingen (2 zonnetjes) zijn meer levels, ingewikkelde powerups zoals blokken wegschieten, veel ballen.             
+Basistest|20|15|- Score op test met multiple-choice vragen over de basisopdrachten (hoofdstuk 2 tot en met 7, zonder uitbreidingen)<br>- Je krijgt tijdens 3 lessen de gelegenheid om een test te maken. Het hoogste cijfer van de eerste 2 testen die je start telt. Als je geen test maakt (ongeacht te reden), dan is je score 0 punten.<br>- Voorbereiding voor de test is het maken van de opgaven (dus geen extra leerwerk).<br>- Elke leerling krijgt een eigen score voor de test (individuele beoordeling).
+**Functionaliteit**
+Gebruikerservaring|5|5|- Geen slordigheden in opmaak<br>- Logische indeling / producten vindbaar
+Basisfunctionaliteit|20|15|- Hoofdtuk 3: minimaal 5 artikelen met plaatjes, prijs en beschrijving,<br>- hoofdtuk 4: 1:n relatie,<br>- hoofdtuk 5: n:m relatie,<br>- hoofdtuk 6: filters,<br>- hoofdtuk 7: client aanpassingen.<br>- Punten per hoofdstuk is totaal aantal punten gedeeld door aantal hoofdstukken dat gemaakt moest worden. Voor een hoofdstuk krijg je alle punten als het geheel volgens de opdracht is gemaakt.             
+**Uitbreidingen**
+Eenvoudige uitbreidingen|15|20|- Eenvoudige uitbreidingen zijn uitbreidingen van één of twee sterren. Elke ster is een punt.
+Ingewikkelder uitbreidingen|15|20|- Ingewikkelder uitbreidingen zijn uitbreidingen van drie of vier sterren. Elke ster is een punt.
 **Proces**	 
 Planning|5|5|Uit de commits en/of tijdens de les blijkt dat het stappenplan gevolgd is en dat er regelmatig is gewerkt.
 Samenwerking|5|5|Uit de commits en/of tijdens de les blijkt dat het werk gelijk verdeeld is onder teamleden. Als één teamlid beduidend minder doet, dan is dat een gezamenlijke verantwoordelijkheid van het team om dat op te lossen of te melden bij de docent. Maak vanaf het begin afspraken en spreek elkaar daarop aan. Als je er niet uitkomt, dan meld je dat zo snel mogelijk bij je docent.
