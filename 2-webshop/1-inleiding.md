@@ -84,7 +84,10 @@ Je werkt op de volgende manier aan de opdrachten.
 (webshop-beoordeling)=
 ## Beoordeling
 
-De meeste onderdelen worden per team beoordeeld, maar je docent kan hiervan afwijken als teamleden geen gelijkwaardige bijdrage hebben geleverd. Voor de test krijg je altijd een individuele beoordeling. Je docent geeft aan op welke momenten je de test kunt doen.
+De opdracht die je inlevert wordt grotendeels per team beoordeeld, maar je docent kan hiervan afwijken als teamleden geen gelijkwaardige bijdrage hebben geleverd. 
+Een netjes uitgevoerde opdracht waarvan je alle basisstappen begrepen hebt, zal in de meeste gevallen beoordeeld worden met een voldoende. Om een hoog cijfer te halen moet je creatieve en complexe uitbreidingen toevoegen.
+
+**Minimale eisen**
 
 Er gelden minimale eisen waaraan je opdracht moet voldoen:
 -	Je hebt je gehouden aan de voorgeschreven werkwijze.
@@ -93,7 +96,19 @@ Er gelden minimale eisen waaraan je opdracht moet voldoen:
 
 Opdrachten die niet voldoen aan de minimale eisen krijgen het cijfer 1,0.
 
-Een netjes uitgevoerde opdracht met alle basisstappen zal in de meeste gevallen beoordeeld worden met een voldoende. Om een hoog cijfer te halen moet je creatieve en complexe uitbreidingen toevoegen.
+**Test**
+
+Een beperkt deel van je eindcijfer wordt bepaald door een test. 
+- De test wordt individueel beoordeeld. 
+- Tijdens de test laat je zien dat je de opgaven die je gemaakt hebt begrijpt. 
+- Het is niet nodig om voor de test te leren. 
+- De test bestaat uit multiple choice vragen en duurt ongeveer een kwartier. 
+- Je docent geeft drie momenten op verschillende dagen waarop je de test kunt maken. 
+- Je mag de test maximaal twee keer doen, de hoogste score telt. 
+
+Als je de test geen enkele keer maakt, dan is je score voor de test 0 punten.
+
+**Beoordelingsmodel**
 
 Een concept beoordelingsmodel staat hieronder. Je docent kan tijdens het nakijken aanpassingen doen aan het beoordelingsmodel of de berekening van het cijfer.
 
@@ -101,7 +116,7 @@ Onderdeel|Punten havo|Punten vwo|Toelichting
 -|-|-|-
 **Code**
 Stijl|5|5|- Netjes uitgelijnd,<br> - helder commentaar, <br>- logische naamgeving van variabelen, <br>- logische volgorde van opdrachten, <br>- consistente code.
-Basistest|20|15|- Score op test met multiple-choice vragen over de basisopdrachten (hoofdstuk 2 tot en met 7, zonder uitbreidingen)<br>- Je krijgt tijdens 3 lessen de gelegenheid om een test te maken. Het hoogste cijfer van de eerste 2 testen die je start telt. Als je geen test maakt (ongeacht te reden), dan is je score 0 punten.<br>- Voorbereiding voor de test is het maken van de opgaven (dus geen extra leerwerk).<br>- Elke leerling krijgt een eigen score voor de test (individuele beoordeling).
+Basistest|20|15|- Score op test met multiple-choice vragen over de basisopdrachten (hoofdstuk 2 tot en met 7, zonder uitbreidingen)
 **Functionaliteit**
 Gebruikerservaring|5|5|- Geen slordigheden in opmaak<br>- Logische indeling / producten vindbaar
 Basisfunctionaliteit|20|15|- Hoofdtuk 3: minimaal 5 artikelen met plaatjes, prijs en beschrijving,<br>- hoofdtuk 4: 1:n relatie,<br>- hoofdtuk 5: n:m relatie,<br>- hoofdtuk 6: filters,<br>- hoofdtuk 7: client aanpassingen.<br>- Punten per hoofdstuk is totaal aantal punten gedeeld door aantal hoofdstukken dat gemaakt moest worden. Voor een hoofdstuk krijg je alle punten als het geheel volgens de opdracht is gemaakt.             
