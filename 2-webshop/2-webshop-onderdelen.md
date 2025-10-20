@@ -78,7 +78,15 @@ De webshop verschijnt op je scherm.
 Bovenaan de webshoppagina staat de naam van de webshop (Smurfsjop). 
 
 Verzin zelf een naam voor jouw webshop en pas de code aan, zodat jouw naam getoond wordt.
+
 :::
+
+```{attention} Artikelen die je kunt kiezen
+Het is handig om in de naam van je webshop aan te geven wat je verkoopt. Je mag smurfen verkopen, maar je mag ook kiezen voor andere artikelen. Om de opdrachten uit de volgende hoofdstukken goed te kunnen maken, moet je met twee dingen rekening houden.
+- In hoofdstuk 4 krijgen je artikelen een merk, we gebruiken de merken Smurf Mania en Totally Smurf. Deze twee merken moeten herkenbaar blijven, maar je mag het woord Smurf aanpassen en meer merken toevoegen.
+- In hoofdstuk 5 krijgen je artikelen kleuren, we gebruiken rood, geel, blauw en combinaties daarvan. Je mag meer kleuren toevoegen.
+```
+
 
 ```{hint} Tips
 :class: dropdown
