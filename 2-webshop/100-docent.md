@@ -66,7 +66,7 @@ Uitwerking
 ## Beoordelingsmodel
 
 Leerlingen
-: Voor leerlingen staat er een [beoordelingsmodel in de opdrachtbeschrijving](webshop-beoordeling).
+: Voor leerlingen staat er een [beoordelingsmodel in de opdrachtbeschrijving](#webshop-beoordeling).
 
 Docenten
 : Voor docenten is er een [Excel-versie van het beoordelingsmodel](Docent-Nakijkmodel-Webshop.xlsx).
