@@ -7,8 +7,54 @@ We beginnen met drie smurfen.
 ```{figure} scherm1.png
 Schermafdruk van webshop aan het begin van dit hoofdstuk.
 ```
+In dit hoofdstuk ga je kleine wijzigingen maken in je webshop, zoals teksten, kleuren en plaatjes aanpassen. Je maakt kennis met alle onderdelen van de webshop en leert hoe die samenwerken.
 
-In dit hoofdstuk ga je kleine aanpassingen doen in je webshop, zoals teksten, kleuren en plaatjes aanpassen. Je maakt kennis met alle onderdelen van de webshop en leert hoe die samenwerken.
+## Opdracht: Startcode voor je webshop 
+In deze opdracht krijgt iedereen uit jouw groepje een ontwikkelomgeving met toegang tot de startcode. Er is één ontwikkelomgeving per persoon en één kopie van de startcode per groepje. De ontwikkelomgeving heet een **codespace**. De map met code heet een **repository**. De repository en de codespace zijn onderdeel van de **GitHub**-website.
+
+```{attention} GitHub account
+Tijdens opdracht a) wordt gevraagd om in te loggen op GitHub.
+
+Inloggen op GitHub als je al eerder een GitHub-account op school hebt gemaakt:
+: 1. Klik op **sign in**.
+: 2. Gebruik je schoolmail en het wachtwoord dat je eerder voor GitHub gekozen hebt. 
+
+Inloggen op GitHub als je nog geen GitHub-account hebt:
+: 1. Klik op sign up.
+: 2. Gebruik je email adres van school.
+: 3. Kies een wachtwoord dat je terug kunt vinden.
+: 4. Kies als username je voornaam met je leerlingnummer. Bijvoorbeeld `james112007`
+: 5. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
+```
+
+:::{note} Opdracht a)
+### Maak een Codespace met startcode
+1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
+2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld `anne-jasmin-noah`. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
+3. Je maakt je eigen codespace door op de knop `Create Codespace` te klikken. Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Meer informatie over de ontwikkelomgeving Codespaces vind je op\
+  [https://stanislas.informatica.nu/webshop/codespaces/](#webshop-codespaces)
+```
+
+:::{note} Opdracht b)
+### Run de startcode 
+- Start de server (database en api) van je webshop. Gebruikt daarvoor het commando `bash start.sh` in de terminal van je Codespace.
+- Open een client van je webshop. Doe dat door een webpagina te openen op poort 8000 van je webserver.
+
+Als het gelukt is, dan zie je een webshop met drie smurfen.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Bij de startcode zit een `README.md` bestand. Hierin staat hoe je code kunt starten, stoppen, wijzigingen en opslaan.
+- Meer informatie over de ontwikkelomgeving Codespaces vind je op\
+  [https://stanislas.informatica.nu/webshop/codespaces/](#webshop-codespaces)
+```
+
 
 ## Uitleg: Architectuur
 :::{note} Uitleg
@@ -46,31 +92,16 @@ Een voordeel van REST ten opzichte van de traditionele aanpak is dat REST intera
 Je leert meer over REST in de volgende hoofdstukken.
 ```
 
-## Opdracht: Je eerste wijzigingen in de startcode 
+## Opdracht: Je eerste wijzigingen in je webshop 
+In deze opdracht ga je de eerste kleine wijzigingen maken in de startcode die je hebt gekregen.
 
-```{attention} Toelichting
-Voor deze opdracht krijg je startcode. De startcode moet je aanpassen in een ontwikkelomgeving. Je docent vertelt hoe je aan de startcode komt en welke ontwikkelomgeving je mag gebruiken.
+```{attention} Onderwerpen die je kunt kiezen
+Voor bezoekers van je webshop is het handig als het onderwerp duidelijk aangeeft welke artikelen je verkoopt. Je mag de smurfen uit de startcode verkopen, maar je mag ook kiezen voor andere artikelen. Om de opdrachten uit de volgende hoofdstukken goed te kunnen maken, moet je met twee dingen rekening houden.
+- In hoofdstuk 4 krijgen je artikelen een merk, we gebruiken de merken Smurf Mania en Totally Smurf. Deze twee merken moeten herkenbaar blijven, maar je mag het woord Smurf aanpassen en meer merken toevoegen.
+- In hoofdstuk 5 krijgen je artikelen kleuren, we gebruiken rood, geel, blauw en combinaties daarvan. Je mag meer kleuren toevoegen.
 ```
-
-Deze opdracht bestaat uit onderdeel a), b), c), d) en e). Begin bij het eerste onderdeel, sla geen onderdelen over. Onder ‘Opdracht x)’ staat steeds wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De tips kun je bekijken als je er niet uitkomt.
 
 :::{note} Opdracht a)
-### Run de startcode 
-
-- Start de server (database en api) van je webshop. Gebruikt daarvoor het commando `bash start.sh`.
-- Open een client van je webshop. Doe dat door een webpagina te openen op poort 8000 van je webserver.
-
-Als het gelukt is, dan zie je een webshop met drie smurfen.
-:::
-
-```{hint} Tips
-:class: dropdown
-- Bij de startcode zit een `README.md` bestand. Hierin staat hoe je code kunt starten, stoppen, wijzigingen en opslaan.
-- Meer informatie over de ontwikkelomgeving GitHub Codespaces vind je op\
-  https://stanislas.informatica.nu/help/codespaces/
-```
-
-:::{note} Opdracht b)
 ### Verander het onderwerp
 
 Start de webshop met het commando `bash start.sh` in de terminal
@@ -78,15 +109,7 @@ De webshop verschijnt op je scherm.
 Bovenaan de webshoppagina staat de naam van de webshop (Smurfsjop). 
 
 Verzin zelf een naam voor jouw webshop en pas de code aan, zodat jouw naam getoond wordt.
-
 :::
-
-```{attention} Artikelen die je kunt kiezen
-Het is handig om in de naam van je webshop aan te geven wat je verkoopt. Je mag smurfen verkopen, maar je mag ook kiezen voor andere artikelen. Om de opdrachten uit de volgende hoofdstukken goed te kunnen maken, moet je met twee dingen rekening houden.
-- In hoofdstuk 4 krijgen je artikelen een merk, we gebruiken de merken Smurf Mania en Totally Smurf. Deze twee merken moeten herkenbaar blijven, maar je mag het woord Smurf aanpassen en meer merken toevoegen.
-- In hoofdstuk 5 krijgen je artikelen kleuren, we gebruiken rood, geel, blauw en combinaties daarvan. Je mag meer kleuren toevoegen.
-```
-
 
 ```{hint} Tips
 :class: dropdown
@@ -94,7 +117,7 @@ Het is handig om in de naam van je webshop aan te geven wat je verkoopt. Je mag 
 - Zoek naar de `h1` tag
 ```
 
-:::{note} Opdracht c)
+:::{note} Opdracht b)
 ### Verander de kleur
 
 De webshop gebruikt zwarte letters op een bijna witte achtergrond en witte letters op een smurfblauwe achtergrond. 
@@ -107,7 +130,7 @@ Verander de smurfblauwe kleur in een kleur die past bij jouw webshop.
 - Kijk in het bestand `/static/style.css`.
 ```
 
-:::{note} Opdracht d)
+:::{note} Opdracht c)
 ### Verander de artikelnamen
 
 Bovenaan de plaatjes staan de namen van de artikelen die je verkoopt. 
@@ -121,7 +144,7 @@ Verander de namen van artikelen in artikelen die jij wilt verkopen.
 - Start de webshop opnieuw met het terminal-commando `bash start.sh`. Tijdens het starten wordt de database opnieuw gemaakt met de commando's in het bestand init.sql
 ```
 
-:::{note} Opdracht e)
+:::{note} Opdracht d)
 ### Verander een plaatje
 
 Voeg een nieuw plaatje toe en geef het een naam die past bij het artikel.

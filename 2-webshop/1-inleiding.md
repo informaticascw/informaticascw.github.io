@@ -6,8 +6,6 @@ Dit is een opdracht waar je één of twee maanden aan gaat werken. De opdracht b
 
 Een hoofdstuk bevat uitleg en opdrachten. In de opdracht staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. Bij een opdracht staan tips die je kunt gebruiken als je er niet uitkomt. Bekijk de tips één voor één van boven naar beneden en probeer na elke tip of je verder met de opdracht komt.
 
-De eerste hoofdstukken werk je aan functionaliteit voor je webshop. Je maakt daarvoor gebruik van de producten (smurfen) die al in de startcode zijn opgenomen. Als je toe bent aan de uitbreidingen, dan kun je zelf kiezen welke producten je in je webshop aanbiedt. Denk aan kleding, sieraden, clubshirts, telefoons, auto's, eten of iets anders dat jij leuk vindt. Zorg ervoor dat het netjes blijft, vraag het aan je docent als je twijfelt.
-
 ## Webshop
 
 Je webshop bevat een plaatje en informatie over wat je verkoopt. Bezoekers kunnen filteren welke producten ze willen zien. Ze kunnen bestellen door je een mailtje te sturen.
