@@ -29,20 +29,27 @@ Lesmateriaal met basiskennis over SQL
 : Fundament Kernprogramma, Domein C: Informatie -> C5 Databases en SQL (inloggen nodig)\
 https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=10497
 
+Uitgebreide informatie over SQL
+: W3schools biedt uitgebreide en tegelijk praktische informatie over SQL. Gebruik de MySQL variant, die lijkt erg veel op de SQLite variant die de webshop gebruikt
+: https://www.w3schools.com/sql/
+
 Lesmateriaal met basiskennis over Python
-: Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python (inloggen nodig)\
-https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=10500
+: Fundament Kernprogramma, Domein D: Programmeren -> Ontwikkelen met Python (inloggen nodig)
+: https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=10500
 
 Uitgebreide informatie over Python
-: Begin bij de Tutorial, daarna kun je de Library Reference bekijken, als je alles wilt weten dan bekijk je daarna de Language Reference\
-https://docs.python.org/3/
+: Begin bij de Tutorial, daarna kun je de Library Reference bekijken, als je alles wilt weten dan bekijk je daarna de Language Reference
+: https://docs.python.org/3/
+
+Lesmateriaal met basiskennis over HTML en CSS
+: Fundament Kernprogramma, Domein A: Vaardigheden -> HTML & CSS (2025) (inloggen nodig)
+: https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=12181
 
 Uitgebreide informatie over HTML, CSS en Javascript
 : W3schools biedt uitgebreide en tegelijk praktische informatie over html, css en javascript
-: html op https://www.w3schools.com/html/default.asp 
-: css op https://www.w3schools.com/css/default.asp
-: javascript op https://www.w3schools.com/js/default.asp
-
+: html op https://www.w3schools.com/html/
+: css op https://www.w3schools.com/css/
+: javascript op https://www.w3schools.com/js/
 ```
 
 ## Tools
