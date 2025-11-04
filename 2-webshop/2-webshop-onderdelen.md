@@ -43,7 +43,7 @@ Inloggen op GitHub als je nog geen GitHub-account hebt:
 :::{note} Opdracht b)
 ### Run de startcode 
 - Start de server (database en api) van je webshop. Gebruikt daarvoor het commando `bash start.sh` in de terminal van je codespace.
-- Open een client van je webshop. Klik daarvoor op de link van de webserverer. Die link staat op het tabblad ports (bij de terminal). Je kunt klikken op de wereldbol die verschijnt als je met je muis de link aanwijst. 
+- Open een client van je webshop. Klik daarvoor op de link van de webserver. Die link staat op het tabblad ports (bij de terminal). Je kunt klikken op de wereldbol die verschijnt als je met je muis de link aanwijst. 
 
 Als het gelukt is, dan zie je een webshop met drie smurfen.
 :::
