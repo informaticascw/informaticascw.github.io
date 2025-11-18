@@ -72,6 +72,7 @@ https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=11352
 
 Je werkt op de volgende manier aan de opdrachten.
 
+- Je maakt deze opdracht in een team van twee personen. Je docent geeft aan hoe de teams gemaakt worden.
 - Je gebruikt de startcode die je van de docent krijgt en je volgt de opdrachten.
 - Je werkt regelmatig, minimaal één keer per les sla je werk op, dat doe je door een commit in github te zetten.
 - Als je in een groepje werkt, dan programmeert iedereen evenveel. De opdrachten in hoofdstuk 1 tot en met 7 maak je samen, de uitbreidingen in hoofdstuk 8 mag je verdelen.
