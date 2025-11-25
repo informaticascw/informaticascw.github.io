@@ -137,5 +137,6 @@ De front-end is zo gemaakt dat een veld met de naam `price` speciaal wordt behan
 ```{hint} Tips
 :class: dropdown
 - Denk aan het juiste gebruik van komma en punt, zie de uitleg hierboven.
+- Als je in je webshop het bedrag ziet zonder euro-teken ervoor, kijk dan of je het veld de goede naam (`price`) hebt gegeven.
 - Zie tips bij de vorige exercise.
 ```
