@@ -95,7 +95,7 @@ Koppel de tabellen door het toevoegen van een verwijzende sleutel en een constra
 :class: dropdown
 - Voeg de verwijzende sleutel en de constraint toe aan de tabel `products`.
 - De verwijzende sleutel heeft het datatype `INTEGER`.
-- De constraint is van de vorm met `FOREIGN KEY(`_verwijzende_sleutel_`) REFERENCES(`_tabel_`.`_primaire_sleutel_`)`
+- De constraint is van de vorm met `FOREIGN KEY(`_verwijzende_sleutel_`) REFERENCES `_tabel_`(`_primaire_sleutel_`)`
 - De volgorde waarin je tabellen in je SQL-bestand zet doet ertoe. De tabel `brands` moet je eerder maken dan de tabel `products`, anders dan kent de computer de tabel `brands` nog niet als je ernaar wilt verwijzen in je constraint.
 ```
 
