@@ -84,7 +84,7 @@ Veelgebruikte gegevenstypen:
 
 ### Voorbeeld om een tabel te maken in SQL
 
-```
+```sql
 CREATE TABLE products (
     id INTEGER PRIMARY KEY,
     name TEXT,
