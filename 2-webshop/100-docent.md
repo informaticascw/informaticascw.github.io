@@ -53,6 +53,11 @@ Opmerkingen:
 - Hoofdstuk 8 kan worden gedaan als 6 en 7 zijn overgeslagen, maar niet alle voorgestelde extra's zullen voor alle leerlingen haalbaar zijn.
 - Hoofdstuk 6 en 7 zijn complexer, voor havo kun je die facultatief maken
 
+## Lespresentatie
+
+Lespresentatie
+: Voor docenten is er een [lespresentatie in powerpoint-formaat](Docent-Lespresentatie-Webshop.pptx) met beknopte versies van de uitleg-paragrafen uit de opdracht.
+
 ## Startcode en uitwerking
 
 Startcode
