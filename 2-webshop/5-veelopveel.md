@@ -265,10 +265,10 @@ In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met S
 - De aanpassing moet je doen in de API, in het bestand `/app/main.py` bij de functie voor het endpoint `/api/products/`.
 - Let op de commentaarregel om te zien naar welke plek je het stuk code exact moet kopieren.\
   De juiste volgorde van de stukken code is\
-  # Build the base query\
-  # Execute the query\
-  # Add values for n:m property (e.g., colors) to products\
-  # Return result
+  `# Build the base query`\
+  `# Execute the query`\
+  `# Add values for n:m property (e.g., colors) to products`\
+  `# Return result`
 - Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
 - Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
 - Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
