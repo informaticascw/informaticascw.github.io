@@ -136,9 +136,45 @@ Het werkt in grote teams handiger als je het werk verdeelt in branches. Vraag hi
 
 ## Howto's en veelgestelde vragen
 
-### Bestanden en mappen
+### Werken met codespaces en repositories
 
-*Ik wil een nieuw bestand maken, de naam van een bestand veranderen, een bestand uploaden, bestanden downloaden of andere dingen met bestanden of mappen doen. Hoe doe ik dat?*
+```{tip} Hoe open ik mijn laatste Codespace?
+:class: dropdown
+1. Open GitHub en login.
+2. Klik op de drie streepjes links bovenin. Een menu opent.
+3. Klik in het menu op Codespaces. Er wordt een lijst al je Codespaces getoond
+4. Klik op de Codespace die je wilt openen. Het openen duurt één a twee minuten.
+```
+
+```{tip} Hoe maak ik een nieuwe Codespace?
+:class: dropdown
+1. Open GitHub en login. Ga naar je repository.
+2. Klik op de groen knop "Code", een popup menu verschijnt.
+3. Kies het tabje "Codespaces" in het menu.
+4. Klik op de groen knop "Create Codespace" (die zie je als je nog geen Codespace van deze repository hebt), klik op "+" als je die knop er niet is.
+5. De nieuwe Codespace wordt gemaakt en al je code uit GitHub wordt naar de Codespace gekopieerd. Dit duurt één a twee minuten.
+```
+
+```{tip} Waar staat mijn repository?
+:class: dropdown
+1. Open GitHub en login
+2. Links in het scherm staan de repo's die je recent en vaak gebruikt hebt. Door op een repo te klikken wordt deze geladen. De link van de repo staat bovenin je browser.
+3. Als je in een team aan een repo werkt, klik dan links op het team, daarna bovenin je scherm op repositories
+```
+
+```{tip} Lijst met commits bekijken
+:class: dropdown
+1. Open GitHub, ga naar de pagina met je repository.
+2. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". Van elke commit kun je zien wat er is gewijzigd, klik daarvoor op het nummer van de commit aan het einde van de regel.
+```
+
+```{tip} Oude versie van je repository bekijken
+:class: dropdown
+1. Open GitHub, ga naar de pagina met je repository.
+2. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". 
+3. Klik op `<>` achter een commit naar keuze. Je ziet nu de versie van de repository op het moment van de commit.
+```
+### Werken met hestanden en mappen
 
 ```{tip} Bestanden bekijken
 :class: dropdown
@@ -192,54 +228,7 @@ Als stap 3 niet werkt, probeer dan stap 4.
 3. Dubbelklik op het gedownloade zip-bestand om alle bestanden uit te pakken.
 ```
 
-### github.com gebruiken
-
-```{tip} Hoe open ik mijn laatste Codespace?
-:class: dropdown
-1. Open GitHub en login.
-2. Klik op de drie streepjes links bovenin. Een menu opent.
-3. Klik in het menu op Codespaces. Er wordt een lijst al je Codespaces getoond
-4. Klik op de Codespace die je wilt openen. Het openen duurt één a twee minuten.
-```
-
-```{tip} Hoe maak ik een nieuwe Codespace?
-:class: dropdown
-1. Open GitHub en login. Ga naar je repository.
-2. Klik op de groen knop "Code", een popup menu verschijnt.
-3. Kies het tabje "Codespaces" in het menu.
-4. Klik op de groen knop "Create Codespace" (die zie je als je nog geen Codespace van deze repository hebt), klik op "+" als je die knop er niet is.
-5. De nieuwe Codespace wordt gemaakt en al je code uit GitHub wordt naar de Codespace gekopieerd. Dit duurt één a twee minuten.
-```
-
-```{tip} Waar staat mijn repository?
-:class: dropdown
-1. Open GitHub en login
-2. Links in het scherm staan de repo's die je recent en vaak gebruikt hebt. Door op een repo te klikken wordt deze geladen. De link van de repo staat bovenin je browser.
-3. Als je in een team aan een repo werkt, klik dan links op het team, daarna bovenin je scherm op repositories
-```
-
-```{tip} Lijst met commits bekijken
-:class: dropdown
-1. Open GitHub, ga naar de pagina met je repository.
-2. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". Van elke commit kun je zien wat er is gewijzigd, klik daarvoor op het nummer van de commit aan het einde van de regel.
-```
-
-```{tip} Oude versie van je repository bekijken
-:class: dropdown
-1. Open GitHub, ga naar de pagina met je repository.
-2. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". 
-3. Klik op `<>` achter een commit naar keuze. Je ziet nu de versie van de repository op het moment van de commit.
-```
-
-### Overige vragen en problemen
-
-```{tip} GitHub 404 fout oplossen
-:class: dropdown
-
-*Ik heb via email een link ontvangen om toegang te krijgen tot een repo, maar als ik op de link druk dan krijg ik een 404 fout. Wat moet ik doen?*
-
-Login op GitHub en druk daarna nogmaals op de link.
-```
+### Versiebeheer en samenwerken
 
 ```{tip} Merge conflict oplossen
 :class: dropdown
@@ -265,13 +254,22 @@ In de iconenbalk links op je scherm zie een soort gebogen pijl. Dit is de extens
 Deze functie is bedoeld om samen snel een klein probleem op te lossen. Gebruik hem niet meer dan een paar minuten per les. Echte programmeurs verdelen het werk, maken elk hun eigen stuk code in hun eigen Codespace en delen het dan via GitHub. Dat moet jij ook leren.
 ```
 
+### Overige vragen en problemen
+
+```{tip} GitHub 404 fout oplossen
+:class: dropdown
+
+*Ik heb via email een link ontvangen om toegang te krijgen tot een repo, maar als ik op de link druk dan krijg ik een 404 fout. Wat moet ik doen?*
+
+Login op GitHub en druk daarna nogmaals op de link.
+```
+
 ```{tip} Automatisch inspringen
 :class: dropdown
 
 1. Open een bestand in VS Code
 2. Klik in het bestand op de rechtermuisknop. Er verschijnt een pop-up menu.
 3. Klik in het menu op Format Document. Het document wordt aangepast zodat de code netjes inspringt.
-
 ```
 
 ```{tip} Hoeveel gratis usage heb ik nog?
