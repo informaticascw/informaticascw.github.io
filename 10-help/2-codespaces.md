@@ -8,7 +8,7 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 | --- | --- |
 | ![github.png](../10-help/github.png) | ![codespace.png](../10-help/codespace.png) |
 
-### GitHub is een website waar je code kunt opslaan en delen.
+GitHub is een website waar je code kunt opslaan en delen.
 ```{note} Wat kun je met GitHub?
 :class: dropdown
 - GitHub bewaart alle oude versies van je code.
@@ -18,7 +18,7 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 - GitHub werkt op basis van Git. Git is open source software. Er zijn veel programmeeromgevingen die via Git kunnen samenwerken met GitHub.
 ```
 
-### Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren
+Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren
 ```{note} Wat kun je met Codespaces?
 :class: dropdown
 - Codespaces biedt een devcontainer (computer in de cloud) waar je op kunt werken via een browser.
@@ -27,7 +27,7 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 - Je kunt code uitvoeren in je Codespace, bijvoorbeeld door commando's te typen in de terminal.
 ```
 
-### VS Code is de editor die in Codespaces wordt gebruikt.
+VS Code is de editor die in Codespaces wordt gebruikt.
 ```{note} Wat kun je met VS Code?
 :class: dropdown
 - VS Code gebruik je voor het wijzigen en runnen van code in Codespaces.
@@ -41,6 +41,8 @@ GitHub is een website waar je code kunt opslaan en delen. Codespaces is een code
 ## Starten met een opdracht
 
 ![inschrijven.png](../10-help/inschrijven.png)
+
+Boven: schematische weergave van github en codespaces.
 
 ### Maak een account in GitHub
 1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome).
