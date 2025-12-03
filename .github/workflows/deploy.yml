@@ -40,7 +40,7 @@ jobs:
         run: npm install -g mystmd
       - name: Build HTML Assets
         run: myst build --html
-        sed -i -e 's|http://localhost:3000|$CUSTOM_DOMAIN|g' $(grep -RIl "http://localhost:3000" ./_build) # fix localhost:3000 in sitemap.xml and robots.txt
+        sed -i -e 's|http://localhost:3000|$CUSTOM_DOMAIN|g' $(grep -RIl "http://localhost:3000" ./_build)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
