@@ -1,6 +1,6 @@
 ---
 title: Informatica
-subtitle: Informatica-opdrachten voor leerlingen van het Stanislascollege Westplantsoen in Delft
+subtitle: Informatica-opdrachten voor havo en vwo van het Stanislascollege Westplantsoen in Delft
 
 numbering:
     title:
