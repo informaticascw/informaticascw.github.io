@@ -40,8 +40,8 @@ jobs:
         run: npm install -g mystmd
       - name: Build HTML Assets
         run: |
-        myst build --html
-        sed -i -e 's|http://localhost:3000|$CUSTOM_DOMAIN|g' $(grep -RIl "http://localhost:3000" ./_build)
+          myst build --html
+          sed -i -e 's|http://localhost:3000|$CUSTOM_DOMAIN|g' $(grep -RIl "http://localhost:3000" ./_build)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
