@@ -160,10 +160,6 @@ JSON kent dictionaries, lists en key-value pairs.
 - Een _value_ (_waarde_) kan true of false, een enkel getal of stuk tekst zijn. Maar op de plek van een waarde kan ook weer een nieuwe dictionary of list staan.
 - Een _list_ (_lijst_) is een geordende lijst met waarden. Elke waarde mag meer dan één keer voorkomen en de volgorde van de waarden doet er toe. Een list begint met `[` en eindigt met `]` (spreek uit als vierkante haken of square brackets), daartussen staan de waarden. Waarden worden gescheiden door `,` (komma of comma).
 
-```{note} JSON in JavaScript
-In JavaScript is de notatie van JSON exact gelijk aan de notatie van JSON in Python. De terminologie is wel anders. In Python worden de termen dictionary en list gebruikt, terwijl in JavaScript de termen object en array worden gebruikt. Keys met meerdere woorden worden in JavaScript vaak geschreven als firstSecond (camelCase) en in Python als first_second (snake_case). Maar beide manieren werken in beide talen. Wij kiezen voor snake_case.
-```
-
 ### Voorbeeld van JSON
 
 Hieronder zie je een voorbeeld van JSON:
@@ -202,6 +198,10 @@ Dit voorbeeld bevat een lijst met producten.
   - een `merk` met as waarde een tekst
   - een `kleur` met als waarde een list
 
+```{attention} JSON in JavaScript
+:class: dropdown
+In JavaScript is de notatie van JSON exact gelijk aan de notatie van JSON in Python. De terminologie is wel anders. In Python worden de termen dictionary en list gebruikt, terwijl in JavaScript de termen object en array worden gebruikt. Keys met meerdere woorden worden in JavaScript vaak geschreven als firstSecond (camelCase) en in Python als first_second (snake_case). Maar beide manieren werken in beide talen. Wij kiezen voor snake_case.
+```
 :::
 
 
@@ -269,7 +269,7 @@ In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met S
   `# Execute the query`\
   `# Add values for n:m property (e.g., colors) to products`\
   `# Return result`
-- Voeg aan de query een `SELECT` toe met één veld, namelijk de naam van de kleur.
+- In de query zet je achter `SELECT` één veld, namelijk de naam van de kleur.
 - Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
 - Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
 ```
