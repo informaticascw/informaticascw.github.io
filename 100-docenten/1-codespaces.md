@@ -5,7 +5,7 @@ Pagina met hulp voor docenten die met de online ontwikkelomgeving Codespaces aan
 
 Codespaces is een online codeeromgeving binnen GitHub. In Codespaces run je programma's in een container in de cloud. Codespaces maakt gebruik van de webversie van de editor Visual Studio Code, daarmee maak je wijzigingen in je Codespace. Wijzigingen sla je op (push) in GitHub. 
 
-## Quickstart: Codespaces gebruiken in je klas
+## Stappenplan: Codespaces gebruiken in je klas
 
 1. Maak organisaties in GitHub (eenmalig)
     1. Maak github account
@@ -34,7 +34,7 @@ Codespaces is een online codeeromgeving binnen GitHub. In Codespaces run je prog
     Tip: onder "commits" kun je zien wanneer de laatste wijziging is gemaakt, je kunt een oude versie kiezen als er na de afgesproken inleverdatum nog gewijzigd is.<br>
     Tip: per bestand kun je onder "blame" zien welke regels op welk moment door wie zijn toegevoegd of gewijzigd<br>
 
-## GitHub
+## Wat is GitHub?
 
 GitHub is een online omgeving waar programmeurs code opslaan en delen. GitHub is gebaseerd op Git. 
 
@@ -78,7 +78,7 @@ GitHub wordt heel veel gebruikt, als je specifieke wensen hebt dan zijn er alter
 - Git lokaal op je PC installeren en via de commandline je code opslaan op een andere git-server dan GitHub.
 - Gitlab, eveneens gebaseerd op Git, zowel te gebruiken in een cloud omgeving als op eigen servers.
 
-## Codespaces
+## Wat is Codespaces?
 
 Codespaces is een online ontwikkelomgeving voor alle programmeertalen.
 
@@ -118,7 +118,7 @@ Alle onderstaande alternatieven kunnen samenwerken met GitHub, maar zijn ook zon
 
 Wij hebben enkele jaren Gitpod (vwo) en replit (havo) gebruikt. In 2023 hebben we een geslaagde pilot in 5-vwo gedraaid met Codespaces, ondermeer vanwege de naadloze integratie met GitHub. De firewall van de nieuwe internetaanbieder van de school blokkeerde gebruik op schoolcomputers. In schooljaar 24/25 willen we Gitpod gebruiken, zowel voor de havo als voor het vwo.
 
-## GitHub Classroom
+## Wat is GitHub Classroom?
 
 Met GitHub Classroom kun je opdrachten klaarzetten voor (grote aantallen) leerlingen.
 
