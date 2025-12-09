@@ -216,6 +216,7 @@ Knip en plak de Python-code op de juiste plek in de API en controleer of de eers
 :class: dropdown
 - De code moet worden ingevoegd in de functie `get_products()` uit de api.
 - De exacte plek voor de code is nadat de basis query met `SELECT` wordt gemaakt en vóórdat de query wordt uitgevoerd (execute)
+- Letop dat de query niet eindigt met `;` (puntkomma), want als je er dan `WHEN` aan vastplakt dan denkt de database dat je twee opdrachten tegelijk wilt uitvoeren. Dat geeft een foutmelding in de api waardoor de producten niet geladen kunnen worden.
 ```
 
 :::{note}Opdracht b)
