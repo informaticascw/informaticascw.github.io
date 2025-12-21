@@ -4,30 +4,29 @@
 
 Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode maken. Volg de stappen hieronder.
 
-### Maak een account in {term}`GitHub`
-1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome).
+### Maak een account in GitHub
+1. Ga naar {term}`GitHub` op https://github.com/ (gebruik bij voorkeur Chrome).
 2. Klik op sign-up.
 3. Gebruik je email adres van school.
 4. Kies een wachtwoord dat je terug kunt vinden.
 5. Kies als username je voornaam met de eerste letter van je achternaam, als die al bezet is voeg je een nummer toe. Bijvoorbeeld jamesb007
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 
-### Maak een codespace met startcode voor je opdracht
-1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een {term}`repository` met startcode voor de opdracht. 
+### Maak een Codespace met startcode voor je opdracht
+1. De docent deelt een link naar {term}`GitHub Classroom` waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een {term}`repository` met startcode voor de opdracht. 
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
-3. Je maakt je eigen codespace door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
+3. Je maakt je eigen {term}`Codespace` door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 
-## Werken aan je project in een codespace
+## Werken aan je project in een Codespace
 
-Elke les gebruik je je codespace om aan je project te werken. Je volgt steeds de stappen hieronder.
+Elke les gebruik je je {term}`Codespace` om aan je project te werken. Je volgt steeds de stappen hieronder.
 
 ### Codespace starten
 
-Als je een Codespace start, dan zie je het scherm van {term}`VS Code` in je browser.
+Als je een {term}`Codespace` start, dan zie je het scherm van {term}`VS Code` in je browser.
 
 
 ```{figure} ../10-help/vscode.png
-:label: vscode
 :alt: Schermafdruk van VS Code
 :align: center
 Schermafdruk van VS Code met de volgende onderdelen:
@@ -43,37 +42,36 @@ Schermafdruk van VS Code met de volgende onderdelen:
 ### Code uitvoeren
 Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor resultaat geeft. In het `README.md` bestand van de startcode staat beschreven hoe dit moet. Voor een aantal veelgebruikte programmeertalen vind je hier een korte samenvattig
 
-#### html:
-1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de html-bestanden uit de Codespace door een browser op je computer kunne worden geladen.
+#### HTML
+1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de HTML-bestanden uit de Codespace door een browser op je computer kunne worden geladen.
 2. Open een browser-venster met het `index.html` bestand uit je Codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de webserver.
 
-#### python:
+#### Python
 1. Type in de terminal `python main.py`, het programma start<br>
 2. Als het programma lang duurt, stop het dan met de toetsen `[CRTL]+[C]`
 3. Start het programma opnieuw met de toets `[PIJL OMHOOG]`<br>
 
-#### python met pygame:
+#### Python met PyGame
 1. Type in de terminal `python main.py`, het programma start<br>
-2. Open een browser-venster dat is verbonden met het grafische scherm (GUI) van je codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de GUI.
+2. Open een browser-venster dat is verbonden met het grafische scherm (GUI) van je Codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de GUI.
 
 ### Wijzigingen bewaren
-1. Klik in de activity bar op het Source Control icoon.
+1. Klik in de activity bar op het "Source Control"-icoon.
 2. Voer een beschrijving van de wijziging in
-3. Druk op de groen knop "Commit & Sync". Je wijzigingen worden nu bewaard in GitHub. Je kunt controleren op github.com of het is gelukt.
+3. Druk op de groen knop "Commit & Sync". Je wijzigingen worden nu bewaard in GitHub. Je kunt controleren op https://github.com of het is gelukt.
 
 ### Samenwerken
 
 ```{figure} ../10-help/samenwerken.png
-:label: codespace
 :alt: Schematische weergave van samenwerken in Codespaces
 :align: center
 Schematische weergave van samenwerken in Codespaces
 ```
 
 #### Jouw wijzigingen opslaan
-Klik in je codespace op "Commit & Sync" om je wijzigingen op te slaan:
-- Bestanden die door jouw maatje gewijzigd zijn worden van GitHub naar jouw codespace gekopieerd
-- Bestanden die jij hebt gewijzigd worden van jouw codespace naar GitHub gekopieerd. 
+Klik in je Codespace op "Commit & Sync" om je wijzigingen op te slaan:
+- Bestanden die door jouw maatje gewijzigd zijn worden van GitHub naar jouw Codespace gekopieerd
+- Bestanden die jij hebt gewijzigd worden van jouw Codespace naar GitHub gekopieerd. 
 - Als jij en je maatje in hetzelfde bestand wijzigingen hebben gedaan, dan wordt de laatste versie (jouw bestand) bewaard.
 
 #### Wijzigingen van jou en je maatje samenvoegen
@@ -87,7 +85,7 @@ Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
 ```{attention}
 :class: dropdown
 ## Opmerkingen voor ervaren git-gebruikers
-Ben je een ervaren git-gebruiker? Lees dan deze paragraaf waarin wordt uitgelegd welke aanpassingen aan de instellingen van git zijn gemaakt in de configuratie van de codespaces die voor projecten worden gebruikt.
+Ben je een ervaren git-gebruiker? Lees dan deze paragraaf waarin wordt uitgelegd welke aanpassingen aan de instellingen van git zijn gemaakt in de configuratie van de Codespace die voor projecten worden gebruikt.
 
 Commit & Sync
 : De "Commit & Sync" knop doet vier dingen met één klik: Stage all changes, Commit, Pull en Push
@@ -96,12 +94,12 @@ Merge (en Pull)
 : Bij pull en merge wordt gekeken per bestand (dus niet per regel). De versie van het laatste gewijzigde bestand (ours) wordt bewaard. Op deze manier ontstaan geen merge-conflicten, dat maakt het werken met git voor leerlingen een stuk eenvoudiger. Deze manier van werken is niet heel git-like, maar het zorgt ervoor dat leerlingen altijd hun werk snel kunnen opslaan. Parallele commits van teamgenoten die daarbij mogelijk worden overschreven, kunnen weer hersteld worden door gewijzigde delen code te knippen uit de oude versie en te plakken in de nieuwe versie.
 
 Branches
-: Gemiddelde projecten van leerlingen zijn tientallen uren. In de praktijk blijkt dat dat zonder branches goed werkt. Als je met groepen van vier of meer personen werkt aan projecten van meer dan honderd uur, dan kun je het gebruik van branches overwegen.
+: Gemiddelde projecten van leerlingen zijn tientallen uren werk. In de praktijk blijkt dat dit zonder branches goed werkt. Als je met groepen van vier of meer personen werkt aan projecten van meer dan honderd uur, dan kun je het gebruik van branches overwegen.
 ```
 
 ## Veelgestelde vragen
 
-### Werken met codespaces en repositories
+### Werken met Codespaces en repositories
 
 ```{tip} Hoe open ik mijn laatste Codespace?
 :class: dropdown
@@ -213,7 +211,7 @@ Als stap 3 niet werkt, probeer dan stap 4.
 
 *Ik heb een merge conflict, hoe los ik dat op?*
 
-Kijk deze video, daarin wordt uitgelegd hoe je een merge conflict in Codespaces oplost.<br>
+Kijk deze video, daarin wordt uitgelegd hoe je een merge conflict in VS Code oplost.<br>
 [https://www.youtube.com/watch?v=HosPml1qkrg](https://www.youtube.com/watch?v=HosPml1qkrg)
 
 Als je er met de video niet uitkomt en er is niemand in de buurt die je kan helpen, dan kun je het volgende doen.
@@ -287,12 +285,15 @@ Je kunt 3 dingen doen:
 Codespace
 : Tijdelijke computer bij Microsoft waar je code kunt wijzigen en uitvoeren via je browser.
 
-VS Code
-: Uitgebreide editor die gebruikt wordt in de {term}`Codespace`, het is de gebruikersinterface van de Codespace.
-
 GitHub
 : Website waar je code kunt bewaren en delen.
 
+GitHub Classroom
+: Website waarmee docenten startcode voor opdrachten kunnen delen met leerlingen.
+
 Repository
 : Map in {term}`GitHub` met alle code van één project.
+
+VS Code
+: Uitgebreide editor die gebruikt wordt in de {term}`Codespace`, het is de gebruikersinterface van de Codespace.
 :::
