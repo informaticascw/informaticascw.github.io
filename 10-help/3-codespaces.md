@@ -1,48 +1,22 @@
 # Codespaces
 
-GitHub is een website waar je code kunt opslaan en delen. Codespaces is een codeeromgeving binnen GitHub waar je code kunt wijzigen en uitvoeren. Codespaces maakt gebruik van de webversie van de editor Visual Studio Code.
+## Begrippen
 
-## Wat zijn GitHub, Codespaces en VS Code?
+Codespace
+: is een tijdelijke computer bij Microsoft waar je code kunt wijzigen en uitvoeren via je browser.
 
-| Screenshot van Github | Screenshot van Codespace |
-| --- | --- |
-| ![github.png](../10-help/github.png) | ![codespace.png](../10-help/codespace.png) |
+VS Code
+: is een uitgebreide editor die gebruikt wordt in de codespace, het is de gebruikersinterface van de codespace.
 
-GitHub is een website waar je code kunt opslaan en delen.
-```{note} Wat kun je met GitHub?
-:class: dropdown
-- GitHub bewaart alle oude versies van je code.
-- Code op GitHub kun je gemakkelijk delen met anderen.
-- Met GitHub kun je in groepen aan dezelfde code werken.
-- Bestanden in GitHub worden bewaard in repositories. Een repository (ook wel afgekort tot repo) is een soort hoofdmap. Voor elk project maak je een aparte repository.
-- GitHub werkt op basis van Git. Git is open source software. Er zijn veel programmeeromgevingen die via Git kunnen samenwerken met GitHub.
-```
+GitHub
+: is een website waar je code kunt bewaren en delen.
 
-Codespaces is een codeeromgeving binnen GitHub waar je code kunt uitvoeren
-```{note} Wat kun je met Codespaces?
-:class: dropdown
-- Codespaces biedt een devcontainer (computer in de cloud) waar je op kunt werken via een browser.
-- In je browser zie je VS Code. VS Code "praat" met Codespaces.
-- Wijzigingen in bestanden in je Codespace kun je bewaren in GitHub.
-- Je kunt code uitvoeren in je Codespace, bijvoorbeeld door commando's te typen in de terminal.
-```
+Repository
+: is een map in GitHub met alle code van één project.
 
-VS Code is de editor die in Codespaces wordt gebruikt.
-```{note} Wat kun je met VS Code?
-:class: dropdown
-- VS Code gebruik je voor het wijzigen en runnen van code in Codespaces.
-- VS Code is geschikt voor alle populaire programmeertalen 
-- VS Code is meer dan een editor, zo verzorgt VS Code ook de verbinding met je Codespace en GitHub
-- Je kunt de instellingen van VS Code naar je eigen smaak aanpassen. Wij gebruiken instellingen om het bewaren van wijzigingen in github gemakkelijker te maken. 
-- De functies van VS Code kun je uitbreiden met extensions. Wij gebruiken extentions om previews van .pdf en .html bestanden te bekijken.
-- VS Code (spreek uit als "vie es koot") is een veelgebruikte afkorting voor Visual Studio Code.
-```
+## Starten met een project in een codespace
 
-## Starten met een opdracht
-
-![inschrijven.png](../10-help/inschrijven.png)
-
-Boven: schematische weergave van github en codespaces.
+Je start met een project. Daarvoor moet je een codespace met startcode maken. Volg de stappen hieronder.
 
 ### Maak een account in GitHub
 1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome).
@@ -52,31 +26,38 @@ Boven: schematische weergave van github en codespaces.
 5. Kies als username je voornaam met de eerste letter van je achternaam, als die al bezet is voeg je een nummer toe. Bijvoorbeeld jamesb007
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 
-### Maak een Codespace met startcode voor je opdracht
+### Maak een codespace met startcode voor je opdracht
 1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
-3. Je maakt je eigen Codespace door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
+3. Je maakt je eigen codespace door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
 
-## Werken aan een opdracht
+## Werken aan je project in een codespace
+
+Elke les gebruik je je codespace om aan je project te werken. Je volgt steeds de stappen hieronder.
 
 ### Codespace starten
 
 Als je een Codespace start, dan zie je het scherm van VS Code in je browser.
 
-![vscode screenshot](../10-help/vscode.png)
-Op bovenstaande plaatje zie je het scherm van VS Code met de volgende onderdelen:
+
+```{figure} ../10-help/vscode.png
+:label: vscode
+:alt: Schermafdruk van VS Code
+:align: center
+Schermafdruk van VS Code met de volgende onderdelen:
 - (A) Activity Bar, klik op het bovenste icoon (Explorer) om je mappen en bestanden te zien, klik op het derde icoon (Source Control) van boven om te werken met GitHub
 - (C) Editor Groups, hier verschijnen de bestanden die je opent.
 - (D) Panel, hierin zit onder andere de Terminal. De terminal geeft toegang tot de virtuele computer, je kunt er commando's intypen.
+```
 
-### Code aanpassen
+### Code wijzigen
 1. Dubbelklik op een bestand, bijvoorbeeld `index.html` of `main.py`. Het bestand wordt geopend in de editor. 
 2. Je kunt nu het bestand aanpassen.
 
-### Resultaat bekijken
+### Code uitvoeren
 Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor resultaat geeft. In het `README.md` bestand van de startcode staat beschreven hoe dit moet. Voor een aantal veelgebruikte programmeertalen vind je hier een korte samenvattig
 
-#### html (eventueel met css en/of javascript):
+#### html:
 1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de html-bestanden uit de Codespace door een browser op je computer kunne worden geladen.
 2. Open een browser-venster met het `index.html` bestand uit je Codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de webserver.
 
@@ -87,54 +68,52 @@ Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor result
 
 #### python met pygame:
 1. Type in de terminal `python main.py`, het programma start<br>
-2. Open een browser-venster dat via novnc is verbonden met het grafische scherm dat pygame gebruikt. Klik hiervoor op Ports, klik daarna op de link met het adres van de novnc-server.
+2. Open een browser-venster dat is verbonden met het grafische scherm (GUI) van je codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de GUI.
 
-### Wijzigingen bewaren in GitHub
+### Wijzigingen bewaren
 1. Klik in de activity bar op het Source Control icoon.
 2. Voer een beschrijving van de wijziging in
 3. Druk op de groen knop "Commit & Sync". Je wijzigingen worden nu bewaard in GitHub. Je kunt controleren op github.com of het is gelukt.
 
-## Samenwerken
+### Samenwerken
 
-![samenwerken.png](../10-help/samenwerken.png)
+```{figure} ../10-help/samenwerken.png
+:label: codespace
+:alt: Schematische weergave van samenwerken in Codespaces
+:align: center
+Schematische weergave van samenwerken in Codespaces
+```
 
-### Een team van één persoon
-Bewaar nieuwe versies van je code steeds in Github. Dan heb heb je een backup als er iets misgaat in Codespaces.
+#### Jouw wijzigingen opslaan
+Klik in je codespace op "Commit & Sync" om je wijzigingen op te slaan:
+- Bestanden die door jouw maatje gewijzigd zijn worden van GitHub naar jouw codespace gekopieerd
+- Bestanden die jij hebt gewijzigd worden van jouw codespace naar GitHub gekopieerd. 
+- Als jij en je maatje in hetzelfde bestand wijzigingen hebben gedaan, dan wordt de laatste versie (jouw bestand) bewaard.
 
-De laatste versie van je code uit je Codespace bewaren op GitHub doe je zo:
-1. In de iconenbalk links op je scherm is een icoon voor "source control". Dit is het derde icoon van boven, als je er even met je muis op staat dan verschijnt de tekst "source control". Klik op het icoon. Je ziet onder "changes" een lijst met bestanden waarin je wijzigingen hebt gemaakt. Daarboven zie je een knop "Commit & Sync". Boven de knop zie je een invoerveld met de tekst "Message".
-2. Type een korte beschrijving van je wijziging in het "Message" invulveld. Dit heet een commit message. Klik daarna op "Commit & Sync".
-3. Je code wordt nu bewaard in GitHub. Als alles gelukt is dan zie je de beschrijving van je wijziging terug in GitHub. Controleer dat in GitHub.
+#### Wijzigingen van jou en je maatje samenvoegen
+Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
+- Klik in de activity bar op het Source Control icoon.
+- Klik onder GRAPH op de wijziging van je maatje, de lijst met bestanden die je maatje veranderd heeft verschijnen
+- Klik bij het bestand waarvan je wijzigingen wilt herstellen op het icoontje links van de M, het bestand opent (als je rode en groene regels ziet dan heb je op de naam van het bestand geklikt in plaats van het icoontje)
+- Knip en plak de wijzigingen uit de versie van je maatje naar de versie van jou
+- Sla je wijzigingen op in GitHub met "Commit & Sync"
 
-Het werkt het best als je aanpassingen doet in kleine stapjes.
-- Type steeds een paar regels code en test dan of het doet wat je verwacht had.
-- Maak per lesuur één of enkele commits en bewaar dit in GitHub. Een commit is een versie met een aantal kleine wijzigingen die samen iets nieuws toevoegen. Het is niet handig om elke minuut een commit te maken, maar minimaal één commit per les zou wel moeten.
+```{attention}
+:class: dropdown
+## Opmerkingen voor ervaren git-gebruikers
+Ben je een ervaren git-gebruiker? Lees dan deze paragraaf waarin wordt uitgelegd welke aanpassingen aan de instellingen van git zijn gemaakt in de configuratie van de codespaces die voor projecten worden gebruikt.
 
-### Een team van twee of drie
+Commit & Sync
+: De "Commit & Sync" knop doet vier dingen met één klik: Stage all changes, Commit, Pull en Push
 
-Elk teamlid heeft zijn eigen kopie van de code in zijn eigen Codespace. In GitHub staat de gezamenlijke code.
+Merge (en Pull)
+: Bij pull en merge wordt gekeken per bestand (dus niet per regel). De versie van het laatste gewijzigde bestand (ours) wordt bewaard. Op deze manier ontstaan geen merge-conflicten, dat maakt het werken met git voor leerlingen een stuk eenvoudiger. Deze manier van werken is niet heel git-like, maar het zorgt ervoor dat leerlingen altijd hun werk snel kunnen opslaan. Parallele commits van teamgenoten die daarbij mogelijk worden overschreven, kunnen weer hersteld worden door gewijzigde delen code te knippen uit de oude versie en te plakken in de nieuwe versie.
 
-Als je in teams werkt, dan is het opslaan van je code ingewikkelder. Je moet immers zorgen dat jouw wijzigingen en die van je maatje worden samengevoegd. GitHub helpt daarbij.
+Branches
+: Gemiddelde projecten van leerlingen zijn tientallen uren. In de praktijk blijkt dat dat zonder branches goed werkt. Als je met groepen van vier of meer personen werkt aan projecten van meer dan honderd uur, dan kun je het gebruik van branches overwegen.
+```
 
-De laatste versie van je code uit je Codespace bewaren op GitHub doe je zo:
-1. **Wijzig en test** : Type steeds een paar regels code en test dan of het doet wat je verwacht had.
-2. **Stage** : Zet de gewijzigde bestanden klaar voor de commit. Een commit is en nieuwe versie.
-3. **Commit** : Type een korte beschrijving waaronder je de nieuwe versie terug kan vinden.
-4. **Pull** : Haal de wijzigingen van teamgenoten uit Github binnen in jouw Codespace. 
-5. **Push** : Duw je commit in Codespace naar je repository op GitHub.
-
-Stap 2, 3, 4, en 5 worden direct achter elkaar gedaan als je klikt op de knop "Commit & Sync". Als je in teams werkt, dan kan het zijn dat je maatje iets in GitHub bewaart, terwijl jij in jouw Codespace aan het werk bent. De wijzigingen van jouw maatje komen niet automatisch in jouw Codespace, zodat jij ongestoord verder kunt coderen. Als jij na je maatje wijzigingen in GitHub bewaart, dan probeert GitHub de wijzigingen van jou en je maatje automatisch samen te voegen. Als jullie dezelfde regels in hetzelfde bestand gewijzigd hebben, dan lukt het samenvoegen niet automatisch. CodeSpace geeft dan aan dat er een merge-conflict is. Jij moet dan zelf aangeven welke wijzigingen GitHub moet kiezen. Daarna klik je op "Continue" om te zorgen dat alle stappen uit "Commit & Sync" worden afgemaakt. 
-
-[Deze video legt uit hoe je merge-conflicten in Codespaces oplost](https://www.youtube.com/watch?v=HosPml1qkrg). Als je goede afspraken maakt over wie wat doet, dan heb je weinig merge-conflicten.
-
-Als je langer dan een dag niet aan je code gewerkt hebt, dan is het handig om de laatste wijzigingen van jullie gezamenlijke code in GitHub binnen te halen. Dat heet "Pull". Onze Codespace is zo ingesteld, dat je op het pijltje naast "Commit & Sync" kunt drukken om te pullen. Pullen kan alleen als je na je laatste commit geen wijzigingen meer hebt gedaan. 
-
-### Een team van vier of meer
-In grotere teams worden er heel veel veranderingen tegelijk doorgevoerd. De gezamenlijke code wijzigt daardoor heel vaak. Dat is onhandig. 
-
-Het werkt in grote teams handiger als je het werk verdeelt in branches. Vraag hierover uitleg aan je docent, als jullie daaraan toe zijn.
-
-## Howto's en veelgestelde vragen
+## Veelgestelde vragen
 
 ### Werken met codespaces en repositories
 
@@ -230,6 +209,19 @@ Als stap 3 niet werkt, probeer dan stap 4.
 
 ### Versiebeheer en samenwerken
 
+```{tip} Oude wijzigingen terughalen
+:class: dropdown
+
+*Er zijn oude wijzigingen overschreven, hoe kan ik die terug halen?*
+
+- Open je Codespace
+- Klik in de activity bar op het Source Control icoon.
+- Klik onder GRAPH op een oude versie, de lijst met bestanden die in die versie gewijzigd zijn verschijnt
+- Klik bij het bestand waarvan je wijzigingen wilt herstellen op het icoontje links van de M, het bestand opent (als je rode en groene regels ziet dan heb je op de naam van het bestand geklikt in plaats van het icoontje)
+- Knip de wijzigingen uit de oude versie en plak ze in de laatste versie 
+- Sla je wijzigingen in de laatste versie op met "Commit & Sync"
+```
+
 ```{tip} Merge conflict oplossen
 :class: dropdown
 
@@ -297,8 +289,8 @@ Je kunt 3 dingen doen:
 ```
 
 ### Documentatie
-*Waar vind ik meer documentatie?*
 
 ```{seealso} Documentatie over VS Code
+:class: dropdown
 - [https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
 ```
