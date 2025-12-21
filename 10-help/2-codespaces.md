@@ -1,24 +1,10 @@
 # Codespaces
 
-## Begrippen
+## Starten met een project in een Codespace
 
-Codespace
-: is een tijdelijke computer bij Microsoft waar je code kunt wijzigen en uitvoeren via je browser.
+Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode maken. Volg de stappen hieronder.
 
-VS Code
-: is een uitgebreide editor die gebruikt wordt in de codespace, het is de gebruikersinterface van de codespace.
-
-GitHub
-: is een website waar je code kunt bewaren en delen.
-
-Repository
-: is een map in GitHub met alle code van één project.
-
-## Starten met een project in een codespace
-
-Je start met een project. Daarvoor moet je een codespace met startcode maken. Volg de stappen hieronder.
-
-### Maak een account in GitHub
+### Maak een account in {term}`GitHub`
 1. Ga naar https://www.github.com/ (gebruik bij voorkeur Chrome).
 2. Klik op sign-up.
 3. Gebruik je email adres van school.
@@ -27,7 +13,7 @@ Je start met een project. Daarvoor moet je een codespace met startcode maken. Vo
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 
 ### Maak een codespace met startcode voor je opdracht
-1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
+1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een {term}`repository` met startcode voor de opdracht. 
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
 3. Je maakt je eigen codespace door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
 
@@ -37,7 +23,7 @@ Elke les gebruik je je codespace om aan je project te werken. Je volgt steeds de
 
 ### Codespace starten
 
-Als je een Codespace start, dan zie je het scherm van VS Code in je browser.
+Als je een Codespace start, dan zie je het scherm van {term}`VS Code` in je browser.
 
 
 ```{figure} ../10-help/vscode.png
@@ -294,3 +280,19 @@ Je kunt 3 dingen doen:
 :class: dropdown
 - [https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
 ```
+
+## Begrippenlijst
+
+:::{glossary}
+Codespace
+: Tijdelijke computer bij Microsoft waar je code kunt wijzigen en uitvoeren via je browser.
+
+VS Code
+: Uitgebreide editor die gebruikt wordt in de {term}`Codespace`, het is de gebruikersinterface van de Codespace.
+
+GitHub
+: Website waar je code kunt bewaren en delen.
+
+Repository
+: Map in {term}`GitHub` met alle code van één project.
+:::
