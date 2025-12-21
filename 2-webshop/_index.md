@@ -11,5 +11,5 @@ authors:
 Hier vind je alle informatie over de SQL Webshop opdracht.
 
 ```{figure} cover.png
-Plaatje van webshop.
+Plaatje van webshop. Gebruikte smurfen-plaatjes komen van https://openai.com/chatgpt/
 ```

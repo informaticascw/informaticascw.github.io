@@ -1,3 +1,4 @@
+(webshop-inleiding)=
 # Inleiding
 
 ## Leeswijzer
@@ -8,19 +9,22 @@ Een hoofdstuk bevat uitleg en opdrachten. In de opdracht staat wat je code moet 
 
 ## Webshop
 
-Je webshop bevat een plaatje en informatie over wat je verkoopt. Bezoekers kunnen filteren welke producten ze willen zien. Ze kunnen bestellen door je een mailtje te sturen.
+Je webshop bevat een plaatje en informatie van de producten die je verkoopt. Bezoekers kunnen filteren welke producten ze willen zien. Ze kunnen bestellen door je een mailtje te sturen.
 
-Bezoekers kunnen niet inloggen op je webshop en er zit geen betaalmogelijkheid in de webshop. Dat maakt de webshop een stuk eenvoudiger. Bezoekers die willen bestellen sturen een mailtje (of appje). De webshop houdt geen winkelmand, geen oude bestellingen en geen voorraad bij.
+Je webshop heeft een paar functionele beperkingen. Dat maakt de startcode een stuk eenvoudiger. De eerste beperking is dat bezoekers niet kunnen inloggen op je webshop. De webshop houdt geen winkelmand, geen oude bestellingen en geen voorraad bij. De tweede beperking is dat bezoekers niet kunnen betalen via je webshop. In de plaats daarvan sturen bezoekers een mailtje (of appje) met wat ze willen bestellen. Met een betaalverzoek (of Tikkie) kun jij zorgen dat ze betalen voordat je de bestelling opstuurt. Als je wilt, dan kun je een deel van de ontbrekende functies erbij maken in [hoofdstuk 8 (uitbreidingen)](#webshop-uitbreidingen).
 
-Je webshop maak je in een ontwikkelomgeving. Zodra je de ontwikkelomgeving afsluit, is je webshop niet meer bereikbaar. Als je wilt dat je webshop altijd bereikbaar is, dan moet je je code neerzetten op een server die altijd bereikbaar is. Dat noemen ze hosten. Je kunt een oude server gebruiken die je thuis hebt, of er eentje bij een bedrijf huren. Je webshop heeft een server met het Unix-besturingssysteem nodig. Als je dit wilt doen dan heb je handigheid met Unix nodig. Het hosten van je webshop is geen onderdeel van deze opdracht. 
+```{attention} Je website hosten
+:class: dropdown
+Je webshop maak je in een ontwikkelomgeving. Zodra je de ontwikkelomgeving afsluit, is je webshop niet meer bereikbaar. Als je wilt dat je webshop altijd bereikbaar is, dan moet je je code neerzetten op een server die altijd bereikbaar is. Dat noemen ze hosten. Je kunt een oude server gebruiken die je thuis hebt, of er eentje bij een bedrijf huren. Je webshop heeft een server met het Unix-besturingssysteem nodig. Als je dit wilt doen dan heb je handigheid met Unix nodig. Het hosten van je webshop is geen onderdeel van deze opdracht.
+```
 
 ## Voorkennis en naslagmateriaal
 
 Voor deze opdracht heb je basiskennis nodig van SQL. Basiskennis van SQL betekent dat je opdrachten gemaakt hebt met `SELECT`, `WHERE`, `JOIN` en `GROUP BY`. 
 
-Voor hoofdstuk 6 (filters) heb je tevens basiskennis nodig van Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
+Voor [hoofdstuk 6 (filters)](#webshop-filters) heb je tevens basiskennis nodig van Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
 
-Voor hoofdstuk 7 (client) heb je tevens basiskennis nodig van HTML en CSS. Je komt in dit hoofdstuk ook in aanraking met JavaScript.
+Voor [hoofdstuk 7 (client)](#webshop-client) heb je tevens basiskennis nodig van HTML en CSS. Je komt in dit hoofdstuk ook in aanraking met JavaScript.
 
 ```{seealso} Naslagmateriaal
 Als je meer over de gebruikte technieken wilt weten, dan kun je de volgende naslagwerken gebruiken:
@@ -77,14 +81,14 @@ Je werkt op de volgende manier aan de opdrachten.
 - Je werkt regelmatig, minimaal één keer per les sla je werk op, dat doe je door een commit in github te zetten.
 - Als je in een groepje werkt, dan programmeert iedereen evenveel. De opdrachten in hoofdstuk 1 tot en met 7 maak je samen, de uitbreidingen in hoofdstuk 8 mag je verdelen.
 - Je werkt op je eigen account. Als je samen aan dezelfde opdracht werkt dan gebruik je het account van degene die typt, na elke opdracht wissel je wie typt en wiens account gebruik wordt.
-- Als je bronnen gebruikt, dan zet je een verwijzing naar de bron als commentaar in je code. Verwijzingen zijn linken chats op chat-gpt, tutorials op youtube of webpagina's. In elk geval moet duidelijk zijn welke stukken code je helemaal zelf hebt bedacht en waar je hulp hebt gehad. 
+- Als je bronnen gebruikt, dan zet je een verwijzing naar de bron als commentaar in je code. Verwijzingen zijn linken naar chats op chat-gpt, tutorials op youtube of webpagina's. In elk geval moet duidelijk zijn welke stukken code je helemaal zelf hebt bedacht en waar je hulp hebt gehad. 
 
 ## Inleveren
 
 - De deadline staat in de lesplanner.
 - De versie van de main branche van je opdracht die op het moment van de deadline in GitHub staat wordt gebruikt voor de beoordeling. Zorg dat je ruim op tijd klaar bent. 
 - Uit de commit-historie van de main branche in GitHub blijkt wie wanneer wat gedaan heeft.
-- Als je uitbreidingen op de opdracht hebt gemaakt, dan zijn die toegevoegd aan het lijstje in het bestand `uitbreidingen.md`
+- Als je uitbreidingen op de opdracht hebt gemaakt, dan zijn die toegevoegd aan het lijstje in het bestand `uitbreidingen.md`.
 - Je kunt vragen stellen tot de laatste les voor de deadline.
 
 (webshop-beoordeling)=
@@ -116,7 +120,7 @@ Als je de test geen enkele keer maakt, dan is je score voor de test 0 punten.
 
 **Beoordelingsmodel**
 
-Een concept beoordelingsmodel staat hieronder. Je docent kan tijdens het nakijken aanpassingen doen aan het beoordelingsmodel of de berekening van het cijfer.
+Een concept beoordelingsmodel staat hieronder. Je docent kan het beoordelingsmodel tijdens het nakijken aanpassen.
 
 Onderdeel|Punten havo|Punten vwo|Toelichting 
 -|-|-|-

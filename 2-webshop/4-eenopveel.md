@@ -1,4 +1,4 @@
-
+(webshop-eenopveel)=
 # 1:n-relatie
 
 ```{pull-quote}
@@ -166,7 +166,7 @@ Pas de query in de api aan op de volgende punten.
 
 1. Vervang `*` (dit betekent: alle velden) uit de query door de namen van de velden die je nodig hebt.
 2. Gebruik `AS` om velden een Nederlandse naam te geven.
-3. Velden met de naam `name`, `image_link` en `price` uit de tabel products moet je in je query opnemen zonder de naam te veranderen. Deze veldnamen worden door de website herkent en speciaal behandeld.
+3. Velden met de naam `id`, `name`, `image_link` en `price` uit de tabel `products` moet je in je query opnemen zonder de naam te veranderen. Deze veldnamen worden door de website herkent en speciaal behandeld.
 :::
 
 ```{hint} Tips

@@ -1,3 +1,4 @@
+(webshop-artikelen)=
 # Artikelen-tabel
 ```{pull-quote}
 We maken vriendjes en een plek om te wonen.

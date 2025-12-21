@@ -1,3 +1,4 @@
+(webshop-veelopveel)=
 # n:m-relatie
 
 ```{pull-quote}
@@ -197,13 +198,11 @@ Dit voorbeeld bevat een lijst met producten.
   - een `name` met als waarde een tekst
   - een `merk` met as waarde een tekst
   - een `kleur` met als waarde een list
-
-```{attention} JSON in JavaScript
-:class: dropdown
-In JavaScript is de notatie van JSON exact gelijk aan de notatie van JSON in Python. De terminologie is wel anders. In Python worden de termen dictionary en list gebruikt, terwijl in JavaScript de termen object en array worden gebruikt. Keys met meerdere woorden worden in JavaScript vaak geschreven als firstSecond (camelCase) en in Python als first_second (snake_case). Maar beide manieren werken in beide talen. Wij kiezen voor snake_case.
-```
 :::
 
+```{tip} JSON in JavaScript
+In JavaScript is de notatie van JSON exact gelijk aan de notatie van JSON in Python. De terminologie is wel anders. In Python worden de termen dictionary en list gebruikt, terwijl in JavaScript de termen object en array worden gebruikt. Keys met meerdere woorden worden in JavaScript vaak geschreven als firstSecond (camelCase) en in Python als first_second (snake_case). Maar beide manieren werken in beide talen. Wij kiezen voor snake_case.
+```
 
 ## Opdracht: Maak kleuren per artikel zichtbaar in de webshop
 Je hebt in de vorige opdracht kleur-informatie aan alle artikelen toegevoegd in de database. Maar deze informatie is nog niet te zien op de webshop. Dat komt omdat de API de kleuren niet opvraagt uit de database. Omdat er meerdere kleuren per product kunnen zijn, moeten we de kleuren in een aparte query opvragen. In deze opdracht ga je de API aanpassen, zodat de informatie over kleuren wordt toegevoegd aan de informatie over artikelen die wordt opgestuurd naar de client. De client is zo gemaakt dat hij deze extra informatie automatisch toont.
@@ -237,27 +236,6 @@ Maak de query in de code af door op de plekken met `<maak af>` de juiste stukje 
 
 Kopieer de code op de juiste plek in de API en test of hij het doet.
 
-```{attention} Performance
-:class: dropdown
-In deze opdracht vraag je met een query de kleuren van één product uit de database op. Voor elk product voer je de query opnieuw uit. Dit is niet heel efficient, maar wel eenvoudig. In een webshop met veel meer artikelen zouden programmeurs ervoor kiezen om de kleuren van meerdere producten tegelijk in één query op te vragen.
-
-Omdat we voor het product alleen `product_id` nodig hebben om de kleuren uit de database op te vragen, hoeven we maar twee tabellen te gebruiken: `product_color` en `colors`. Die tabellen hebben een 1:n-relatie. Dit is vergelijkbaar met de manier waarop het staat in [Uitleg SQL voorbeeld 1:n-relatie](#webshop-section4-uitleg-SQLvoorbeeld1Nrelatie).
-
-Wanneer je meerdere kleuren van meerdere producten opvraagt in één query, dan gebruik je de n:m-relatie tussen producten en kleuren. Daarvoor heb je drie tabellen nodig: `products`, `colors` en de koppeltabel `product_color`. Dit is zoals het staat in [Uitleg SQL voorbeeld n:m-relatie](#webshop-section4-uitleg-SQLvoorbeeldNMrelatie).
-
-```
-
-```{attention} SQL-injection
-:class: dropdown
-In onze code wordt de `execute` functie gebruikt om de query uit te voeren. De `execute`-functie vult ook de parameters in, zoals `product_id`. We hadden die parameter ook gewoon met `+` aan de query kunnen toevoegen,maar dat doen we bewust niet. 
-
-Tijdens het invullen controleert de `execute`-functie of er geen rare dingen in het `product_id` staan. In deze code komt de waarde van `product_id` uit de database waar alleen ontwikkelaars bij kunnen. Bij het hoofdstuk over filters zul je zien dat parameters ook door de client (de computer van bezoekers) opgestuurd kunnen worden. Deze parameters zouden bezoekers kunnen veranderen voordat ze ze opsturen. 
-
-Door de waarde van de parameter slim te kiezen kunnen gebruikers informatie uit de database halen die niet voor hen bedoeld is. Denk bijvoorbeeld aan een parameter `product_id` met de waarde `1; SELECT * FROM passwords;`. De database denkt dan dat hij twee opdrachten moet uitvoeren waarvan de laatste de wachtwoorden geeft. Deze truuk heet _SQL-injectie_. 
-
-In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met SQL-injectie, onder andere omdat wachtwoorden niet zomaar in een database worden gezet. Maar als je Googlet op SQL-injection, dan zie je dat het een veelvoorkomend probleem is. In onze database kan dit niet gebeuren, omdat we alle parameters door de `execute`-functie laten controleren.
-```
-
 :::
 
 ```{hint} Tips
@@ -272,4 +250,23 @@ In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met S
 - In de query zet je achter `SELECT` één veld, namelijk de naam van de kleur.
 - Voeg aan de query een `JOIN` toe tussen de tabellen `product_color` en `colors`.
 - Controleer wat de API opstuurt naar de client. Zet in je browser achter de hostname van je webshop `/api/products/` en laadt die webpagina. Het antwoord is hetzelfde antwoord als wat de client van de API zou krijgen. Je ziet de artikelinformatie in JSON-formaat.
+```
+
+```{tip} Performance
+In deze opdracht vraag je met een query de kleuren van één product uit de database op. Voor elk product voer je de query opnieuw uit. Dit is niet heel efficient, maar wel eenvoudig. In een webshop met veel meer artikelen zouden programmeurs ervoor kiezen om de kleuren van meerdere producten tegelijk in één query op te vragen.
+
+Omdat we voor het product alleen `product_id` nodig hebben om de kleuren uit de database op te vragen, hoeven we maar twee tabellen te gebruiken: `product_color` en `colors`. Die tabellen hebben een 1:n-relatie. Dit is vergelijkbaar met de manier waarop het staat in [Uitleg SQL voorbeeld 1:n-relatie](#webshop-section4-uitleg-SQLvoorbeeld1Nrelatie).
+
+Wanneer je meerdere kleuren van meerdere producten opvraagt in één query, dan gebruik je de n:m-relatie tussen producten en kleuren. Daarvoor heb je drie tabellen nodig: `products`, `colors` en de koppeltabel `product_color`. Dit is zoals het staat in [Uitleg SQL voorbeeld n:m-relatie](#webshop-section4-uitleg-SQLvoorbeeldNMrelatie).
+
+```
+
+```{tip} SQL-injection
+In onze code wordt de `execute` functie gebruikt om de query uit te voeren. De `execute`-functie vult ook de parameters in, zoals `product_id`. We hadden die parameter ook gewoon met `+` aan de query kunnen toevoegen,maar dat doen we bewust niet. 
+
+Tijdens het invullen controleert de `execute`-functie of er geen rare dingen in het `product_id` staan. In deze code komt de waarde van `product_id` uit de database waar alleen ontwikkelaars bij kunnen. Bij het hoofdstuk over filters zul je zien dat parameters ook door de client (de computer van bezoekers) opgestuurd kunnen worden. Deze parameters zouden bezoekers kunnen veranderen voordat ze ze opsturen. 
+
+Door de waarde van de parameter slim te kiezen kunnen gebruikers informatie uit de database halen die niet voor hen bedoeld is. Denk bijvoorbeeld aan een parameter `product_id` met de waarde `1; SELECT * FROM passwords;`. De database denkt dan dat hij twee opdrachten moet uitvoeren waarvan de laatste de wachtwoorden geeft. Deze truuk heet _SQL-injectie_. 
+
+In de praktijk is het meestal niet zo gemakkelijk om een systeem te hacken met SQL-injectie, onder andere omdat wachtwoorden niet zomaar in een database worden gezet. Maar als je Googlet op SQL-injection, dan zie je dat het een veelvoorkomend probleem is. In onze database kan dit niet gebeuren, omdat we alle parameters door de `execute`-functie laten controleren.
 ```
