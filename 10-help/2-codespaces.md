@@ -40,16 +40,16 @@ Schermafdruk van VS Code met de volgende onderdelen:
 2. Je kunt nu het bestand aanpassen.
 
 ### Code uitvoeren
-Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor resultaat geeft. In het `README.md` bestand van de startcode staat beschreven hoe dit moet. Voor een aantal veelgebruikte programmeertalen vind je hier een korte samenvattig
+Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor resultaat geeft. In het `README.md` bestand van de startcode staat beschreven hoe dit moet. Voor een aantal veelgebruikte programmeertalen vind je hier een korte beschrijving.
 
 #### HTML
-1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de HTML-bestanden uit de Codespace door een browser op je computer kunne worden geladen.
+1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de HTML-bestanden uit de Codespace door een browser op je computer kunnen worden geladen.
 2. Open een browser-venster met het `index.html` bestand uit je Codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de webserver.
 
 #### Python
 1. Type in de terminal `python main.py`, het programma start<br>
-2. Als het programma lang duurt, stop het dan met de toetsen `[CRTL]+[C]`
-3. Start het programma opnieuw met de toets `[PIJL OMHOOG]`<br>
+2. Als het programma lang duurt, stop het dan met de toetsen {kbd}`CRTL`+{kbd}`C` gevolgd door {kbd}`Return`
+3. Start het programma opnieuw met de toets {kbd}`PIJL OMHOOG` gevolgd door {kbd}`Return`<br>
 
 #### Python met PyGame
 1. Type in de terminal `python main.py`, het programma start<br>
@@ -77,10 +77,10 @@ Klik in je Codespace op "Commit & Sync" om je wijzigingen op te slaan:
 #### Wijzigingen van jou en je maatje samenvoegen
 Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
 - Klik in de activity bar op het Source Control icoon.
-- Klik onder GRAPH op de wijziging van je maatje, de lijst met bestanden die je maatje veranderd heeft verschijnen
-- Klik bij het bestand waarvan je wijzigingen wilt herstellen op het icoontje links van de M, het bestand opent (als je rode en groene regels ziet dan heb je op de naam van het bestand geklikt in plaats van het icoontje)
-- Knip en plak de wijzigingen uit de versie van je maatje naar de versie van jou
-- Sla je wijzigingen op in GitHub met "Commit & Sync"
+- Klik onder GRAPH op de wijziging van je maatje, er verschijnt een lijst met bestanden die je maatje veranderd heeft.
+- Klik bij het bestand waarvan je wijzigingen wilt herstellen op het icoontje links van de M, het bestand opent (als je rode en groene regels ziet dan heb je op de naam van het bestand geklikt in plaats van het icoontje).
+- Knip en plak de wijzigingen uit de versie van je maatje naar de versie van jou.
+- Sla je wijzigingen op in GitHub met "Commit & Sync".
 
 ```{attention}
 :class: dropdown
@@ -272,10 +272,9 @@ Je kunt 3 dingen doen:
 - Verder werken in een lokaal geïnstalleerde VS Code met Docker, hiervoor heb je een PC of laptop nodig en moet je handig zijn met VS Code en Docker.
 ```
 
-### Documentatie
+## Documentatie
 
 ```{seealso} Documentatie over VS Code
-:class: dropdown
 - [https://code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstudio.com/docs/getstarted/userinterface)
 ```
 
