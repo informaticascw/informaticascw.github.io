@@ -87,7 +87,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 ```{hint} Tips
 :class: dropdown
-- De code moet worden ingevoegd in de functie `get_filters()` uit de api. 
+- De code moet worden ingevoegd in de functie `get_filters()` uit de API. 
 - Let op het commentaar om de exacte plek te vinden waarnaar je de code moet kopieren.
 ```
 
@@ -125,7 +125,7 @@ Als je het goed gedaan hebt, dan zie je de filters in je webshop en kun je vinkj
 
 ```{hint} Tips
 :class: dropdown
-- De code moet worden ingevoegd in de functie `get_filters()` uit de api. 
+- De code moet worden ingevoegd in de functie `get_filters()` uit de API. 
 - Let op het commentaar om de exacte plek te vinden waarnaar je de code moet kopieren.
 - Maak beide SQL-queries in de code af.
 ```
@@ -214,9 +214,9 @@ Knip en plak de Python-code op de juiste plek in de API en controleer of de eers
 
 ```{hint} Tips
 :class: dropdown
-- De code moet worden ingevoegd in de functie `get_products()` uit de api.
+- De code moet worden ingevoegd in de functie `get_products()` uit de API.
 - De exacte plek voor de code is nadat de basis query met `SELECT` wordt gemaakt en vóórdat de query wordt uitgevoerd (execute)
-- Letop dat de query niet eindigt met `;` (puntkomma), want als je er dan `WHERE` aan vastplakt dan denkt de database dat je twee opdrachten tegelijk wilt uitvoeren. Dat geeft een foutmelding in de api waardoor de producten niet geladen kunnen worden.
+- Letop dat de query niet eindigt met `;` (puntkomma), want als je er dan `WHERE` aan vastplakt dan denkt de database dat je twee opdrachten tegelijk wilt uitvoeren. Dat geeft een foutmelding in de API waardoor de producten niet geladen kunnen worden.
 ```
 
 :::{note}Opdracht b)

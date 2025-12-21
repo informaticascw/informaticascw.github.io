@@ -1,7 +1,7 @@
 ---
 title: Webshop
-subtitle: Webshop maken met backend van sql en python met fastAPI en een frontend van html, css en javascript
-date: 2025-10-22
+subtitle: Webshop maken met server (Python, FastAPI en SQLite3) en client (HTML, CSS en JavaScript) gekoppeld met REST-API
+date: 2025-12-21
 authors:
   - name: Sander van Geest
     affiliations:

@@ -20,7 +20,7 @@ Voor deze opdracht heb je basiskennis nodig van SQL. Basiskennis van SQL beteken
 
 Voor hoofdstuk 6 (filters) heb je tevens basiskennis nodig van Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
 
-Voor hoofdstuk 7 (client) heb je tevens basiskennis nodig van html en css. Je komt in dit hoofdstuk ook in aanraking met JavaScript.
+Voor hoofdstuk 7 (client) heb je tevens basiskennis nodig van HTML en CSS. Je komt in dit hoofdstuk ook in aanraking met JavaScript.
 
 ```{seealso} Naslagmateriaal
 Als je meer over de gebruikte technieken wilt weten, dan kun je de volgende naslagwerken gebruiken:
@@ -45,11 +45,11 @@ Lesmateriaal met basiskennis over HTML en CSS
 : Fundament Kernprogramma, Domein A: Vaardigheden -> HTML & CSS (2025) (inloggen nodig)
 : https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=12181
 
-Uitgebreide informatie over HTML, CSS en Javascript
-: W3schools biedt uitgebreide en tegelijk praktische informatie over html, css en javascript
-: html op https://www.w3schools.com/html/
-: css op https://www.w3schools.com/css/
-: javascript op https://www.w3schools.com/js/
+Uitgebreide informatie over HTML, CSS en JavaScript
+: W3schools biedt uitgebreide en tegelijk praktische informatie over HTML, CSS en JavaScript
+: HTML op https://www.w3schools.com/html/
+: CSS op https://www.w3schools.com/css/
+: JavaScript op https://www.w3schools.com/js/
 ```
 
 ## Tools

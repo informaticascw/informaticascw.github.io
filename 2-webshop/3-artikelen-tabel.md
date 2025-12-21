@@ -59,7 +59,7 @@ Je hoeft hiervoor alleen de database aan te passen.
 ```{hint} Tips
 :class: dropdown
 - Aanpassingen in de database doe je in het bestand `/data/init.sql`. Na een aanpassing moet je de database opnieuw maken met het terminal-commando `bash start.sh`.
-- Als je helemaal geen artikelen meer ziet, dan heb je waarschijnlijk een fout gemaakt in de sql. Foutmeldingen verschijnen in de terminal als je de database opnieuw aanmaakt.
+- Als je helemaal geen artikelen meer ziet, dan heb je waarschijnlijk een fout gemaakt in de SQL. Foutmeldingen verschijnen in de terminal als je de database opnieuw aanmaakt.
 - Voeg elk artikel toe met een apart INSERT INTO commando. 
 - Als de artikelen zichtbaar zijn, probeer dan de leesbaarheid van je code te verbeteren door alle artikelen in één INSERT INTO commando te zetten.
 - Er staat een komma tussen elke artikel in een INSERT INTO commando, er staat geen komma na het laatste artikel in INSERT INTO.
