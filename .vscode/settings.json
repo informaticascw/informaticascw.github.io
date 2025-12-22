@@ -14,10 +14,11 @@
     "github.copilot.enable": { // disable copilot code suggestions in editor, we rather stick to autocomplete and use copilot chat for code snippets
         "*": false
     },
-    
 
     // language settings
-    // this won't work, as Locale is a user setting, not a workspace setting
+    "github.copilot.chat.localeOverride": "nl", // set default language for responses of copilot chat to Dutch, overriding locale settings
+    // following line won't work, as Locale is a user setting, not a workspace setting
+    // attempt to fix by using ./config/Code/locale.json
     "workbench.action.configureLocale": "en", // set display language to English to comply with most documentation, remove this setting to follow system settings
 
     // hide some popups
