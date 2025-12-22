@@ -74,10 +74,12 @@ Schematische weergave van samenwerken in Codespaces
 Sla je wijzigingen als volgt op in GitHub:
 1. Klik in de menu balk die links op je scherm staat op het Source Control icoon.
 2. Vul een beschrijving in van je wijziging
-3. Druk op de knop "Commit & Sync":
-    - Bestanden die door jouw maatje gewijzigd zijn worden van GitHub naar jouw Codespace gekopieerd
-    - Bestanden die jij hebt gewijzigd worden van jouw Codespace naar GitHub gekopieerd. 
-    - Als jij en je maatje in hetzelfde bestand wijzigingen hebben gedaan, dan wordt de laatste versie (jouw bestand) bewaard.
+3. Druk op de knop "Commit & Sync".
+
+Als je maatje intussen andere wijzigingen heeft opgeslagen, dan kiest GitHub als volgt:
+- Bestanden die jouw maatje heeft gewijzigd worden van GitHub naar jouw Codespace gekopieerd.
+- Bestanden die jij hebt gewijzigd worden van jouw Codespace naar GitHub gekopieerd. 
+- Van bestanden die jullie allebei hebben gewijzigd wordt de laatste versie (jouw versie) naar GitHub gekopieerd.
 
 #### Wijzigingen van jou en je maatje samenvoegen
 Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
