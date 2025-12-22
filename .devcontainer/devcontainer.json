@@ -1,8 +1,7 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/universal
+// For format details, see https://aka.ms/devcontainer.json. 
 {
 	"name": "MySTmd",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	// Image to use for the dev container. More info: https://containers.dev/templates
 	"image": "mcr.microsoft.com/devcontainers/universal:latest",
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -36,13 +35,8 @@
 				"ms-vsliveshare.vsliveshare", // add google-docs like typing in same file, click on live-share button in left icon pane
 				"mhutchie.git-graph", // add graphical viewer for branches and commits, click on button in Source-Code tab
 				"ms-python.python" // add common functionallity for python (syntax checking, autocomplete, debugging etc)
-			],
-			"settings": {
-				"locale": "en" // this setting works here, but it does not work when moved to .vscode/settings.json
-			}
+			]
 		}
 	}
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }

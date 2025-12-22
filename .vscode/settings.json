@@ -14,8 +14,12 @@
     "github.copilot.enable": { // disable copilot code suggestions in editor, we rather stick to autocomplete and use copilot chat for code snippets
         "*": false
     },
-    "github.copilot.chat.localeOverride": "nl", // set default language for responses of copilot chat to Dutch, overriding locale settings
- 
+
+    // display language settings
+    // display language defaults to settings in browser or local machine
+    // I tried a lot, didn't succeed to force display language to English
+    // work around: edit manually in vscode after startup with [shift]+[control]+[p] > Configure Display Settings
+
     // hide some popups
     "extensions.ignoreRecommendations": true, // disable popup that asks to install recommended extensions
     "terminal.integrated.sendKeybindingsToShell": true, // disable popup that appears when focus is on the integrated terminal and a shortcut key for vscode is pressed
@@ -25,6 +29,6 @@
     // edit in vscode with [shift]+[control]+[p] preferences: open workspace settings (JSON)
     "files.exclude": {
         "**/.*": false,
-        "__pycache__/": true
-    },
+        "__pycache__/": false
+    }
 }
