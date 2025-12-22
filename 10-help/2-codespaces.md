@@ -68,19 +68,24 @@ Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor result
 Schematische weergave van samenwerken in Codespaces
 ```
 
+## Samenwerken in GitHub
+
 #### Jouw wijzigingen opslaan
-Klik in je Codespace op "Commit & Sync" om je wijzigingen op te slaan:
-- Bestanden die door jouw maatje gewijzigd zijn worden van GitHub naar jouw Codespace gekopieerd
-- Bestanden die jij hebt gewijzigd worden van jouw Codespace naar GitHub gekopieerd. 
-- Als jij en je maatje in hetzelfde bestand wijzigingen hebben gedaan, dan wordt de laatste versie (jouw bestand) bewaard.
+Sla je wijzigingen als volgt op in GitHub:
+- Klik in de menu balk die links op je scherm staat op het Source Control icoon.
+- Vul een beschrijving in van je wijziging
+- Druk op de knop "Commit & Sync":
+    - Bestanden die door jouw maatje gewijzigd zijn worden van GitHub naar jouw Codespace gekopieerd
+    - Bestanden die jij hebt gewijzigd worden van jouw Codespace naar GitHub gekopieerd. 
+    - Als jij en je maatje in hetzelfde bestand wijzigingen hebben gedaan, dan wordt de laatste versie (jouw bestand) bewaard.
 
 #### Wijzigingen van jou en je maatje samenvoegen
 Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
-- Klik in de activity bar op het Source Control icoon.
-- Klik onder GRAPH op de wijziging van je maatje, er verschijnt een lijst met bestanden die je maatje veranderd heeft.
-- Klik bij het bestand waarvan je wijzigingen wilt herstellen op het icoontje links van de M, het bestand opent (als je rode en groene regels ziet dan heb je op de naam van het bestand geklikt in plaats van het icoontje).
-- Knip en plak de wijzigingen uit de versie van je maatje naar de versie van jou.
-- Sla je wijzigingen op in GitHub met "Commit & Sync".
+- Klik op het Source Control icoon.
+- Klik onder GRAPH op de wijziging van je maatje, de lijst met bestanden die je maatje veranderd heeft verschijnen
+- Klik bij het bestand waarvan je wijzigingen wilt herstellen op het icoontje links van de M, het bestand opent (als je rode en groene regels ziet dan heb je op de naam van het bestand geklikt in plaats van het icoontje)
+- Knip en plak de wijzigingen uit de versie van je maatje naar de versie van jou
+- Sla je wijzigingen op in GitHub met "Commit & Sync"
 
 ```{attention}
 :class: dropdown
