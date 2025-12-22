@@ -14,13 +14,8 @@
     "github.copilot.enable": { // disable copilot code suggestions in editor, we rather stick to autocomplete and use copilot chat for code snippets
         "*": false
     },
-
-    // language settings
     "github.copilot.chat.localeOverride": "nl", // set default language for responses of copilot chat to Dutch, overriding locale settings
-    // following line won't work, as Locale is a user setting, not a workspace setting
-    // attempt to fix by using ./config/Code/locale.json
-    "locale": "en", // set display language to English to comply with most documentation, remove this setting to follow system settings
-
+ 
     // hide some popups
     "extensions.ignoreRecommendations": true, // disable popup that asks to install recommended extensions
     "terminal.integrated.sendKeybindingsToShell": true, // disable popup that appears when focus is on the integrated terminal and a shortcut key for vscode is pressed
