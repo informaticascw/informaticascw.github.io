@@ -79,7 +79,7 @@ Sla je wijzigingen als volgt op in GitHub:
 Als je maatje intussen andere wijzigingen heeft opgeslagen, dan kiest GitHub als volgt:
 - Bestanden die jouw maatje heeft gewijzigd worden van GitHub naar jouw Codespace gekopieerd.
 - Bestanden die jij hebt gewijzigd worden van jouw Codespace naar GitHub gekopieerd. 
-- Van bestanden die jullie allebei hebben gewijzigd wordt de laatste versie (jouw versie) naar GitHub gekopieerd.
+- Van bestanden die jullie allebei hebben gewijzigd toont GitHub jouw versie als laatste versie.
 
 #### Wijzigingen van jou en je maatje samenvoegen
 Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
