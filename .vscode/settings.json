@@ -15,9 +15,8 @@
         "*": false
     },
 
-    // language settings (experimental)
-    // these can be changes after startup using the command panel
-    "locale": "en", // remove this setting to follow system settings
+    // language settings
+    "workbench.action.configureLocale": "en", // set display language to English to comply with most documentation, remove this setting to follow system settings
 
     // hide some popups
     "extensions.ignoreRecommendations": true, // disable popup that asks to install recommended extensions
@@ -25,7 +24,7 @@
     "python.createEnvironment.trigger": "off", // disable popup that asks if a python environment needs to be created
 
     // hide (true) or unhide (false) .* directories and files in the editor
-    // edit met [shift]+[control]+[p] preferences: open workspace settings (JSON)
+    // edit in vscode with [shift]+[control]+[p] preferences: open workspace settings (JSON)
     "files.exclude": {
         "**/.*": true,
         "__pycache__/": true
