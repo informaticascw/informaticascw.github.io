@@ -21,7 +21,7 @@ Vraag hulp aan Chat-bot Anne bij het maken van je game
 
 ## [Lesplanning](Docent%20-%20Lesplanner%20Python%20Game.docx)
 
-## [Uitwerking](https://github.com/informaticascw/h4v4-game-uitwerking)
+## [Uitwerking](https://github.com/informaticascw/h4v4-python-game-uitwerking)
 
 private repository op github, mail gees_at_stanislascollege_punt_nl voor toegang
 
