@@ -123,7 +123,8 @@ Een beperkt deel van je eindcijfer wordt bepaald door een test.
 - Het is niet nodig om voor de test te leren. 
 - De test bestaat uit multiple choice vragen en duurt ongeveer een kwartier. 
 - Je docent geeft drie momenten op verschillende dagen waarop je de test kunt maken. 
-- Je mag de test maximaal twee keer doen, de hoogste score telt. 
+- Je mag de test maximaal twee keer doen, de hoogste score telt.
+- Je score krijg je zo snel na het maken van de test, als mogelijk direct bij inleveren. Inzage in de gemaakte test is mogelijk nadat de hele praktische opdracht is ingeleverd en nagekeken.
 
 Als je de test geen enkele keer maakt, dan is je score voor de test 0 punten.
 
