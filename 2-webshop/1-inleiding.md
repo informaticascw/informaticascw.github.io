@@ -76,12 +76,12 @@ https://fundament-online.nl/leeromgeving/hoofdstuk.php?id=11352
 
 Je werkt op de volgende manier aan de opdrachten.
 
-- Je maakt deze opdracht in een team van twee personen. Je docent geeft aan hoe de teams gemaakt worden.
-- Je gebruikt de startcode die je van de docent krijgt en je volgt de opdrachten.
-- Je werkt regelmatig, minimaal één keer per les sla je werk op, dat doe je door een commit in github te zetten.
-- Als je in een groepje werkt, dan programmeert iedereen evenveel. De opdrachten in hoofdstuk 1 tot en met 7 maak je samen, de uitbreidingen in hoofdstuk 8 mag je verdelen.
-- Je werkt op je eigen account. Als je samen aan dezelfde opdracht werkt dan gebruik je het account van degene die typt, na elke opdracht wissel je wie typt en wiens account gebruik wordt.
-- Als je bronnen gebruikt, dan zet je een verwijzing naar de bron als commentaar in je code. Verwijzingen zijn linken naar chats op chat-gpt, tutorials op youtube of webpagina's. In elk geval moet duidelijk zijn welke stukken code je helemaal zelf hebt bedacht en waar je hulp hebt gehad. 
+-	Je maakt deze opdracht in een team van twee personen. Je docent geeft aan hoe de teams gemaakt worden.
+-	Je gebruikt de startcode die je voor deze opdracht krijgt van je docent. 
+-	Je volgt het stappenplan in de opdracht. Elke stap of uitbreiding sla je op in GitHub; je maakt per stap minimaal één commit. Uit je commit-message blijkt bij welke stap of uitbreiding de commit hoort.
+-	Jullie verdelen het werk eerlijk over de teamleden. Elk teamlid codeert evenveel. Als je samen achter één computer zit, dan wissel je elke opdracht wie er typt. Elke leerling typt op zijn eigen GitHub-account.
+-	Problemen binnen het team meld je zo snel mogelijk bij je docent.
+-   Als je bronnen gebruikt, dan zet je een verwijzing naar de bron als commentaar in je code. Verwijzingen zijn linken naar chats op chat-gpt, tutorials op youtube of webpagina's. In elk geval moet duidelijk zijn welke stukken code je helemaal zelf hebt bedacht en waar je hulp hebt gehad. 
 
 ## Inleveren
 
