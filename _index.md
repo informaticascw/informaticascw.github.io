@@ -5,6 +5,9 @@ subtitle: Informatica-opdrachten voor havo en vwo van het Stanislascollege Westp
 numbering:
     title:
         enabled: false
+
+site:
+  hide_outline: true
 ---
 
 % when using site:  template: book-theme options: folder: true in myst.yml, the links on the toc are generated wrong
