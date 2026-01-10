@@ -36,7 +36,7 @@ In de bovenstaande uitwerking zie je totaal 5 toestanden en 6 toestandsovergange
 
 Het losse pijltje naar toestand 1 betekent dat dit de begintoestand is, oftewel de initiële toestand.
 
-```{exercise} Unplugged Nooddienstregeling bij de spoorwegen
+```{exercise} Verbreding: Unplugged Nooddienstregeling bij de spoorwegen
 :label: opdracht3unplugged
 Je kunt ook als inleiding ook de unplugged activiteit doen die je via de onderstaande link vindt.
 
