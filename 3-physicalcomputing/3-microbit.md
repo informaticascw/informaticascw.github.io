@@ -132,7 +132,8 @@ Als je externe sensoren gaat aansluiten raden we aan dat je een breadboard en br
 Kitronic Breadboard en Breakoutboard
 ```
 
-Op de eerste pagina van de handleiding die bij de uitvinderskit wordt meegeleverd staat beschreven hoe je deze onderdelen aan elkaar koppelt. Zie ook: https://www.kitronik.co.uk/pdf/5609_prototyping_system_for_the_bbc_micro_bit_assembly_instructions.pdf.
+Op de eerste pagina van de handleiding die bij de uitvinderskit wordt meegeleverd staat beschreven hoe je deze onderdelen aan elkaar koppelt. \
+Zie ook: https://www.kitronik.co.uk/pdf/5609_prototyping_system_for_the_bbc_micro_bit_assembly_instructions.pdf.
 
 ### Breakoutboard
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4855378
@@ -163,7 +164,8 @@ Meer achtergrond over het breadboard vind je [op de site van Sparkfun](https://l
 ### Aansluiten met krokodillebekken
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4866810
 
-Je hoeft niet per se gebruik te maken van het breakoutboard en het breadboard. Je kunt ook werken met draden met zogenaamde krokodillebekjes. Hieronder zie je een voorbeeld van het gebruik daarvan in een opstelling voor het meten van de vochtigheid van aarde. Zie ook: https://makecode.microbit.org/projects/soil-moisture.
+Je hoeft niet per se gebruik te maken van het breakoutboard en het breadboard. Je kunt ook werken met draden met zogenaamde krokodillebekjes. Hieronder zie je een voorbeeld van het gebruik daarvan in een opstelling voor het meten van de vochtigheid van aarde.\
+Zie ook: https://makecode.microbit.org/projects/soil-moisture.
 
 ```{figure} 3-krokodillenbekken.jpg
 Gebruik van krokodillebekjes 

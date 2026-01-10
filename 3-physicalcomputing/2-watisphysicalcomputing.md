@@ -37,7 +37,8 @@ Kies samen één toepassing en verken deze toepassing. Zoek zelf naar informatie
 
 Bekijk de twee video’s in het volgende artikel over robotchirurgie.
 
-Het artikel **Opereren met robots gaat grote vlucht nemen** staat op https://www.1limburg.nl/opereren-met-robots-gaat-grote-vlucht-nemen
+Het artikel **Opereren met robots gaat grote vlucht nemen** staat op\
+https://www.1limburg.nl/opereren-met-robots-gaat-grote-vlucht-nemen
 
 ```{figure} 2-chirurgie.png
 Foto van https://www.l1nieuws.nl/nieuws/1318054/opereren-met-robots-gaat-grote-vlucht-nemen
@@ -55,7 +56,8 @@ Foto van https://www.l1nieuws.nl/nieuws/1318054/opereren-met-robots-gaat-grote-v
 
 Een stofzuigerrobot maakt je kamer schoon terwijl je zelf op school zit of aan het werk bent. Er zijn diverse stofzuigerrobots verkrijgbaar. In het filmpje hieronder zie je een korte review van de iRobot Roomba 980. Deze stofzuigerrobot is in staat te bepalen of er een object in de weg staat. Als de stofzuiger naar beneden dreigt te vallen, bijvoorbeeld van de trap, draait hij zich om. Hij laadt zichzelf op bij het basisstation.
 
-De review **iRobot Roomba 980 review** staat op https://www.cnet.com/reviews/irobot-roomba-980-review/
+De review **iRobot Roomba 980 review** staat op\
+https://www.cnet.com/reviews/irobot-roomba-980-review/
 
 ```{figure} 2-roomba980.webp
 Foto van https://www.cnet.com/reviews/irobot-roomba-980-review/
@@ -126,9 +128,11 @@ Bekijk het filmpje, de website van project MARCH en lees eventueel het artikel.
 Cybathlon Aftermovie 2018 - Project MARCH
 ```
 
-De website van **Project MARCH** staat op https://www.projectmarch.nl/
+De website van **Project MARCH** staat op\
+https://www.projectmarch.nl/
 
-Het artikel **Dwarslaesiepatiënt zet eerste stappen met exoskelet van studenten** staat op https://tweakers.net/nieuws/129067/dwarslaesiepatient-zet-eerste-stappen-met-exoskelet-van-studenten.html
+Het artikel **Dwarslaesiepatiënt zet eerste stappen met exoskelet van studenten** staat op\
+https://tweakers.net/nieuws/129067/dwarslaesiepatient-zet-eerste-stappen-met-exoskelet-van-studenten.html
 
 ```{exercise} Exo-skelet
 :label: opdracht1skelet

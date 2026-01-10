@@ -1,6 +1,6 @@
 # Toestandsdiagrammen
 
-## Inleiding
+## Voorbeeld: game
 
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4855353
 

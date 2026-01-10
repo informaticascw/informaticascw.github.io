@@ -1,6 +1,5 @@
 # Toestandsdiagrammen (opdrachten)
 
-## Inleiding
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379818
 
 In dit deel vind je enkele voorbeelden, deels uitgewerkt, en deels zijn het opdrachten. Deze helpen om toestandsdiagrammen te begrijpen en te oefenen met het maken van toestandsdiagrammen. Kies zelf welke je interessant vindt.
@@ -18,14 +17,15 @@ De lamp kan in drie standen worden gezet:
 
 Het systeem heeft twee knoppen zonder toggle-functie (A en B). Met knop A gaat de lamp feller branden. Bijvoorbeeld: als de lamp half aan is en knop A wordt ingedrukt, dan gaat de lamp helemaal aan. Met knop B gaat de lamp minder fel branden. De lamp is altijd in één van de drie bovengenoemde standen.
 
-```{exercise} Opdracht: maak toestandsdiagram lichtregulering
-:label: opdracht3lichtregulering
+```{exercise} Opdracht: maak toestandsdiagram lichtregulering deel 1
+:label: opdracht3lichtregulering-1
 
-a) Maak een toestandsdiagram voor dit systeem. In de volgende paragraaf wordt dit uitgewerkt, probeer het echter eerst zelf.
-b) Het systeem wordt verder uitgebreid. De lamp heeft twee kleuren (rood en blauw). Er wordt een derde knop (C) toegevoegd waarmee kan worden gewisseld tussen de kleur rood en de kleur blauw. Pas het toestandsdiagram hier op aan.
+Maak een toestandsdiagram voor dit systeem. Hieronder wordt dit uitgewerkt, probeer het echter eerst zelf.
 ```
 
-### Uitwerking opdracht a)
+````{solution} opdracht3lichtregulering-1
+:class: dropdown
+### Uitwerking deel 1
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379547
 
 Hieronder volgt een mogelijke uitwerking van opdracht a) over de lichtregulering.
@@ -72,8 +72,18 @@ We houden de teksten kort in het diagram om het overzichtelijk te houden. Het na
 Je kunt het toestandsdiagram voor jezelf testen en daarmee controleren of het klopt. Bijvoorbeeld, wat gebeurt er is als ik op A, B en dan weer B druk? Klopt dit met wat het systeem zou moeten doen?
 
 Probeer nu eerst zelf opdracht b) te doen voordat je de uitwerking bekijkt.
+```
+````
 
-### Uitwerking opdracht b)
+```{exercise} Opdracht: maak toestandsdiagram lichtregulering deel 2
+:label: opdracht3lichtregulering-2
+
+Het systeem wordt verder uitgebreid. De lamp heeft twee kleuren (rood en blauw). Er wordt een derde knop (C) toegevoegd waarmee kan worden gewisseld tussen de kleur rood en de kleur blauw. Pas het toestandsdiagram hier op aan.
+```
+
+````{solution} opdracht3lichtregulering-2
+:class: dropdown
+### Uitwerking deel 2
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379568
 
 Hieronder volgt een mogelijke uitwerking van opdracht b) over de lichtregulering.
@@ -123,9 +133,11 @@ Nog een voorbeeld: de pijl van toestand 1 naar toestand 2 waar bij staat A: 50% 
 
 Een begintoestand hadden we al, dus dit zou het moeten zijn. Test je toestandsdiagram vervolgens voor jezelf. Wat gebeurt er bijvoorbeeld als je de knoppen C, dan A, dan C, dan A indrukt? En klopt dat met wat je verwacht dat het zou moeten doen?
 
+````
+
 ```{exercise} Geen acties bij toestandsovergangen
 :label: opdracht3geenacties
-Aan de linkerkant van het toestandsdiagram staan twee toestandsovergangen zonder actie:
+Aan de linkerkant van het laatste toestandsdiagram in de uitwerking van de vorige opgave staan twee toestandsovergangen zonder actie:
 
 - van toestand 1 naar 4 (knop C wordt ingedrukt)
 - van toestand 4 naar 1 (knop C wordt ingedrukt)

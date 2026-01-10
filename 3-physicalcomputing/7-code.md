@@ -7,11 +7,21 @@ Een toestandsdiagram geeft de werking van een systeem weer. Als je een toestands
 
 Als je denkt dat het toestandsdiagram goed is kun je het programma gaan maken. Gelukkig is het omzetten van een toestandsdiagram naar een programma redelijk eenvoudig, in dit hoofdstuk leggen we uit hoe dat moet.
 
+### Ondersteuning: klassikale unplugged opdrachten
+
 Doe ter voorbereiding op het werken met logische operatoren en met if-then-else structuren de volgende unplugged activiteiten met de klas.
 
-[Dobbelen met booleans](http://www.informaticaunplugged.nl/de-werkvormen/dobbelen-met-booleans/)
+```{exercise} Dobbelen met booleans
+:label: opdracht8-1dobbelen
+De opdrachtbeschrijving voor **Dobbelen met booleans** staat op\
+http://www.informaticaunplugged.nl/de-werkvormen/dobbelen-met-booleans/
+```
 
-[Kiezen met kaarten](http://www.informaticaunplugged.nl/de-werkvormen/kiezen-met-kaarten/)
+```{exercise} Kiezen met kaarten
+:label: opdracht8-2kaarten
+De opdrachtbeschrijving voor **Kiezen met kaarten** staat op\
+http://www.informaticaunplugged.nl/de-werkvormen/kiezen-met-kaarten/
+```
 
 ## Stappenplan
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886280
@@ -100,6 +110,7 @@ Waarom is dit niet een juiste vertaling van toestandsdiagram naar programma?
 ```
 
 ```{solution} opdracht4omzetten
+:class: dropdown
 Ga na wat er gebeurt als het systeem in toestand 1 is en iemand drukt het knopje in (en laat het weer los). Het programma controleert of het systeem in toestand 1 is (dat is waar). Dan wordt de lamp aangezet en wordt de toestand 2. Dan controleert het programma of het systeem in toestand 2 is (en dat is dan waar!) en wordt de lamp uitgezet en wordt de toestand 1. De lamp zal dus heel even aan zijn en gelijk weer uit worden gezet.
 ```
 
@@ -144,7 +155,7 @@ Maak de bovenstaande tabel compleet
 | 4        | 3 zet lamp uit | -              | -              | 1 zet lamp uit |	 
 ```
 
-## Opdracht: maak programma
+## Opdracht: maak programma in pseudocode
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886290
 
 Hieronder vind je een start voor het programma dat hoort bij het toestandsdiagram voor de hotelschakeling uit de vorige paragraaf.
@@ -169,3 +180,16 @@ HERHAAL:
 :label: opdracht4pseudocodehotelschakeling
 Maak op basis van het toestandsdiagram en de bijbehorende tabel het programma in pseudocode af.
 ```
+
+## Opdracht: maak programma in Micro:bit
+
+```{exercise} Opdracht: maak de code in Micro:bit
+:label: opdracht4code
+Maak de Micro:bit code op basis van de pseudocode.
+
+Test op je Micro:bit of je code goed werkt.
+```
+
+## Verdieping: toestand-eerst of gebeurtenis-eerst
+
+Hier komt ooit wat, nu mag je het overslaan.
