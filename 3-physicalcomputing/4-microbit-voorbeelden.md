@@ -30,7 +30,7 @@ Behind the MakeCode Hardware - LEDs
 
 Maak de volgende opstelling.
 
-```{figure}
+```{figure} 4-knop-aansluitschema.png
 ```
 
 De bovenste rij op het breadboard in het plaatje hierboven is dus de min (0V), de rij daaronder is de plus (3V). Het knopje is dus verbonden met pin P0 en de min (0V).
@@ -39,7 +39,7 @@ Het drukknopje heeft vier pinnen, die twee aan twee zijn verbonden. Als je het k
 
 Je kunt nu op pin P0 meten of het knopje wordt ingedrukt. Belangrijk is om eerst te testen of dit werkt. Dat kan bijvoorbeeld met het volgende programma. Probeer het uit en kijk of het knopje werkt. Als je het knopje indrukt moet er een hartje verschijnen op de Micro:bit.
 
-```{figure}
+```{figure} 4-knop-code.png
 ```
 
 Enkele opmerkingen voor de experts:
@@ -56,12 +56,12 @@ Een led kan doorbranden als er teveel spanning op staat. Daarom moet je altijd e
 Een led is een diode. Dat betekent dat de stroom er maar van één kant door kan. Zorg dat je de platte zijde verbindt met de – (min, 0V) en de bolle zijde met de + (plus, 3V). Doe je het andersom, dan zal de led niet branden. Je kunt het ook zien aan de lengte van de twee pootjes van de led, het lange pootje is de +, het korte pootje de min.
 Breid het systeem uit met een led zoals in het onderstaande schema. Je ziet, de led is aangesloten op pin P1. Die fungeert als een soort schakelaar waarmee je de led aan en uit kunt zetten.
 
-```{figure}
+```{figure} 4-led-aansluitschema.png
 ```
 
 Nu moet je eerst de led testen. Je kunt de led bijvoorbeeld steeds aan en uit zetten, met het onderstaande programma. Let op: we gebruiken hier ‘pauzeer’ puur voor het testen van de afzonderlijke LED. In de module leer je om een timer te gebruiken in plaats van 'pauzeer', zie cyclus 2.
 
-```{figure}
+```{figure} 4-led-code.png
 ```
 
 ```{exercise} Aansluiten drukknop en led
@@ -104,7 +104,7 @@ Als de spanning op pin 1 gelijk is aan 0V gaat er geen stroom door de led en bli
 
 De volgende stap is om de twee onderdelen (drukknop en led) te combineren: als het knopje wordt ingedrukt (en weer wordt losgelaten) gaat de led aan. Wordt het knopje nogmaals ingedrukt, dan gaat de led weer uit. In deze module werken we altijd met een toestandsdiagram, dus ook nu. Je kunt bijvoorbeeld het volgende toestandsdiagram gebruiken.
 
-```{figure}
+```{figure} 4-knopled-toestand.png
 ```
 
 Toestand 1: de lamp is uit
@@ -113,7 +113,7 @@ Toestand 2: de lamp is aan
 
 Het programma ziet er dan als volgt uit:
 
-```{figure}
+```{figure} 4-knopled-code.png
 ```
 
 Werkt het?
@@ -153,12 +153,12 @@ Maak de onderstaande opstelling (die is gelijk aan Voorbeeld: aansluiten LED en 
 - We gebruiken een weerstand van 47 Ohm om te voorkomen dat de led doorbrandt
 - De platte kant van de led sluiten we aan op de min (0V). Je kunt ook kijken naar de pootjes van de led: het korte pootje sluiten we aan op de min (0V).
 
-```{figure}
+```{figure} 4-leddim-aansluitschema.png
 ```
 
 Test of de led werkt, bijvoorbeeld met onderstaande programma. Dit programma laat het lampje steeds met een andere sterkte branden. Daarbij is 1023 de maximale waarde.
 
-```{figure}
+```{figure} 4-leddim-code.png
 ```
 
 Let op: we gebruiken hier ‘pauzeer’ puur voor het testen. In de module leer je hoe je hiervoor een timer kunt gebruiken, zie cyclus 2 - timers.
@@ -173,14 +173,14 @@ Toch is er een oplossing om de led minder fel te laten branden. De Micro:bit wis
 
 De figuur hieronder laat drie situaties zien. Het gemiddelde geeft aan hoe sterk de led zal branden.
 
-```{figure}
+```{figure} 4-pwm.gif
 ```
 
 Bron: [Wikipedia](https://nl.wikipedia.org/wiki/Pulsbreedtemodulatie).
 
 Je hoeft maar weinig te doen om PWM te gebruiken. Je gebruikt ‘schrijf analoog pin … naar …’ en de Micro:bit handelt het verder af. Als je de led op 50% gebruik je bijvoorbeeld het onderstaande blokje. De waarde is 512, omdat dat de helft is van 1023, wat het maximum is.
 
-```{figure}
+```{figure} 4-pwm-code.png
 ```
 
 ### Stap 2 Maken van een toestandsdiagram
@@ -195,7 +195,7 @@ We maken een programma met 4 toestanden.
 
 Het toestandsdiagram ziet er dan zo uit:
 
-```{figure}
+```{figure} 4-leddim-toestand.png
 ```
 
 ### Stap 3 Omzetten naar een programma
@@ -205,12 +205,12 @@ Dit was de bedoeling van ons systeem: als de A-knop op de Micro:bit wordt ingedr
 
 Als je met de Micro:bit wilt nagaan of een knopje is gedrukt en weer losgelaten kun je het volgende commando gebruiken:
 
-```{figure}
+```{figure} 4-leddim-code3a.png
 ```
 
 Daarom hebben het programma als volgt opgebouwd.
 
-```{figure}
+```{figure} 4-leddim-code3b.png
 ```
 
 Test het programma. Werkt het?
@@ -228,17 +228,17 @@ Mocht je geen piezo-buzzer hebben, dan kun je ook gebruikmaken van oortjes om ge
 
 Voor het aansluiten van een een piezo-buzzer kun je het onderstaande schema gebruiken. Je ziet dat de piezo-buzzer is aangesloten op pin 2 (P2). Je ziet daarbij ook de aansluiting van de ultrasoonsensor. Je kunt echter ook prima eerst alleen de piezo-buzzer aansluiten en testen, zodat je aan deelprobleem 2 kunt werken.
 
-```{figure}
+```{figure} 4-buzzer-aansluitschema.png
 ```
 
 Met onderstaande programma kun je testen of de piezo-buzzer werkt. Met het blokje 'zet analoge toonhoogte pin P2' laat je weten dat de piezo-buzzer op pin 2 (P2) is aangesloten.
 
-```{figure}
+```{figure} 4-buzzer-code1a.png
 ```
 
 Als het goed is hoor je een hoge toon bij het starten van het programma. De piezo-buzzer blijft nu de hele tijd aan. Om de piezo-buzzer uit te zetten kun je het volgende blokje gebruiken.
 
-```{figure}
+```{figure} 4-buzzer-code1b.png
 ```
 
 ## Ultrasoon sensor
