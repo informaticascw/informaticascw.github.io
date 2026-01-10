@@ -13,4 +13,11 @@ https://maken.wikiwijs.nl/135434/Physical_Computing_geheel#!page-4913100
 
 ```{warning} Work in progress
 In het schooljaar 25/26 gaan we deze aangepaste versie van het keuzethema gebruiken, tot die tijd zijn we bezig met de ontwikkeling.
+
+Akties:
+1. Algemene en microbit delen van SLO overzetten naar deze website => 75% gereed
+2. Structuur: hoofdstukindeling verbeteren, streven is elk hoofdstuk samenhangend en ongeveer gelijke omvang van één les => 75% gereed
+3. Didactiek: toestandsdiagrammen verwijderen uit oefeningen met microbit sensoren en actuatoren (hoofdstuk 4) => 0% gereed
+4. Didactiek: heldere lijn tussen toestand-eerst en overgang-eerst => 0% gereed
+5. Verdieping: enkele delen van SLO lesmateriaal (of eigen opdrachten) toevoegen als verdieping => 0% gereed
 ```
