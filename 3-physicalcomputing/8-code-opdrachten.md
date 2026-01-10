@@ -1,4 +1,4 @@
-# Van toestandsdiagram naar Micro:bit-code (opdrachten)
+# Coderen met toestandsdiagram (opdrachten)
 
 ## Oefenopdracht: toegangscode
 

@@ -1,4 +1,4 @@
-# Toestandsdiagrammen ontwerpen
+# Toestandsdiagrammen
 
 ## Inleiding
 

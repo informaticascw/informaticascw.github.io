@@ -1,4 +1,4 @@
-# Werken met de Micro:bit
+# Werken met Micro:bit
 
 ## De Micro:bit
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4889670

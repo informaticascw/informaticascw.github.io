@@ -1,4 +1,4 @@
-# Sensoren en actuatoren op de Micro:bit (opdrachten)
+# Sensoren en actuatoren (opdrachten)
 
 ## LED
 Zie Drukknop

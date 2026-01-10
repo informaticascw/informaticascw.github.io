@@ -1,4 +1,4 @@
-# Toestandsdiagrammen ontwerpen (opdrachten)
+# Toestandsdiagrammen (opdrachten)
 
 ## Inleiding
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379818
