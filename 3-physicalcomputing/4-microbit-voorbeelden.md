@@ -1,7 +1,4 @@
-# Micro:bit sensoren en actuatoren
-
-
-## Weerstand
+# Sensoren en actuatoren op de Micro:bit (opdrachten)
 
 ## LED
 Zie Drukknop

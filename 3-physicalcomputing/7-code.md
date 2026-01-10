@@ -1,4 +1,4 @@
-# Van toestandsdiagram naar code
+# Van toestandsdiagram naar Micro:bit-code
 
 ## Inleiding
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886279
@@ -18,7 +18,7 @@ Doe ter voorbereiding op het werken met logische operatoren en met if-then-else 
 
 Als je het toestandsdiagram eenmaal klaar hebt, dan is het maken van een programma dat kan worden uitgevoerd op bijvoorbeeld de Microbit, Arduino of Lego Mindstorms eenvoudig. We laten dat zien aan de hand van het volgende toestandsdiagram voor een systeem bestaande uit een lamp en een drukknop. Als de drukknop wordt ingedrukt (en weer losgelaten) gaat de lamp aan. Wordt de drukknop nogmaals ingedrukt (en weer losgelaten) gaat de lamp uit.
 
-```{figure} 4-stappenplan-td1
+```{figure} 7-stappenplan-td1
 ```
 
 Om een toestandsdiagram om te zetten in een programma gebruik je ALS-DAN-constructies. De toestand sla je op in een variabele. Hieronder zie je een uitwerking in pseudo-code. Het bestaat uit twee delen:
@@ -117,7 +117,7 @@ SA staat voor Schakelaar A, SB voor Schakelaar B
 
 Hieronder zie je een tabel met alle mogelijke toestandsovergangen. Voor elke combinatie moet er staan wat de nieuwe toestand wordt en welke actie wordt uitgevoerd. Als er een streepje staat (-), dan is er geen toestandsovergang en geen actie. Hieronder hebben we vast een begin gemaakt.
 
-```{figure} 4-tabel-td1
+```{figure} 7-tabel-td1
 ```
 
 ```{table}
@@ -169,11 +169,3 @@ HERHAAL:
 :label: opdracht4pseudocodehotelschakeling
 Maak op basis van het toestandsdiagram en de bijbehorende tabel het programma in pseudocode af.
 ```
-
-## Oefenopdrachten
-
-### Oefenopdracht: toegangscode
-
-### Oefenopdracht: toggle-functie van een drukknop
-
-### Oefenopdracht: TV met 2 afstandsbedieningen

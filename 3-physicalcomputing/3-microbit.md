@@ -1,12 +1,10 @@
-# Electronica
+# Werken met de Micro:bit
 
-## Werken met de Micro:bit
-
-### De Micro:bit
+## De Micro:bit
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4889670
 De Micro:bit is een microcontroller waarop je allerlei sensoren en actuatoren kunt aansluiten. Dat aansluiten gaat via de pinnen. Als je kijkt naar de Micro:bit kun je de pinnen zien: 0, 1, 2, en daarnaast de 3V en GND.
 
-```{figure} 2-microbit-front
+```{figure} 3-microbit-front
 Voorkant Micro:bit
 ```
 
@@ -16,13 +14,13 @@ De pinnen 0, 1 en 2 kun je gebruiken om sensoren aan te sluiten. Je kunt bijvoor
 
 De Micro:bit heeft overigens nog veel meer pinnen, die zijn echter veel kleiner. Toch kun je die wel gebruiken door gebruik te maken van een speciaal breakout board. Daarover later meer.
 
-```{figure} 2-microbit-back
+```{figure} 3-microbit-back
 Micro:bit achterkant
 ```
 
 De Micro:bit heeft op de voorkant 5x5=25 ledjes die je ieder apart aan en uit kunt zetten. 
 
-```{figure} 2-microbit-leds
+```{figure} 3-microbit-leds
 De leds van de Micro:bit
 ```
 
@@ -30,63 +28,15 @@ Bekijk de onderstaande link als je meer wilt wilt weten over de pinnen van de Mi
 
 [BBC micro:bit pinnen](https://makecode.microbit.org/device/pins) (Engelstalig)
 
-### Sensoren en actuatoren op de Micro:bit
+## Sensoren en actuatoren op de Micro:bit
 % TODO: stukje over sensoren en actuatoren die op de microbit zitten zonder dat je iets hoeft aan te sluiten
 Hier komt ooit nog wat, nu mag je het overslaan
 
-### Programmeeromgeving
-
-#### Je eerste programma voor de Micro:bit
-% bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4855374
-
-Je kunt met de Micro:bit al heel snel je eerste programma maken, bijvoorbeeld een knipperend hartje. Daarvoor heb je geen sensoren nodig.
-
-```{figure} 2-microbit-blink.gif
-```
-
-Doorloop de volgende stappen. Als je er niet uitkomt, kijk dan op de site https://microbit.org/nl/get-started/getting-started/introduction/ voor meer informatie.
-
-**Stap 1** Verbind de Micro:bit via de USB-kabel met je computer.
-
-```{figure} 2-microbit-connect.gif
-```
-
-Als het goed is zie je de Micro:bit als schijf verschijnen.
-
-**Stap 2** Programmeer de Micro:bit vanuit de website: https://makecode.microbit.org/
-
-Open de site en start een nieuw project.
-```{figure} 2-nieuw-project.png
-```
-
-
-Maak het programma (zie het filmpje hieronder). Je kunt de blokjes verslepen.
-
-```{figure} 2-maak-code.gif
-```
-
-Zorg dat je het volgende programma krijgt:
-
-```{figure} 2-code-stap2.png
-```
-
-**Stap 3** Sla het programma op, bijvoorbeeld onder de naam 'Kloppend hart'.
-
-**Stap 4** Download het programma naar de Micro:bit
-
-Klik op de Download-knop en sla het bestand op. Vervolgens sleep je het bestand naar de Micro:bit. De Micro:bit zal opnieuw opstarten en dan het programma starten. Als het goed is zie je een kloppend hart verschijnen.
-
-```{exercise} Opdracht Maak twee projecten na
-:label: opdracht1namaken
-
-Je gaat nu de Micro:bit verder verkennen. Werk in tweetallen. Kies twee projecten van de site https://makecode.microbit.org/# en bouw deze na in de Micro:bit.
-```
-
-### Programmeeromgeving Micro:bit
+## Programmeeromgeving Micro:bit
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4855375
 Hieronder vind je een overzicht van de programmeeromgeving van de Micro:bit en een korte uitleg van de belangrijkste onderdelen.
 
-```{figure} 2-programmeeromgeving.png
+```{figure} 3-programmeeromgeving.png
 De programmeeromgeving van de Micro:bit
 ```
  
@@ -121,7 +71,53 @@ Als je wilt dat er iets gebeurt op het moment dat de Micro:bit wordt geschud, ge
 5. bij schudden
 ```
 
-## Uitvinderkit voor het aansluiten van sensoren en actuatoren
+## Je eerste programma voor de Micro:bit
+% bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4855374
+
+Je kunt met de Micro:bit al heel snel je eerste programma maken, bijvoorbeeld een knipperend hartje. Daarvoor heb je geen sensoren nodig.
+
+```{figure} 3-microbit-blink.gif
+```
+
+Doorloop de volgende stappen. Als je er niet uitkomt, kijk dan op de site https://microbit.org/nl/get-started/getting-started/introduction/ voor meer informatie.
+
+**Stap 1** Verbind de Micro:bit via de USB-kabel met je computer.
+
+```{figure} 3-microbit-connect.gif
+```
+
+Als het goed is zie je de Micro:bit als schijf verschijnen.
+
+**Stap 2** Programmeer de Micro:bit vanuit de website: https://makecode.microbit.org/
+
+Open de site en start een nieuw project.
+```{figure} 3-nieuw-project.png
+```
+
+
+Maak het programma (zie het filmpje hieronder). Je kunt de blokjes verslepen.
+
+```{figure} 3-maak-code.gif
+```
+
+Zorg dat je het volgende programma krijgt:
+
+```{figure} 3-code-stap2.png
+```
+
+**Stap 3** Sla het programma op, bijvoorbeeld onder de naam 'Kloppend hart'.
+
+**Stap 4** Download het programma naar de Micro:bit
+
+Klik op de Download-knop en sla het bestand op. Vervolgens sleep je het bestand naar de Micro:bit. De Micro:bit zal opnieuw opstarten en dan het programma starten. Als het goed is zie je een kloppend hart verschijnen.
+
+```{exercise} Opdracht Maak twee projecten na
+:label: opdracht1namaken
+
+Je gaat nu de Micro:bit verder verkennen. Werk in tweetallen. Kies twee projecten van de site https://makecode.microbit.org/# en bouw deze na in de Micro:bit.
+```
+
+## Uitvinderskit voor het aansluiten van sensoren en actuatoren
 
 ### Uitvinderskit
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4866806
@@ -132,7 +128,7 @@ Als je externe sensoren gaat aansluiten raden we aan dat je een breadboard en br
 :width:100%
 ```
 
-```{figure} 2-inventorskit.jpg
+```{figure} 3-inventorskit.jpg
 Kitronic Breadboard en Breakoutboard
 ```
 
@@ -155,7 +151,7 @@ Ondanks dat de Micro:Bit al allerlei sensoren heeft, zal je waarschijnlijk ook a
 
 Een breadboard is een bordje met gaatjes waar je draadjes en andere onderdelen in kunt steken en zo verbindingen kunt maken.
 
-```{figure} 2-breadboard.jpg
+```{figure} 3-breadboard.jpg
 ```
 
 De 5 horizontale gaatjes zijn steeds met elkaar verbonden. Bijvoorbeeld: de gaatjes van rij 5 met de letters F G H I J zijn met elkaar verbonden. Steek je dus een draadje in J5 en een pootje van een led in G5 dan zijn die twee met elkaar verbonden. Maar dus niet met een ander onderdeel dat je in D5 hebt gestoken.
@@ -169,9 +165,8 @@ Meer achtergrond over het breadboard vind je [op de site van Sparkfun](https://l
 
 Je hoeft niet per se gebruik te maken van het breakoutboard en het breadboard. Je kunt ook werken met draden met zogenaamde krokodillebekjes. Hieronder zie je een voorbeeld van het gebruik daarvan in een opstelling voor het meten van de vochtigheid van aarde. Zie ook: https://makecode.microbit.org/projects/soil-moisture.
 
-```{figure} 2-krokodillenbekken.jpg
+```{figure} 3-krokodillenbekken.jpg
 Gebruik van krokodillebekjes 
 ```
 
 Het nadeel van het gebruik van deze krokodillebekjes is dat je alleen maar de pinnen 0, 1 en 2 kunt gebruiken, naast 3V en GND. Als je meerdere sensoren en/of actuatoren wilt aansluiten kom je dan wellicht tekort.
-
