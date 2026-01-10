@@ -40,6 +40,7 @@ Het drukknopje heeft vier pinnen, die twee aan twee zijn verbonden. Als je het k
 Je kunt nu op pin P0 meten of het knopje wordt ingedrukt. Belangrijk is om eerst te testen of dit werkt. Dat kan bijvoorbeeld met het volgende programma. Probeer het uit en kijk of het knopje werkt. Als je het knopje indrukt moet er een hartje verschijnen op de Micro:bit.
 
 ```{figure} 4-knop-code.png
+:width: 300px
 ```
 
 Enkele opmerkingen voor de experts:
@@ -62,6 +63,7 @@ Breid het systeem uit met een led zoals in het onderstaande schema. Je ziet, de 
 Nu moet je eerst de led testen. Je kunt de led bijvoorbeeld steeds aan en uit zetten, met het onderstaande programma. Let op: we gebruiken hier ‘pauzeer’ puur voor het testen van de afzonderlijke LED. In de module leer je om een timer te gebruiken in plaats van 'pauzeer', zie cyclus 2.
 
 ```{figure} 4-led-code.png
+:width: 300px
 ```
 
 ```{exercise} Aansluiten drukknop en led
@@ -114,6 +116,7 @@ Toestand 2: de lamp is aan
 Het programma ziet er dan als volgt uit:
 
 ```{figure} 4-knopled-code.png
+:width: 400px
 ```
 
 Werkt het?
@@ -159,6 +162,7 @@ Maak de onderstaande opstelling (die is gelijk aan Voorbeeld: aansluiten LED en 
 Test of de led werkt, bijvoorbeeld met onderstaande programma. Dit programma laat het lampje steeds met een andere sterkte branden. Daarbij is 1023 de maximale waarde.
 
 ```{figure} 4-leddim-code.png
+:width: 300px
 ```
 
 Let op: we gebruiken hier ‘pauzeer’ puur voor het testen. In de module leer je hoe je hiervoor een timer kunt gebruiken, zie cyclus 2 - timers.
@@ -181,6 +185,7 @@ Bron: [Wikipedia](https://nl.wikipedia.org/wiki/Pulsbreedtemodulatie).
 Je hoeft maar weinig te doen om PWM te gebruiken. Je gebruikt ‘schrijf analoog pin … naar …’ en de Micro:bit handelt het verder af. Als je de led op 50% gebruik je bijvoorbeeld het onderstaande blokje. De waarde is 512, omdat dat de helft is van 1023, wat het maximum is.
 
 ```{figure} 4-pwm-code.png
+:width: 300px
 ```
 
 ### Stap 2 Maken van een toestandsdiagram
@@ -206,11 +211,13 @@ Dit was de bedoeling van ons systeem: als de A-knop op de Micro:bit wordt ingedr
 Als je met de Micro:bit wilt nagaan of een knopje is gedrukt en weer losgelaten kun je het volgende commando gebruiken:
 
 ```{figure} 4-leddim-code3a.png
+:width: 300px
 ```
 
 Daarom hebben het programma als volgt opgebouwd.
 
 ```{figure} 4-leddim-code3b.png
+:width: 600px
 ```
 
 Test het programma. Werkt het?
@@ -234,13 +241,15 @@ Voor het aansluiten van een een piezo-buzzer kun je het onderstaande schema gebr
 Met onderstaande programma kun je testen of de piezo-buzzer werkt. Met het blokje 'zet analoge toonhoogte pin P2' laat je weten dat de piezo-buzzer op pin 2 (P2) is aangesloten.
 
 ```{figure} 4-buzzer-code1a.png
+:width: 300px
 ```
 
 Als het goed is hoor je een hoge toon bij het starten van het programma. De piezo-buzzer blijft nu de hele tijd aan. Om de piezo-buzzer uit te zetten kun je het volgende blokje gebruiken.
 
 ```{figure} 4-buzzer-code1b.png
+:width: 300px
 ```
 
-## Ultrasoon sensor
+## Verdieping: Ultrasoon sensor
 % TODO: meer sensoren en actuatoren (voor snelle werkers)
 Hier komt ooit iets, nu mag je het overslaan.

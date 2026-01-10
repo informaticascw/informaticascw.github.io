@@ -86,23 +86,23 @@ Doorloop de volgende stappen. Als je er niet uitkomt, kijk dan op de site https:
 ```{figure} 3-microbit-connect.gif
 ```
 
-Als het goed is zie je de Micro:bit als schijf verschijnen.
-
 **Stap 2** Programmeer de Micro:bit vanuit de website: https://makecode.microbit.org/
 
 Open de site en start een nieuw project.
 ```{figure} 3-nieuw-project.png
+:width: 200px
 ```
-
 
 Maak het programma (zie het filmpje hieronder). Je kunt de blokjes verslepen.
 
 ```{figure} 3-maak-code.gif
+:width: 600px
 ```
 
 Zorg dat je het volgende programma krijgt:
 
 ```{figure} 3-code-stap2.png
+:width: 200px
 ```
 
 **Stap 3** Sla het programma op, bijvoorbeeld onder de naam 'Kloppend hart'.
