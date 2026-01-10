@@ -126,9 +126,9 @@ Bekijk het filmpje, de website van project MARCH en lees eventueel het artikel.
 Cybathlon Aftermovie 2018 - Project MARCH
 ```
 
-[Project MARCH](https://www.projectmarch.nl/)
+De website van **Project MARCH** staat op https://www.projectmarch.nl/
 
-[Dwarslaesiepatiënt zet eerste stappen met exoskelet van studenten](https://tweakers.net/nieuws/129067/dwarslaesiepatient-zet-eerste-stappen-met-exoskelet-van-studenten.html)
+Het artikel **Dwarslaesiepatiënt zet eerste stappen met exoskelet van studenten** staat op https://tweakers.net/nieuws/129067/dwarslaesiepatient-zet-eerste-stappen-met-exoskelet-van-studenten.html
 
 ```{exercise} Exo-skelet
 :label: opdracht1skelet
