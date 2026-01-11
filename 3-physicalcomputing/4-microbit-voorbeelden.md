@@ -3,6 +3,8 @@
 ## Voorbeeld: aansluiten led
 % bron (didactiek aangepast): https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4889671
 
+In deze paragraaf leer je hoe je een externe led kunt koppelen aan je Micro:bit. Een led is een lampje.
+
 ### Stap 1: Hoe werkt een led?
 Bekijk eerst de onderstaande filmpje over de led.
 
@@ -24,32 +26,69 @@ Bij het aansluiten van led zijn twee dingen belangrijk:
 1. Een led kan doorbranden als er teveel spanning op staat. Daarom moet je altijd een weerstand gebruiken. Voor de ledjes die bij de uitvinderskit zitten kun je een ledje gebruiken van 47 Ohm. Dit zijn de weerstanden met de kleuren: geel, paars, zwart, goud. Als je meer wilt weten over deze kleurcodering, zie bijvoorbeeld: https://www.weerstandcalculator.nl/
 2. Een led is een diode. Dat betekent dat de stroom er maar van één kant door kan. Zorg dat je de platte zijde verbindt met de – (min, 0V) en de bolle zijde met de + (plus, 3V). Doe je het andersom, dan zal de led niet branden. Je kunt het ook zien aan de lengte van de twee pootjes van de led, het lange pootje is de +, het korte pootje de min.
 
-```{figure} 4-leddim-aansluitschema.png
+```{exercise} Vraag over pinnen
+:label: opdracht2stelling1
+
+Geef aan of deze waar (vinkje) of niet-waar (geen vinkje) is.
+
+- [ ] Computers werken met enen (1) en nullen (0). Je kunt voor de Micro:bit zeggen: als er 0 volt op een pin staat is dat gelijk aan een 0. Als er 3 volt op een pin staat is dat gelijk aan een 1.
+```
+
+```{solution} opdracht2stelling1
+:class: dropdown
+De stelling is waar.
+```
+
+```{exercise} Aansluiten led
+:label: opdracht2-led
+Kies de juiste woorden op de lege plekken.
+
+De led is aangesloten op ______(1) en ______(2).
+De led is een ______(3).
+Daarom fungeert pin 1 als ______(4).               .
+
+Je kunt kiezen uit de volgende woorden:
+- 3V
+- GND
+- pin 0
+- output-pin
+- input-pin
+- actuator
+- sensor
+- pin 1
+```
+
+```{solution} opdracht2-led
+:class: dropdown
+1. pin 1
+2. 3V
+3. actuator
+4. output-pin
+
+Als de spanning op pin 1 gelijk is aan 0V gaat er geen stroom door de led en blijft deze uit. Als de spanning op pin 1 gelijk wordt aan 3 volt, dan gaat er stroom lopen van pin 1 naar GND via de led en de weerstand. Dan gaat de led dus aan.
 ```
 
 ### Stap 3: Programma maken voor de led
-Je kunt de led bijvoorbeeld steeds aan en uit zetten, met het onderstaande programma. Let op: we gebruiken hier ‘pauzeer’ puur voor het testen van de afzonderlijke led. Later in de module leer je om een timer te gebruiken in plaats van 'pauzeer'.
+Je kunt de led bijvoorbeeld steeds aan en uit zetten, met het onderstaande programma. 
 % TODO: verwijzing toevoegen
 
 ```{figure} 4-led-code.png
 :width: 300px
 ```
 
-## Voorbeeld: sterkte van een LED aanpassen
+Let op: we gebruiken hier ‘pauzeer’ puur voor het testen van de afzonderlijke led. Later in de module leer je om een timer te gebruiken in plaats van 'pauzeer'.
 
-### Inleiding
+Test het programma. Werkt het?
+
+
+## Voorbeeld: sterkte van een led aanpassen
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4889672
-In deze paragraaf leer je hoe je de sterkte, oftewel de lichtintensiteit, van een led kunt aanpassen. Het doel is om de lichtintensiteit van een led aan te passen met behulp van de A-knop en de B-knop. Als de A-knop wordt ingedrukt gaat de led feller branden. Als de B-knop wordt ingedrukt gaat de led minder fel branden. Dat werkt op basis van Pulse Width Modulation (PWM), ook dat zullen we toelichten.
 
-We doorlopen de volgende stappen:
-
-1. Aansluiten van de led en het testen daarvan
-2. Maken van een toestandsdiagram
-3. Omzetten naar een programma
+In deze paragraaf leer je hoe je de sterkte, oftewel de lichtintensiteit, van een led kunt aanpassen. Dat werkt op basis van Pulse Width Modulation (PWM), ook dat zullen we toelichten.
 
 ### Stap 1 Aansluiten van de led
-Maak de onderstaande opstelling (die is gelijk aan Voorbeeld: aansluiten LED en drukknop). Je ziet:
-% TODO: verwijzing naar voorbeeld aanpassen
+Maak de onderstaande opstelling (die is gelijk aan Voorbeeld: aansluiten led). Je ziet:
+% TODO: verwijzing naar voorbeeld toevoegen
 
 - De led is aangesloten op pin 1.
 - We gebruiken een weerstand van 47 Ohm om te voorkomen dat de led doorbrandt
@@ -58,16 +97,32 @@ Maak de onderstaande opstelling (die is gelijk aan Voorbeeld: aansluiten LED en 
 ```{figure} 4-leddim-aansluitschema.png
 ```
 
+```{exercise} Vraag over pinnen
+:label: opdracht2stelling2
+
+Geef aan of deze waar (vinkje) of niet-waar (geen vinkje) is.
+
+- [ ] Een pin kan zowel digitale als analoge signalen verwerken.
+```
+
+```{solution} opdracht2stelling2
+:class: dropdown
+De stelling is waar.
+```
+
+### Stap 2 Programma maken
 Test of de led werkt, bijvoorbeeld met onderstaande programma. Dit programma laat het lampje steeds met een andere sterkte branden. Daarbij is 1023 de maximale waarde.
 
 ```{figure} 4-leddim-code.png
 :width: 300px
 ```
 
-Let op: we gebruiken hier ‘pauzeer’ puur voor het testen. In de module leer je hoe je hiervoor een timer kunt gebruiken, zie cyclus 2 - timers.
+Let op: we gebruiken hier ‘pauzeer’ puur voor het testen. Later in de module leer je hoe je hiervoor een timer kunt gebruiken.
 % TODO: verwijzing aanpassen
 
-### Over PWM: Pulse With Modulation
+Test het programma. Werkt het?
+
+### Stap 3: Hoe werkt PWM
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4870502
 
 In het voorbeeld bij stap 1 zie je al een toepassing van Pulse With Modulation (PWM). De Micro:bit kan namelijk alleen maar een spanning van 3 volt of 0 volt op de pinnen zetten. Het is niet mogelijk om bijvoorbeeld 1,5 volt op de pin te zetten en daarmee de led minder fel te laten branden. De led is dus aan (3V) of uit (0V).
@@ -87,44 +142,13 @@ Je hoeft maar weinig te doen om PWM te gebruiken. Je gebruikt ‘schrijf analoog
 :width: 300px
 ```
 
-### Stap 2 Maken van een toestandsdiagram
-% bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4870499
-
-We maken een programma met 4 toestanden.
-
-- Toestand 1: de led is uit
-- Toestand 2: de led is aan op 33% sterkte
-- Toestand 3: de led is aan op 66% sterkte
-- Toestand 4: de led is aan op 100% sterkte
-
-Het toestandsdiagram ziet er dan zo uit:
-
-```{figure} 4-leddim-toestand.png
-```
-
-### Stap 3 Omzetten naar een programma
-% bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4870500
-
-Dit was de bedoeling van ons systeem: als de A-knop op de Micro:bit wordt ingedrukt gaat de led feller branden. Als de B-knop wordt ingedrukt gaat de led minder fel branden.
-
-Als je met de Micro:bit wilt nagaan of een knopje is gedrukt en weer losgelaten kun je het volgende commando gebruiken:
-
-```{figure} 4-leddim-code3a.png
-:width: 300px
-```
-
-Daarom hebben het programma als volgt opgebouwd.
-
-```{figure} 4-leddim-code3b.png
-:width: 600px
-```
-
-Test het programma. Werkt het?
-
 ## Voorbeeld: aansluiten drukknop
 % bron (didactiek aangepast): https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4889671
+% bron (theorie aanraaksensoren): https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4855351
 
-### Stap 1: Hoe werkt een drukknop?
+In deze paragraaf leer je hoe je een externe drukknop kunt koppelen aan je Micro:bit. Je leert ook het verschil tussen een drukknop en een schakelaar.
+
+### Stap 1: Hoe werken een drukknoppen en schakelaars?
 
 Bekijk eerst de onderstaande filmpje over de drukknop.
 
@@ -132,6 +156,29 @@ Bekijk eerst de onderstaande filmpje over de drukknop.
 :width:100%
 Behind the MakeCode Hardware - Buttons
 ```
+
+In het filmje heb je kunnen zien dat er twee soorten drukknoppen zijn:
+
+- Normally open (NO) - als je de drukknop niet indrukt kan er geen stroom lopen
+- Normally closed (NC) - als je de drukknop niet indrukt kan er wel stroom lopen
+
+```{figure} 4-deurbel.jpg
+```
+
+Een deurbel is een drukknop - normally open.
+
+Naast de drukknop zijn er ook aanraaksensoren met een zogenaamde toggle-functie. De meeste lichtschakelaars in huis werken zo. Zo'n schakelaar staat aan (er kan stroom lopen) of uit (er kan geen stroom lopen). De schakelaar houdt dus de toestand vast ook als je de sensor niet meer aanraakt.
+
+```{figure} 4-schakelaars.png
+```
+
+Bovenstaande schakelaars hebben allemaal een toggle-functie. Ook het rechter (rode) knopje heeft dat, deze drukknop werkt dus anders dan de drukknop uit het filmpje.
+
+Het is echter mogelijk om een drukknop zonder toggle-functie, zoals bijvoorbeeld die in het filmpje, te laten werken als een schakelaar met toggle-functie door dat te programmeren. Bijvoorbeeld, je kunt een systeem maken met een drukknop (zonder toggle-functie) en een lamp. Als je de drukknop indrukt en weer loslaat gaat de lamp aan. Doe je dat nogmaals gaat de lamp weer uit. Het systeem onthoudt dus of de lamp aan of uit moet, ook al is de drukknop niet ingedrukt. Wat dat betreft is zo'n drukknop handiger dan een schakelaar met toggle-functie. Je kunt immers softwarematig, door het programma te veranderen, het gedrag van de drukknop en het systeem als geheel aanpassen.
+
+Als je met drukknoppen werkt is het belangrijk om wat te weten over pull up en pull down weerstanden. We geven je hierbij één bron, hoewel er veel meer bronnen over te vinden zijn. 
+
+Pull up en pull down: http://www.itela.nl/pull-up-en-pull-down-weerstand/
 
 ### Stap 2: Aansluiten van de drukknop
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4870491
@@ -149,30 +196,26 @@ Het drukknopje heeft vier pinnen, die twee aan twee zijn verbonden. Als je het k
 Schematische werking van een knop.
 ```
 
-### Stap 3: Programma maken voor de drukknop
-Je kunt nu op pin P0 meten of het knopje wordt ingedrukt. Belangrijk is om te testen of dit werkt. Dat kan bijvoorbeeld met het volgende programma. Probeer het uit en kijk of het knopje werkt. Als je het knopje indrukt moet er een hartje verschijnen op de Micro:bit.
+```{exercise} Vraag over pinnen
+:label: opdracht2stelling3
 
-```{figure} 4-knop-code.png
-:width: 300px
+Geef aan of deze waar (vinkje) of niet-waar (geen vinkje) is.
+
+- [ ] Een pin op de Micro:bit kan zowel input als output zijn.
 ```
-% TODO: code aanpassen zonder event
 
-Enkele opmerkingen voor de experts:
+```{solution} opdracht2stelling3
+:class: dropdown
+De stelling is waar.
+```
 
-- De pinnen P0, P1, P2, maar ook P5 en P11 hebben een ingebouwde weerstand, die hoeft er dus niet bij worden geplaatst.
-- De Micro:bit heeft een ingebouwde pull-up, zie ook: https://makecode.microbit.org/reference/pins/set-pull.
-
-## oefeningen led en drukknop - nog indelen
-% bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4870492
-
-```{exercise} Aansluiten drukknop en led
-:label: opdracht2-ledknop
+```{exercise} Aansluiten drukknop
+:label: opdracht2-knop
 Kies de juiste woorden op de lege plekken.
 
 De drukknop is aangesloten op ______(1) en ______(2). 
-De led is aangesloten op ______(3) en ______(4).
-De drukknop is een ______(5) en de led is een ______(6).
-Daarom fungeert pin 0 als ______(7) en pin 1 als ______(8).               .
+De drukknop is een ______(3).
+Daarom fungeert pin 0 als ______(4).               .
 
 Je kunt kiezen uit de volgende woorden:
 - 3V
@@ -185,51 +228,50 @@ Je kunt kiezen uit de volgende woorden:
 - pin 1
 ```
 
-```{solution} opdracht2-ledknop
+```{solution} opdracht2-knop
 :class: dropdown
 1. pin 0
 2. GND
-3. pin 1
-4. 3V
-5. sensor
-6. actuator
-7. output-pin
-8. input-pin
+3. sensor
+4. input-pin
 
 Als de drukknop niet wordt ingedrukt is de spanning op pin 0 dus 0 volt. Dat noemen we ook wel LOW. Als de drukknop wel wordt ingedrukt wordt de spanning op pin 1 dus 3 volt. Dat noemen we ook wel HIGH.
-Als de spanning op pin 1 gelijk is aan 0V gaat er geen stroom door de led en blijft deze uit. Als de spanning op pin 1 gelijk wordt aan 3 volt, dan gaat er stroom lopen van pin 1 naar GND via de led en de weerstand. Dan gaat de led dus aan.
 ```
 
-```{exercise} Vraag over pinnen
-:label: opdracht2pinnen
+### Stap 3: Programma maken voor de drukknop
+Je kunt nu op pin P0 meten of het knopje wordt ingedrukt. Belangrijk is om te testen of dit werkt. Dat kan bijvoorbeeld met het volgende programma. Probeer het uit en kijk of het knopje werkt. Als je de knop indrukt is (de knop is dan omlaag), dan toont de Micro:bit een hartje. Als de knop niet ingedrukt is (de knop is dan omhoog), dan toont de Micro:bit een vierkant. Het kan zijn dat het een fractie van een seconde duurt voordat de Micro:bit reageert op de drukknop, dat komt omdat het weergeven van een symbool soms even duurt.
 
-Zet een vinkje bij de stelling(en) die waar zijn.
-
-- [ ] Een pin op de Micro:bit kan zowel input als output zijn.
-- [ ] Een pin kan zowel digitale als analoge signalen verwerken.
-- [ ] Computers werken met enen (1) en nullen (0). Je kunt voor de Micro:bit zeggen: als er 0 volt op een pin staat is dat gelijk aan een 0. Als er 3 volt op een pin staat is dat gelijk aan een 1.
+```{figure} 4-knop-code-symbool.png
+:width: 300px
 ```
+% TODO: code aanpassen zonder event
 
-```{solution} opdracht2pinnen
-:class: dropdown
-Alle stellingen zijn waar.
-```
+Enkele opmerkingen voor de experts:
+
+- De pinnen P0, P1, P2, maar ook P5 en P11 hebben een ingebouwde weerstand, die hoeft er dus niet bij worden geplaatst.
+- De Micro:bit heeft een ingebouwde pull-up,\
+zie ook: https://makecode.microbit.org/reference/pins/set-pull.
 
 ## Voorbeeld: aansluiten piezobuzzer
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-5383224
 
-Met een piezo-buzzer kun je een alarm laten klinken of een muziekje laten horen. In dit deel laten we zien hoe je de piezo-buzzer kunt aansluiten. De piezo buzzer zit bij de uitvinderskit. Zie ook: https://www.kitronik.co.uk/blog/inventors-kit-experiment-6-help.
+In deze paragraaf laten we zien hoe je de piezo-buzzer kunt aansluiten. Met een piezo-buzzer kun je een alarm laten klinken of een muziekje laten horen. 
 
-Mocht je geen piezo-buzzer hebben, dan kun je ook gebruikmaken van oortjes om geluid te laten (zie de afbeelding hieronder). Daarvoor heb je krokodillebekjes nodig. Zie ook het volgende filmpje over het maken van geluid met de Micro:bit.
+### Stap 1: Hoe werkt een piezobuzzer?
+Bekijk het volgende filmpje over het maken van geluid met de Micro:bit.
 
 ```{iframe} https://www.youtube.com/embed/cxfPNc4Wefo
 :width:100%
 ```
 
-Voor het aansluiten van een een piezo-buzzer kun je het onderstaande schema gebruiken. Je ziet dat de piezo-buzzer is aangesloten op pin 2 (P2). Je ziet daarbij ook de aansluiting van de ultrasoonsensor. Je kunt echter ook prima eerst alleen de piezo-buzzer aansluiten en testen, zodat je aan deelprobleem 2 kunt werken.
+### Stap 2: Piezobuzzer aansluiten
+
+Voor het aansluiten van een een piezo-buzzer kun je het onderstaande schema gebruiken. Je ziet dat de piezo-buzzer is aangesloten op pin 2 (P2). 
 
 ```{figure} 4-buzzer-aansluitschema.png
 ```
+
+### Stap 3: Programma maken voor piezobuzzer
 
 Met onderstaande programma kun je testen of de piezo-buzzer werkt. Met het blokje 'zet analoge toonhoogte pin P2' laat je weten dat de piezo-buzzer op pin 2 (P2) is aangesloten.
 
