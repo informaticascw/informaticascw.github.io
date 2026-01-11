@@ -14,6 +14,10 @@ https://maken.wikiwijs.nl/135434/Physical_Computing_geheel#!page-4913100
 ```{warning} Work in progress
 In het schooljaar 25/26 gaan we deze aangepaste versie van het keuzethema gebruiken, tot die tijd zijn we bezig met de ontwikkeling.
 
+Status per hoofdstuk:
+- Gereed: h1, h2, h3, h4, h5, voor docenten
+- Work in Progress: h6, h7, h8, h9
+
 Akties:
 1. Algemene en microbit delen van SLO overzetten naar deze website => 75% gereed
 2. Structuur: hoofdstukindeling verbeteren, streven is elk hoofdstuk samenhangend en ongeveer gelijke omvang van één les => 90% gereed
