@@ -4,6 +4,72 @@
 
 In dit deel vind je enkele voorbeelden, deels uitgewerkt, en deels zijn het opdrachten. Deze helpen om toestandsdiagrammen te begrijpen en te oefenen met het maken van toestandsdiagrammen. Kies zelf welke je interessant vindt.
 
+## Voorbeeld: lichtbediening
+
+### Zonder toggle functie (versie 1)
+```{figure} 6-td-knop.jpg
+```
+
+### Met toggle functie (versie 2)
+
+```{figure} 6-td-toggle.jpg
+```
+https://maken.wikiwijs.nl/userfiles/ed3e0b32cbb0dd7ae561e558b0d290b55faaef72.html
+
+
+## Voorbeeld: hotelschakelaar
+
+### Met schakelaars (versie 1)
+% geinspireerd op bron: https://maken.wikiwijs.nl/135892/Cyclus_1___Arduino#!page-4957251
+% en bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886282
+Maak een toestandsdiagram van een hotelschakeling. Maak gebruik van twee schakelaars en een lamp (led). 
+
+Een hotelschakelaar werkt als volgt: als de stand van één van de schakelaars verandert, dan verandert de status van de lamp. Begin met alle schakelaar omlaag en de lamp uit. Als schakelaar A omhoog wordt gezet dan gaat de lamp (LED) aan. Als vervolgens B omhoog wordt gezet, dan gaat de lamp weer uit. Wordt vervolgens aan weer omlaag gezet, dan gaat de lamp weer aan, enzovoort.
+
+Je hebt de volgende mogelijke toestandsovergangen:
+- schakelaar A gaat omhoog
+- schakelaar A gaat omlaag
+- schakelaar B gaat omhoog
+- schakelaar B gaat omlaag
+
+De mogelijke acties zijn:
+- lamp aan (doe ledje aan)
+- lamp uit (doe ledje uit)
+
+Bovenstaande toestandsovergangen en acties heb je nodig in je toestandsdiagram. Je hebt 4 toestanden nodig.
+
+Maak een toestandsdiagram. 
+
+```{figure} 6-td-hotelschakelaars.png
+```
+
+### Met drukknoppen (versie 2)
+% bron: https://maken.wikiwijs.nl/135892/Cyclus_1___Arduino#!page-4942190
+Opdracht: bouw een hotelschakeling (versie 2)
+
+In deze opdracht gebruik je drukknopjes zonder toggle-functie.
+
+Je gaat nu de hotelschakeling nog eens maken, alleen met drukknoppen werkt het op een iets andere manier dan met schakelaars. Als je een drukknop indrukt en vervolgens loslaat moet de lamp aangaan. Als een drukknop weer indrukt en vervolgens loslaat gaat de lamp weer uit. De drukknopjes krijgen dus een toggle-functie.
+
+Je kunt de volgende toestandsovergangen gebruiken:
+- drukknop A ingedrukt
+- drukknop A niet ingedrukt
+- drukknop B ingedrukt
+- drukknop B niet ingedrukt 
+
+De mogelijke acties zijn:
+- lamp aan (doe ledje aan)
+- lamp uit (doe ledje uit)
+
+Bovenstaande toestandsovergangen en acties heb je nodig in je toestandsdiagram. Op het moment dat een knop wordt ingedrukt, dan is er een toestandsovergang en een actie. Als een knop wordt losgelaten, dan verandert de toestand, maar dan is er geen actie. Er kunnen niet twee knoppen precies tegelijk ingedrukt of losgelaten worden, in dat geval is er altijd één knop net iets eerder. Je hebt 8 toestanden nodig.
+
+Maak een toestandsdiagram. 
+
+```{figure} 6-td-hotelknoppen.jpeg
+```
+
+## Voorbeeld: lichtdimmer (nog herzien)
+
 ## Voorbeeld: lichtregulering
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379587
 
