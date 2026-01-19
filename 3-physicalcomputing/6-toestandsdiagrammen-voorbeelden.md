@@ -68,9 +68,7 @@ Maak een toestandsdiagram.
 ```{figure} 6-td-hotelknoppen.jpeg
 ```
 
-## Voorbeeld: lichtdimmer (nog herzien)
-
-## Voorbeeld: lichtregulering
+## Voorbeeld: lichtregulering (nog herzien)
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379587
 
 In dit voorbeeld gaat het om een systeem waarmee je de intensiteit van een lamp kunt reguleren. Het systeem bestaat uit een lamp en twee knoppen.
