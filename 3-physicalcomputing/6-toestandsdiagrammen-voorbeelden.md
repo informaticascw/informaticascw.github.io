@@ -12,7 +12,7 @@ In dit deel vind je enkele voorbeelden, deels uitgewerkt, en deels zijn het opdr
 
 ### Met toggle functie (versie 2)
 
-```{figure} 6-td-toggle.jpg
+```{figure} 6-td-toggle.png
 ```
 https://maken.wikiwijs.nl/userfiles/ed3e0b32cbb0dd7ae561e558b0d290b55faaef72.html
 
@@ -27,10 +27,10 @@ Maak een toestandsdiagram van een hotelschakeling. Maak gebruik van twee schakel
 Een hotelschakelaar werkt als volgt: als de stand van één van de schakelaars verandert, dan verandert de status van de lamp. Begin met alle schakelaar omlaag en de lamp uit. Als schakelaar A omhoog wordt gezet dan gaat de lamp (LED) aan. Als vervolgens B omhoog wordt gezet, dan gaat de lamp weer uit. Wordt vervolgens aan weer omlaag gezet, dan gaat de lamp weer aan, enzovoort.
 
 Je hebt de volgende mogelijke toestandsovergangen:
-- schakelaar A gaat omhoog
-- schakelaar A gaat omlaag
-- schakelaar B gaat omhoog
-- schakelaar B gaat omlaag
+- SA aan (schakelaar A gaat omhoog)
+- SA uit (schakelaar A gaat omlaag)
+- SA aan (schakelaar B gaat omhoog)
+- SA uit (schakelaar B gaat omlaag)
 
 De mogelijke acties zijn:
 - lamp aan (doe ledje aan)

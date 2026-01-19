@@ -23,12 +23,13 @@ De opdrachtbeschrijving voor **Kiezen met kaarten** staat op\
 http://www.informaticaunplugged.nl/de-werkvormen/kiezen-met-kaarten/
 ```
 
-## Stappenplan (aanpassen op basis van schakelaar met toggle functie)
+## Stap 1. Van plaatje naar pseudocode
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886280
 
-Als je het toestandsdiagram eenmaal klaar hebt, dan is het maken van een programma dat kan worden uitgevoerd op bijvoorbeeld de Microbit, Arduino of Lego Mindstorms eenvoudig. We laten dat zien aan de hand van het volgende toestandsdiagram voor een systeem bestaande uit een lamp en een drukknop. Als de drukknop wordt ingedrukt (en weer losgelaten) gaat de lamp aan. Wordt de drukknop nogmaals ingedrukt (en weer losgelaten) gaat de lamp uit.
+Als je het toestandsdiagram eenmaal klaar hebt, dan is het maken van een programma dat kan worden uitgevoerd op de Microbit eenvoudig. We laten dat zien aan de hand van het volgende toestandsdiagram voor een systeem bestaande uit een lamp en een drukknop. Als de drukknop wordt ingedrukt (en weer losgelaten) gaat de lamp aan. Wordt de drukknop nogmaals ingedrukt (en weer losgelaten) gaat de lamp uit. Je hebt dit toestandsdiagram al gezien in het vorige hoofdstuk.
+% TODO: verwijzing toevoegen
 
-```{figure} 7-stappenplan-td1
+```{figure} 6-td-toggle.png
 ```
 
 Om een toestandsdiagram om te zetten in een programma gebruik je ALS-DAN-constructies. De toestand sla je op in een variabele. Hieronder zie je een uitwerking in pseudo-code. Het bestaat uit twee delen:
@@ -44,9 +45,10 @@ HERHAAL:
 Alles wat hier staat wordt steeds weer opnieuw uitgevoerd, zolang het systeem aan is.
 
 Alle toestanden krijgen een nummer:
-1 - Lamp is uit
-2 - Lamp is aan
-
+1 - Lamp is uit, knop is los
+2 - Lamp is aan, knop is ingedrukt 
+3 - Lamp is aan, knop is los
+4 - Lamp is uit, knop is ingedrukt
  
 ```{code} pseudocode
 EENMALIG BIJ OPSTARTEN:
@@ -54,142 +56,116 @@ EENMALIG BIJ OPSTARTEN:
 
 HERHAAL:
     ALS (toestand is 1) DAN
-        ALS (de drukknop wordt ingedrukt) DAN
+        ALS (de drukknop is ingedrukt) DAN
              toestand wordt 2
              zet lamp aan
-    ALS (toestand is 2) DAN
-        ALS (de drukknop wordt ingedrukt) DAN
-             toestand wordt 1
-             zet lamp uit
+    ANDERS ALS (toestand is 2) DAN
+        ALS (de drukknop is losgelaten) DAN
+             toestand wordt 3
+             lamp blijft aan
+    ...
 ```
 
 Zie je de relatie tussen het toestandsdiagram en de pseudo-code?
 
-Er is ook een andere manier, waarbij je start vanuit de gebeurtenissen.
 
-```{code} pseudocode
-EENMALIG BIJ OPSTARTEN:
-    toestand wordt 1
-    zet lamp aan
-
-HERHAAL:
-    ALS (de drukknop wordt ingedrukt) DAN
-        ALS (toestand is 1) DAN
-            toestand wordt 2
-            zet lamp aan
-         ANDERS ALS (toestand is gelijk aan 2) DAN
-             toestand wordt 1   
-             zet lamp uit
-```
- 
-
-Beide manieren zijn toegestaan. Het hangt van de situatie en het specifieke platform dat je gebruikt (Micro:bit, Arduino, Lego Mindstormd) af wat het makkelijkste is. Soms gebruik je een mix van beide aanpakken.
-
-## Pas op voor de valkuil
-% bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886281
-
-Blijf goed opletten bij het omzetten van een toestandsdiagram naar een programma. Neem het volgende voorbeeld. Iemand heeft op basis van het eerdere toestandsdiagram het volgende programma gemaakt.
- 
-```{code} pseudocode
-EENMALIG BIJ OPSTARTEN:
-    toestand wordt 1
- 
-HERHAAL:
-    ALS (de drukknop wordt ingedrukt) DAN
-        ALS (toestand is 1) DAN
-             toestand wordt 2
-             zet lamp aan
-        ALS (toestand is 2) DAN
-             toestand wordt 1   
-             zet lamp uit
+```{exercise} Opdracht: maak de pseudocode af
+:label: opdracht4pseudo
+Maak de bovenstaande pseuscode af. Gebruik het toestandsdiagram uit stap 1.
 ```
 
-```{exercise} Omzetten toestandsdiagram naar programma
-:label: opdracht4omzetten
-Waarom is dit niet een juiste vertaling van toestandsdiagram naar programma? 
-```
-
-```{solution} opdracht4omzetten
+````{solution} opdracht4pseudo
 :class: dropdown
-Ga na wat er gebeurt als het systeem in toestand 1 is en iemand drukt het knopje in (en laat het weer los). Het programma controleert of het systeem in toestand 1 is (dat is waar). Dan wordt de lamp aangezet en wordt de toestand 2. Dan controleert het programma of het systeem in toestand 2 is (en dat is dan waar!) en wordt de lamp uitgezet en wordt de toestand 1. De lamp zal dus heel even aan zijn en gelijk weer uit worden gezet.
-```
-
-## Tabel met alle toestandsovergangen
-% bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886282
-
-Om er zeker van te zijn dat je hebt nagedacht over alle toestandsovergangen is het goed om een tabel maken met alle mogelijke combinaties. We geven een voorbeeld op basis van het volgende toestandsdiagram. Dit is een uitwerking van de hotelschakeling die je eerder hebt gezien. Het systeem bestaat uit twee schakelaars en een lamp. Met beide schakelaars moet de lamp aan en uit kunnen worden gezet.
-
-SA staat voor Schakelaar A, SB voor Schakelaar B
-
-- Toestand 1: SA = uit, SB = uit (de lamp is uit )
-- Toestand 2: SA = aan, SB = uit (de lamp is uit )
-- Toestand 3: SA = aan, SB = aan (de lamp is uit )
-- Toestand 4: SA = uit, SB = aan(de lamp is uit )
-
-Hieronder zie je een tabel met alle mogelijke toestandsovergangen. Voor elke combinatie moet er staan wat de nieuwe toestand wordt en welke actie wordt uitgevoerd. Als er een streepje staat (-), dan is er geen toestandsovergang en geen actie. Hieronder hebben we vast een begin gemaakt.
-
-```{figure} 7-tabel-td1
-```
-
-```{table}
-| Toestand | SA gaat aan | SA gaat uit | SB gaat aan | SB gaat uit |  
-| --- | --- | --- | --- | --- | 
-| 1	| 2 zet lamp aan | – | | |
-| 2	| – | 1 zet lamp uit | | | 	 
-| 3	| | | | | 	 	 	 
-| 4 | | | | |	 
-``` 	 	 
- 
-```{exercise} Opdracht: maak de tabel compleet
-:label: opdracht4maaktabelcompleet
-Maak de bovenstaande tabel compleet
-```
-
-```{solution} opdracht4maaktabelcompleet
-:class: dropdown
-| Toestand | SA gaat aan    | SA gaat uit    | SB gaat aan    | SB gaat uit.   |  
-| ---      | ---            | ---            | ---            | ---            | 
-| 1	       | 2 zet lamp aan | –              | 4 zet lamp aan | -              |
-| 2.       | –              | 1 zet lamp uit | 3 zet lamp uit | -              | 	 
-| 3	       | -              | 4 zet lamp aan | -              | 2 zet lamp aan | 	 	 	 
-| 4        | 3 zet lamp uit | -              | -              | 1 zet lamp uit |	 
-```
-
-## Opdracht: maak programma in pseudocode
-% bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886290
-
-Hieronder vind je een start voor het programma dat hoort bij het toestandsdiagram voor de hotelschakeling uit de vorige paragraaf.
-
 ```{code} pseudocode
 EENMALIG BIJ OPSTARTEN:
     toestand wordt 1
 
 HERHAAL:
     ALS (toestand is 1) DAN
-        ALS (SA gaat aan) DAN
+        ALS (de drukknop is ingedrukt) DAN
              toestand wordt 2
              zet lamp aan
-        ANDERS ALS (SB gaat aan) DAN
-             toestand wordt 4   
-             zet lamp aan
-    ALS (toestand is 2) DAN
-         ...
+    ANDERS ALS (toestand is 2) DAN
+        ALS (de drukknop is losgelaten) DAN
+             toestand wordt 3
+             lamp blijft aan
+    ANDERS ALS (toestand is 3) DAN
+        ALS (de drukknop is ingedrukt) DAN
+             toestand wordt 4
+             zet lamp uit
+    ANDERS ALS (toestand is 4) DAN
+        ALS (de drukknop is losgelaten) DAN
+             toestand wordt 1
+             lamp blijft uit
+```
+````
+
+
+```{attention} ALS ... ANDERS ALS is beter dan ALS ... ALS
+Je ziet dat we in de pseudocode gebruik maken van `ANDERS ALS`. Je zou op de plaatsen waar `ANDERS ALS` staat ook alleen`ALS` kunnen gebruiken. 
+
+Als je alleen `ALS` gebruikt, dan kan het bij sommige toetsdiagrammen gebeuren dat het systeem binnen één keer uitvoeren van de HERHAAL-code twee toestandsveranderingen doet. Dat is minder netjes en kan soms zelfs tot fouten leiden.
+
+Gebruik daarom altijd `ANDERS ALS`.
 ```
 
-```{exercise} Opdracht: maak de pseudocode
-:label: opdracht4pseudocodehotelschakeling
-Maak op basis van het toestandsdiagram en de bijbehorende tabel het programma in pseudocode af.
+````{attention} Verdieping: toestand-eerst of overgang-eerst
+
+Er is ook een andere manier, waarbij je start vanuit de toestandsovergangen in plaats van de toestanden.
+
+```{code} pseudocode
+VOORBEELD OOIT NOG TOEVOEGEN
 ```
 
-## Opdracht: maak programma in Micro:bit
+Beide manieren werken. Het hangt van de situatie en het specifieke platform dat je gebruikt (Micro:bit, Arduino, Lego Mindstormd) af wat het makkelijkste is.
 
-```{exercise} Opdracht: maak de code in Micro:bit
+Gebruik in deze module altijd toestand-eerst, tenzij duidelijk anders is aangegeven.
+````
+
+## Stap 2. Pseudocode controleren met een tabel
+% bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886282
+
+Om er zeker van te zijn dat je hebt nagedacht over alle toestandsovergangen is het goed om een tabel maken met alle mogelijke combinaties. We geven een voorbeeld op basis van het toestandsdiagram uit stap 1. 
+
+- Toestand 1: schakelaar los, lamp uit
+- Toestand 2: schakelaar ingedruk, lamp aan
+- Toestand 3: schakelaar los, lamp aan
+- Toestand 4: schakelaar ingedrukt, lamp uit
+
+Hieronder zie je een tabel met alle mogelijke toestandsovergangen. Voor elke combinatie moet er staan wat de nieuwe toestand wordt en welke actie wordt uitgevoerd. Als er een streepje staat (-), dan is er geen toestandsovergang en geen actie. 
+
+```{table}
+| Toestand ↓ / Toestandsovergang → | knop los | knop ingedrukt |  
+| --- | --- | --- | 
+| 1	| - | 2: zet lamp aan |
+| 2	| 3 | - |
+| 3	| - | 4: zet lamp uit | 	 	 
+| 4 | 1 | - |
+```
+
+Controleer of de pseudocode uit stap 1 past bij de tabel. Begin bij toestand 1, kijk of alle acties kloppen en kijk of alle overgangen kloppen. Ga daarna door met toestand 2 en zo verder tot je de hele tabel gehad hebt.
+
+## Stap 3: Van pseudocode naar programma
+% bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886290
+
+Bekijk de pseudocode onder stap 1 nog eens en maak dan volgende opdracht.
+
+````{exercise} Opdracht: maak de code in Micro:bit
 :label: opdracht4code
 Maak de Micro:bit code op basis van de pseudocode.
 
-Test op je Micro:bit of je code goed werkt.
+Gebruik de volgende blokken. Je mag de blokken kopieren. Gebruik geen andere blokken. 
+
+```{figure} 7-code-toggle-blokken.png
 ```
 
-## Verdieping: toestand-eerst of gebeurtenis-eerst
+Test op je Micro:bit of je code goed werkt.
+````
 
-Hier komt ooit wat, nu mag je het overslaan.
+````{solution} opdracht4code
+:class: dropdown
+% broncode voor plaatje op: https://makecode.microbit.org/_g78PvVU6aeDx
+```{figure} 7-code-toggle.png
+```
+````
+
