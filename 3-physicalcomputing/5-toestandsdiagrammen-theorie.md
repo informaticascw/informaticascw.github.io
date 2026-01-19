@@ -54,14 +54,33 @@ Hieronder zie je een voorbeeld van een onderdeel van een frisdrankautomaat. Dit 
 De bollen zijn _toestanden_. Dit toestandsdiagram kent dus vijf toestanden. De frisdrankautomaat begint in de starttoestand, dat is in dit geval de toestand ‘Start: 0 euro’. Bij elke toestand zie je enkele _overgangen_. Bijvoorbeeld de overgang van de _starttoestand_ ‘0 euro’ naar ‘0,5 euro’. Die toestandsovergang vindt plaats als de gebruiker begint met het inwerpen van een muntstuk van 50 eurocent.  
 Je ziet dat een toestandsovergang ook naar dezelfde toestand kan gaan. Kijk maar bij de toestand ‘2 euro’. Na de toestandsovergang ‘Inworp 50 cent’ is de toestand nog steeds ‘2 euro’. 
 
-Je kunt er zelf even mee oefenen. Klik op het plaatje hieronder om te activeren. Via de blauw en oranje knop kun je zogenaamd 50 cent of 1 euro inwerpen en dan zie je in welke toestand de automaat terecht komt.
-
 ```{figure} 5-frisdrank-toestanden-kleur.png
+```
+
+```{exercise} Frisdrankautomaat bedienen
+:label: opdracht3frisbedienen
+
+Je kunt zelf even met de frisdrankautomaat oefenen. Klik op de link hieronder om te activeren. Via de blauw en oranje knop kun je zogenaamd 50 cent of 1 euro inwerpen en dan zie je in welke toestand de automaat terecht komt.
+
+[Bedien de frisdrankautomaat door hier te klikken.](https://maken.wikiwijs.nl/userfiles/2fe8467d59075d55fdbd2ce3f016c23bdeeeed34.html)
+
+Op hoeveel manieren kun je twee euro inwerpen?
+```
+
+```{solution} opdracht3frisbedienen
+:class: dropdown
+Dat kan op de volgende vier manieren:
+- 50ct + 50ct + 50ct + 50ct
+- 50ct + 1 euro + 50ct
+- 50ct + 50ct + 1 euro
+- 1 euro + 50ct + 50ct
+
+De meeste automaten geven teveel ingeworpen muntjes direct bij het inwerpen terug. Daarom tellen we die mogelijkheden niet mee in dit antwoord.
 ```
 
 Een toestandsovergang wordt meestal uitgevoerd op basis van informatie uit één van de sensoren. Als iemand één euro in de frisdrankautomaat doet, wordt dat door één of meerdere sensoren gedetecteerd. Hoe dat precies werkt is hierbij niet belangrijk. Uit de toestandsdiagram kun je opmaken naar welke toestand de automaat moet gaan als iemand die euromunt inwerpt.
 
-```{exercise} Frisdrankautomaat
+```{exercise} Frisdrankautomaat vragen
 :label: opdracht3fris
 Vul in. In welke toestand komt de automaat als iemand de volgende munten ingooit: 50 cent en nog eens 50 cent? Dat is toestand
 `______`
