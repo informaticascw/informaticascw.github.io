@@ -7,7 +7,7 @@ In dit deel vind je enkele voorbeelden, deels uitgewerkt, en deels zijn het opdr
 ## Voorbeeld: lichtbediening
 
 ### Zonder toggle functie (versie 1)
-```{figure} 6-td-knop.jpg
+```{figure} 6-td-knop.png
 ```
 
 ### Met toggle functie (versie 2)

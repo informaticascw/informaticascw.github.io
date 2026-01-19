@@ -23,7 +23,7 @@ De opdrachtbeschrijving voor **Kiezen met kaarten** staat op\
 http://www.informaticaunplugged.nl/de-werkvormen/kiezen-met-kaarten/
 ```
 
-## Stappenplan
+## Stappenplan (aanpassen op basis van schakelaar met toggle functie)
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886280
 
 Als je het toestandsdiagram eenmaal klaar hebt, dan is het maken van een programma dat kan worden uitgevoerd op bijvoorbeeld de Microbit, Arduino of Lego Mindstorms eenvoudig. We laten dat zien aan de hand van het volgende toestandsdiagram voor een systeem bestaande uit een lamp en een drukknop. Als de drukknop wordt ingedrukt (en weer losgelaten) gaat de lamp aan. Wordt de drukknop nogmaals ingedrukt (en weer losgelaten) gaat de lamp uit.

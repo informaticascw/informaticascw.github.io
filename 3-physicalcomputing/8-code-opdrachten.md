@@ -1,7 +1,10 @@
 # Coderen met toestandsdiagram (opdrachten)
+Hier even de relatie met de eerder behandelde toestandsdiagrammen uitleggen, of bij beide dezelfde voorbeelden gebruiken?
 
-## Oefenopdracht: toegangscode
+## Oefenopdracht: hotelschakelaar versie 2 (toevoegen)
 
-## Oefenopdracht: toggle-functie van een drukknop
+## Oefenopdracht: toegangscode (toevoegen)
 
-## Oefenopdracht: TV met 2 afstandsbedieningen
+## Oefenopdracht: toggle-functie van een drukknop (vooralsnog niet toevoegen)
+
+## Oefenopdracht: TV met 2 afstandsbedieningen (vooralsnog niet toevoegen)
