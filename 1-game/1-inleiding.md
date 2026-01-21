@@ -147,4 +147,4 @@ Ingewikkelder uitbreidingen|15|20|- Ingewikkelder uitbreidingen zijn uitbreiding
 Planning|5|5|Uit de commits en/of tijdens de les blijkt dat het stappenplan gevolgd is en dat er regelmatig is gewerkt.
 Samenwerking|5|5|Uit de commits en/of tijdens de les blijkt dat het werk gelijk verdeeld is onder teamleden. Als één teamlid beduidend minder doet, dan is dat een gezamenlijke verantwoordelijkheid van het team om dat op te lossen of te melden bij de docent. Maak vanaf het begin afspraken en spreek elkaar daarop aan. Als je er niet uitkomt, dan meld je dat zo snel mogelijk bij je docent.
 
-Cijfer = 1 + 9 * behaalde punten / maximale punten
+Cijfer = [N-term](https://nl.wikipedia.org/wiki/N-term) + 9 * behaalde punten / maximale punten
