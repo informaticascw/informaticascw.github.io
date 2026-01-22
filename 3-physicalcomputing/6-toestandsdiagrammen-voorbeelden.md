@@ -126,22 +126,41 @@ De mogelijke acties zijn:
 
 ```{exercise} Toestandsdiagram voor hotelschakelaars (versie 2)
 :label: opdrachgt6-hotelknoppen
-Gebruik bovenstaande toestandsovergangen en acties heb je nodig in je toestandsdiagram. Op het moment dat een knop wordt ingedrukt, dan is er een toestandsovergang en een actie. Als een knop wordt losgelaten, dan verandert de toestand, maar dan is er geen actie. Er kunnen niet twee knoppen precies tegelijk ingedrukt of losgelaten worden, in dat geval is er altijd één knop net iets eerder. Je hebt 8 toestanden nodig.
+Gebruik bovenstaande toestandsovergangen en acties heb je nodig in je toestandsdiagram. Op het moment dat een knop wordt ingedrukt, dan is er een toestandsovergang en een actie. Als een knop wordt losgelaten, dan verandert de toestand, maar dan is er geen actie. Er kunnen niet twee knoppen precies tegelijk ingedrukt of losgelaten worden, in dat geval is er altijd één knop net iets eerder. 
 
-Maak het toestandsdiagram. 
+Je kunt een toestandsdiagram met acht toestanden maken, maar het kan ook met drie toestanden.
+
+Maak een toestandsdiagram met acht of drie toestanden. Lukt het je om beide te maken?
 ```
 
 ````{solution} opdrachgt6-hotelknoppen
 :class: dropdown
-```{figure} 6-td-hotelknoppen.png
+Oplossing met acht toestanden.
+```{figure} 6-td-hotelknoppen8.png
 ```
 Legenda:
-- L- (licht uit)
-- L+ (licht aan)
-- A- (knop A ingedrukt)
-- A+ (knop A niet ingedrukt)
-- B- (knop B ingedrukt)
-- B+ (knop B niet ingedrukt)
+- 1 = licht uit, geen knop ingedrukt
+- 2 = licht uit, knop A ingedrukt
+- 3 = licht uit, knop A en B ingedrukt
+- 4 = licht uit, knop B ingedrukt
+- 5 = licht aan, geen knop ingedrukt
+- 6 = licht aan, knop A ingedrukt
+- 7 = licht aan, knop A en B ingedrukt
+- 8 = licht aan, knop B ingedrukt
+- L- - licht uit
+- L+ = licht aan
+- A- = knop A ingedrukt
+- A+ = knop A niet ingedrukt
+- B- = knop B ingedrukt
+- B+ = knop B niet ingedrukt
+
+Oplossing met drie toestanden.
+```{figure} 6-td-hotelknoppen3.png
+```
+Legenda:
+- 1 = licht uit, geen knop ingedrukt
+- 2 = licht aan, één knop ingedrukt
+- 3 = licht uit, twee knoppen ingedrukt
 ````
 
 ## Voorbeeld: lichtregulering
