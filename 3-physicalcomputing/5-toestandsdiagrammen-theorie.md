@@ -1,6 +1,6 @@
 # Toestandsdiagrammen
 
-## Voorbeeld: game
+## Inleiding: game
 
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4855353
 
@@ -168,7 +168,8 @@ Maak de tabel hierboven af.
 ```	
 ````
 
-```{attention} Toestandsovergang bij gebeurtenis of status
+(=physcomp-5-gebeurtenis)
+```{attention} Verbreding: toestandsovergang bij gebeurtenis of status
 In het voorbeeld van de frisdankautomaat is er een toestandsovergang als er wat gebeurt. De gebeurtenis is het inwerpen van een muntje. De gebeurtenis duurt kort, het is een moment waarop je het muntje inwerpt. Je kunt je voorstellen dat het inwerpen het moment is waarop het muntje tegen een drukknopje komt. Het moment dat het muntje tegen de drukknop komt, verandert de drukknop van niet-ingedrukt naar wel-ingedrukt. Een gebeurtenis is dus een verandering van een waarde. De waarde is in dit geval niet-ingedrukt of wel-ingedrukt.
 
 Je kunt een toestandsdiagram ook anders maken. Een toestandsovergang vindt dan niet plaats bij een verandering van een waarde, maar als een sensor (bijvoorbeeld een drukknop) een bepaalde waarde heeft. Je hebt dan twee keer zoveel toestanden nodig. Elke keer als er de schakelaar wordt ingedrukt door een muntje ga je naar een volgende toestand waarin gewacht wordt tot het muntje verder valt. Voor een mens duurt dat wachten zo kort dat je het niet eens merkt, maar voor de computer in de frisdrankautomaat duurt dat wachten best lang. Als het muntje verder is gevallen, dan staat de schakelaar weer in de niet-ingedrukt stand. Je gaat dan naar de toestand met het nieuwe bedrag.

@@ -8,6 +8,8 @@ In dit deel vind je enkele voorbeelden, deels uitgewerkt, en deels zijn het opdr
 
 ### Zonder toggle functie (versie 1)
 
+In deze paragraaf ga je een toestandsdiagram maken voor een lamp die aan en uit kan met een drukknop.
+
 Gebruik een drukknop om een lamp aan en uit te zetten. Zolang de drukknop is ingedrukt staat de lamp aan. Zodra de drukknop wordt losgelaten gaat de lamp uit.
 
 Er zijn de volgende overgangen:
@@ -33,7 +35,9 @@ Gebruik twee toestanden. Gebruik de hierboven beschreven toestandsovergangen en 
 
 ### Met toggle functie (versie 2)
 
-Bij de lamp uit de vorige opdracht moest je je vinger zolang op de drukknop houden als je het licht aan wil hebben. Dat is erg onhandig als je het licht wilt gebruiken om een boek te lezen. Je kunt in de plaats van een drukknop gebruik maken van een schakelaar. Een schakelaar blijft in de stand staan waarnaar je hem duwt. Het kan ook met een drukknop, maar dan moet je een toestandsdiagram maken dat een toggle functie nadoet.
+In deze paragraaf ga je een toestandsdiagram maken voor een lamp die aan en uit kan met een drukknop die een toggle functie heeft.
+
+Bij de lamp uit de vorige opdracht ging de lamp uit zodra je de knop losliet. Dat is erg onhandig als je het licht wilt gebruiken om een boek te lezen. Je kunt in de plaats van een drukknop gebruik maken van een schakelaar. Een schakelaar blijft in de stand staan waarnaar je hem duwt. Het kan ook met een drukknop, maar dan moet je een toestandsdiagram maken dat een toggle functie nadoet.
 
 Bij een drukknop met toggle functie zijn de volgende overgangen:
 - Knop los (niet-ingedrukt)
@@ -70,6 +74,9 @@ Gebruik vier toestanden. Gebruik de hierboven beschreven toestandsovergangen en 
 ### Met schakelaars (versie 1)
 % geinspireerd op bron: https://maken.wikiwijs.nl/135892/Cyclus_1___Arduino#!page-4957251
 % en bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886282
+
+In deze paragraaf ga je een toestandsdiagram maken voor een lamp die aan en uit kan met twee schakelaars.
+
 In hotels zijn vaak twee schakelaars aanwezig om het licht te bedienen: een schakelaar bij de deur en een schakelaar bij het bed. Dit voorbeeld gaat over het toestandsdiagram van een hotelschakelaar met twee schakelaars en een lamp (led). 
 
 Een hotelschakelaar werkt als volgt: als de stand van één van de schakelaars verandert, dan verandert de status van de lamp. Begin met alle schakelaar omlaag en de lamp uit. Als schakelaar A omhoog wordt gezet dan gaat de lamp (LED) aan. Als vervolgens B omhoog wordt gezet, dan gaat de lamp weer uit. Wordt vervolgens aan weer omlaag gezet, dan gaat de lamp weer aan, enzovoort.
@@ -101,6 +108,8 @@ Gebruik vier toestanden. Gebruik de hierboven beschreven toestandsovergangen en 
 ### Met drukknoppen (versie 2)
 % bron: https://maken.wikiwijs.nl/135892/Cyclus_1___Arduino#!page-4942190
 
+In deze paragraaf ga je een toestandsdiagram maken voor een lamp die aan en uit kan met twee drukknoppen met een toggle functie.
+
 In nieuwe hotels zijn de schakelaars vaak vervangen door drukknoppen zonder toggle functie. Dit voorbeeld gaat over een toestandsdiagram van een hotelschakelaar met twee drukknoppen en een lamp (led).
 
 Je gaat nu het toestandandsdiagram voor de hotelschakeling nog eens maken, alleen met drukknoppen werkt het op een iets andere manier dan met schakelaars. Als je een drukknop indrukt en vervolgens loslaat moet de lamp aangaan. Als een drukknop weer indrukt en vervolgens loslaat gaat de lamp weer uit. De drukknopjes krijgen dus een toggle-functie.
@@ -128,28 +137,35 @@ Maak het toestandsdiagram.
 ```
 ````
 
-## Voorbeeld: lichtregulering (nog herzien)
+## Voorbeeld: lichtregulering
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379587
 
-In dit voorbeeld gaat het om een systeem waarmee je de intensiteit van een lamp kunt reguleren. Het systeem bestaat uit een lamp en twee knoppen.
+### Deel 1: drie standen
 
-De lamp kan in drie standen worden gezet:
+In deze paragraaf ga je een toestandsdiagram maken voor een lamp waarvan de felheid kan worden ingesteld met twee drukkknoppen.
+
+Het systeem bestaat uit een lamp en twee knoppen. De lamp kan in drie standen worden gezet:
 
 - Uit (geen licht)
 - Half aan (zacht licht)
 - Helemaal aan (fel licht)
 
-Het systeem heeft twee knoppen zonder toggle-functie (A en B). Met knop A gaat de lamp feller branden. Bijvoorbeeld: als de lamp half aan is en knop A wordt ingedrukt, dan gaat de lamp helemaal aan. Met knop B gaat de lamp minder fel branden. De lamp is altijd in één van de drie bovengenoemde standen.
+Het systeem heeft twee knoppen (A en B). Met knop A gaat de lamp feller branden. Bijvoorbeeld: als de lamp half aan is en knop A wordt ingedrukt, dan gaat de lamp helemaal aan. Met knop B gaat de lamp minder fel branden. De lamp is altijd in één van de drie bovengenoemde standen. 
 
 ```{exercise} Opdracht: maak toestandsdiagram lichtregulering deel 1
 :label: opdracht3lichtregulering-1
 
-Maak een toestandsdiagram voor dit systeem. Hieronder wordt dit uitgewerkt, probeer het echter eerst zelf.
+Maak een toestandsdiagram voor dit systeem. 
+
+Gebruik toestandsovergangen bij gebeurtenissen. De gebeurtenis vindt plaats het moment dat de status van een knop verandert van niet-ingedrukt naar ingedrukt. Lees [het kader in het vorige hoofdstuk over toestandsovergangen met gebeurtenis of status](=physcomp-5-gebeurtenis) als je het verschil tussen een gebeurtenis of status niet begrijpt.
+
+Je kunt je toestandsdiagram voor jezelf testen en daarmee controleren of het klopt. Bijvoorbeeld, wat gebeurt er is als ik op A, B en dan weer B druk? Klopt dit met wat het systeem zou moeten doen?
+
+Probeer het eerst zelf, voordat je de uitwerking bekijkt.
 ```
 
 ````{solution} opdracht3lichtregulering-1
 :class: dropdown
-### Uitwerking deel 1
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379547
 
 Hieronder volgt een mogelijke uitwerking van opdracht a) over de lichtregulering.
@@ -192,25 +208,21 @@ We zijn nog niet helemaal klaar, begintoestand moet er bij. Dat is de initiele t
 We houden de teksten kort in het diagram om het overzichtelijk te houden. Het nadeel is dat misschien niet helemaal helder is wat er wordt bedoeld. Bijvoorbeeld, de pijl van toestand 1 naar toestand 2 waar bij staat A: lamp half aan zou beter kunnen zeggen:
 
 (gebeurtenis) knop A wordt ingedrukt -> (actie) zet de lamp met halve intensiteit aan.
-
-Je kunt het toestandsdiagram voor jezelf testen en daarmee controleren of het klopt. Bijvoorbeeld, wat gebeurt er is als ik op A, B en dan weer B druk? Klopt dit met wat het systeem zou moeten doen?
-
-Probeer nu eerst zelf opdracht b) te doen voordat je de uitwerking bekijkt.
 ```
 ````
 
+### Deel 2: drie standen en twee kleuren
 ```{exercise} Opdracht: maak toestandsdiagram lichtregulering deel 2
 :label: opdracht3lichtregulering-2
 
-Het systeem wordt verder uitgebreid. De lamp heeft twee kleuren (rood en blauw). Er wordt een derde knop (C) toegevoegd waarmee kan worden gewisseld tussen de kleur rood en de kleur blauw. Pas het toestandsdiagram hier op aan.
+Breidt het systeem uit de vorige opgave uit. De lamp heeft twee kleuren (rood en blauw). Er wordt een derde knop (C) toegevoegd waarmee kan worden gewisseld tussen de kleur rood en de kleur blauw. Pas het toestandsdiagram hier op aan.
+
+Probeer het eerst zelf, voordat je de uitwerking bekijkt.
 ```
 
 ````{solution} opdracht3lichtregulering-2
 :class: dropdown
-### Uitwerking deel 2
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379568
-
-Hieronder volgt een mogelijke uitwerking van opdracht b) over de lichtregulering.
 
 De eerste vraag die je jezelf moet stellen is: welke toestanden herken ik? De lamp kent nu naast de drie standen (uit, half aan, fel) ook nog de mogelijkheid voor twee kleuren (rood en blauw). Hoeveel toestanden zijn er dan? Het lijkt er op dat dat er zes zijn, namelijk 3 standen x 2 kleuren:
 

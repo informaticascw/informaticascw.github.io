@@ -1,5 +1,16 @@
 # Inleiding
 
+## Eindopdracht
+
+Deze module wordt afgesloten met een eindopdracht.
+- Bij de eindopdracht moet je toestandsdiagrammen en code maken. Je gebruikt sensoren, actuatoren, een Micro:bit en een computer. De exacte inhoud van de eindopdracht krijg je aan het begin van de les. 
+- Je doet de eindopdracht in groepjes van twee. De docent geeft aan hoe de groepjes worden samengesteld.
+- De eindopdracht wordt tijdens een beperkt aantal lessen op school gemaakt. Je docent geeft aan welke lessen dit zijn. Er is een _beperkte_ inhaalmogelijkheid bij ziekte.
+- Tijdens de eindopdracht mag je het lesmateriaal erbij houden, maar je mag geen andere bronnen gebruiken.
+- Je levert code en een kort verslag met foto's in, dat maak je tijdens de les.
+- De docent kan vragen stellen over wat je hebt ingeleverd.
+- Bij de beoordeling telt het resultaat, je houding tijdens de les en eventueel de beantwoording van vragen over wat je hebt ingeleverd.
+
 ## Leerdoelen
 
 Aan het einde van deze module, moet je de volgende dingen kunnen.
@@ -32,17 +43,6 @@ Over toestandsdiagrammen moet je het volgende kunnen.
 Toestandsdiagrammencode
 - Toestandsdiagram omzetten naar Micro:bit-code met toestand eerst [havo + vwo]
 - Toestandsdiagram omzetten naar Micro:bit-code met gebeurtenis eerst [vwo]
-
-## Eindopdracht
-
-Deze module wordt afgesloten met een eindopdracht.
-- Bij de eindopdracht moet je toestandsdiagrammen en code maken. Je gebruikt sensoren, actuatoren, een Micro:bit en een computer. De exacte inhoud van de eindopdracht krijg je aan het begin van de les. 
-- Je doet de eindopdracht in groepjes van twee. De docent geeft aan hoe de groepjes worden samengesteld.
-- De eindopdracht wordt tijdens een beperkt aantal lessen op school gemaakt. Je docent geeft aan welke lessen dit zijn. Er is een _beperkte_ inhaalmogelijkheid bij ziekte.
-- Tijdens de eindopdracht mag je het lesmateriaal erbij houden, maar je mag geen andere bronnen gebruiken.
-- Je levert code en een kort verslag met foto's in, dat maak je tijdens de les.
-- De docent kan vragen stellen over wat je hebt ingeleverd.
-- Bij de beoordeling telt het resultaat, je houding tijdens de les en eventueel de beantwoording van vragen over wat je hebt ingeleverd.
 
 ## Onderdelen die je kunt overslaan
 
