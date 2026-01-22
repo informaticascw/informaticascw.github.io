@@ -133,8 +133,15 @@ Maak het toestandsdiagram.
 
 ````{solution} opdrachgt6-hotelknoppen
 :class: dropdown
-```{figure} 6-td-hotelknoppen.jpeg
+```{figure} 6-td-hotelknoppen.png
 ```
+Legenda:
+- L- (licht uit)
+- L+ (licht aan)
+- A- (knop A ingedrukt)
+- A+ (knop A niet ingedrukt)
+- B- (knop B ingedrukt)
+- B+ (knop B niet ingedrukt)
 ````
 
 ## Voorbeeld: lichtregulering
