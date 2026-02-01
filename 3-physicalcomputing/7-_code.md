@@ -216,7 +216,7 @@ In [paragraaf %s](#physcomp-5-gebeurtenis) heb je geleerd dat er nog een tweede 
 
 Door gebruik te maken van gebeurtenissen, hebben we nog maar twee toestanden nodig. Je ziet dat in het volgende toestandsdiagram.
 
-Onderstaande toestandsdiagram lijkt erg veel op het toestandsdiagram van de drukknop zonder toggle functie van [](#opdracht6-zondertoggle) uit het vorige hoofdstuk [](#ophyscomp-h6). Het verschil is dat het toestandsdiagram uit het vorige hoofdstuk de _status_ van een knop gebruikt, terwijl het toestandsdiagram hieronder een _gebeurtenis_ met een knop gebruikt. In het onderstaande toestandsdiagram kun je aan het woord `zojuist` zien dat het over gebeurtenissen gaat. Soms is het lastig te zien of er een status of een gebeurtenis bij een overgang hoort. Je moet dan goed de beschrijving lezen. Let op dat je zelf altijd heel duidelijk bent wanneer je een status of een gebeurtenis gebruikt.
+Onderstaande toestandsdiagram lijkt erg veel op het toestandsdiagram van de drukknop zonder toggle functie van [](#opdracht6-zondertoggle) uit [hoofstuk %s](#physcomp-h6). Het verschil is dat het toestandsdiagram uit het vorige hoofdstuk de _status_ van een knop gebruikt, terwijl het toestandsdiagram hieronder een _gebeurtenis_ met een knop gebruikt. In het onderstaande toestandsdiagram kun je aan het woord `zojuist` zien dat het over gebeurtenissen gaat. Soms is het lastig te zien of er een status of een gebeurtenis bij een overgang hoort. Je moet dan goed de beschrijving lezen. Let op dat je zelf altijd heel duidelijk bent wanneer je een status of een gebeurtenis gebruikt.
 
 
 ```{figure} 7-gebeurtenis-td.png

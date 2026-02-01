@@ -5,18 +5,20 @@ Hier even de relatie met de eerder behandelde toestandsdiagrammen uitleggen, of 
 ## Oefenopdracht: hotelschakelaar
 %bron: https://maken.wikiwijs.nl/135429/Cyclus_1___Micro_bit#!page-4889687
 
-::: {exercise} Hotelschakelaar
+``` {exercise} Hotelschakelaar
 :label: opdracht8-1
-Maak Micro:bit code voor de hotelschakelaar (versie 2). Gebruik het toestandsdiagram met drie toestanden van [](#opdrachgt6-hotelknoppen) uit hoofdstuk [](#physcomp-h6).
-:::
+Maak Micro:bit code voor de hotelschakelaar (versie 2). Gebruik het toestandsdiagram met drie toestanden van [](#opdrachgt6-hotelknoppen) uit [hoofdstuk %s](#physcomp-h6).
+```
 ```` {solution} opdracht8-1
 :class: dropdown
 ```{figure} 8-hotelschakeling-code.png
 ```
 ````
 
-## Oefenopdracht: lichtregulering (aanpassen aan drukknoppen of verwijderen)
+## Oefenopdracht: lichtregulering
 %bron https://maken.wikiwijs.nl/135429/Cyclus_1___Micro_bit#!page-5379783
+
+Bij deze opdracht worden toestandsovergangen met _gebeurtenissen_ gebruikt. 
 
 ``` {exercise} Lichtregulering
 :label: opdracht8-2a

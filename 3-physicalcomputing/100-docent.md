@@ -28,3 +28,4 @@ De wijzigingen ten opzichte van het SLO materiaal betreffen op hoofdlijnen
 - Didactiek: toestandsdiagrammen verwijderd uit oefeningen met microbit sensoren en actuatoren (hoofdstuk 4), waardoor toestandsdiagrammen pas in de opdrachten gebruikt worden na introductie van de theorie over toestansdiagrammen (hoofdstuk 5)
 - Didactiek: alle uitleg en code op basis van toestand-eerst (gebeurtenis-eerst en events enkel in verdieping)
 - Didactiek: codeeropdrachten op basis van drukknoppen (geen schakelaars, want die zitten niet in de uitbreidingskit)
+- Didactiek: onderscheid tussen toestandsovergang op basis van status en op basis van gebeurtenis (status verandering)

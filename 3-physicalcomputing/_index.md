@@ -15,6 +15,6 @@ https://maken.wikiwijs.nl/135434/Physical_Computing_geheel
 In het schooljaar 25/26 gaan we deze aangepaste versie van het keuzethema gebruiken, tot die tijd zijn we bezig met de ontwikkeling.
 
 Status:
-- Gereed: h1, h2, h3, h4, h5, h6, h7, voor docenten
-- Work in Progress: h8, h9
+- Gereed: h1, h2, h3, h4, h5, h6, h7, h8, voor docenten
+- Work in Progress: h9
 ```
