@@ -1,3 +1,4 @@
+(physcomp-h4)=
 # Sensoren en actuatoren (opdrachten)
 
 ## Voorbeeld: aansluiten led

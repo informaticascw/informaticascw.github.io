@@ -1,3 +1,4 @@
+(physcomp-h7)=
 # Van toestandsdiagram naar code
 
 ## Inleiding
@@ -111,7 +112,9 @@ Als je alleen `ALS` gebruikt, dan kan het bij sommige toetsdiagrammen gebeuren d
 Gebruik daarom altijd `ANDERS ALS`.
 ```
 
-````{attention} Verdieping: toestand-eerst of overgang-eerst
+## Verdieping: Van plaatje naar pseudocode
+
+### Toestand-eerst of overgang-eerst
 
 Er is ook een andere manier, waarbij je start vanuit de toestandsovergangen in plaats van de toestanden.
 
@@ -137,9 +140,8 @@ HERHAAL:
 Beide manieren werken. Het hangt van de situatie en het specifieke platform dat je gebruikt (Micro:bit, Arduino, Lego Mindstormd) af wat het makkelijkste is.
 
 Gebruik in deze module altijd toestand-eerst, tenzij duidelijk anders is aangegeven.
-````
 
-````{attention} Verdieping: events
+### Events
 Bij sommige platformen, waaronder Micro:bit, kun je gebruik maken van events. Events zijn gebeurtenissen die gekoppeld kunnen worden aan een stukje code. Een voorbeeld van een event is het indrukken van een knop. De Micro:bit houdt op de achtergrond in de gaten of een event plaatsvindt. Zodra het event gebeurt, start de Micro:bit met uitvoeren van de gekoppelde code. In pseudocode ziet dat er zo uit:
 
 ```{code} pseudocode
@@ -156,7 +158,6 @@ BIJ (knop indrukken)
 ```
 
 Gebruik in deze module altijd HERHAAL en geen BIJ (events), tenzij duidelijk anders is aangegeven.
-````
 
 ## Pseudocode controleren met een tabel
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886282
@@ -205,3 +206,40 @@ Test op je Micro:bit of je code goed werkt.
 ```
 ````
 
+## Verbreding: Coderen met gebeurtenissen
+
+In dit hoofdstuk hebben we met drukknoppen een lamp met toggle functie gemaakt. De code uit opdracht4code bekijkt de status van de drukknop om te bepalen of er een toestandsovergang is. Er zijn vier toestanden nodig,
+
+In [paragraaf %s](#physcomp-5-gebeurtenis) heb je geleerd dat er nog een tweede manier is om te bekijken of er een toestandsovergang is. Daarbij bekijkt je code of de status _veranderd_ is. We noemen dat een toestandsovergang bij een _gebeurtenis_.
+
+### Toestandsdiagram
+
+Door gebruik te maken van gebeurtenissen, hebben we nog maar twee toestanden nodig. Je ziet dat in het volgende toestandsdiagram.
+
+Onderstaande toestandsdiagram lijkt erg veel op het toestandsdiagram van de drukknop zonder toggle functie van [](#opdracht6-zondertoggle) uit het vorige hoofdstuk [](#ophyscomp-h6). Het verschil is dat het toestandsdiagram uit het vorige hoofdstuk de _status_ van een knop gebruikt, terwijl het toestandsdiagram hieronder een _gebeurtenis_ met een knop gebruikt. In het onderstaande toestandsdiagram kun je aan het woord `zojuist` zien dat het over gebeurtenissen gaat. Soms is het lastig te zien of er een status of een gebeurtenis bij een overgang hoort. Je moet dan goed de beschrijving lezen. Let op dat je zelf altijd heel duidelijk bent wanneer je een status of een gebeurtenis gebruikt.
+
+
+```{figure} 7-gebeurtenis-td.png
+:width: 400px
+Toestandsdiagram van een lamp met toggle functie op basis van overgangen bij gebeurtenis.
+```
+### Micro:bit code
+
+In Micro:bit code gebruik je het onderstaande blok om de status van een knop op te vragen.
+```{figure} 7-blok-status.png
+:width: 300px
+Blok voor de actuele status van een knop in Micro:bit-code
+```
+
+
+In Micro:bit code is er geen blok die aangeeft of een knop zojuist is ingedrukt. We kunnen dat oplossen door zelf een variabele en wat code te maken. De knop ziet er dan zo uit.
+```{figure} 7-blok-gebeurtenis.png
+:width: 300px
+Blok voor de actuele status van een knop in Micro:bit-code
+```
+
+De hele code van een lamp uit het bovenstaande toestandsdiagram, inclusief het maken van de knop voor een gebeurtenis, ziet er zo uit.
+
+```{figure} 7-gebeurtenis-code.png
+Code van een lamp die aan en uit gaat als een drukknop wordt ingedrukt (en losgelaten).
+```

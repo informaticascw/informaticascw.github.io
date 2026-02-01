@@ -1,3 +1,4 @@
+(physcomp-h8)=
 # Coderen met toestandsdiagram (opdrachten)
 Hier even de relatie met de eerder behandelde toestandsdiagrammen uitleggen, of bij beide dezelfde voorbeelden gebruiken?
 
@@ -19,7 +20,7 @@ Maak Micro:bit code voor de hotelschakelaar (versie 2). Gebruik het toestandsdia
 
 ``` {exercise} Lichtregulering
 :label: opdracht8-2a
-Maak Micro:bit code voor de lichtregulering (deel 1). Gebruik het toestandsdiagram van [](#opdracht3lichtregulering-1) uit hoofdstuk [](#physcomp-h6)
+Maak Micro:bit code voor de lichtregulering (deel 1). Gebruik het toestandsdiagram van [](#opdracht3lichtregulering-1) uit [hoofdstuk %s](#physcomp-h6)
 ```
 ``` {solution} opdracht8-2a
 :class: dropdown
@@ -28,21 +29,24 @@ Er is geen antwoord beschikbaar.
 
 ``` {exercise} Versterking: Lichtregulering
 :label: opdracht8-2b
-Maak Micro:bit code voor de lichtregulering (deel 2). Sluit daarvoor een ledje aan op je Micro:bit. Gebruik het toestandsdiagram van [](#opdracht3lichtregulering-2) uit hoofdstuk [](#physcomp-h6)
+Maak Micro:bit code voor de lichtregulering (deel 2). Sluit daarvoor een ledje aan op je Micro:bit. Gebruik het toestandsdiagram van [](#opdracht3lichtregulering-2) uit [hoofdstuk %s](#physcomp-h6)
 ```
 ``` {solution} opdracht8-2b
 :class: dropdown
-Tip: In hoofdstuk [](#physcomp-h4-2) staat hoe je een led aansluit op je Micro:bit en hoe je deze kunt dimmen.
+Tip: In [paragraaf %s](#physcomp-h4-2) staat hoe je een led aansluit op je Micro:bit en hoe je deze kunt dimmen.
 
 Er is geen antwoord beschikbaar.
 ```
 
-## Oefenopdracht: toegangscode (aanpassen aan drukknop)
+## Oefenopdracht: toegangscode
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-4886253
+
+Bij deze opdracht worden toestandsovergangen met _gebeurtenissen_ gebruikt. 
 
 Het volgende toestandsdiagram beschrijft een systeem voor toegang tot een beveiligde omgeving. Het systeem bestaat uit twee drukknoppen, A en B. Om toegang te krijgen tot het systeem moet de gebruiker de knopjes indrukken in de juiste volgorde. Dan gaat de deur van het slot. Zodra iemand er doorheen loopt valt de deur automatisch weer in het slot.
 
 ```{figure} 8-toegangscode-td.png
+Toestandsdiagram voor toegangscode.
 ```
 
 ``` {exercise} Toegangscode vraag a)
@@ -106,8 +110,3 @@ Maak het toestandsdiagram en de pseudocode. Sluit knop C aan op de Micro:bit en 
 
 Test je schakeling, klopt de werking met de beschrijving?
 ```
-
-
-## Oefenopdracht: toggle-functie van een drukknop (vooralsnog niet toevoegen)
-
-## Oefenopdracht: TV met 2 afstandsbedieningen (vooralsnog niet toevoegen)

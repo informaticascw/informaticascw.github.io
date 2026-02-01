@@ -5,6 +5,7 @@
 
 In dit deel vind je enkele voorbeelden, deels uitgewerkt, en deels zijn het opdrachten. Deze helpen om toestandsdiagrammen te begrijpen en te oefenen met het maken van toestandsdiagrammen. Kies zelf welke je interessant vindt.
 
+
 ## Voorbeeld: lichtbediening
 
 ### Zonder toggle functie (versie 1)
@@ -167,6 +168,8 @@ Legenda:
 ## Voorbeeld: lichtregulering
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379587
 
+Dit voorbeeld gebruikt toestandsovergangen bij gebeurtenissen. De gebeurtenis vindt plaats het moment dat de status van een knop verandert van niet-ingedrukt naar ingedrukt. Lees [het vorige hoofdstuk over toestandsovergangen met gebeurtenis of status](#physcomp-5-gebeurtenis) als je het verschil tussen een gebeurtenis en status niet begrijpt.
+
 ### Deel 1: drie standen
 
 In deze paragraaf ga je een toestandsdiagram maken voor een lamp waarvan de felheid kan worden ingesteld met twee drukkknoppen.
@@ -182,9 +185,7 @@ Het systeem heeft twee knoppen (A en B). Met knop A gaat de lamp feller branden.
 ```{exercise} Opdracht: maak toestandsdiagram lichtregulering deel 1
 :label: opdracht3lichtregulering-1
 
-Maak een toestandsdiagram voor dit systeem. 
-
-Gebruik toestandsovergangen bij gebeurtenissen. De gebeurtenis vindt plaats het moment dat de status van een knop verandert van niet-ingedrukt naar ingedrukt. Lees [het kader in het vorige hoofdstuk over toestandsovergangen met gebeurtenis of status](#physcomp-5-gebeurtenis) als je het verschil tussen een gebeurtenis of status niet begrijpt.
+Maak een toestandsdiagram voor dit systeem. Gebruik toestandsovergangen bij gebeurtenissen.
 
 Je kunt je toestandsdiagram voor jezelf testen en daarmee controleren of het klopt. Bijvoorbeeld, wat gebeurt er is als ik op A, B en dan weer B druk? Klopt dit met wat het systeem zou moeten doen?
 
