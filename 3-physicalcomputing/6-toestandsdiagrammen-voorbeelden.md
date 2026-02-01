@@ -84,8 +84,8 @@ Een hotelschakelaar werkt als volgt: als de stand van één van de schakelaars v
 Je hebt de volgende mogelijke toestandsovergangen:
 - SA aan (schakelaar A gaat omhoog)
 - SA uit (schakelaar A gaat omlaag)
-- SA aan (schakelaar B gaat omhoog)
-- SA uit (schakelaar B gaat omlaag)
+- SB aan (schakelaar B gaat omhoog)
+- SB uit (schakelaar B gaat omlaag)
 
 De mogelijke acties zijn:
 - lamp aan (doe ledje aan)
