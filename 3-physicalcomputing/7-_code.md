@@ -235,11 +235,11 @@ Blok voor de actuele status van een knop in Micro:bit-code
 In Micro:bit code is er geen blok die aangeeft of een knop zojuist is ingedrukt. We kunnen dat oplossen door zelf een variabele en wat code te maken. De knop ziet er dan zo uit.
 ```{figure} 7-blok-gebeurtenis.png
 :width: 300px
-Blok voor de actuele status van een knop in Micro:bit-code
+Blok voor gebeurtenis met een knop in Micro:bit-code
 ```
 
 De hele code van een lamp uit het bovenstaande toestandsdiagram, inclusief het maken van de knop voor een gebeurtenis, ziet er zo uit.
 
 ```{figure} 7-gebeurtenis-code.png
-Code van een lamp die aan en uit gaat als een drukknop wordt ingedrukt (en losgelaten).
+Code van een lamp die aan of uit gaat als er een gebeurenis is waarbij een drukknop wordt ingedrukt.
 ```
