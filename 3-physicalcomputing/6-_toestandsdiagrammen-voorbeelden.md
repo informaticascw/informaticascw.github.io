@@ -184,7 +184,7 @@ Het systeem heeft twee knoppen (A en B). Met knop A gaat de lamp feller branden.
 
 Maak een toestandsdiagram voor dit systeem. 
 
-Gebruik toestandsovergangen bij gebeurtenissen. De gebeurtenis vindt plaats het moment dat de status van een knop verandert van niet-ingedrukt naar ingedrukt. Lees [het kader in het vorige hoofdstuk over toestandsovergangen met gebeurtenis of status](=physcomp-5-gebeurtenis) als je het verschil tussen een gebeurtenis of status niet begrijpt.
+Gebruik toestandsovergangen bij gebeurtenissen. De gebeurtenis vindt plaats het moment dat de status van een knop verandert van niet-ingedrukt naar ingedrukt. Lees [het kader in het vorige hoofdstuk over toestandsovergangen met gebeurtenis of status](#physcomp-5-gebeurtenis) als je het verschil tussen een gebeurtenis of status niet begrijpt.
 
 Je kunt je toestandsdiagram voor jezelf testen en daarmee controleren of het klopt. Bijvoorbeeld, wat gebeurt er is als ik op A, B en dan weer B druk? Klopt dit met wat het systeem zou moeten doen?
 

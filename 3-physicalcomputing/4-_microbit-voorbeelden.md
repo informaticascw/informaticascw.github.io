@@ -149,7 +149,7 @@ Je hoeft maar weinig te doen om PWM te gebruiken. Je gebruikt ‘schrijf analoog
 
 In deze paragraaf leer je hoe je een externe drukknop kunt koppelen aan je Micro:bit. Je leert ook het verschil tussen een drukknop en een schakelaar.
 
-### Stap 1: Hoe werken een drukknoppen en schakelaars?
+### Stap 1: Hoe werkt een drukknop en een schakelaar?
 
 Bekijk eerst de onderstaande filmpje over de drukknop.
 
