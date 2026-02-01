@@ -1,3 +1,4 @@
+(physcomp-h6)=
 # Toestandsdiagrammen (opdrachten)
 
 % bron: https://maken.wikiwijs.nl/135422/Cyclus_1#!page-5379818

@@ -81,6 +81,7 @@ Let op: we gebruiken hier ‘pauzeer’ puur voor het testen van de afzonderlijk
 Test het programma. Werkt het?
 
 
+(physcomp-h4-2)=
 ## Voorbeeld: sterkte van een led aanpassen
 % bron: https://maken.wikiwijs.nl/135426/Inleiding___Micro_bit#!page-4889672
 
