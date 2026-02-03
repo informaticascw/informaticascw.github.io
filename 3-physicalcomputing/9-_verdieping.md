@@ -1,8 +1,7 @@
 (physcomp-h9)=
-# Verdieping
+# Verdieping: Timers
 
-## Timers
-### Toestandsdiagram met timer
+## Toestandsdiagram met timer
 % bron: https://maken.wikiwijs.nl/135424/Cyclus_2#!page-4903449
 
 Uit het voorbeeld met de PIR-sensor blijkt dat er een soort klokje in de sensor zit verwerkt. De sensor blijft een tijdje HIGH als output geven, ook al loopt er niemand meer voorbij. Je kunt echter ook zelf zo'n klokje programmeren, dat noemen we een timer. In dit hoofdstuk leer je om zelf een timer te gebruiken.
@@ -36,7 +35,7 @@ Los van deze toepassing met de lantaarnpaal is het belangrijk dat je timers leer
 Bij een pauze reageert het systeem nergens meer op. Bij een timer is dat anders, die werkt als een kookwekker. Het systeem gaat gewoon door terwijl de seconden op de kookwekker wegtikken. Op het moment dat de kookwekker afgaat, kan het systeem actie ondernemen.
 ```
 
-### Micro:bit code met timer
+## Micro:bit code met timer
 % bron: https://maken.wikiwijs.nl/135430/Cyclus_2___Micro_bit#!page-4972766
 
 In dit deel laten we zien hoe je een timer kunt programmeren voor de Micro:bit en welke blokken je daarvoor nodig hebt. We laten de volgende onderdelen zien:
@@ -96,7 +95,7 @@ Waarom staat er >= en niet = bij het controleren of de timer afloopt?
 De looptijd wordt bijgehouden in milliseconden. Het uitvoeren van de blokjes kost veel meer tijd dan 1 milliseconde, vaak zelfs meer dan 100 milliseconden. De kans is dus groot dat de looptijd niet precies gelijk is aan de eindtijd van de timer. Dus moet je ook controleren of de looptijd groter is dan de eindtijd, vandaar >= (groter of gelijk aan) en niet = (gelijk aan).
 ```
 
-### Opdracht: knipperend lampje
+## Opdracht: knipperend lampje
 % bron: https://maken.wikiwijs.nl/135424/Cyclus_2#!page-4904947
 
 ```{exercise} Toestandsdiagram voor een knipperend lampje
@@ -136,7 +135,7 @@ Hint: als je uitgaat van de twee lampjes die allebei aan en uit kunnen zijn, hoe
 Maak op je Micro:bit code voor twee knipperende lampjes. Elk lampje knippert op zijn eigen snelheid. Gebruik het toestandsdiagram uit de vorige opgaven. Gebruik van een timer, het blok `pauzeer` mag je niet gebruiken.
 ```
 
-### Opdracht: dodemansknop
+## Opdracht: dodemansknop
 % bron: https://maken.wikiwijs.nl/135424/Cyclus_2#!page-5382606
 
 ```{exercise} Dodemansknop toestandsdiagram
@@ -152,19 +151,3 @@ Maak een toestandsdiagram voor een prototype van een dodemansknop. Om de 10 seco
 
 IMaak op basis van het toestandsdiagram dat je voor deze opdracht hebt gemaakt een prototype op de Micro:bit. Bepaal zelf hoe je de knop, lamp en het alarm nabootst.
 ```
-
-## Toestandsdiagrammen koppelen (hier komt misschien ooit iets)
-Gebruik signalen
-
-Wellicht ook: abstractie door samenpakken van toestanden (en hergebruiken in code / subtoestanden)
-
-Wellicht ook hier (of elders): tellen in toestandsdiagrammen
-
-Ook leuk: voorbeeld van gekoppeld toestandsdiagram uitwerken op 1 Micro:bit en daarna op 2
-
-## Events op de Micro:bit (hier komt misschien ooit iets)
-
-Leg hier uit:
-1. wat events op de microbit zijn
-2. hoe die soms (hotelschakelaar voorbeeld) gebruikt kunnen worden om eenvoudige event-driven code te schrijven
-3. misschien iets uitleggen waarom dat niet op alle platformen eenvoudig werkt (maar met interrupts lukt het wel)
