@@ -61,7 +61,7 @@ Om de deur te openen moeten de volgende knoppen worden ingedrukt: ...
 ``` {solution} opdracht8-3a
 :class: dropdown
 Vul aan. \
-Als iemand de knoppen ABA invoert, dan is het systeem in toestand `2`` . 
+Als iemand de knoppen ABA invoert, dan is het systeem in toestand `2` . 
 Om de deur te openen moeten de volgende knoppen worden ingedrukt: `AAB`
 ```
 
