@@ -56,6 +56,3 @@ site:
     logo_text: Informatica
     #hide_outline: true # hide document navigation column on the right side of the contents, unfortunatelly the content doesn't go wider
     #hide_title_block: true # prevent header 1 on top of page being displayed
-  parts:
-    footer: footer.md
-  
