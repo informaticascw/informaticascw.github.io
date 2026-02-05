@@ -42,6 +42,7 @@ jobs:
         run: |
           myst build --html
           sed -i -e "s|http://localhost:3000|$CUSTOM_DOMAIN|g" $(grep -RIl "http://localhost:3000" ./_build)
+          sed -i '' -e 's|</body>|<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script></body>|g' $(find ./_build -name "*.html")
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
