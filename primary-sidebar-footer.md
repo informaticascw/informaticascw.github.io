@@ -1,6 +1,7 @@
 % The contents of this file is rendered and placed below the menu on the left part of the screen
 Powered by \
 [![MyST Wide Logo](https://mystmd.org/build/_assets/logo-wide-AK6GY6DB.svg)](https://mystmd.org/made-with-myst) \
+<div>
 <a
   href="https://dashboard.simpleanalytics.com/stanislas.informatica.nu?utm_source=stanislas.informatica.nu&utm_content=badge&affiliate=hatiq"
   referrerpolicy="origin"
@@ -18,3 +19,4 @@ Powered by \
     />
   </picture>
 </a>
+</div>
