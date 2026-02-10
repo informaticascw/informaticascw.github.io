@@ -21,11 +21,21 @@ Codespaces is een online codeeromgeving binnen GitHub. In Codespaces run je prog
     1. Maak een class voor elke lesgroep en elk jaar. Tip: Gebruik een systematische naamgeving, bijvoorbeeld 2425-4Hin1 volgens schema jaar-klas.
     2. Voeg leerlingen toe aan elke klas. Tip: Gebruik voornaam zonder speciale tekens en als nodig een letter van de achternaam.
     3. optioneel: nodig collega's uit als TA's in je klassen
+
+    :::{iframe} https://www.youtube.com/embed/41UOlxRIiLw
+    :width: 100%
+    Walk through video voor docenten: klas aanmaken in GitHub Classroom
+    :::
 4. Maak een opdracht aan (per opdracht)
     1. Kies de repository met startcode, deze wordt gekopieerd naar de school-leerling organisatie voor elke leerling of elk groepje. <br>
     Tip: Gebruik een systematische naamgeving voor de opdrachten, bijvoorbeeld 2425-4Hin1-website volgens schema jaar-klas-opdracht. <br>
     Gebruik dit systeem ook voor de voorvoegsels van de namen van de repositories en als je in groepjes werkt tevens voor de voorvoegsels van de namen van de teams.
     2. Deel de inschrijflink met je leerlingen.
+
+    :::{iframe} https://www.youtube.com/embed/EV2pSftqTI0
+    :width: 100%
+    Walk through video voor docenten: opdracht aanmaken in GitHub Classroom
+    :::
 5. Begeleid leerlingen (per opdracht)
     1. Gebruik [Leerlinghandleiding Codespaces](/help/codespaces/)
 6. Ga nakijken (per opdracht)
@@ -100,7 +110,7 @@ Codespaces maakt onderdeel uit van GitHub. CodeSpaces is geïntegreerd in GitHub
 
 Met een gratis GitHub account kun je per maand 60 uur gebruik maken van Codespaces en gemiddeld 15 GB opslag gebruiken. Je kunt je gebruik inzien, bij overschrijding van de limit wordt Codespaces (niet GitHub) geblokkeerd totdat de maand voorbij is. 
 
-Eén codespace vraagt ongeveer 1 GB data, tegen de opslag limiet loop je normaliter niet aan. 
+Eén codespace vraagt ongeveer 1 tot 5 GB data, tegen de opslag limiet loop je normaliter niet aan. 
 
 De 60 uur is voldoende voor bijna alle leerlingen. Een enkele leerling die door de limiet gaat kan een 2e GitHub account aanmaken op een ander email adres, zichzelf als collaborator toevoegen aan de repositories waarin die werkt en dan weer 60 uur vooruit.
 
@@ -113,10 +123,9 @@ Login op GitHub, ga naar een repository, klik op de groene code knop en maak een
 ### Codespaces: Alternatieven
 
 Alle onderstaande alternatieven kunnen samenwerken met GitHub, maar zijn ook zonder GitHub te gebruiken.
-- https://gitpod.io/, zelfde look and feel en nagenoeg dezelfde mogelijkheden als Codespaces, inclusief editor VS Code.
-- https://replit.com/, in 2017-2020 begonnen als online multi-language platform voor kleine stukjes code, inmiddels fors gegroeid kwa mogelijkheden en aantal gebruikers.
-
-Wij hebben enkele jaren Gitpod (vwo) en replit (havo) gebruikt. In 2023 hebben we een geslaagde pilot in 5-vwo gedraaid met Codespaces, ondermeer vanwege de naadloze integratie met GitHub. De firewall van de nieuwe internetaanbieder van de school blokkeerde gebruik op schoolcomputers. In schooljaar 24/25 willen we Gitpod gebruiken, zowel voor de havo als voor het vwo.
+- https://replit.com/, in 2017-2020 begonnen als online multi-language platform voor kleine stukjes code, inmiddels fors gegroeid kwa mogelijkheden en aantal gebruikers. Stand 2022: gratis aanbod ingeperkt.
+- https://gitpod.io/, zelfde look and feel en nagenoeg dezelfde mogelijkheden als Codespaces, inclusief editor VS Code. Stand 2024: gratis aanbod ingeperkt.
+- https://codesandbox.io/, ondersteutn (net als gitpod en codespaces) devcontainers, Git en VS Code. Stand 2024: niet getest in klas.
 
 ## Wat is GitHub Classroom?
 
@@ -131,7 +140,7 @@ Wat wel kan:
 - Bij het inschrijven krijgen leerlingen een kopie van een template-repository uit GitHub die de docent bij de opdracht meegeeft.
 
 Wat niet kan:
-- Template-repository aanpassen nadat opdracht is uitgezet. Sinds januari 2024 is er beta functionaliteit beschikbaar waarmee dit wel kan. Zie https://github.blog/changelog/2024-01-22-migrating-github-classroom-assignment-repository-creation-from-create-from-template-to-forks-public-beta/
+- Template-repository aanpassen nadat opdracht is uitgezet. Sinds 2024 is er functionaliteit beschikbaar waarmee dit wel kan.
 - Groepjes aanpassen nadat opdracht is uitgezet. Je kunt dit wel handmatig in GitHub doen door de teams die Classroom aanmaakt in GitHub aan te passen.
 
 ### Classroom: Gratis aanbod
@@ -156,16 +165,21 @@ Alternatieven voor Classroom:
 ## Veelgestelde vragen
 
 Heb je een voorbeeld-repository om mee aan de slag te gaan?
-- Mail ons even voor de laatste versie, of ga zelf op zoek tussen onze template-repositories op
-  [https://github.com/orgs/emmauscollege/repositories?q=template](https://github.com/orgs/emmauscollege/repositories?q=template)
+- Mail ons even, of zoek tussen template-repositories van bijvoorbeeld:
+    - [https://github.com/orgs/informatica-actief/repositories](https://github.com/orgs/informatica-actief/repositories?q=template%3Atrue+archived%3Afalse)
+    - [https://github.com/orgs/informaticascw/repositories](https://github.com/orgs/informaticascw/repositories?q=template%3Atrue+archived%3Afalse) of
+    - [https://github.com/orgs/emmauscollege/repositories](https://github.com/orgs/emmauscollege/repositories?q=template%3Atrue+archived%3Afalse)
 
-Ik zie geen open poorten Codespaces, hoe kan dat?
-- Sommige scholen blokkeren verkeer naar https://euw.rel.tunnels.api.visualstudio.com in hun firewall. Een work around is om de link naar de juiste poort op de server zelf te typen. Als je een webserver draait op poort 8080, dan doe je dat als volgt:
-    - Knip de link van je Codespace boven in je browser naar een nieuw tabblad (de link lijkt op https://xxxxxx-xxxxxx-xxxxxx.github.dev)
-    - Verander de link in https://xxxxxx-xxxxxx-xxxxxx-8080.app.github.dev (dus voeg -8080.app toe)
-    - Je ziet nu de webpagina die je in je codespace gemaakt hebt.
+Codespaces geeft de melding "It seems like you are offline"
+- Sommige scholen blokkeren verkeer naar https://euw.rel.tunnels.api.visualstudio.com in hun firewall. 
+- Controleer of je de Codespace kunt openen als je je computer vanaf huis of via de 5G verbinding van je mobiel met het internet verbindt.
+- Neem contact op met je firewall beheerder of gebruik een andere internettoegang.
+- Informatie die je firewall beheerder nodig heeft staat op https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/security
 
-De merge-conflicten zijn lastig op te lossen, is er een simpelere manier van werken?
+Hoe gaat GitHub om met privacy?
+- Juridische documentatie staat op https://docs.github.com/en/site-policy/privacy-policies
+
+Samenwerken in GitHub is lastig, is er een simpelere manier van werken?
 - Gebruik de plugin live-share, waardoor leerlingen tegelijk kunnen typen in dezelfde codespace. De ene leerling nodigt de andere uit.
   
 ## Documentatie
