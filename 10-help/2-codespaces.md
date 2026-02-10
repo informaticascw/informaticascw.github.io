@@ -17,6 +17,34 @@ Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode m
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
 3. Je maakt je eigen {term}`Codespace` door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 
+:::{note} Een Codespace met startcode maken zonder link van je docent
+:class: dropdown
+Als je geen docent hebt die je een link kan geven naar {term}`GitHub Classroom`, dan kun je een {term}`Codespace` met startcode maken in je eigen GitHub-account.
+
+1. Zoek een repository die past bij je wensen op 
+    - [https://github.com/orgs/informaticascw/repositories](https://github.com/orgs/informaticascw/repositories?q=template%3Atrue+archived%3Afalse) of
+    - [https://github.com/orgs/informatica-actief/repositories](https://github.com/orgs/informatica-actief/repositories?q=template%3Atrue+archived%3Afalse)
+2. Maak een {term}`repository` van het template: 
+    - klik op de groene knop `Use this template`, een pull-down menu verschijnt
+    - klik op `Create a new repository`, een nieuwe pagina verschijnt, 
+    - vul een naam voor je {term}`repository` in, 
+    - wijzig de visibility van `Public` naar `Private`, 
+    - klik op de groene knop `Create repository` onderaan de pagina, wacht enkele seconden tot de nieuwe repository gemaakt is.
+4. Nodig iedereen waarmee je wilt samenwerken uit: 
+    - Klik op `Settings` (rechtsboven), links verschijnt een menu, 
+    - klik op `Collaborators`, een tab verschijnt.
+5. Herhaal voor elke persoon:
+    - klik op de knop `Add people`, een invoerveld verschijnt, 
+    - voer het email adres in van een persoon waarmee je wilt samenwerken, selecteer het juiste email adres zodra het verschijnt, 
+    - klik op de knop `Add ...`
+6. Maak een {term}`Codespace` van je {term}`repository`: 
+    - klik in het menu linksboven op `Code`, de startpagina van je repository verschijnt,
+    - klik op de groene knop `Code`, een pull-down menu verschijnt, 
+    - klik op de tab `Codespaces`, 
+    - klik op de groene knop `Create codespace`, 
+    - wacht 1 tot 3 minuten tot de Codespace is gemaakt en gestart.
+:::
+
 ## Werken aan je project in een Codespace
 
 Elke les gebruik je je {term}`Codespace` om aan je project te werken. Je volgt steeds de stappen hieronder.
@@ -92,7 +120,7 @@ Wijzigingen van je maatje die jij hebt overschreven kun je terughalen:
 ```{attention}
 :class: dropdown
 ## Opmerkingen voor ervaren git-gebruikers
-Ben je een ervaren git-gebruiker? Lees dan deze paragraaf waarin wordt uitgelegd welke aanpassingen aan de instellingen van git zijn gemaakt in de configuratie van de Codespace die voor projecten worden gebruikt.
+De standaardinstellingen voor git zijn aangepast in de configuratie-bestanden van de Codespaces, zodat git gemakkelijker te gebruiken is voor leerlingen.
 
 Commit & Sync
 : De "Commit & Sync" knop doet vier dingen met één klik: Stage all changes, Commit, Pull en Push
@@ -216,9 +244,11 @@ Als stap 3 niet werkt, probeer dan stap 4.
 ```{tip} Merge conflict oplossen
 :class: dropdown
 
-*Ik heb een merge conflict, hoe los ik dat op?*
+Met de configuratie van git die we sinds leerjaar 2025/2026 gebruiken, kiest git automatisch de laatste versie van elk bestand. Daardoor zijn er geen merge conflicten meer mogelijk. Het kan daardoor wel gebeuren dat oude versies worden overschreven. In de tip hierboven staat hoe je overschreven wijzigingen terug kunt halen.
 
-Kijk deze video, daarin wordt uitgelegd hoe je een merge conflict in VS Code oplost.<br>
+*Ik heb toch een merge conflict, hoe los ik dat op?*
+
+Kijk dan deze video. daarin wordt uitgelegd hoe je een merge conflict in VS Code oplost.<br>
 [https://www.youtube.com/watch?v=HosPml1qkrg](https://www.youtube.com/watch?v=HosPml1qkrg)
 
 Als je er met de video niet uitkomt en er is niemand in de buurt die je kan helpen, dan kun je het volgende doen.
@@ -289,7 +319,7 @@ Je kunt 3 dingen doen:
 
 :::{glossary}
 Codespace
-: Tijdelijke computer bij Microsoft waar je code kunt wijzigen en uitvoeren via je browser.
+: Tijdelijke computer bij Microsoft waar je via een browser code kunt wijzigen en uitvoeren.
 
 GitHub
 : Website waar je code kunt bewaren en delen.
