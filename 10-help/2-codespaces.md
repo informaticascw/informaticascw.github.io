@@ -9,7 +9,7 @@ Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode m
 2. Klik op sign-up.
 3. Gebruik je email adres van school.
 4. Kies een wachtwoord dat je terug kunt vinden.
-5. Kies als username je voornaam met de eerste letter van je achternaam, als die al bezet is voeg je een nummer toe. Bijvoorbeeld jamesb007
+5. Kies als username je voornaam met een nummer om het uniek te maken. Bijvoorbeeld james123007
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 
 ### Maak een Codespace met startcode voor je opdracht
@@ -44,7 +44,7 @@ Het hangt van de programmeertaal af hoe je kunt bekijken wat je code voor result
 
 #### HTML
 1. Start een webserver in de Codespace, bij de meeste startcode gebeurt dit automatisch als je de Codespace start. De webserver zorgt ervoor dat de HTML-bestanden uit de Codespace door een browser op je computer kunnen worden geladen.
-2. Open een browser-venster met het `index.html` bestand uit je Codespace. Klik hiervoor op Ports, klik daarna op de link met het adres van de webserver.
+2. Open een browser-venster met het `index.html` bestand uit je Codespace. Klik hiervoor op `Ports`, klik daarna op de link met het adres van de webserver.
 
 #### Python
 1. Type in de terminal `python main.py`, het programma start<br>
