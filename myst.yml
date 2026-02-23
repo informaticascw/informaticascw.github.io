@@ -49,7 +49,7 @@ project:
 site:
   template: book-theme
   options:
-    folders: true # keeps folder names in URL, bug: doesn't work with static if you you use {toc} in you .md files (links don't work)
+    folders: true # keeps folder names in URL
     outline_maxdepth: 1
     favicon: images/informatica-logo.ico
     logo: images/informatica-logo.svg
