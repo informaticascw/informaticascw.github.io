@@ -35,5 +35,6 @@ Jouw school?
 ## I&I conferentie 10 november 2022
 
 Locatie: Utrecht\
-Onderwerp: Praktische Opdrachten op het Emmauscollege Rottterdam
-[Conferentiepagina](https://ieni.github.io/ieni2022/informatica/emmaus.html)
+Onderwerp: Praktische Opdrachten op het Emmauscollege Rottterdam\
+[Conferentiepagina](https://ieni.github.io/ieni2022/informatica/emmaus.html)\
+[presentatieslides](20221110-emmauscollege.pdf)
