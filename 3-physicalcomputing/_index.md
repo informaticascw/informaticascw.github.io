@@ -1,7 +1,7 @@
 ---
 title: Physical Computing
 subtitle: Micro:bit programmeren met toestandsdiagrammen
-date: 2026-01-10
+# date: 2026-01-10
 ---
 (physicalcomputing-homepage)=
 Deze module is een bewerkte versie van het keuzethema Physical Computing dat ontwikkeld is door SLO.

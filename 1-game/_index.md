@@ -1,11 +1,11 @@
 ---
 title: Game
 subtitle: Game maken met python en pygame
-date: 2025-05-01
-authors:
-  - name: Sander van Geest
-    affiliations:
-      - Stanislascollege Westplantsoen
+# date: 2025-05-01
+# authors:
+#  - name: Sander van Geest
+#    affiliations:
+#      - Stanislascollege Westplantsoen
 ---
 (game-homepage)=
 Hier vind je alle informatie over de Python Game opdracht.
