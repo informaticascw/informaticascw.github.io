@@ -11,12 +11,6 @@ Het oorspronkelijke lesmateriaal is te vinden op WikiWijs\
 https://maken.wikiwijs.nl/135434/Physical_Computing_geheel
 ```
 
-```{warning} Work in progress
-In het schooljaar 25/26 gaan we deze aangepaste versie van het keuzethema gebruiken, tot die tijd zijn we bezig met de ontwikkeling.
-
-Status:
-- Gereed voor havo (periode 3): h1, h2, h3, h4, h5, h6, h7, h8, h9, voor docenten
-- Suggesties voor vwo (periode 4): 
-  - verbeteringen op basis van ervaring met havo doorvoeren 
-  - ingewikkelder uitbreidingen
-```
+::: {toc} Inhoudsopgave
+:context:children
+:::

@@ -13,3 +13,7 @@ Hier vind je alle informatie over de Python Game opdracht.
 ```{figure} cover.png
 Plaatje van https://openai.com/chatgpt/
 ```
+
+::: {toc} Inhoudsopgave
+:context:children
+:::
