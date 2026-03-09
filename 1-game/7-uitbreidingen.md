@@ -29,7 +29,6 @@ Je kunt je game uniek maken door er uitbreidingen aan toe te voegen. Je kunt daa
 ```{attention} Ideeen voor uitbreidingen
 Ter inspiratie staan hier een aantal ideeën voor uitbreidingen. Uitbreidingen met één of twee sterren zijn eenvoudiger dan uitbreidingen met drie of vier sterren.
 
-```{attention} Ideeen voor uitbreidingen
 Uitbreiding: Bal die steeds sneller gaat ⭐️
 : Een eenvoudige manier om dit te doen, is telkens als er een blok verwijderd wordt, de snelheid van het blok in de x en y richting te vermenigvuldigen met een kommagetal dat groter is dan 1.0. Op deze manier kan het met twee regels code en maakt je spelletje een heel klein beetje spannender. Dit is een makkelijke uitbreiding, nog niet genoeg om een maantje of zonnetje te verdienen.
 
