@@ -5,7 +5,22 @@ Pagina met hulp voor docenten die met de online ontwikkelomgeving Codespaces aan
 
 Codespaces is een online codeeromgeving binnen GitHub. In Codespaces run je programma's in een container in de cloud. Codespaces maakt gebruik van de webversie van de editor Visual Studio Code, daarmee maak je wijzigingen in je Codespace. Wijzigingen sla je op (push) in GitHub. 
 
-## Stappenplan: Codespaces gebruiken in je klas
+## Codespaces incidenteel gebruiken in je klas
+
+Om Codespaces een keer te proberen met enkele leerlingen kun je onderstaande video volgen. 
+
+Leerlingen hergebruiken een bestaande configuratie voor Codespaces. De leerling is baas over de code en deelt die met de docent. Deze aanpak vergt weinig voorbereiding van de docent, maar enige ervaring van de docent met GitHub is gewenst.
+
+:::{iframe} https://www.youtube.com/embed/phEfM4Yg0pA
+:width: 100%
+Walk through video voor docenten: leerlingen incidenteel laten werken met GitHub Codespaces
+:::
+
+## Stappenplan: Codespaces structureel gebruiken in je klas
+
+Gebruik onderstaande stappenplan om Codespaces meerdere jaren in meerdere klassen te gebruiken. 
+
+Het onderstaande stappenplan voor structureel vergt meer voorbereiding dan de bovenstaande aanpak voor incidenteel gebruik, maar biedt voordelen voor grotere aantallen leerlingen en opdrachten. De leerling schrijft in via GitHub Classroom. De docent kan de configuratie voor Codespaces aanpassen. De code van de leerling staat binnen de GitHub-organisatie van de docent en de docent bepaalt de toegangsrechten.
 
 1. Maak organisaties in GitHub (eenmalig)
     1. Maak github account
