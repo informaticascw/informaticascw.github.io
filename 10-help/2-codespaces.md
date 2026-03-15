@@ -17,7 +17,7 @@ Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode m
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
 3. Je maakt je eigen {term}`Codespace` door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 
-:::{note} Een Codespace met startcode maken zonder link van je docent
+:::{note} Maak een Codespace met startcode voor je opdracht **zonder link** naar GitHub Classroom
 :class: dropdown
 Als je geen docent hebt die je een link kan geven naar {term}`GitHub Classroom`, dan kun je een {term}`Codespace` met startcode maken in je eigen GitHub-account.
 
