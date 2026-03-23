@@ -2,19 +2,24 @@
 
 Materiaal van bijeenkomsten voor docenten.
 
-## I&I conferentie 25 maart 2026 (onder voorbehoud)
-Locatie: Utrecht\
-Onderwerp: Codespaces
+## Inspiratiedag 25 maart 2026
+- Locatie: ICT College in Nieuwegein
+- Organisatie: i&i, Fundament Informatica, informaticaActief en NexEd
+- Onderwerp: Codespaces
+- [Presentatieslides](10-codespaces_ia_20260325.pptx)
 
 ## Regiobijeenkomst 26 mei 2025
-Locatie: TU Delft\
-[presentatieslides Codespaces](10-Presentatie-Codespaces-Regiobijeenkomst-26mei2025.pptx)
+- Locatie: TU Delft
+- Onderwerp: Codespaces
+- [Presentatieslides](10-Presentatie-Codespaces-Regiobijeenkomst-26mei2025.pptx)
 
 ## I&I conferentie 7 november 2024
-Locatie: Universiteit Utrecht
-- [presentatieslides Arcadekast](10-arcadekast_ieni_20241107.pptx)
+- Locatie: Universiteit Utrecht
+- Onderwerp: Arcadekast maken
+- [Presentatieslides](10-arcadekast_ieni_20241107.pptx)
 
-### Scholen met een Arcade
+:::{seealso} Scholen met een Arcade
+:class:dropdown
 
 Emmauscollege, Rotterdam
 : [games spelen in je browser](https://informatica.emmauscollege.nl/arcade)
@@ -32,9 +37,12 @@ Lek en Linge
 Jouw school?
 : Heb je een arcade of wil je er eentje? mail gees_at_stanislascollege.nl
 
+:::
+
+
 ## I&I conferentie 10 november 2022
 
-Locatie: Utrecht\
-Onderwerp: Praktische Opdrachten op het Emmauscollege Rottterdam\
-[Conferentiepagina](https://ieni.github.io/ieni2022/informatica/emmaus.html)\
-[presentatieslides](20221110-emmauscollege.pdf)
+- Locatie: Utrecht
+- Onderwerp: Praktische Opdrachten op het Emmauscollege Rottterdam
+- [Conferentiepagina](https://ieni.github.io/ieni2022/informatica/emmaus.html)
+- [Presentatieslides](20221110-emmauscollege.pdf)
