@@ -6,7 +6,7 @@ Materiaal van bijeenkomsten voor docenten.
 - Locatie: ICT College in Nieuwegein
 - Organisatie: i&i, Fundament Informatica, informaticaActief en NexEd
 - Onderwerp: Codespaces
-- [Presentatieslides](10-codespaces_ia_20260325.pptx)
+- [Presentatieslides](10-Presentatie-Codespaces-IA-20260325.pptx)
 
 ## Regiobijeenkomst 26 mei 2025
 - Locatie: TU Delft
