@@ -23,6 +23,7 @@ Deze sensoren en actuatoren moet je kunnen gebruiken:
 - Losse led’s aan/uit en dimmen
 - Losse piezo buzzer
 - Timer
+- Een verassingssensor waarover je informatie krijgt, maar die je niet eerder gebruikt hebt [vwo]
 
 Leerdoelen over aansluitingen op de Micro:bit zijn
 - Uitleggen hoe een breadboard intern verbonden is en het kunnen gebruiken.
