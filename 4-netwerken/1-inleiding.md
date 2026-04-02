@@ -2,8 +2,8 @@
 # Inleiding
 
 ## Leerdoelen
-; de onderwerpen zijn redelijk compleet
-; de werkwoorden die aangeven tot op welk niveau (RTTI, Bloom etc) leerlingen ermee moeten kunnen werken ontbreken nog
+% de onderwerpen zijn redelijk compleet
+% de werkwoorden die aangeven tot op welk niveau (RTTI, Bloom etc) leerlingen ermee moeten kunnen werken ontbreken nog
 
 Lagenmodel
 - OSI model (of TCP/IP model)
