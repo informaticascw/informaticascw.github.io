@@ -99,19 +99,6 @@ Maak de onderstaande opstelling (die is gelijk aan Voorbeeld: aansluiten led). J
 ```{figure} 4-leddim-aansluitschema.png
 ```
 
-```{exercise} Vraag over pinnen
-:label: opdracht2stelling2
-
-Geef aan of deze waar (vinkje) of niet-waar (geen vinkje) is.
-
-- [ ] Een pin kan zowel digitale als analoge signalen verwerken.
-```
-
-```{solution} opdracht2stelling2
-:class: dropdown
-De stelling is waar.
-```
-
 ### Stap 2 Programma maken
 Test of de led werkt, bijvoorbeeld met onderstaande programma. Dit programma laat het lampje steeds met een andere sterkte branden. Daarbij is 1023 de maximale waarde.
 
@@ -142,6 +129,19 @@ Je hoeft maar weinig te doen om PWM te gebruiken. Je gebruikt ‘schrijf analoog
 
 ```{figure} 4-pwm-code.png
 :width: 300px
+```
+
+```{exercise} Vraag over pinnen
+:label: opdracht2stelling2
+
+Geef aan of deze waar (vinkje) of niet-waar (geen vinkje) is.
+
+- [ ] Een pin kan zowel digitale als analoge signalen verwerken.
+```
+
+```{solution} opdracht2stelling2
+:class: dropdown
+De stelling is waar.
 ```
 
 ## Voorbeeld: aansluiten drukknop
