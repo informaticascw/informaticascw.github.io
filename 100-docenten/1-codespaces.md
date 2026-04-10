@@ -1,3 +1,7 @@
+---
+site:
+  outline_maxdepth: 2
+---
 (docenten-codespaces)=
 # Codespaces voor docenten
 
@@ -26,42 +30,42 @@ Gebruik onderstaande stappenplan om Codespaces meerdere jaren in meerdere klasse
 - De leerling schrijft in via GitHub Classroom.
 - De code van de leerling staat binnen de GitHub-organisatie van de docent en de docent bepaalt de toegangsrechten.
 
-1. Maak organisaties in GitHub (eenmalig)
-    1. Maak github account
-    2. Maak twee organisaties, één voor docenten (vanaf nu: schooldocent) en één voor leerlingen (vanaf nu: schoolleerling)
-    3. Nodig collega informaticadocenten van je school uit als owner van beide organisaties
-    4. Optioneel: vraag de gratis educatiestatus aan voor je github account en zet daarmee je abonnement voor je organisaties om van free naar team
-2. Maak startcode voor opdrachten (eenmalig)
-    1. Kopieer wat voorbeelden van anderen: maak een fork van een repository van iemand anders en zet die in je schooldocent organisatie
-    2. optioneel: startcode aanpassen
-    3. optioneel: aanpassen devcontainer configuratie
-    4. optioneel: aanpassen vscode configuratie
-3. Maak klassen in GitHub Classroom (jaarlijks)
-    1. Maak een class voor elke lesgroep en elk jaar. Tip: Gebruik een systematische naamgeving, bijvoorbeeld 2425-4Hin1 volgens schema jaar-klas.
-    2. Voeg leerlingen toe aan elke klas. Tip: Gebruik voornaam zonder speciale tekens en als nodig een letter van de achternaam.
-    3. optioneel: nodig collega's uit als TA's in je klassen
+### 1. Maak organisaties in GitHub (eenmalig)
+1. Maak github account
+2. Maak twee organisaties, één voor docenten (vanaf nu: schooldocent) en één voor leerlingen (vanaf nu: schoolleerling)
+3. Nodig collega informaticadocenten van je school uit als owner van beide organisaties
+4. Optioneel: vraag de gratis educatiestatus aan voor je github account en zet daarmee je abonnement voor je organisaties om van free naar team
+### 2. Maak startcode voor opdrachten (eenmalig)
+1. Kopieer wat voorbeelden van anderen: maak een fork van een repository van iemand anders en zet die in je schooldocent organisatie
+2. optioneel: startcode aanpassen
+3. optioneel: aanpassen devcontainer configuratie
+4. optioneel: aanpassen vscode configuratie
+### 3. Maak klassen in GitHub Classroom (jaarlijks)
+1. Maak een class voor elke lesgroep en elk jaar. Tip: Gebruik een systematische naamgeving, bijvoorbeeld 2425-4Hin1 volgens schema jaar-klas.
+2. Voeg leerlingen toe aan elke klas. Tip: Gebruik voornaam zonder speciale tekens en als nodig een letter van de achternaam.
+3. optioneel: nodig collega's uit als TA's in je klassen
 
-    :::{iframe} https://www.youtube.com/embed/41UOlxRIiLw
-    :width: 100%
-    Walk through video voor docenten: klas aanmaken in GitHub Classroom
-    :::
-4. Maak een opdracht aan (per opdracht)
-    1. Kies de repository met startcode, deze wordt gekopieerd naar de school-leerling organisatie voor elke leerling of elk groepje. <br>
-    Tip: Gebruik een systematische naamgeving voor de opdrachten, bijvoorbeeld 2425-4Hin1-website volgens schema jaar-klas-opdracht. <br>
-    Gebruik dit systeem ook voor de voorvoegsels van de namen van de repositories en als je in groepjes werkt tevens voor de voorvoegsels van de namen van de teams.
-    2. Deel de inschrijflink met je leerlingen.
+:::{iframe} https://www.youtube.com/embed/41UOlxRIiLw
+:width: 100%
+Walk through video voor docenten: klas aanmaken in GitHub Classroom
+:::
+### 4. Maak een opdracht aan (per opdracht)
+1. Kies de repository met startcode, deze wordt gekopieerd naar de school-leerling organisatie voor elke leerling of elk groepje. <br>
+Tip: Gebruik een systematische naamgeving voor de opdrachten, bijvoorbeeld 2425-4Hin1-website volgens schema jaar-klas-opdracht. <br>
+Gebruik dit systeem ook voor de voorvoegsels van de namen van de repositories en als je in groepjes werkt tevens voor de voorvoegsels van de namen van de teams.
+2. Deel de inschrijflink met je leerlingen.
 
-    :::{iframe} https://www.youtube.com/embed/EV2pSftqTI0
-    :width: 100%
-    Walk through video voor docenten: opdracht aanmaken in GitHub Classroom
-    :::
-5. Begeleid leerlingen (per opdracht)
-    1. Gebruik [Leerlinghandleiding Codespaces](/help/codespaces/)
-6. Ga nakijken (per opdracht)
-    1. Bekijk het werk p github in de organisatie school-leerling.<br>
-    Tip: je kunt alle bestanden downloaden onder de groene knop "Code" (dit kan per repository, niet voor alle repositories tegelijk) of het werk openen in een Codespace<br>
-    Tip: onder "commits" kun je zien wanneer de laatste wijziging is gemaakt, je kunt een oude versie kiezen als er na de afgesproken inleverdatum nog gewijzigd is.<br>
-    Tip: per bestand kun je onder "blame" zien welke regels op welk moment door wie zijn toegevoegd of gewijzigd<br>
+:::{iframe} https://www.youtube.com/embed/EV2pSftqTI0
+:width: 100%
+Walk through video voor docenten: opdracht aanmaken in GitHub Classroom
+:::
+### 5. Begeleid leerlingen (per opdracht)
+1. Gebruik [Leerlinghandleiding Codespaces](/help/codespaces/)
+### 6. Ga nakijken (per opdracht)
+1. Bekijk het werk p github in de organisatie school-leerling.<br>
+Tip: je kunt alle bestanden downloaden onder de groene knop "Code" (dit kan per repository, niet voor alle repositories tegelijk) of het werk openen in een Codespace<br>
+Tip: onder "commits" kun je zien wanneer de laatste wijziging is gemaakt, je kunt een oude versie kiezen als er na de afgesproken inleverdatum nog gewijzigd is.<br>
+Tip: per bestand kun je onder "blame" zien welke regels op welk moment door wie zijn toegevoegd of gewijzigd<br>
 
 ## Wat is GitHub?
 
@@ -69,7 +73,7 @@ GitHub is een online omgeving waar programmeurs code opslaan en delen. GitHub is
 
 Het kost tijd om Git te leren begrijpen, maar een team dat Git begrijpt kan veel efficienter werken. Leeringen die beginnen met programmeren werken veelal samen tegelijk achter 1 computer of typen tegelijk online in hetzelfde document. Het typen en runnen van code moet dan synchroon gebeuren. Professionele teams van programmeurs verdelen werk, maken en testen dat in hun eigen kopie van de omgeving en voegen stukjes code die werken toe aan het gezamenlijke product. Zo is er altijd een werkende versie van het product en kan iedereen zijn eigen versie op elk moment runnen.
 
-### GitHub: Functionaliteit
+### Functionaliteit
 
 Functionaliteit van GitHub:
 - Online opslaan van code
@@ -80,13 +84,13 @@ Functionaliteit van GitHub:
 - API beschikbaar
 - ...
 
-### GitHub: Gratis aanbod
+### Gratis aanbod
 
 Git is open-source.
 
 GitHub is eigendom van Microsoft. Met een gratis account kun je bijna alle functionaliteit gebruiken. De betaalde functies zijn gericht op software-bedrijven, in het onderwijs heb je die niet nodig.
 
-### GitHub: Aan de slag
+### Aan de slag
 
 Tips voor gebruik:
 - Maak een gratis GitHub account aan en start met het maken van repositories.
@@ -101,7 +105,7 @@ Tips voor gebruik:
 - Er zijn instellingen in Git die het gemakkelijker maken voor beginners om ermee te werken, bijvoorbeeld dat alle changes automatisch gestaged worden, dat bij commit automatisch geprobeerd wordt te pullen en pushen, een merge-editor aanzetten die helpt met het oplossen van merge-conflicten etc. In de template-repositories van Emmauscollege vind je de instellingen die wij handig vinden.
 - Voor grotere projecten kun je gebruik maken van branches. Een branch bevat een nieuwe functies die meerdere commits bevat. Als de feature klaar is, dan merge je de branch in de main branche. Je kunt incidenten aanmaken om bij te houden welke bugs er zijn of welke uitbreidingen nog gedaan moeten worden. De indicenten kun je koppelen aan wijzigingen in de code. Dit kan handig zijn voor grotere projecten, bijvoorbeeld in 6-vwo. 
 
-### GitHub: Alternatieven
+### Alternatieven
 
 GitHub wordt heel veel gebruikt, als je specifieke wensen hebt dan zijn er alternatieven voor GitHub.
 - Git lokaal op je PC installeren en via de commandline je code opslaan op een andere git-server dan GitHub.
@@ -111,7 +115,7 @@ GitHub wordt heel veel gebruikt, als je specifieke wensen hebt dan zijn er alter
 
 Codespaces is een online ontwikkelomgeving voor alle programmeertalen.
 
-### Codespaces: Functionaliteit
+### Functionaliteit
 
 Functionaliteit van Codespaces:
 - Virtual machine in de cloud waarop je een Docker image kunt draaien. Het Docker image kun je zelf volledig configureren. 
@@ -123,7 +127,7 @@ Functionaliteit van Codespaces:
 Wat kan niet:
 - Een Codespace dag en nacht laten draaien kan niet, want als je de browser afsluit dan stopt de Codespace na enige tijd (half uur). Als een Codespace stopt dan blijven de bestanden in de Codespace bewaard, dus je kunt de Codespace later weer opnieuw starten. Als een Codespace langere tijd (30 dagen) niet gebruikt is, dan wordt hij gewist. De bestanden uit de Codespace verdwijnen dan, wat je vanuit de CodeSpace in GitHub hebt gezet blijft uiteraard wel bestaan.
 
-### Codespaces: Gratis aanbod
+### Gratis aanbod
 
 Codespaces maakt onderdeel uit van GitHub. CodeSpaces is geïntegreerd in GitHub. Je GitHub account gebruik je voor CodeSpaces. 
 
@@ -135,11 +139,11 @@ De 60 uur is voldoende voor bijna alle leerlingen. Een enkele leerling die door 
 
 Een docent die door de limieten heen gaat kan creditcardgegevens en een bestedingslimiet toevoegen aan zijn account. Dat is normaal gesproken niet nodig. Een tweede account aanmaken kan ook.
 
-### Codespaces: Aan de slag
+### Aan de slag
 
 Login op GitHub, ga naar een repository, klik op de groene code knop en maak een Codespace. Er wordt een standaard image van een linux server gestart en je bestanden uit de repository worden gekopieerd naar de server. Je kunt de Codespace configureren door een devcontainer.json bestand in de .devcontainer map te plaatsen. Open het Source-Control tab links in het scherm om wijzigingen te bewaren in GitHub. 
 
-### Codespaces: Alternatieven
+### Alternatieven
 
 Alle onderstaande alternatieven kunnen samenwerken met GitHub, maar zijn ook zonder GitHub te gebruiken.
 - https://replit.com/, in 2017-2020 begonnen als online multi-language platform voor kleine stukjes code, inmiddels fors gegroeid kwa mogelijkheden en aantal gebruikers. Stand 2022: gratis aanbod ingeperkt.
@@ -150,7 +154,7 @@ Alle onderstaande alternatieven kunnen samenwerken met GitHub, maar zijn ook zon
 
 Met GitHub Classroom kun je opdrachten klaarzetten voor (grote aantallen) leerlingen.
 
-### Classroom: Functionaliteit
+### Functionaliteit
 
 Wat wel kan:
 - Opdrachten aanmaken en uitnodigingen versturen per email naar leerlingen.
@@ -162,11 +166,11 @@ Wat niet kan:
 - Template-repository aanpassen nadat opdracht is uitgezet. Sinds 2024 is er functionaliteit beschikbaar waarmee dit wel kan.
 - Groepjes aanpassen nadat opdracht is uitgezet. Je kunt dit wel handmatig in GitHub doen door de teams die Classroom aanmaakt in GitHub aan te passen.
 
-### Classroom: Gratis aanbod
+### Gratis aanbod
 
 Je gebruikt je GitHub account voor classroom. Classroom is geheel gratis, zonder beperkingen. Je kunt de educatie-status aanvragen voor je GitHub account, maar dat is niet nodig. 
 
-### Classroom: Aan de slag
+### Aan de slag
 
 Tips voor gebruik:
 - Maak een organisatie in GitHub waarin je alle leerlingwerkstukken neerzet. Gebruik een andere organisatie voor je eigen voorbeelden en templates. Op die manier hou je werk van leerlingen en van docenten gemakkelijk uit elkaar.
@@ -174,7 +178,7 @@ Tips voor gebruik:
 - Geef herkenbare identifiers voor leerlingen op in Classroom. Voornamen werkt handiger dan leerlingnummers. Leerlingen koppelen bij inschrijven hun GitHub account aan de identifier. Deze identifiers worden door Classroom toegevoegd aan de namen van de repositories voor leerlingen.
 - Leerlingen kiezen hun eigen GitHub accountnaam en hun eigen teamnaam, deze zie je terug in de teams die Classroom in GitHub aanmaakt. Hou in de gaten dat de namen die leerlingen kiezen okee zijn.
 
-### Classroom: Alternatieven
+### Alternatieven
 
 Alternatieven voor Classroom:
 - Laat leerlingen zelf hun repositories aanmaken, eventueel op basis van een template-repository die de docent online zet. Voor een eerste keer en tot enkele tientallen leerlingen is dit een prima oplossing.
