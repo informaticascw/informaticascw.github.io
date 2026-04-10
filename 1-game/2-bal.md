@@ -42,7 +42,7 @@ Tijdens opdracht a) wordt gevraagd om in te loggen op GitHub.
 
 :::{note} Opdracht b) Run de startcode
 - Start je game. Gebruikt daarvoor het commando `python main.py` in de terminal van je codespace.
-- Open het grafische scherm van je game. Klik daarvoor op de link van de webserver. Die link staat op het tabblad ports (bij de terminal). Je kunt klikken op de wereldbol die verschijnt als je met je muis de link aanwijst. 
+- Open het grafische scherm van je game. Klik daarvoor op de link van de GUI. Die link staat op het tabblad ports (bij de terminal). Je kunt klikken op de wereldbol die verschijnt als je met je muis de link aanwijst. 
 
 Als het gelukt is, dan zie je een zwarte achtergrond met bovenin een blauwe bal die beweegt.
 :::
