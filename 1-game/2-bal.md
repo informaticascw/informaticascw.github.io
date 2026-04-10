@@ -54,7 +54,7 @@ Als het gelukt is, dan zie je een zwarte achtergrond met bovenin een blauwe bal 
   [https://stanislas.informatica.nu/game/codespaces/](#game-codespaces)
 ```
 
-```{note} Opdracht c) Verander de achtergonndkleur
+```{note} Opdracht c) Verander de achtergrondkleur
 Verander in de code de achtergrondkleur van je spel. Doe het volgende:
 -	Run de startcode. De achtergrond is zwart, bovenin beweegt een blauwe bal.
 -	Verander in de code de achtergrondkleur van je spel. 
