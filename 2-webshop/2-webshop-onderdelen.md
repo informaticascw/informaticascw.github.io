@@ -11,21 +11,21 @@ Schermafdruk van webshop aan het begin van dit hoofdstuk.
 In dit hoofdstuk ga je kleine wijzigingen maken in je webshop, zoals teksten, kleuren en plaatjes aanpassen. Je maakt kennis met alle onderdelen van de webshop en leert hoe die samenwerken.
 
 ## Opdracht: Startcode voor je webshop 
-In deze opdracht krijgt iedereen uit jouw groepje een ontwikkelomgeving met toegang tot de startcode. Er is één ontwikkelomgeving per persoon en één kopie van de startcode per groepje. De ontwikkelomgeving heet een **codespace**. De map met code heet een **repository**. De repository en de codespace zijn onderdeel van de **GitHub**-website.
+In deze opdracht krijgt iedereen uit jouw groepje een ontwikkelomgeving met startcode. Er is één ontwikkelomgeving per persoon en één kopie van de startcode per groepje. De ontwikkelomgeving heet een **codespace**. De map met code heet een **repository**. De repository en de codespace zijn onderdeel van de **GitHub**-website.
 
 ```{attention} GitHub account
 Tijdens opdracht a) wordt gevraagd om in te loggen op GitHub.
 
-Inloggen op GitHub als je al eerder een GitHub-account op school hebt gemaakt:
-: 1. Klik op **sign in**.
-: 2. Gebruik je schoolmail en het wachtwoord dat je eerder voor GitHub gekozen hebt. 
+**Inloggen op GitHub als je al eerder een GitHub-account op school hebt gemaakt:**
+1. Klik op **sign in**.
+2. Gebruik je schoolmail en het wachtwoord dat je eerder voor GitHub gekozen hebt. 
 
-Inloggen op GitHub als je nog geen GitHub-account hebt:
-: 1. Klik op sign up.
-: 2. Gebruik je email adres van school.
-: 3. Kies een wachtwoord dat je terug kunt vinden.
-: 4. Kies als username je voornaam met je leerlingnummer. Bijvoorbeeld `james112007`
-: 5. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
+**Inloggen op GitHub als je nog geen GitHub-account hebt:**
+1. Klik op sign up.
+2. Gebruik je email adres van school.
+3. Kies een wachtwoord dat je terug kunt vinden.
+4. Kies als username je voornaam met je leerlingnummer. Bijvoorbeeld `james112007`
+5. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 ```
 
 :::{note} Opdracht a)

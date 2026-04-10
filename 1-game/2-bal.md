@@ -10,20 +10,56 @@ Schermafdruk van spelletje met basisstap 0 t/m 3.
 De basisstappen zijn genummerd van stap 0 tot en met stap 21. In elke basisstap staat onder ‘opdracht’ wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De toelichting geeft aan hoe je de opdracht kunt maken. De tips kun je bekijken als je er niet uitkomt. 
 
 (game-stap-0)=
-## Stap 0: Run de startcode 
+## Stap 0: Kopieer startcode voor je game 
+In deze stap krijgt iedereen uit jouw groepje een ontwikkelomgeving met startcode. Er is één ontwikkelomgeving per persoon en één kopie van de startcode per groepje. De ontwikkelomgeving heet een **codespace**. De map met code heet een **repository**. De repository en de codespace zijn onderdeel van de **GitHub**-website.
 
-In ‘de opdracht’ staat wat je code moet doen. Lees dit aandachtig door, voordat je begint te coderen. De toelichting geeft aan hoe je de opdracht kunt maken. De tips kun je bekijken als je er niet uitkomt.
+```{attention} GitHub account
+Tijdens opdracht a) wordt gevraagd om in te loggen op GitHub.
 
-```{note} Opdracht
+**Inloggen op GitHub als je al eerder een GitHub-account op school hebt gemaakt:**
+1. Klik op **sign in**.
+2. Gebruik je schoolmail en het wachtwoord dat je eerder voor GitHub gekozen hebt. 
+
+**Inloggen op GitHub als je nog geen GitHub-account hebt:**
+1. Klik op sign up.
+2. Gebruik je email adres van school.
+3. Kies een wachtwoord dat je terug kunt vinden.
+4. Kies als username je voornaam met je leerlingnummer. Bijvoorbeeld `james112007`
+5. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
+```
+
+:::{note} Opdracht a) Maak een Codespace met startcode
+1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
+2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld `anne-jasmin-noah`. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
+3. Je maakt je eigen codespace door op de knop `Create Codespace` te klikken. Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Meer informatie over de ontwikkelomgeving Codespaces vind je op\
+  [https://stanislas.informatica.nu/game/codespaces/](#game-codespaces)
+```
+
+:::{note} Opdracht b) Run de startcode
+- Start je game. Gebruikt daarvoor het commando `python main.py` in de terminal van je codespace.
+- Open het grafische scherm van je game. Klik daarvoor op de link van de webserver. Die link staat op het tabblad ports (bij de terminal). Je kunt klikken op de wereldbol die verschijnt als je met je muis de link aanwijst. 
+
+Als het gelukt is, dan zie je een zwarte achtergrond met bovenin een blauwe bal die beweegt.
+:::
+
+```{hint} Tips
+:class: dropdown
+- Bij de startcode zit een `README.md` bestand. Hierin staat hoe je code kunt starten, stoppen, wijzigingen en opslaan.
+- Meer informatie over de ontwikkelomgeving Codespaces vind je op\
+  [https://stanislas.informatica.nu/game/codespaces/](#game-codespaces)
+```
+
+```{note} Opdracht c) Verander de achtergonndkleur
 Verander in de code de achtergrondkleur van je spel. Doe het volgende:
 -	Run de startcode. De achtergrond is zwart, bovenin beweegt een blauwe bal.
 -	Verander in de code de achtergrondkleur van je spel. 
 -	Start je code opnieuw.
 -	Sla de nieuwe versie van je code op in GitHub.
-```
-
-```{attention} Toelichting
-Voor deze opdracht krijg je startcode. De startcode beweegt een bal bovenin het scherm van links naar rechts naar links enzovoort. De startcode moet je uitvoeren (Engels: run) en wijzigen (Engels: edit) in een ontwikkelomgeving. Je docent vertelt hoe je aan de startcode komt en welke ontwikkelomgeving je mag gebruiken.
 ```
 
 ```{hint} Tips
