@@ -33,7 +33,7 @@ Informatie voor docentenover de online ontwikkelomgeving Codespaces vind je in [
 Wijzigingshistorie Python Game
 
 V1.3 april schooljaar 25/26
-- Kennistest (beschikbaar in Woots) toegevoegd aan beoordeling, om meeliften en overschrijven te beperken.
+- Begripstest (beschikbaar in Woots) toegevoegd aan beoordeling, om meeliften en overschrijven te beperken.
 
 V1.2 april schooljaar 24/25
 - Layout aangepast voor publicatie in website-vorm (op basis van MySTmd)
