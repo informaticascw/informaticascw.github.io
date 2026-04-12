@@ -4,10 +4,6 @@
 Schermafdruk van een voorbeeld van een spelletje aan het einde van dit hoofdstuk.
 ```
 
-```{figure} scherm6.png
-Schermafdruk van een voorbeeld van een webshop aan het einde van dit hoofdstuk.
-```
-
 Nu je basisgame af is kan het echte werk beginnen. Voeg een aantal uitbreidingen toe aan je game. Gebruik je creativiteit en laat zien dat je complexere code aankunt. 
 
 ## Arcadekast
@@ -30,7 +26,7 @@ Je kunt je game uniek maken door er uitbreidingen aan toe te voegen. Je kunt daa
 Ter inspiratie staan hier een aantal ideeën voor uitbreidingen. Uitbreidingen met één of twee sterren zijn eenvoudiger dan uitbreidingen met drie of vier sterren.
 
 Uitbreiding: Bal die steeds sneller gaat ⭐️
-: Een eenvoudige manier om dit te doen, is telkens als er een blok verwijderd wordt, de snelheid van het blok in de x en y richting te vermenigvuldigen met een kommagetal dat groter is dan 1.0. Op deze manier kan het met twee regels code en maakt je spelletje een heel klein beetje spannender. Dit is een makkelijke uitbreiding, nog niet genoeg om een maantje of zonnetje te verdienen.
+: Een eenvoudige manier om dit te doen, is telkens als er een blok verwijderd wordt, de snelheid van het blok in de x en y richting te vermenigvuldigen met een kommagetal dat groter is dan 1.0. Op deze manier kan het met twee regels code en maakt je spelletje een heel klein beetje spannender. Dit is een makkelijke uitbreiding, nog niet genoeg om een ster te verdienen.
 
 Uitbreiding: Blokken die van kleur veranderen ⭐️ of ⭐️⭐️
 : Een eenvoudige manier om dit te doen, is plaatjes van blokken met een andere kleur inlezen en dan meerdere blokken op dezelfde plek zetten.
