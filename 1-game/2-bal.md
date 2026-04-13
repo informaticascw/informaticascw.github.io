@@ -94,7 +94,7 @@ Stukje code uit `main.py` die game te initialiseert:
 ```python
 # init game
 pygame.init()
-font = pygame.font.SysFont('default', 64)
+font = pygame.font.Font('PressStart2P-Regular.ttf', 24)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
 fps_clock = pygame.time.Clock()
 ```
