@@ -28,8 +28,11 @@ Ter inspiratie staan hier een aantal ideeën voor uitbreidingen. Uitbreidingen m
 Uitbreiding: Bal die steeds sneller gaat ⭐️
 : Een eenvoudige manier om dit te doen, is telkens als er een blok verwijderd wordt, de snelheid van het blok in de x en y richting te vermenigvuldigen met een kommagetal dat groter is dan 1.0. Op deze manier kan het met twee regels code en maakt je spelletje een heel klein beetje spannender. Dit is een makkelijke uitbreiding, nog niet genoeg om een ster te verdienen.
 
-Uitbreiding: Blokken met meerdere kleuren tekenen ⭐️ of ⭐️⭐️
+Uitbreiding: Blokken van verschillende kleuren tekenen ⭐️ of ⭐️⭐️
 : Een eenvoudige manier om dit te doen, is plaatjes van blokken met een andere kleur inlezen, een lijst met de kleur van elk blok maken en die lijst bij het tekenen gebruiken om te bepalen welke plaatje op het scherm gezet wordt.
+
+Uitbreiding: Blokken laten barsten bij de eerste hit en verdwijnen bij de tweede hit ⭐️ of ⭐️⭐️
+: Lees het plaatje van een gebroken blok in, maak een lijst met tellers die aangeeft hoeveel keer elk blok nog geraakt moet worden, bij het raken van een blok haal je één van de teller af, als de teller nul is, dan verwijder je het blok. Bij het tekenen kies je een heel blok als de teller twee is en een gebarsten blok als de teller één is.
 
 Uitbreiding: Beter kaats-algoritme voor plankje ⭐️ of ⭐️⭐️
 : In het basisspel kaatst de bal erg eenvoudig tegen de plank. Als je de horizontale snelheid waarmee de bal de plank verlaat, laat afhangen van de plek waar de bal de plank raakt, dan wordt het spel beter speelbaar.
