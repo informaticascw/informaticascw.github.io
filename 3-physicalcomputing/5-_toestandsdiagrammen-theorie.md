@@ -75,6 +75,7 @@ Dat kan op de volgende vier manieren:
 - 50ct + 1 euro + 50ct
 - 50ct + 50ct + 1 euro
 - 1 euro + 50ct + 50ct
+- 1 euro + 1 euro
 
 De meeste automaten geven teveel ingeworpen muntjes direct bij het inwerpen terug. Daarom tellen we die mogelijkheden niet mee in dit antwoord.
 ```
