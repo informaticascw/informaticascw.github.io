@@ -70,7 +70,7 @@ Op hoeveel manieren kun je twee euro inwerpen?
 
 ```{solution} opdracht3frisbedienen
 :class: dropdown
-Dat kan op de volgende vier manieren:
+Dat kan op de volgende vijf manieren:
 - 50ct + 50ct + 50ct + 50ct
 - 50ct + 1 euro + 50ct
 - 50ct + 50ct + 1 euro
