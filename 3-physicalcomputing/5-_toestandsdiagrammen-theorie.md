@@ -141,7 +141,7 @@ Het is echter wel verstandig om goed na te denken over wat er in alle gevallen g
 ```{table} 
 | Toestand ↓ / Toestandsovergang → | Inworp 50 cent | Inworp 1 euro | Selectie |
 | --- | --- | --- | --- | 
-| Start: | 0 euro | 0,5 euro | 1 euro | 0 euro |
+| Start: 0 euro | 0,5 euro | 1 euro | 0 euro |
 | 0,5 euro | 1 euro | |  |
 | 1 euro |  |  |  |
 | 1,5 euro |  |  |  | 	 
@@ -162,9 +162,9 @@ Maak de tabel hierboven af.
 ```{table}
 | Toestand ↓ / Toestandsovergang → | Inworp 50 cent | Inworp 1 euro | Selectie |
 | --- | --- | --- | --- | 
-| Start: | 0 euro | 0,5 euro | 1 euro | 0 euro |
+| Start: 0 euro | 0,5 euro | 1 euro | 0 euro |
 | 0,5 euro | 1 euro | 1,5 euro | 0,5 euro |
-| 1 euro | 2 euro | 2 euro | 1 euro |
+| 1 euro | 1,5 euro | 2 euro | 1 euro |
 | 1,5 euro | 2 euro | 2 euro | 1,5 euro | 	 
 | 2 euro | 2 euro | 2 euro | 0 euro: geef frisdrank |
 ```	
