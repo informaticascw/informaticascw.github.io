@@ -53,9 +53,9 @@ Beweeg de plank als de D-toets (rechts) of A-toets (links) is ingedrukt. Beweeg 
 
 ````{attention} Toelichting
 Kijken of de D-toets is ingedrukt doe je als volgt:
-`````
+```
 if keys[pygame.K_d] : # key d is down
-`````
+```
 ````
 
 ````{hint} Tips
