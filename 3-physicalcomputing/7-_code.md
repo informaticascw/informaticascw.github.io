@@ -202,6 +202,8 @@ Test op je Micro:bit of je code goed werkt.
 ````{solution} opdracht4code
 :class: dropdown
 % broncode voor plaatje op: https://makecode.microbit.org/_g78PvVU6aeDx
+Tip: Om blokjes met "toestand" te kunnen maken, moet je eerst een variabele met de naam "toestand" maken.
+
 ```{figure} 7-code-toggle.png
 ```
 ````
