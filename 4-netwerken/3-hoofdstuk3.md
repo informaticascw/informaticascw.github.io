@@ -20,7 +20,7 @@ Wil je dit ook kunnen? Zoek dan op hoe parity werkt.
 :::
 
 ## Functie van de datalink
-Frames versturen van en naar meerdere computers met een redelijke betrouwbaarheid.
+Met een redelijke betrouwbaarheid berichten versturen tussen meerdere systemen.
 
 ### Foutdetectie: Wat doen we met fouten
 - CRC
