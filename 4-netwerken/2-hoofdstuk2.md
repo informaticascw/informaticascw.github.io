@@ -31,14 +31,21 @@ Misschien herken je de volgende dingen die verkeerd kunnen gaan
 ## Functie van de fysieke laag
 Bits versturen tussen twee systemen.
 
-## Media
+### Media
 - utp
 - glasvezel
 - draadloos
 
-## Hoe onderscheiden we een 0 en een 1?
+### Hoe onderscheiden we een 0 en een 1?
 
-## Hoe snel zenden we?
+### Hoe snel zenden we?
 
-## Wanneer begint het zenden?
+### Wanneer begint het zenden?
 
+## Apparatuur
+
+### NIC
+Als het in de computer zit
+
+### modem
+Omzetten van ene naar andere media, als het in het netwerk zit.

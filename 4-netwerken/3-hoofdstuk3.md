@@ -22,12 +22,19 @@ Wil je dit ook kunnen? Zoek dan op hoe parity werkt.
 ## Functie van de datalink
 Frames versturen van en naar meerdere computers met een redelijke betrouwbaarheid.
 
-## Wat doen we met fouten
-Vooral een probleem bij draadloos.
+### Foutdetectie: Wat doen we met fouten
+- CRC
+- Vooral een probleem bij draadloos.
 
-## Voor wie is het bericht?
+### Adressering: Voor wie is het bericht?
 MAC-adressen
 
-## Hoe voorkomen we door elkaar praten?
+### Collision: Hoe voorkomen we door elkaar praten?
 Niet zo'n groot probleem bij LAN's met switches, maar wel bij Wifi.
 - detect collision or timeout of ack and retransmit after random time.
+
+### Broadcast: Bericht naar iedereen sturen?
+
+## Apparatuur: switch
+
+### Routering: forwarding table
