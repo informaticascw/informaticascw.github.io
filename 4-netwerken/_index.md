@@ -25,12 +25,12 @@ Uitleg over opmaak van deze website:
 
 % zolang deze module in myst.yml is gemarkeerd als hidden, moet de inhoudsopgave handmatig worden gemaakt
 - [Inleiding](netwerken/inleiding)
-- [hoofdstuk 1](netwerken/hoofdstuk1)
-- [hoofdstuk 2](netwerken/hoofdstuk2)
-- [hoofdstuk 3](netwerken/hoofdstuk3)
+- [Fysieke laag](netwerken/hoofdstuk2)
+- [Datalink laag](netwerken/hoofdstuk3)
 - [hoofdstuk 4](netwerken/hoofdstuk4)
 - [hoofdstuk 5](netwerken/hoofdstuk5)
 - [hoofdstuk 6](netwerken/hoofdstuk6)
 - [hoofdstuk 7](netwerken/hoofdstuk7)
 - [hoofdstuk 8](netwerken/hoofdstuk8)
+- [hoofdstuk 9](netwerken/hoofdstuk9)
 - [Voor de docent](netwerken/docent)
