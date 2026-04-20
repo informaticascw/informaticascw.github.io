@@ -6,11 +6,11 @@
 ::: {exercise} Klassikaal: 64 bits onthouden.
 :label: netwerken-h3-o1
 - Een vrijwillige leerling verlaat de klas.
-- De klas 49 getallen op het bord. Een getal is 0 of 1. De getallen worden in 7 rijen en 8 kolommen opgeschreven.
+- De klas schrijft 49 getallen op het bord. Een getal is 0 of 1. De getallen worden in 7 rijen en 7 kolommen opgeschreven.
 - De docent maakt een extra rij en een extra kolom om het extra moeilijk te maken. Er staan nu 8 x 8 = 64 getallen (bits) op het bord.
 - De vrijwillige leerling komt terug in het lokaal, krijgt 1 minuut om de getallen uit het hoofd te leren.
 - De vrijwillige leerling verlaat het lokaal.
-- De klas verandert 1 getal.
+- De klas verandert één getal.
 - De vrijwllige leerling komt het lokaal in en vertelt welk getal is veranderd.
 :::
 
