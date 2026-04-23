@@ -118,15 +118,14 @@ Opdrachten die niet voldoen aan de minimale eisen krijgen het cijfer 1,0.
 **Test**
 
 Een beperkt deel van je eindcijfer wordt bepaald door een test. 
-- De test wordt individueel beoordeeld. 
+- Het is niet nodig om voor de test te leren.
 - Tijdens de test laat je zien dat je de opgaven die je gemaakt hebt begrijpt. 
-- Het is niet nodig om voor de test te leren. 
-- De test bestaat uit multiple choice vragen en duurt ongeveer een kwartier. 
+- De test bestaat uit multiple choice vragen en duurt ongeveer tien minuten. 
 - Je docent geeft drie momenten op verschillende dagen waarop je de test kunt maken. 
 - Je mag de test maximaal twee keer doen, de hoogste score telt.
+- Als je de test geen enkele keer maakt, dan is je score voor de test 0 punten.
 - Je score krijg je zo snel na het maken van de test, als mogelijk direct bij inleveren. Inzage in de gemaakte test is mogelijk nadat de hele praktische opdracht is ingeleverd en nagekeken.
-
-Als je de test geen enkele keer maakt, dan is je score voor de test 0 punten.
+- De test wordt individueel beoordeeld. 
 
 **Beoordelingsmodel**
 
