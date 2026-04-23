@@ -309,6 +309,17 @@ Je kunt 3 dingen doen:
 - Verder werken in een lokaal geïnstalleerde VS Code met Docker, hiervoor heb je een PC of laptop nodig en moet je handig zijn met VS Code en Docker.
 ```
 
+```{tip} De GUI toont mijn oude programma
+:class: dropdown
+Het kan zijn dat de GUI (grafische scherm) nog verbonden is met een oude versie van je programma, Dat gebeurt als je programma niet goed afgesloten is, voordat je een nieuwe start.
+ 
+- Vraag een lijst van je programma's die nu worden uitgevoerd op door het volgende commando in de terminal van je Codespace te typen,<br>
+`pgrep -af "python main.py"`
+- Stop je programma's door het volgende commando in de terminal van je Codespace te typen,<br>
+`pkill -f "python main.py"`
+```
+
+
 ## Documentatie
 
 ```{seealso} Documentatie over VS Code
