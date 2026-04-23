@@ -109,6 +109,7 @@ Opdrachten die niet voldoen aan de minimale eisen krijgen het cijfer 1,0.
 **Test**
 
 Een beperkt deel van je eindcijfer wordt bepaald door een test. 
+- De test gaat over hoofdstuk 2 tot en met 6.
 - Het is niet nodig om voor de test te leren.
 - Tijdens de test laat je zien dat je de opgaven die je gemaakt hebt begrijpt. 
 - De test bestaat uit multiple choice vragen en duurt ongeveer tien minuten. 
