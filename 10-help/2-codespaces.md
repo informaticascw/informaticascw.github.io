@@ -311,14 +311,11 @@ Je kunt 3 dingen doen:
 
 ```{tip} De GUI toont mijn oude programma
 :class: dropdown
-Het kan zijn dat de GUI (grafische scherm) nog verbonden is met een oude versie van je programma, Dat gebeurt als je programma niet goed afgesloten is, voordat je een nieuwe start.
+Het kan zijn dat de GUI (grafische scherm) nog verbonden is met een oude versie van je programma, Dat gebeurt als je programma niet (of niet goed) afgesloten is, voordat je een nieuwe start.
  
-- Vraag een lijst van je programma's die nu worden uitgevoerd op door het volgende commando in de terminal van je Codespace te typen,<br>
-`pgrep -af "python main.py"`
-- Stop je programma's door het volgende commando in de terminal van je Codespace te typen,<br>
-`pkill -f "python main.py"`
+- Sluit alle terminals in je codespace. Een terminal sluit je door met je rechter muisknop in de terminal te klikken, daarna kies je `terminal afsluiten` in het popup-menu dat verschijnt. Herhaal dit tot je geen enkele terminal meer ziet.
+- Open één nieuwe terminal, dat kan met de toets [control]+[`]
 ```
-
 
 ## Documentatie
 
