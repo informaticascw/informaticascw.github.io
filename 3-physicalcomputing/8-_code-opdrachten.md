@@ -7,7 +7,7 @@ Hier even de relatie met de eerder behandelde toestandsdiagrammen uitleggen, of 
 
 ``` {exercise} Hotelschakelaar
 :label: opdracht8-1
-Maak Micro:bit code voor de hotelschakelaar (versie 2). Gebruik het toestandsdiagram met drie toestanden van [](#opdrachgt6-hotelknoppen) uit [hoofdstuk %s](#physcomp-h6).
+Maak Micro:bit code voor de hotelschakelaar (versie 2). Gebruik het toestandsdiagram {u}`met drie toestanden` van [](#opdrachgt6-hotelknoppen) uit [hoofdstuk {number}](#physcomp-h6).
 ```
 ```` {solution} opdracht8-1
 :class: dropdown
