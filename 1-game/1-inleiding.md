@@ -33,9 +33,9 @@ Een voorbeeld van een spel dat je kon spelen is Arkanoid. Arkanoid is een game w
 
 Voor deze opdracht heb je basiskennis nodig van programmeren in Python. Je hebt basiskennis als je geoefend hebt met variabelen, selectie (if-jes), iteratie (for-loop), functies en lijsten.
 
-```{image} pygame.png
+```{image} pygamece.png
 ```
-Deze opdracht maakt gebruik van Pygame. Pygame is een package voor Python waarmee je gemakkelijker grafische spelletjes kunt programmeren. Je hoeft niet eerder met Pygame geoefend te hebben om deze opdracht te kunnen maken.
+Deze opdracht maakt gebruik van Pygame-ce. Pygame-ce is een package voor Python waarmee je gemakkelijker grafische spelletjes kunt programmeren. Pygame-ce is afgeleid van Pygame. Je hoeft niet eerder met Pygame of Pygame-ce geoefend te hebben om deze opdracht te kunnen maken.
 
 ```{seealso} Python en Pygame
 Als je meer over Python of Pygame wilt weten, dan kun je de volgende naslagwerken gebruiken:
@@ -48,9 +48,9 @@ Uitgebreide informatie over Python
 : Begin bij de Tutorial, daarna kun je de Library Reference bekijken, als je alles wilt weten dan bekijk je daarna de Language Reference\
 https://docs.python.org/3/
 
-Alle mogelijkheden van de pygame library
+Alle mogelijkheden van de Pygame-ce library
 : Zoek ze op in de reference guide\
-https://www.pygame.org/docs/
+https://pyga.me/docs/
 
 De Pygame library beter begrijpen
 : Bekijk deze tutorial\
