@@ -41,10 +41,12 @@ jobs:
       - name: Build HTML Assets
         run: |
           myst build --html
-          # Replace localhost references with custom domain in robots.txt and sitemap
-          sed -i -e "s|http://localhost:3000|$CUSTOM_DOMAIN|g" $(grep -RIl "http://localhost:3000" ./_build)
+          # Replace localhost references with custom domain in robots.txt and sitemap.xml
+          find ./_build/html \( -name "robots.txt" -o -name "sitemap.xml" \) \
+            -exec sed -i -e "s|http://localhost:3000|$CUSTOM_DOMAIN|g" {} +
           # Inject simple analytics script into all HTML pages
-          sed -i -e 's|</body>|<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script></body>|g' $(grep -RIl '</body>' ./_build)
+          find ./_build/html -name "*.html" \
+            -exec sed -i -e 's|</body>|<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script></body>|g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
