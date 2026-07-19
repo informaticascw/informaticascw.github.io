@@ -44,4 +44,21 @@ Toetsvoorbereiding
 16. Samenvatting / herhaling
 17. Oefentoets
 
+## Materiaal voor verdere verdieping
+Voor docenten die meer willen weten van netwerken is hier een lijstje met materiaal.
 
+Boeken
+- Computer Networks<br>Tanenbaum, Feamster, Wetherall<br>SIXTH EDITION<br>Pearson Education Limited, 2021<br>ISBN 10: 1-292-37406-3<br>ISBN 13: 978-1-292-37406-2<br>eBook ISBN 13: 9781292374017 (dit boek wordt gebruikt op de TU Delft)
+
+Online gratis boeken
+- https://beta.computer-networking.info/syllabus/default/index.html
+- https://intronetworks.cs.luc.edu/
+
+Video's
+-	https://www.youtube.com/watch?v=Mad4kQ5835Y&list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg (via justin)
+-	https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi
+
+Instellingen die opleidingen geven
+- Stanford complete course info fall 2025: https://cs144.github.io/
+- Other university complete course (inclusing refernces tot complete academic books) https://courses.cs.washington.edu/courses/cse461/
+- MIT
