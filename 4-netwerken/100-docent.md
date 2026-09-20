@@ -54,6 +54,9 @@ Online gratis boeken
 - https://beta.computer-networking.info/syllabus/default/index.html
 - https://intronetworks.cs.luc.edu/
 
+Online gratis cursus
+- https://www.geeksforgeeks.org/computer-networks/basics-computer-networking/
+
 Video's
 -	https://www.youtube.com/watch?v=Mad4kQ5835Y&list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg (via justin)
 -	https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi
@@ -62,3 +65,8 @@ Instellingen die opleidingen geven
 - Stanford complete course info fall 2025: https://cs144.github.io/
 - Other university complete course (inclusing refernces tot complete academic books) https://courses.cs.washington.edu/courses/cse461/
 - MIT
+
+Sites voor docenten met lesmateriaal over netwerken
+- https://sleutelboek.eu/web/computernetwerken30 (gericht op vlaanderen, gratis aanmelden nodig, papieren boek zelf niet gratis en is ook nodig)
+- https://teachcomputing.org/curriculum/key-stage-4/networks (gericht op UK, ontwikkeld door overheid, gratis aanmelden nodig)
+- https://teachcomputerscience.com/a-level/exchanging-data/ (gericht op UK, betaald aanmelden nodig)
