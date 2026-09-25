@@ -7,7 +7,7 @@ subtitle: subtitel
 In deze module leer je hoe computers communiceren over internet.
 
 :::{attention} Work in progress
-In 26/27 periode 3 (start ongeveer januari 2027) willen we dit lesmateriaal gaan gebruiken in 5-vwo. 
+In 26/27 periode 3 (start ongeveer januari 2027), of een jaar later, willen we dit lesmateriaal gaan gebruiken in 5-vwo. 
 Tot die tijd werken we aan de ontwikkeling.
 
 Uitleg over opmaak van deze website:

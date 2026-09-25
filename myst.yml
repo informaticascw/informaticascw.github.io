@@ -23,10 +23,8 @@ project:
       children:
         - pattern: 3-physicalcomputing/*-*.md
     - file: 4-netwerken/_index.md
-      hidden: true
       children:
         - pattern: 4-netwerken/*-*.md
-          hidden: true
     - file: 5-gdevelop/_index.md
       #children:
         #- pattern: 5-gdevelop/*-*.md
