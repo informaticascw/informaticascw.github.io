@@ -22,16 +22,3 @@ Uitleg over opmaak van deze website:
 ::: {toc} Inhoudsopgave
 :context:children
 :::
-
-% zolang deze module in myst.yml is gemarkeerd als hidden, moet de inhoudsopgave handmatig worden gemaakt
-- [Inleiding](netwerken/inleiding)
-- [Fysieke laag](netwerken/fysiek)
-- [Datalink laag](netwerken/datalink)
-- [hoofdstuk 4](netwerken/hoofdstuk4)
-- [hoofdstuk 5](netwerken/hoofdstuk5)
-- [hoofdstuk 6](netwerken/hoofdstuk6)
-- [hoofdstuk 7](netwerken/hoofdstuk7)
-- [hoofdstuk 8](netwerken/hoofdstuk8)
-- [hoofdstuk 9](netwerken/hoofdstuk9)
-- [Locaties](netwerken/adressen)
-- [Voor de docent](netwerken/docent)
