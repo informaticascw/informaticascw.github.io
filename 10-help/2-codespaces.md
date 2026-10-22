@@ -285,6 +285,14 @@ Login op GitHub en druk daarna nogmaals op de link.
 3. Klik in het menu op Format Document. Het document wordt aangepast zodat de code netjes inspringt.
 ```
 
+```{tip} De taal van de VS-code gebruikersinterface op Engels zetten
+:class: dropdown
+
+1. Open de Command Palette met de toets [F1] of de toetsencombinatie [Control]+[Shift]+[P].
+2. Kies Configure Display Language.
+3. Selecteer English (en). 
+```
+
 ```{tip} Hoeveel gratis usage heb ik nog?
 :class: dropdown
 Per maand krijg je gratis usage voor allerlei dingen, de belangrijkste voor jou zijn:
