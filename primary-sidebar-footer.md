@@ -2,7 +2,6 @@
 
   Powered by \
 [![MyST Wide Logo](https://mystmd.org/build/_assets/logo-wide-AK6GY6DB.svg)](https://mystmd.org/made-with-myst) \
-
 <a href="https://www.simpleanalytics.com/stanislas.informatica.nu?utm_source=stanislas.informatica.nu&utm_content=badge" referrerpolicy="origin" target="_blank">
   <picture>
     <source
