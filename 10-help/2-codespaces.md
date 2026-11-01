@@ -13,13 +13,14 @@ Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode m
 6. Bevestig je account door te klikken op de link in de mail die je ontvangt van GitHub.
 
 ### Maak een Codespace met startcode voor je opdracht
-1. De docent deelt een link naar {term}`GitHub Classroom` waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een {term}`repository` met startcode voor de opdracht. 
-2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
-3. Je maakt je eigen {term}`Codespace` door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
+1. Als dit je eerste opdracht in deze klas is, dan heb je een mail van {term}'Github' ontvangen met een uitnodiging om jezelf toe te voegen aan de klas. Login op Github en druk op de groene knop uit de mail.
+2. De docent deelt een link naar {term}`Classroom50` waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een {term}`repository` met startcode voor de opdracht. 
+3. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
+4. Je maakt je eigen {term}`Codespace` door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 
-:::{note} Maak een Codespace met startcode voor je opdracht **zonder link** naar GitHub Classroom
+:::{note} Maak een Codespace met startcode voor je opdracht **zonder link**
 :class: dropdown
-Als je geen docent hebt die je een link kan geven naar {term}`GitHub Classroom`, dan kun je een {term}`Codespace` met startcode maken in je eigen GitHub-account.
+Als je geen docent hebt die je een link kan geven naar {term}`Classroom50`, dan kun je een {term}`Codespace` met startcode maken in je eigen GitHub-account.
 
 1. Zoek een repository die past bij je wensen op 
     - [https://github.com/orgs/informaticascw/repositories](https://github.com/orgs/informaticascw/repositories?q=template%3Atrue+archived%3Afalse) of
@@ -340,7 +341,7 @@ Codespace
 GitHub
 : Website waar je code kunt bewaren en delen.
 
-GitHub Classroom
+Classroom50
 : Website waarmee docenten startcode voor opdrachten kunnen delen met leerlingen.
 
 Repository
