@@ -9,7 +9,7 @@ Pagina met hulp voor docenten die met de online ontwikkelomgeving Codespaces aan
 
 Codespaces is een online codeeromgeving binnen GitHub. In Codespaces run je programma's in een container in de cloud. Codespaces maakt gebruik van de webversie van de editor Visual Studio Code, daarmee maak je wijzigingen in je Codespace. Wijzigingen sla je op (push) in GitHub. 
 
-## Codespaces incidenteel gebruiken in je klas (zonder GitHub Classroom)
+## Codespaces incidenteel gebruiken in je klas
 
 Om Codespaces een keer te proberen met enkele leerlingen kun je onderstaande video volgen. 
 - Deze aanpak vergt weinig voorbereiding van de docent.
@@ -21,48 +21,44 @@ Om Codespaces een keer te proberen met enkele leerlingen kun je onderstaande vid
 Walk through video voor docenten: leerlingen incidenteel laten werken met GitHub Codespaces
 :::
 
-## Codespaces structureel gebruiken in je klas (met GitHub Classroom)
+## Codespaces structureel gebruiken in je klas (met Classroom50)
 
 Gebruik onderstaande stappenplan om Codespaces meerdere jaren in meerdere klassen te gebruiken. 
-- De docent zet opdrachten vooraf klaar in GitHub Classroom, dit vergt voorbereiding, ervaring met GitHub is een pré. 
-- De docent heeft overzicht van het onderhanden werk via GitHub Classroom.
-- De docent heeft meer mogelijkheden om de configuratie voor de Codespaces aan te passen.
-- De leerling schrijft in via GitHub Classroom.
+- De docent zet opdrachten vooraf klaar Classroom50, dit vergt voorbereiding, ervaring met GitHub is een pré, een account met education status (gratis aan de vragen) is vereist. 
+- De docent heeft overzicht van het onderhanden werk via Classroom50.
+- De leerling schrijft in via Classroom50.
 - De code van de leerling staat binnen de GitHub-organisatie van de docent en de docent bepaalt de toegangsrechten.
+
+Meer uitgebreide informatie staat op [https://github.com/foundation50/classroom50/wiki/Quickstart](https://github.com/foundation50/classroom50/wiki/Quickstart)
 
 ### 1. Maak organisaties in GitHub (eenmalig)
 1. Maak github account
 2. Maak twee organisaties, één voor docenten (vanaf nu: schooldocent) en één voor leerlingen (vanaf nu: schoolleerling)
 3. Nodig collega informaticadocenten van je school uit als owner van beide organisaties
-4. Optioneel: vraag de gratis educatiestatus aan voor je github account en zet daarmee je abonnement voor je organisaties om van free naar team
+4. Vraag de gratis educatiestatus aan voor je github account en zet daarmee je abonnement voor je organisaties om van free naar team
+5. Voeg je leerlingorganisatie toe aan Classroom50. Classroom50 past de instellingen van je repository aan, let op dat je bepaalde instellingen handmatig moet controleren.
 ### 2. Maak startcode voor opdrachten (eenmalig)
 1. Kopieer wat voorbeelden van anderen: maak een fork van een repository van iemand anders en zet die in je schooldocent organisatie
 2. optioneel: startcode aanpassen
 3. optioneel: aanpassen devcontainer configuratie
 4. optioneel: aanpassen vscode configuratie
-### 3. Maak klassen in GitHub Classroom (jaarlijks)
-1. Maak een class voor elke lesgroep en elk jaar. Tip: Gebruik een systematische naamgeving, bijvoorbeeld 2425-4Hin1 volgens schema jaar-klas.
-2. Voeg leerlingen toe aan elke klas. Tip: Gebruik voornaam zonder speciale tekens en als nodig een letter van de achternaam.
-3. optioneel: nodig collega's uit als TA's in je klassen
-
-:::{iframe} https://www.youtube.com/embed/41UOlxRIiLw
-:width: 100%
-Walk through video voor docenten: klas aanmaken in GitHub Classroom
-:::
+### 3. Maak klassen in Classroom50 (jaarlijks)
+1. Maak een class voor elke lesgroep en elk jaar. Tip: Gebruik een systematische naamgeving, bijvoorbeeld 2425-h4in1 volgens schema jaar-klas.
+2. Voeg leerlingen toe aan het roster van elke klas. Je leerlingen krijgen een email met een link waarmee ze zich kunnen aanmelden. Tip: laat de leerlingen vooraf thuis een GitHub account aanmaken, want bij het aanmaken van meedere accounts tegelijk in de klas heb je kans dat GitHub de toegang tijdelijk blokkeert.
 ### 4. Maak een opdracht aan (per opdracht)
-1. Kies de repository met startcode, deze wordt gekopieerd naar de school-leerling organisatie voor elke leerling of elk groepje. <br>
-Tip: Gebruik een systematische naamgeving voor de opdrachten, bijvoorbeeld 2425-4Hin1-website volgens schema jaar-klas-opdracht. <br>
-Gebruik dit systeem ook voor de voorvoegsels van de namen van de repositories en als je in groepjes werkt tevens voor de voorvoegsels van de namen van de teams.
-2. Deel de inschrijflink met je leerlingen.
+1. Zet de startcode voor je opdracht in de leerlingorganisatie. Je kunt dit doen door een template uit je docentenorganisatie te usen en daarna bij de instellingen het vinkje voor template aan te zetten. Leerlingen kunnen alle historie zien van het template in de leerlingorganisatie. Door het template uit de docentenorganisatie te usen, wordt enkel de laatste versie gekopieerd naar de leerlingorganisatie. Tip: gebruik een systematische naamgeving, bijvoorbeeld 2627-p1-website-template.
+2. Maak in Classroom50 een opdracht<br>
+- kies de template-repository met startcode uit de leerlingorganisatie, deze wordt gekopieerd naar de school-leerling organisatie voor elke leerling of elk groepje. <br>
+  Tip: Gebruik een systematische naamgeving voor de opdrachten, bijvoorbeeld p1-website volgens schema periode-onderwerp. <br>
+- kies of het een individuele of groepsopdracht is
+- zet een publicatiedatum, dan kunnen leerlingen via een inschrijflink inschrijven
+- de rest van de opties kun je ongewijzigd laten
+3. Deel de inschrijflink met je leerlingen.
 
-:::{iframe} https://www.youtube.com/embed/EV2pSftqTI0
-:width: 100%
-Walk through video voor docenten: opdracht aanmaken in GitHub Classroom
-:::
 ### 5. Begeleid leerlingen (per opdracht)
 1. Gebruik [Leerlinghandleiding Codespaces](/help/codespaces/)
 ### 6. Ga nakijken (per opdracht)
-1. Bekijk het werk p github in de organisatie school-leerling.<br>
+1. Bekijk het werk op Github in de organisatie school-leerling.<br>
 Tip: je kunt alle bestanden downloaden onder de groene knop "Code" (dit kan per repository, niet voor alle repositories tegelijk) of het werk openen in een Codespace<br>
 Tip: onder "commits" kun je zien wanneer de laatste wijziging is gemaakt, je kunt een oude versie kiezen als er na de afgesproken inleverdatum nog gewijzigd is.<br>
 Tip: per bestand kun je onder "blame" zien welke regels op welk moment door wie zijn toegevoegd of gewijzigd<br>
@@ -150,9 +146,9 @@ Alle onderstaande alternatieven kunnen samenwerken met GitHub, maar zijn ook zon
 - https://gitpod.io/, zelfde look and feel en nagenoeg dezelfde mogelijkheden als Codespaces, inclusief editor VS Code. Stand 2024: gratis aanbod ingeperkt.
 - https://codesandbox.io/, ondersteutn (net als gitpod en codespaces) devcontainers, Git en VS Code. Stand 2024: niet getest in klas.
 
-## Wat is GitHub Classroom?
+## Wat is Classroom50?
 
-Met GitHub Classroom kun je opdrachten klaarzetten voor (grote aantallen) leerlingen.
+Met Classroom50 kun je opdrachten klaarzetten voor (grote aantallen) leerlingen.
 
 ### Functionaliteit
 
@@ -163,24 +159,22 @@ Wat wel kan:
 - Bij het inschrijven krijgen leerlingen een kopie van een template-repository uit GitHub die de docent bij de opdracht meegeeft.
 
 Wat niet kan:
-- Template-repository aanpassen nadat opdracht is uitgezet. Sinds 2024 is er functionaliteit beschikbaar waarmee dit wel kan.
-- Groepjes aanpassen nadat opdracht is uitgezet. Je kunt dit wel handmatig in GitHub doen door de teams die Classroom aanmaakt in GitHub aan te passen.
-
+- In bulk gebruikersaccount op Github aanmaken, leerlingen moeten zelf hun Github account aanmaken.
+  
 ### Gratis aanbod
 
-Je gebruikt je GitHub account voor classroom. Classroom is geheel gratis, zonder beperkingen. Je kunt de educatie-status aanvragen voor je GitHub account, maar dat is niet nodig. 
+Je gebruikt je GitHub account voor Classroom50. Classroom50 is geheel gratis, zonder beperkingen. Je hebt wel de educatie-status nodig voor je GitHub account, zodat je de github organisatie waaraan je Classroom50 koppelt gratis kunt upgraden van free naar team.
 
 ### Aan de slag
 
 Tips voor gebruik:
 - Maak een organisatie in GitHub waarin je alle leerlingwerkstukken neerzet. Gebruik een andere organisatie voor je eigen voorbeelden en templates. Op die manier hou je werk van leerlingen en van docenten gemakkelijk uit elkaar.
-- Bij elke opdracht die je aanmaakt kunt je aangeven waarmee de naam van de repository die Classroom voor leerlingen in GitHub aanmaakt moet beginnen. Gebruik een systematische naam, dat maakt het vinden van klassen en leerlingen veel gemakkelijker. Bijvoorbeeld :2324-5hin1-website (jaar-klas-opdracht).
-- Geef herkenbare identifiers voor leerlingen op in Classroom. Voornamen werkt handiger dan leerlingnummers. Leerlingen koppelen bij inschrijven hun GitHub account aan de identifier. Deze identifiers worden door Classroom toegevoegd aan de namen van de repositories voor leerlingen.
-- Leerlingen kiezen hun eigen GitHub accountnaam en hun eigen teamnaam, deze zie je terug in de teams die Classroom in GitHub aanmaakt. Hou in de gaten dat de namen die leerlingen kiezen okee zijn.
+- Gebruik een systematische naam voor klassen en opdrachten, dat maakt het vinden van klassen en leerlingen veel gemakkelijker. Bijvoorbeeld :2324-5hin1 (jaar-klas) voor klassen en p1-website (periode-opdracht) voor de opdracht.
+- Leerlingen kiezen hun eigen GitHub accountnaam en hun eigen teamnaam, deze zie je terug in de repositories en teams die Classroom50 in GitHub aanmaakt. Hou in de gaten dat de namen die leerlingen kiezen okee zijn. Een systematische naam voor accounts is bijvoorbeeld voornaamleerlingnummer, bijvoorbeeld james112007.
 
 ### Alternatieven
 
-Alternatieven voor Classroom:
+Alternatieven voor Classroom60:
 - Laat leerlingen zelf hun repositories aanmaken, eventueel op basis van een template-repository die de docent online zet. Voor een eerste keer en tot enkele tientallen leerlingen is dit een prima oplossing.
 - De docent maakt de repositories met de hand aan. In een situatie met enkele tientallen leerlingen is dit prima te doen.
 - Gebruik eigen scripts om repo's aan te maken. Dit hebben wij enkele jaren gedaan, omdat Classroom toen nog niet betrouwbaar werkte.
@@ -211,6 +205,6 @@ To be added, er is heeeel veel te vinden.
     - The EXTREMELY helpful guide to merge conflicts [YouTube](https://youtu.be/HosPml1qkrg?si=r02MvcxlS9AbuPky)
 - Codespaces, officiele documentatie<br>
 [https://docs.github.com/en/codespaces](https://docs.github.com/en/codespaces)
-- GitHub Classroom, officiele documentatie<br>
-[https://docs.github.com/en/education/manage-coursework-with-github-classroom](https://docs.github.com/en/education/manage-coursework-with-github-classroom)
+- Classroom50, officiele documentatie<br>
+[https://github.com/foundation50/classroom50/wiki](https://github.com/foundation50/classroom50/wiki)
 
