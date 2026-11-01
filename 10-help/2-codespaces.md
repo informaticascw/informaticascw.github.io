@@ -16,7 +16,7 @@ Je start met een project. Daarvoor moet je een {term}`Codespace` met startcode m
 1. Als dit je eerste opdracht in deze klas is, dan heb je een mail van {term}'Github' ontvangen met een uitnodiging om jezelf toe te voegen aan de klas. Login op Github en druk op de groene knop uit de mail.
 2. De docent deelt een link naar {term}`Classroom50` waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een {term}`repository` met startcode voor de opdracht. 
 3. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld anne-jasmin-noah. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
-4. Je maakt je eigen {term}`Codespace` door op de knop "Create Codespace te klikken". Alle bestanden uit de GitHub repository worden gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
+4. Vanuit je repository maakt je een {term}`Codespace`. Dit staat onder de groene 'Code' knop, een exacte beschrijving staat in de [howto](#howto-create-codespace)). Als dit gelukt is dan worden alle bestanden uit de GitHub repository gekopieerd naar jouw Codespace. Dit kan enkele minuten duren.
 
 :::{note} Maak een Codespace met startcode voor je opdracht **zonder link**
 :class: dropdown
@@ -137,6 +137,7 @@ Branches
 
 ### Werken met Codespaces en repositories
 
+(howto-open-codespace)=
 ```{tip} Hoe open ik mijn laatste Codespace?
 :class: dropdown
 1. Open GitHub en login.
@@ -145,6 +146,7 @@ Branches
 4. Klik op de Codespace die je wilt openen. Het openen duurt één a twee minuten.
 ```
 
+(howto-create-codespace)=
 ```{tip} Hoe maak ik een nieuwe Codespace?
 :class: dropdown
 1. Open GitHub en login. Ga naar je repository.
@@ -154,6 +156,7 @@ Branches
 5. De nieuwe Codespace wordt gemaakt en al je code uit GitHub wordt naar de Codespace gekopieerd. Dit duurt één a twee minuten.
 ```
 
+(howto-find-repo)=
 ```{tip} Waar staat mijn repository?
 :class: dropdown
 1. Open GitHub en login
@@ -161,12 +164,14 @@ Branches
 3. Als je in een team aan een repo werkt, klik dan links op het team, daarna bovenin je scherm op repositories
 ```
 
+(howto-show-conmits)=
 ```{tip} Lijst met commits bekijken
 :class: dropdown
 1. Open GitHub, ga naar de pagina met je repository.
 2. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". Van elke commit kun je zien wat er is gewijzigd, klik daarvoor op het nummer van de commit aan het einde van de regel.
 ```
 
+(howto-show-old)=
 ```{tip} Oude versie van je repository bekijken
 :class: dropdown
 1. Open GitHub, ga naar de pagina met je repository.
