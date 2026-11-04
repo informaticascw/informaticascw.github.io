@@ -1,5 +1,5 @@
 (netwerken-h03)=
-# IP: Een wereldwijd netwerk
+# IP: wereldwijd netwerk
 
 ## Inleiding
 

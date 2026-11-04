@@ -1,5 +1,5 @@
 (netwerken-h06)=
-# UDP en TCP: meer programma's tegelijk en verzendbevestiging
+# UDP en TCP: meerdere programma's en ontvangstbevestiging
 
 ## Inleiding
 

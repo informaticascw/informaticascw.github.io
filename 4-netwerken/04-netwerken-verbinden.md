@@ -1,5 +1,5 @@
 (netwerken-h04)=
-# ARP en gateway: Lokale netwerken en wereldwijde netwerken verbinden
+# ARP: netwerken koppelen
 
 ## Inleiding
 

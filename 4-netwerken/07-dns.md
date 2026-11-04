@@ -1,5 +1,5 @@
 (netwerken-h07)=
-# DNS: een naam opzoeken
+# DNS: adressen opzoeken
 
 ## Inleiding
 

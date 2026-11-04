@@ -1,5 +1,5 @@
 (netwerken-h08)=
-# HTTP: een webpagina opvragen
+# HTTP: webpagina's opvragen
 
 ## Inleiding
 

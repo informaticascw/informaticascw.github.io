@@ -1,5 +1,5 @@
 (netwerken-h02)=
-# Ethernet: Een lokaal netwerk
+# Ethernet: lokaal netwerk
 
 ## Inleiding
 
