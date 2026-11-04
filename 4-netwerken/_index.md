@@ -1,24 +1,24 @@
 ---
-title: Netwerken
-subtitle: subtitel 
-# date: 2026-03-23
+title: Computernetwerken
+numbering: false
 ---
 (netwerken-homepage)=
-In deze module leer je hoe computers communiceren over internet.
+# Computernetwerken
 
-:::{attention} Work in progress
-In 26/27 periode 3 (start ongeveer januari 2027), of een jaar later, willen we dit lesmateriaal gaan gebruiken in 5-vwo. 
-Tot die tijd werken we aan de ontwikkeling.
+Hoe komt een bericht bij de juiste toepassing terecht? Je bouwt de uitleg op van signalen en lokale netwerken tot routering en webverkeer. Het lagenmodel helpt te onderscheiden welke functie welk probleem oplost.
 
-Uitleg over opmaak van deze website:
-- https://mystmd.org/guide/quickstart-myst-markdown
-- https://mystmd.org/guide/commonmark
-- https://mystmd.org/guide/syntax-overview
-- https://mystmd.org/guide/directives
-- https://mystmd.org/guide/roles
+De hoofdstukken bevatten korte uitleg, voorbeelden, opdrachten zonder Filius, experimenten in Filius en onderzoek op je eigen apparaat. Bij oefenopdrachten staat het antwoord direct eronder in een uitklapbaar blok. De [begrippenlijst](99-begrippenlijst.md) bevat één centrale definitie per begrip; gekoppelde termen in de hoofdstukken verwijzen daarheen.
 
+De module is bedoeld voor twaalf lessen van zestig minuten met huiswerk. Hoofdstukken zijn geen vaste lesgrenzen: hoofdstuk 4 loopt door over delen van twee lessen en hoofdstuk 11 bevat de volledige beoordeling voor les 11 en 12.
+
+## Inhoud
+
+::: {toc} Hoofdstukken
+:context: children
 :::
 
-::: {toc} Inhoudsopgave
-:context:children
-:::
+## Benodigdheden
+
+Je hebt Filius nodig in de door school beschikbaar gemaakte omgeving en een browser. Voor opdrachten op het echte netwerk bekijk je alleen je eigen gegevens of een demonstratie van de docent. Als een beheerd apparaat bepaalde informatie niet laat zien, gebruik je het gegeven voorbeeld.
+
+De verdieping is optioneel. De docentpagina en begrippenlijst zijn naslagpagina’s en tellen niet mee als hoofdstuk.

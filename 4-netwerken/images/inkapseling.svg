@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" role="img" aria-labelledby="title desc">
+<title id="title">Inkapseling: segment in pakket in frame</title>
+<desc id="desc">Een Ethernetframe bestaat uit een Ethernetheader, een IP-pakket en een trailer met FCS. Het IP-pakket bevat een IP-header en een TCP-segment. Het segment bevat een TCP-header en toepassingsgegevens.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#15243b;text-anchor:middle}.label{font-size:21px;font-weight:bold}.body{font-size:18px}.small{font-size:16px}</style>
+<rect width="1100" height="470" fill="#f8fafc"/>
+<rect x="15" y="25" width="1070" height="365" rx="12" fill="#e5f0fa" stroke="#245c84" stroke-width="2"/>
+<text class="label" x="550" y="57">Ethernetframe — datalinklaag</text>
+<rect x="35" y="85" width="145" height="280" rx="8" fill="white" stroke="#245c84"/>
+<text class="body" x="107" y="168">Ethernet-</text><text class="body" x="107" y="194">header</text>
+<text class="small" x="107" y="242">Bron-MAC</text><text class="small" x="107" y="266">Doel-MAC</text>
+<rect x="200" y="85" width="700" height="280" rx="8" fill="#e8f4ed" stroke="#397656" stroke-width="2"/>
+<text class="label" x="550" y="116">IP-pakket — netwerklaag</text>
+<rect x="220" y="145" width="145" height="195" rx="6" fill="white" stroke="#397656"/>
+<text class="body" x="292" y="189">IP-header</text><text class="small" x="292" y="242">Bron-IP</text><text class="small" x="292" y="266">Bestemming-IP</text>
+<rect x="385" y="145" width="495" height="195" rx="8" fill="#fff4dc" stroke="#94702a" stroke-width="2"/>
+<text class="label" x="632" y="177">TCP-segment — transportlaag</text>
+<rect x="405" y="205" width="150" height="115" rx="6" fill="white" stroke="#94702a"/>
+<text class="body" x="480" y="235">TCP-header</text><text class="small" x="480" y="267">Poorten</text><text class="small" x="480" y="291">Volgnummers</text>
+<rect x="575" y="205" width="285" height="115" rx="6" fill="white" stroke="#94702a"/>
+<text class="body" x="717" y="243">Toepassingsgegevens</text><text class="small" x="717" y="279">Bijvoorbeeld een HTTP-verzoek</text>
+<rect x="920" y="85" width="145" height="280" rx="8" fill="white" stroke="#245c84"/>
+<text class="body" x="992" y="178">Ethernet-</text><text class="body" x="992" y="204">trailer</text><text class="small" x="992" y="252">FCS</text><text class="small" x="992" y="276">Foutcontrole</text>
+<text class="body" x="550" y="425">Fysieke laag: zet de bits van dit frame om in signalen; geen extra adresverpakking.</text>
+<text class="small" x="550" y="453">Vereenvoudigd voorbeeld: HTTP boven TCP, IPv4 en Ethernet. Verhoudingen zijn niet op schaal.</text>
+</svg>

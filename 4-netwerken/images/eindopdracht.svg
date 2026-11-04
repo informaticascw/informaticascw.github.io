@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-labelledby="title"><title id="title">Topologie voor de praktische eindopdracht</title><rect width="1000" height="440" fill="#f8fafc"/>
+<style>text{font-family:Arial,sans-serif;fill:#15243b} .small{font-size:15px} .name{font-size:18px;font-weight:bold}</style>
+<line x1="255" y1="110" x2="320" y2="190" stroke="#526b84" stroke-width="3"/>
+<line x1="255" y1="325" x2="320" y2="245" stroke="#526b84" stroke-width="3"/>
+<line x1="510" y1="217" x2="590" y2="217" stroke="#526b84" stroke-width="3"/>
+<line x1="770" y1="217" x2="805" y2="217" stroke="#526b84" stroke-width="3"/>
+<rect x="25" y="65" width="230" height="90" rx="10" fill="white" stroke="#245c84" stroke-width="2"/>
+<text class="name" x="140.0" y="94" text-anchor="middle">Werkruimte</text>
+<text class="small" x="140.0" y="118" text-anchor="middle">45 clients + router</text>
+<text class="small" x="140.0" y="139" text-anchor="middle">192.168.40.0 / ?</text>
+<rect x="25" y="280" width="230" height="90" rx="10" fill="white" stroke="#245c84" stroke-width="2"/>
+<text class="name" x="140.0" y="309" text-anchor="middle">Serverruimte</text>
+<text class="small" x="140.0" y="333" text-anchor="middle">4 servers + router</text>
+<text class="small" x="140.0" y="354" text-anchor="middle">192.168.50.0 / ?</text>
+<rect x="320" y="160" width="190" height="115" rx="10" fill="white" stroke="#245c84" stroke-width="2"/>
+<text class="name" x="415.0" y="189" text-anchor="middle">R1</text>
+<text class="small" x="415.0" y="213" text-anchor="middle">Drie interfaces</text>
+<text class="small" x="415.0" y="234" text-anchor="middle">Kies geldige adressen</text>
+<rect x="590" y="160" width="180" height="115" rx="10" fill="white" stroke="#245c84" stroke-width="2"/>
+<text class="name" x="680.0" y="189" text-anchor="middle">R2</text>
+<text class="small" x="680.0" y="213" text-anchor="middle">Twee interfaces</text>
+<text class="small" x="680.0" y="234" text-anchor="middle">Kies geldige adressen</text>
+<rect x="805" y="160" width="180" height="115" rx="10" fill="white" stroke="#245c84" stroke-width="2"/>
+<text class="name" x="895.0" y="189" text-anchor="middle">Vestiging</text>
+<text class="small" x="895.0" y="213" text-anchor="middle">12 clients + router</text>
+<text class="small" x="895.0" y="234" text-anchor="middle">192.168.60.0 / ?</text>
+<text class="small" x="550" y="135" text-anchor="middle">10.0.0.0/30</text>
+<text class="small" x="500" y="415" text-anchor="middle">Teken in Filius alleen de gevraagde voorbeeldclients; plan wel de volledige capaciteit.</text>
+</svg>
