@@ -1,5 +1,5 @@
 (netwerken-h09)=
-# E-mail
+# SMTP en IMAP: e-mailen
 
 ## Inleiding
 

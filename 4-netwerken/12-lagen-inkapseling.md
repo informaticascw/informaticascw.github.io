@@ -1,5 +1,5 @@
 (netwerken-h12)=
-# Lagen en inkapseling
+# Lagenmodel
 
 ## Inleiding
 
@@ -13,10 +13,10 @@ We gebruiken een {term}`lagenmodel` met vijf lagen. Een laag is geen aparte kast
 
 | Laag | Welke vraag lost de laag op? | Wat gebruikt de laag daarvoor? |
 | --- | --- | --- |
-| {term}`Toepassingslaag <toepassingslaag>` | Wat vraagt of levert het programma? | Een bericht van het programma, bijvoorbeeld een verzoek om een webpagina |
-| {term}`Transportlaag <transportlaag>` | Voor welk programma zijn de gegevens bedoeld, en hoe betrouwbaar moeten ze aankomen? | {term}`Poortnummers <poortnummer>`; {term}`TCP` regelt ook volgorde en herhaling |
-| {term}`Netwerklaag <netwerklaag>` | Naar welke computer moet het bericht, ook via andere netwerken? | Bron- en bestemmings-IP-adres |
-| {term}`Datalinklaag <datalinklaag>` | Naar welk apparaat op deze lokale verbinding? | Bron- en bestemmings-MAC-adres bij {term}`Ethernet` |
+| {term}`Toepassingslaag <toepassingslaag>` | Hoe communiceren programma's? | Een bericht van het programma, bijvoorbeeld een verzoek om een webpagina |
+| {term}`Transportlaag <transportlaag>` | Hoe weet je zeker dat grote berichten aankomen? | {term}`Poortnummers <poortnummer>`; {term}`TCP` regelt ook volgorde en herhaling |
+| {term}`Netwerklaag <netwerklaag>` | Hoe communiceer je wereldwijd? | Bron- en bestemmings-IP-adres |
+| {term}`Datalinklaag <datalinklaag>` | Hoe communiceer je tussen meer dan twee apparaten? | Bron- en bestemmings-MAC-adres bij {term}`Ethernet` |
 | {term}`Fysieke laag <fysieke laag>` | Hoe gaan de {term}`bits <bit>` over het {term}`medium`? | Signalen op koper, glasvezel of radio |
 
 Een protocol is een verzameling concrete afspraken. {term}`IP` is bijvoorbeeld het protocol van de netwerklaag, {term}`HTTP` een protocol van de toepassingslaag en TCP en {term}`UDP` zijn protocollen van de transportlaag. Dezelfde taak kan door verschillende protocollen worden uitgevoerd: een browser stuurt hetzelfde HTTP-verzoek via een kabel of via wifi. Alleen de onderste laag verandert.

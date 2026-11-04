@@ -1,5 +1,5 @@
 (netwerken-h11)=
-# NAT en firewall
+# NAT en firewall: prive netwerken
 
 ## Inleiding
 
