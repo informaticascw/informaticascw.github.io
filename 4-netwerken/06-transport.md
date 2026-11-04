@@ -1,5 +1,5 @@
 (netwerken-h06)=
-# Poorten, TCP en UDP
+# UDP en TCP: meer programma's tegelijk en verzendbevestiging
 
 ## Inleiding
 

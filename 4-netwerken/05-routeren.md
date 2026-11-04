@@ -1,5 +1,5 @@
 (netwerken-h05)=
-# Routeren
+# Routeren: doorsturen naar het juiste netwerk
 
 ## Inleiding
 

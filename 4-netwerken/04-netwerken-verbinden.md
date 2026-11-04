@@ -1,9 +1,5 @@
----
-title: Lokale netwerken en wereldwijde netwerken verbinden
----
-
 (netwerken-h04)=
-# Lokale netwerken en wereldwijde netwerken verbinden
+# ARP en gateway: Lokale netwerken en wereldwijde netwerken verbinden
 
 ## Inleiding
 
