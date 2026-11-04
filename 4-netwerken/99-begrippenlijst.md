@@ -4,12 +4,12 @@ numbering: false
 (netwerken-begrippen)=
 # Begrippenlijst
 
-Deze lijst bevat de centrale definities van de module. Begrippen in de hoofdstukken verwijzen met MyST-termen naar deze ene lijst. De uitleg en voorbeelden in de hoofdstukken laten zien hoe je de begrippen toepast.
+Deze lijst bevat de definities van de vaktermen in deze module. Een term staat in de lijst als je hem moet kunnen uitleggen en hij in meer dan één hoofdstuk of op meer dan één plek wordt gebruikt. Gewone woorden en eenmalige details staan er niet in. In de hoofdstukken verwijst de eerste vermelding van een term naar deze lijst.
 
 ::: {glossary}
 
-afspraak
-: Regel die zender en ontvanger allebei gebruiken om communicatie op dezelfde manier uit te voeren of te begrijpen.
+A-record
+: DNS-gegeven dat een naam koppelt aan een IPv4-adres. Voor IPv6 bestaat het AAAA-record.
 
 apparaatdeel
 : Bits van een IPv4-adres die binnen het gekozen subnet beschikbaar zijn voor adressen. In een gewoon LAN reserveren we alle nullen en alle enen voor netwerk- en broadcastadres.
@@ -59,11 +59,17 @@ CIDR-prefix
 client
 : Programma of apparaat dat een dienst van een server aanvraagt, bijvoorbeeld een browser die een webpagina opvraagt.
 
+certificaat
+: Digitaal bewijs dat een publieke sleutel bij een domeinnaam hoort, uitgegeven door een partij die de browser vertrouwt. Het zegt niets over de kwaliteit of betrouwbaarheid van de inhoud.
+
 CRC
 : Methode voor het berekenen van foutcontrole-informatie uit bits. De ontvanger kan ermee veel overdrachtsfouten detecteren; CRC herstelt de gegevens niet zelf.
 
 datalinklaag
 : Laag die gegevens in frames over een lokale verbinding aflevert. Bij Ethernet worden daarvoor onder andere MAC-adressen gebruikt.
+
+datagram
+: Los bericht met bron- en bestemmingspoort, zoals UDP dat verstuurt. De grenzen van het bericht blijven bewaard.
 
 DHCP
 : Toepassingsprotocol waarmee een client automatisch netwerkconfiguratie kan verkrijgen, zoals IPv4-adres, masker, gateway en DNS-server.
@@ -89,14 +95,14 @@ flooding
 frame
 : Datalinkverpakking. Een Ethernetframe bevat een header, inhoud en een trailer met foutcontrole. De inhoud kan een heel IP-pakket zijn.
 
-functie
-: Het probleem of de taak die een netwerkonderdeel of laag oplost. Een protocol legt de concrete communicatieafspraken vast waarmee zo een functie wordt uitgevoerd.
-
 fysieke laag
 : Laag die bits als signalen over een medium overdraagt, bijvoorbeeld via koper, glasvezel of radio.
 
 gateway
 : Volgende router waar een apparaat verkeer naartoe kan sturen. De standaardgateway wordt gebruikt als voor een bestemming geen specifiekere route beschikbaar is.
+
+handshake
+: Berichtenwisseling waarmee twee partijen een verbinding opbouwen. Bij TCP zijn dat SYN, SYN-ACK en ACK.
 
 header
 : Besturingsinformatie vóór de inhoud van een protocolbericht. Iedere laag verwerkt zijn eigen headervelden; verschillende headers kunnen in elkaar verpakt zijn.
@@ -119,11 +125,17 @@ internet
 IP
 : Internet Protocol: protocol voor adressering en aflevering van pakketten tussen netwerken. IPv4 gebruikt adressen van 32 bits en biedt op zichzelf geen betrouwbare geordende bytestroom.
 
+IPv4
+: Versie 4 van IP, met adressen van 32 bits, geschreven als vier getallen zoals 192.168.10.37.
+
 IP-adres
 : Logisch adres van een netwerkinterface. Met het subnetmasker bepaalt een IPv4-afzender welk deel het subnet aanwijst.
 
 IP-pakket
 : Verpakking van de netwerklaag: een IP-header plus inhoud, bijvoorbeeld een TCP-segment of ICMP-bericht.
+
+lease
+: Tijdsduur waarvoor een DHCP-server een IP-adres uitleent aan een client.
 
 lagenmodel
 : Indeling van communicatiefuncties in lagen. Een laag gebruikt diensten van de laag eronder; de module gebruikt vijf lagen.
@@ -137,6 +149,9 @@ MAC-adres
 medium
 : Fysieke drager voor signalen, zoals een koperkabel, glasvezel of radioverbinding.
 
+MX-record
+: DNS-gegeven dat aangeeft welke mailservers e-mail voor een domein ontvangen.
+
 NAPT
 : Variant van NAT die bij verbindingen zowel adres- als poortinformatie vertaalt, zodat meerdere interne apparaten een buitenadres kunnen delen.
 
@@ -148,6 +163,9 @@ netwerkadres
 
 netwerkdeel
 : Bits van een IP-adres die volgens het subnetmasker het subnet aanwijzen.
+
+netwerkinterface
+: Aansluiting van een apparaat op een netwerk, zoals een Ethernetpoort of wifi-adapter. Elke interface heeft een eigen MAC-adres en meestal een eigen IP-adres.
 
 netwerklaag
 : Laag voor adressering en doorsturen tussen netwerken. IP is een protocol dat deze functie invult.
@@ -188,6 +206,9 @@ routeringstabel
 server
 : Programma of apparaat dat een dienst aanbiedt, bijvoorbeeld HTTP-verzoeken beantwoordt. Eén apparaat kan meerdere serverdiensten uitvoeren.
 
+SMTP
+: Protocol om e-mail aan te bieden en tussen mailservers door te sturen.
+
 standaardroute
 : Route die gebruikt wordt als geen specifiekere route past. Bij IPv4 wordt zij als 0.0.0.0/0 geschreven.
 
@@ -220,6 +241,9 @@ transportlaag
 
 UDP
 : Transportprotocol voor afzonderlijke datagrammen met poorten. Verzorgt zelf geen verbindingsopbouw, geordende stroom of hertransmissie; een toepassing kan zulke functies toevoegen.
+
+TTL
+: Time to live: teller in de IP-header die bij elke router met 1 afneemt. Bij 0 wordt het pakket weggegooid, zodat het niet eindeloos rondgaat.
 
 unicast
 : Gerichte aflevering aan één ontvanger, in tegenstelling tot bijvoorbeeld broadcast aan alle lokale ontvangers.

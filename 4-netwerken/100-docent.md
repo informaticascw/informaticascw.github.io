@@ -4,13 +4,15 @@ numbering: false
 (netwerken-docent)=
 # Voor de docent
 
-## Opbouw na de inhoudelijke herziening
+## Opbouw
 
-De nummering van hoofdstukken en het aantal lessen zijn niet hetzelfde. De kern heeft tien inhoudelijke hoofdstukken en één beoordelingshoofdstuk. De startpagina, verdieping, begrippenlijst en deze docentpagina worden niet meegeteld.
+Hoofdstuknummers en lesnummers zijn niet hetzelfde. De kern heeft tien inhoudelijke hoofdstukken en één beoordelingshoofdstuk. De startpagina, verdieping, begrippenlijst en deze docentpagina worden niet meegeteld.
 
-De oefening met één druk netwerk, splitsen en weer koppelen staat bij hoofdstuk 4: daar motiveert zij de overgang naar afzonderlijke IP-netwerken. In hoofdstuk 5 blijft de nog ontbrekende stap over: het MAC-adres vinden bij de gekozen lokale IP-ontvanger. Daar wordt geen tweede broadcastspel gedaan. De sorteeractiviteit met /28-kaarten is verwijderd: die vroeg rekenkennis die de leerling daar nog niet had en voegde naast de andere oefening te weinig toe.
+Hoofdstuk 3 introduceert het lagenmodel en inkapseling: toepassingsgegevens in een TCP-segment, in een IP-pakket, in een Ethernetframe met header en trailer. De fysieke laag zet bits om in signalen en voegt geen header toe. Hoofdstuk 10 past dat model toe op één websitebezoek.
 
-Het lagenmodel staat nu expliciet in hoofdstuk 3, na de eerste uitleg over frames. Inkapseling wordt uitgewerkt als toepassingsgegevens in een TCP-segment, in een IP-pakket, in een Ethernetframe met header en trailer. De fysieke laag is signaaloverdracht en wordt niet als een extra omslag voorgesteld. Hoofdstuk 10 gebruikt het model in een concrete communicatie en herhaalt de theorie niet volledig.
+Hoofdstuk 4 bevat de klassikale oefening met één druk netwerk, splitsen en weer koppelen. Die motiveert de overgang naar afzonderlijke IP-netwerken. Hoofdstuk 5 behandelt daarna alleen nog hoe een computer het MAC-adres bij de gekozen lokale ontvanger vindt; daar is geen tweede broadcastspel.
+
+De begrippenlijst bevat vaktermen die leerlingen moeten kunnen uitleggen en die op meer dan één plek voorkomen. De hoofdstukken linken de eerste vermelding van een term.
 
 ## Planning van twaalf lessen
 
@@ -22,12 +24,12 @@ Het lagenmodel staat nu expliciet in hoofdstuk 3, na de eerste uitleg over frame
 | 4 | 4 IP en subnetten | 20 min uitgewerkte berekeningen, 25 min oefenen, 15 min subnetproef | Subnetberekeningen afronden |
 | 5 | 5 ARP | 10 min keuze volgende ontvanger, 15 min ARP, 20 min routerpad en Filius, 15 min eigen apparaat | Schriftelijke verklaringen afronden |
 | 6 | 6 Routering | 10 min lokale routekaarten, 15 min uitleg, 35 min handmatige routes | Heen- en terugweg verklaren |
-| 7 | 7 Transport | 10 min ontbrekende delen, 20 min poorten en TCP/UDP, 30 min vragen en waarneming | Begripsvragen afronden |
-| 8 | 8 Web | 10 min naam/adres/inhoud, 15 min uitleg, 35 min DNS en HTTP instellen | Verzoek en antwoord verklaren |
-| 9 | 9 Beschermen | 10 min vertaaltabelspel, 25 min uitleg, 25 min regels en eigen browser | Beveiligingsfuncties vergelijken |
-| 10 | 10 Samenhang | 15 min uitgewerkt bezoek, 35 min bewijsverslag, 10 min introductie beoordeling | Adresplan eindopdracht voorbereiden |
-| 11 | 11 Beoordeling | 5 min afspraken, 55 min bouwen en testen | Verslag volgens schoolafspraak afronden |
-| 12 | 11 Beoordeling | 5 min afspraken, 55 min afronden en individueel aantonen | Inleveren |
+| 7 | 7 Poorten, TCP en UDP | 10 min ontbrekende delen, 20 min poorten en TCP/UDP, 30 min vragen en waarneming | Begripsvragen afronden |
+| 8 | 8 DNS en HTTP | 10 min naam/adres/inhoud, 15 min uitleg, 35 min DNS en HTTP instellen | Verzoek en antwoord verklaren |
+| 9 | 9 NAT, firewall en HTTPS | 10 min vertaaltabelspel, 25 min uitleg, 25 min regels en eigen browser | Beveiligingsfuncties vergelijken |
+| 10 | 10 Van URL naar webpagina | 15 min uitgewerkt bezoek, 35 min bewijsverslag, 10 min introductie beoordeling | Adresplan eindopdracht voorbereiden |
+| 11 | 11 Eindopdracht | 5 min afspraken, 55 min bouwen en testen | Verslag volgens schoolafspraak afronden |
+| 12 | 11 Eindopdracht | 5 min afspraken, 55 min afronden en individueel aantonen | Inleveren |
 
 Dit zijn richttijden, geen gemeten uitvoertijden. Hoofdstuk 4 vraagt flink oefenen; gebruik huiswerk voor aanvullende berekeningen en stel de kern boven verdieping. Een correct startbestand kan helpen als Filius-bediening de conceptuele leertijd verdringt. Er zijn nog geen praktisch geteste .fls-startbestanden meegeleverd.
 
@@ -61,7 +63,7 @@ Eerst is de hele klas één /16-netwerk. Daarna maak je twee daadwerkelijk gesch
 
 Tel hoeveel leerlingen zoekvragen moeten verwerken. De winst hoeft niet als snellere stopwatchtijd zichtbaar te zijn: de oefening heeft ook uitvoeringskosten. Eerst belast iedere vraag beide groepen, daarna alleen de eigen groep. Geef pas dan een bestemming buiten de groep en introduceer de router als oplossing. De router zoekt lokaal aan beide kanten; de oorspronkelijke broadcast gaat niet automatisch door.
 
-Benadruk de grenzen van de vergelijking: alleen andere IP-instellingen scheiden geen Ethernetbroadcasts; hetzelfde wifi-SSID zegt niet genoeg over subnetten; radio-interferentie is niet hetzelfde als een broadcastdomein. De uitgebreide omslagenactiviteit uit de eerdere ARP-versie is bewust naar hoofdstuk 3 verplaatst; deze oefening heeft alleen netwerkgrenzen als focus.
+Benadruk de grenzen van de vergelijking: alleen andere IP-instellingen scheiden geen Ethernetbroadcasts; hetzelfde wifi-SSID zegt niet genoeg over subnetten; radio-interferentie is niet hetzelfde als een broadcastdomein. Deze oefening richt zich alleen op netwerkgrenzen; het inpakken van berichten kwam al in hoofdstuk 3 aan bod.
 
 ### Hoofdstuk 5: geen tweede klassikale introductie
 
@@ -89,7 +91,7 @@ Gebruik de rubric uit hoofdstuk 11. De fysieke laag, TCP-dienst en beveiligingsf
 
 ## Begrippenlijst onderhouden
 
-Alle definities staan één keer in `99-begrippenlijst.md`, binnen een MyST-glossary. De hoofdstukken gebruiken de term-rol, inclusief weergavetekst waar nodig. Een begrip hoeft niet bij iedere herhaling opnieuw gelinkt te worden. Nieuwe definities horen op de begrippenpagina; kopieer de glossary niet naar andere hoofdstukken of naar de complete leesversie. Deze pagina blijft in de inhoudsopgave, zodat MyST de termverwijzingen kan oplossen.
+Alle definities staan één keer in `99-begrippenlijst.md`, binnen een MyST-glossary. De hoofdstukken gebruiken de term-rol, met weergavetekst waar nodig, en linken een term bij de eerste vermelding in een hoofdstuk. Nieuwe vaktermen horen op de begrippenpagina; gewone woorden niet. Kopieer de glossary niet naar andere hoofdstukken of naar de leesversie. De begrippenpagina blijft in de inhoudsopgave, zodat MyST de termverwijzingen kan oplossen.
 
 
 ## Voorbeeldconfiguratie en beoordeling
@@ -203,12 +205,7 @@ Filius is een onderwijsmodel. De auteurswebsite en enkele broncodeonderdelen zij
 ---
 
 
-## Controleverslag
+## Status
 
-- De oorspronkelijke nummeringsfout is gereproduceerd met dezelfde nummeringsopties als de bestaande website: Bits was 3 en ARP 7. Met de aangepaste startpagina zijn Bits 1 en ARP 5; de elf kernhoofdstukken lopen van 1 tot en met 11. Verdieping, begrippenlijst en docentpagina zijn ongenummerd.
-- De website-inhoud is door MyST 1.12.0 verwerkt en de berekende nummers zijn in de gegenereerde pagina-inhoud gecontroleerd. De verwerking van het volledige websitethema blijft in deze omgeving geblokkeerd bij het ophalen van de thema-metadata; dat is geen geslaagde visuele publicatietest.
-- De glossary bevat 76 unieke centrale definities. Alle 253 door MyST verwerkte termverwijzingen zijn opgelost naar die ene begrippenpagina. De glossary wordt niet in de hoofdstukken of de leesversie gekopieerd.
-- 37 gelabelde oefenopdrachten hebben een direct bijbehorend uitklapbaar antwoord. Klassikale werkvormen staan deels als gewone sectie in de les en vallen niet allemaal onder die telling.
-- Lokale links, afbeeldingspaden, unieke labels, directive-afsluitingen en de SVG-bestanden zijn gecontroleerd. De uitgewerkte subnetberekeningen zijn opnieuw met Python ipaddress gecontroleerd.
-- Nieuwe inkapselingsfiguur gerenderd en bekeken. De overige figuren zijn uit de eerdere versie behouden.
-- De Filius-opstellingen en lestijden zijn nog niet praktisch getest. Er zijn geen geteste .fls-bestanden bijgevoegd.
+- De Filius-opstellingen en lestijden zijn nog niet praktisch getest. Er zijn geen geteste .fls-startbestanden bijgevoegd.
+- De subnetberekeningen in de hoofdstukken en in de voorbeeldconfiguratie zijn met Python `ipaddress` gecontroleerd.

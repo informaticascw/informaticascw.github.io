@@ -1,100 +1,99 @@
-(netwerken-lagen)=
+(netwerken-h03)=
 # Lagen en inkapseling
 
 ## Inleiding
 
-Een {term}`Ethernetframe <frame>` brengt gegevens naar een volgende ontvanger op het lokale netwerk. Maar het bericht moet ook de juiste eindcomputer én het juiste programma bereiken. Soms liggen daar verschillende netwerken tussen. Eén soort adres lost al die vragen niet op.
+In hoofdstuk 1 zag je dat bits als signalen worden verstuurd en in hoofdstuk 2 dat een {term}`frame` een apparaat op het lokale netwerk bereikt. Voor een website is meer nodig: het bericht moet bij de juiste computer komen, soms via meerdere netwerken, en daar bij het juiste programma. Die taken zijn verdeeld over lagen. Elke laag gebruikt de diensten van de laag eronder.
 
-We verdelen de communicatie daarom in {term}`functies <functie>`. Iedere laag gebruikt de dienst van de laag eronder. Je krijgt in dit hoofdstuk het overzicht; de afzonderlijke {term}`protocollen <protocol>` werk je daarna uit. Je hoeft hun details hier nog niet te kennen.
+**Laag:** alle vijf. **Vraag:** welke taak hoort bij welke laag, en hoe verpakt elke laag de gegevens van de laag erboven?
 
-**Hoofdvraag:** hoe kunnen verschillende {term}`afspraken <afspraak>` samen één bericht bezorgen?
+In dit hoofdstuk krijg je het overzicht. De protocollen van de lagen werk je in de volgende hoofdstukken uit; hun details hoef je nu nog niet te kennen.
 
-## Welke vraag hoort bij welke laag?
+## Vijf lagen, vijf vragen
 
-We gebruiken een internetmodel met vijf lagen. Een laag is geen aparte kast: één computer voert functies uit meerdere lagen uit.
+We gebruiken een {term}`lagenmodel` met vijf lagen. Een laag is geen aparte kast: één computer voert taken uit meerdere lagen uit.
 
-| Laag | De vraag die deze laag oplost | Wat wordt toegevoegd of uitgevoerd? |
+| Laag | Welke vraag lost de laag op? | Wat gebruikt de laag daarvoor? |
 | --- | --- | --- |
-| {term}`Toepassingslaag <toepassingslaag>` | Wat vraagt of levert het programma? | Een toepassingsbericht, bijvoorbeeld een verzoek om een webpagina |
-| {term}`Transportlaag <transportlaag>` | Bij welke toepassing of verbinding horen de gegevens? Welke overdrachtsdienst is nodig? | Onder andere {term}`poortnummers <poortnummer>`; {term}`TCP` kan ook volgorde en hertransmissie verzorgen |
-| {term}`Netwerklaag <netwerklaag>` | Naar welk eindapparaat moet het bericht over de gekoppelde netwerken? | Onder andere bron- en bestemmings-IP-adres |
-| {term}`Datalinklaag <datalinklaag>` | Naar welke volgende ontvanger op deze lokale verbinding? | Onder andere bron- en bestemmings-MAC-adres bij {term}`Ethernet` |
-| {term}`Fysieke laag <fysieke laag>` | Hoe dragen we de {term}`bits <bit>` over het {term}`medium`? | Signalen op koper, glasvezel of radio |
+| {term}`Toepassingslaag <toepassingslaag>` | Wat vraagt of levert het programma? | Een bericht van het programma, bijvoorbeeld een verzoek om een webpagina |
+| {term}`Transportlaag <transportlaag>` | Voor welk programma zijn de gegevens bedoeld, en hoe betrouwbaar moeten ze aankomen? | {term}`Poortnummers <poortnummer>`; {term}`TCP` regelt ook volgorde en herhaling |
+| {term}`Netwerklaag <netwerklaag>` | Naar welke computer moet het bericht, ook via andere netwerken? | Bron- en bestemmings-IP-adres |
+| {term}`Datalinklaag <datalinklaag>` | Naar welk apparaat op deze lokale verbinding? | Bron- en bestemmings-MAC-adres bij {term}`Ethernet` |
+| {term}`Fysieke laag <fysieke laag>` | Hoe gaan de {term}`bits <bit>` over het {term}`medium`? | Signalen op koper, glasvezel of radio |
 
-Een protocol is een verzameling concrete communicatieafspraken. {term}`IP` is bijvoorbeeld een protocol voor de netwerklaag. De functie is breder: die zegt welk probleem we oplossen, niet precies welke velden en berichten we gebruiken. {term}`HTTP` is een toepassingsprotocol voor webverkeer. TCP en {term}`UDP` zijn transportprotocollen. Hun werking komt later.
+Een protocol is een verzameling concrete afspraken. {term}`IP` is bijvoorbeeld het protocol van de netwerklaag, {term}`HTTP` een protocol van de toepassingslaag en TCP en {term}`UDP` zijn protocollen van de transportlaag. Dezelfde taak kan door verschillende protocollen worden uitgevoerd: een browser stuurt hetzelfde HTTP-verzoek via een kabel of via wifi. Alleen de onderste laag verandert.
 
-Dezelfde functie kan met verschillende protocollen of technieken worden ingevuld. Een browser kan webverkeer gebruiken via zowel een bekabelde als een draadloze aansluiting. De afspraak ‘vraag deze pagina op’ hoeft niet te veranderen alleen omdat het lokale medium verandert.
+## Inkapseling: elke laag voegt informatie toe
 
-## Een bericht krijgt laag voor laag extra informatie
+Een ontvanger moet kunnen herkennen wat hij krijgt en voor wie het bedoeld is. Daarom voegt de zender bij elke laag besturingsinformatie toe, meestal als {term}`header` vóór de gegevens. Dat heet {term}`inkapseling`.
 
-Een ontvangend apparaat moet kunnen herkennen wat het krijgt en voor wie het bedoeld is. De afzender voegt daarom bij iedere relevante laag besturingsinformatie toe, vaak als {term}`header` vóór de bestaande gegevens. Dat noemen we {term}`inkapseling` of encapsulation.
+We volgen één klein HTTP-bericht dat via TCP, IPv4 en Ethernet wordt verstuurd:
 
-We volgen één klein HTTP-bericht dat boven TCP via IPv4 en Ethernet wordt verstuurd:
-
-1. De toepassing maakt gegevens: bijvoorbeeld een verzoek om `/rooster.html`.
-2. TCP voegt een TCP-header toe, onder andere met poort- en volgorde-informatie. Dit geheel heet een {term}`TCP-segment`.
+1. De toepassing maakt het bericht: een verzoek om `/rooster.html`.
+2. TCP voegt een TCP-header toe met onder andere poortnummers en volgnummers. Dit geheel heet een {term}`TCP-segment`.
 3. IP behandelt dat segment als inhoud en voegt een IP-header toe. Dit geheel heet een {term}`IP-pakket`.
-4. Ethernet behandelt het IP-pakket als inhoud en voegt een Ethernetheader én foutcontrole aan het einde toe. Dit geheel heet een frame. Het stukje achteraan heet een {term}`trailer`; de {term}`Ethernet-FCS <FCS>` bevat de foutcontrole.
-5. De fysieke laag zet de bits van het frame om in signalen. Dit is geen extra papieren omslag met weer een nieuw adres.
+4. Ethernet behandelt het IP-pakket als inhoud en voegt een header ervoor en een {term}`trailer` erachter toe. De trailer bevat de foutcontrole ({term}`FCS`). Dit geheel is het frame.
+5. De fysieke laag zet de bits van het frame om in signalen. Zij voegt geen header toe.
 
 ```{figure} images/inkapseling.svg
 :alt: Een Ethernetframe bevat een IP-pakket; dat bevat een TCP-segment met de toepassingsgegevens. De Ethernetheader en trailer staan buiten het IP-pakket.
 
-Bij dit voorbeeld zit het segment in het pakket en het pakket in het frame. Iedere header hoort bij zijn eigen laag.
+Het segment zit in het pakket en het pakket in het frame. Elke header hoort bij zijn eigen laag.
 ```
 
-De inhoud van een laag heet ook wel de {term}`payload`. Voor Ethernet is dat in dit voorbeeld het hele IP-pakket, niet alleen de tekst van de webpagina. Eén toepassingbericht kan over meerdere TCP-segmenten verdeeld worden; de tekening toont bewust één klein stuk en geen algemene één-op-éénverhouding.
+De inhoud die een laag vervoert heet de {term}`payload`. Voor Ethernet is dat hier het hele IP-pakket, niet alleen de tekst van de webpagina. Eén bericht van een programma kan over meerdere TCP-segmenten worden verdeeld; de figuur toont bewust één klein bericht.
 
-## Wat doet de ontvanger?
+## Ontkapseling: de ontvanger pakt uit
 
-De ontvanger werkt in de omgekeerde richting. De netwerkinterface haalt bits uit signalen. De datalinklaag controleert het frame, verwerkt zijn eigen informatie en geeft de inhoud door aan de netwerklaag. IP verwerkt de IP-header en geeft de inhoud door aan TCP. TCP verwerkt zijn eigen informatie, voegt waar nodig ontvangen {term}`bytes <byte>` samen en levert de gegevens af bij de toepassing.
-
-Dit heet {term}`ontkapseling`. Het is dus niet zo dat het ene apparaat alle headers tegelijk gebruikt voor één beslissing: iedere functie verwerkt de bijbehorende informatie.
+De ontvanger werkt in omgekeerde richting. De netwerkinterface haalt de bits uit de signalen. De datalinklaag controleert het frame, verwerkt de Ethernetheader en geeft de inhoud door aan de netwerklaag. IP verwerkt de IP-header en geeft de inhoud door aan TCP. TCP verwerkt de TCP-header, voegt ontvangen {term}`bytes <byte>` in de goede volgorde samen en levert ze af bij het programma. Dit heet {term}`ontkapseling`. Elke laag gebruikt alleen zijn eigen header.
 
 ::: {exercise} Zonder Filius: wat zit waarin?
-:label: nw03-laag-o1
+:label: nw03-o1
 
-1. Orden van buiten naar binnen: toepassingsgegevens, Ethernetframe, TCP-segment en IP-pakket.
-2. Hoort een bestemmings-MAC-adres bij dezelfde header als een bestemmings-IP-adres?
-3. Een IP-pakket is 100 bytes groot. Er komt voor dit rekenvoorbeeld 18 bytes Ethernetheader en -trailer bij. Hoe groot is dit frame, zonder verdere fysieke overhead? Wordt het IP-pakket zelf hierdoor 118 bytes?
+1. Orden van buiten naar binnen: toepassingsgegevens, Ethernetframe, TCP-segment, IP-pakket.
+2. Staan een bestemmings-MAC-adres en een bestemmings-IP-adres in dezelfde header?
+3. Een IP-pakket is 100 bytes. Ethernetheader en -trailer samen zijn in dit voorbeeld 18 bytes. Hoe groot is het frame? Is het IP-pakket zelf nu 118 bytes?
 :::
 
-::: {solution} nw03-laag-o1
+::: {solution} nw03-o1
 :class: dropdown
 
 1. Ethernetframe → IP-pakket → TCP-segment → toepassingsgegevens.
-2. Nee. Het {term}`MAC-adres` hoort bij Ethernetinformatie en het {term}`IP-adres` bij IP-informatie. De ene header zit buiten de andere.
-3. Het frame is 118 bytes. Het ingesloten IP-pakket blijft 100 bytes. De 18 bytes zijn informatie van de buitenste verpakking in dit vereenvoudigde voorbeeld.
+2. Nee. Het MAC-adres staat in de Ethernetheader en het IP-adres in de IP-header. De Ethernetheader zit buiten het IP-pakket.
+3. Het frame is 118 bytes. Het IP-pakket blijft 100 bytes: de 18 bytes zijn de buitenste verpakking.
 :::
 
-## En als er een router tussen zit?
+## Wat doet een router?
 
-Een {term}`router` ontvangt een lokaal frame, verwerkt die datalinkverpakking en bekijkt het IP-pakket. Hij bepaalt de volgende verbinding en maakt daarvoor een nieuw lokaal frame. Op een Ethernetverbinding krijgt dat frame de MAC-adressen voor die volgende stap. De router hoeft daarvoor niet de webpagina te begrijpen.
+Een {term}`router` ontvangt een frame, haalt het IP-pakket eruit en kijkt naar het IP-adres van de bestemming. Daarmee kiest hij de volgende verbinding en verpakt hij het pakket in een nieuw frame. Op Ethernet krijgt dat frame de MAC-adressen voor de volgende stap. De router hoeft de inhoud van de webpagina niet te begrijpen.
 
-De IP-eindadressen blijven bij gewone {term}`routering` zonder {term}`NAT` gelijk. Het pakket is niet letterlijk byte voor byte onveranderd: bijvoorbeeld de IP-levensduur wordt aangepast. Die details zijn hier niet nodig voor het verschil tussen de twee soorten adressen.
+Zonder {term}`NAT` blijven de IP-adressen van afzender en bestemming onderweg gelijk. Het IP-pakket verandert wel een klein beetje: de {term}`TTL`, een teller die bij elke router met 1 afneemt, wordt aangepast.
 
-Een {term}`switch` maakt zijn gewone Ethernetkeuze op basis van MAC-informatie. Een router maakt zijn doorstuurkeuze op basis van IP-informatie. Dat zijn verschillende vragen, ook als de functies in één behuizing zitten.
+Een {term}`switch` kiest op basis van MAC-adressen, een router op basis van IP-adressen. Dat zijn twee verschillende beslissingen, ook als beide in één apparaat zitten.
 
-## Klassikaal: bouw samen de verpakkingen
+## Klassikaal: een bericht inpakken en uitpakken
 
-Maak groepen van negen: vier zenderrollen, vier ontvangerrollen en één routerrol. Aan beide kanten zijn de rollen toepassing, transport, netwerk en datalink. De docent geeft iedere rol alleen de velden die die rol moet invullen. De toepassingsrol weet de boodschap; de netwerkrol kent het IP-eindadres; de datalinkrol kent de MAC-ontvanger voor het eerste kabelstuk.
+Maak groepen van negen: vier zenderrollen, vier ontvangerrollen en één routerrol. Aan beide kanten zijn de rollen toepassing, transport, netwerk en datalink. De docent geeft elke rol alleen de velden die die rol invult. De toepassingsrol kent de tekst, de netwerkrol het IP-adres van de bestemming en de datalinkrol het MAC-adres van de eerste ontvanger.
 
-Bouw met gevouwen kaarten een bericht: transportinformatie om toepassingsgegevens, IP-informatie om dat segment en een frame om dat pakket. Geef het geheel door. De ontvangers mogen ieder alleen hun eigen verpakking verwerken; alleen de toepassingsrol leest de tekst. Laat daarna de routerrol tussenbeide komen. Die verwijdert de lokale frameverpakking en maakt met andere MAC-adressen een nieuwe, zonder de toepassingsboodschap te openen.
+1. Bouw het bericht met gevouwen kaarten: transportinformatie om de toepassingsgegevens, IP-informatie om het segment en een frame om het pakket.
+2. Geef het bericht door aan de ontvangers. Elke ontvangerrol haalt alleen zijn eigen verpakking weg. Alleen de toepassingsrol leest de tekst.
+3. Laat nu de routerrol tussen zender en ontvanger staan. De router haalt het frame weg en verpakt het IP-pakket in een nieuw frame met andere MAC-adressen, zonder de toepassingsgegevens te openen.
+4. Leg het oude en het nieuwe frame naast elkaar. Wat is veranderd en wat is gelijk gebleven?
 
-Leg de oude en nieuwe buitenverpakking naast elkaar. Benoem wat veranderde en wat in de binnenste gegevens bleef staan. De fysieke overdracht van bits en echte foutcontrole worden hier niet nagespeeld.
+De fysieke overdracht en de foutcontrole worden niet nagespeeld.
 
-::: {exercise} In het echt en in Filius: vind twee lagen
-:label: nw03-laag-o2
+::: {exercise} Filius: twee lagen terugvinden
+:label: nw03-o2
 
-1. Open de gegevensuitwisseling bij een ping tussen je twee bestaande Filius-computers. Zoek, voor zover jouw versie dit toont, Ethernet- en IPv4-velden in hetzelfde verzonden bericht. Noteer één MAC-adres en één IP-adres en benoem hun functie.
-2. Als het venster de velden niet genest weergeeft, betekent dat dan dat er in een echt Ethernetframe geen IP-pakket kan zitten?
-3. Waarom mag je bij deze ping niet automatisch een TCP-segment tekenen?
+1. Open de gegevensuitwisseling bij een ping tussen twee computers uit je netwerk. Zoek, voor zover jouw versie dat toont, Ethernet- en IP-velden in hetzelfde bericht. Noteer één MAC-adres en één IP-adres en leg uit waarvoor elk adres dient.
+2. Het venster toont de velden niet in elkaar genest. Betekent dat dat een frame geen IP-pakket bevat?
+3. Waarom mag je bij deze ping geen TCP-segment tekenen?
 :::
 
-::: {solution} nw03-laag-o2
+::: {solution} nw03-o2
 :class: dropdown
 
-1. Het MAC-adres hoort bij lokale aflevering; het IP-adres bij een IP-bron of -bestemming. De concrete waarden komen uit je eigen netwerk.
-2. Nee. De weergave van een simulatie is niet de verpakking zelf. Gebruik de figuur om het verschil tussen de laagvelden te tekenen.
-3. Ping gebruikt {term}`ICMP`, geen TCP. De uitlegfiguur laat één specifiek HTTP/TCP-voorbeeld zien, niet de inhoud van ieder IP-pakket.
+1. Het MAC-adres dient voor aflevering op het lokale netwerk, het IP-adres voor de bron of bestemming van het pakket. De waarden komen uit je eigen netwerk.
+2. Nee. Het venster is een weergave; de figuur laat zien hoe de verpakking in elkaar zit.
+3. Ping gebruikt {term}`ICMP`, geen TCP. De figuur toont één HTTP/TCP-voorbeeld, niet de inhoud van elk IP-pakket.
 :::

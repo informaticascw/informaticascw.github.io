@@ -1,91 +1,88 @@
-(netwerken-les01)=
+(netwerken-h01)=
 # Bits versturen
 
 ## Inleiding
 
-Je verstuurt een foto. De verbinding vervoert die foto niet als één herkenbaar plaatje, maar als signalen waaruit de ontvanger {term}`bits <bit>` moet afleiden. Daarvoor moeten zender en ontvanger dezelfde {term}`afspraken <afspraak>` gebruiken.
+Je verstuurt een foto. Over de verbinding gaan geen plaatjes maar signalen, zoals lichtpulsen of spanningsverschillen. De ontvanger moet daaruit dezelfde {term}`bits <bit>` afleiden als de zender verstuurde. Dat lukt alleen als beide kanten van tevoren afspreken hoe een 0, een 1 en het tempo eruitzien.
 
-**Laag:** {term}`fysieke laag`. **Hoofdvraag:** hoe krijgt de ontvanger dezelfde reeks bits als de zender?
+**Laag:** {term}`fysieke laag`. **Vraag:** hoe herkent de ontvanger dezelfde bitreeks als de zender verstuurde, en hoe snel kan dat?
 
-Je onderzoekt eerst hoe je een 0, een 1 en de grenzen ertussen herkenbaar maakt. Daarna vergelijk je overdrachtscapaciteit en {term}`vertraging`.
+## Klassikaal: een bitreeks overseinen
 
-## Klassikaal: een bericht zonder woorden
+Werk in teams van vier: zender, ontvanger, tijdwaarnemer en controleur. De docent geeft alleen de zender een geheime reeks van acht bits. Zender en ontvanger staan enkele meters uit elkaar. Alle teams doen tegelijk mee.
 
-Werk in teams van vier: een zender, ontvanger, tijdwaarnemer en controleur. De docent geeft alleen de zender een geheime reeks van acht bits. Tussen zender en ontvanger zit enkele meters afstand. Andere teams doen tegelijk mee.
+1. **Ronde 1, zonder afspraken.** De zender gebruikt alleen een zaklamp of een omhooggehouden kaart. Praten, schrijven en wijzen zijn niet toegestaan. De ontvanger schrijft op wat hij denkt te ontvangen.
+2. **Ronde 2, met afspraken.** Spreek een code, een startteken en een vast tempo af. Verstuur een nieuwe reeks. De ontvanger meldt het resultaat terug, zodat de zender kan controleren of het klopt.
+3. **Ronde 3, sneller.** Verhoog het tempo tot er fouten optreden.
 
-In de eerste ronde mag de zender alleen een zaklamp of een omhooggehouden kaart gebruiken. Geen praten, schrijven of wijzen naar de bits. Spreek nog geen code af. De ontvanger schrijft op wat hij denkt te ontvangen.
+Bespreek welke afspraken het verschil maakten. De uitleg hieronder beschrijft die afspraken ook zonder de oefening.
 
-Vergelijk de uitkomst. Spreek daarna een code, een startteken en een vast tempo af. Probeer een nieuwe reeks. Laat de ontvanger het bericht terugmelden, zodat de zender kan controleren of het klopt. Verhoog ten slotte het tempo totdat fouten optreden.
+## Van bit naar signaal
 
-Bespreek welke afspraken het verschil maakten. De uitleg hieronder beschrijft deze ook zonder de oefening.
+Een bit is een waarde: 0 of 1. Om die over te dragen is een fysiek verschijnsel nodig. Via koper gebruik je elektrische signalen, via glasvezel licht en via {term}`wifi` radiogolven. De zender zet bits om in signalen; de ontvanger leidt de bits daar weer uit af.
 
-## Een bit is nog geen signaal
+‘Licht aan is 1, licht uit is 0’ lijkt voldoende, maar is een lange periode licht één 1 of tien enen? De ontvanger moet dus ook weten hoe lang één bit duurt en waar een bericht begint. Echte verbindingen gebruiken uitgebreidere codes dan dit voorbeeld.
 
-Een bit is een waarde: 0 of 1. Om die over te dragen heb je een fysiek verschijnsel nodig. Via koper kun je elektrische signalen gebruiken, via glasvezel licht en via {term}`wifi` radiogolven. Een zender zet bits om in signalen; de ontvanger leidt daar de bits weer uit af.
-
-‘Licht aan is 1 en uit is 0’ lijkt voldoende. Maar is een lange periode licht één 1 of zijn het tien enen? Ontvangers hebben ook afspraken nodig over timing. Echte netwerkverbindingen gebruiken uitgebreidere coderingen dan dit eenvoudige voorbeeld.
-
-Bij een {term}`protocol` spreken apparaten af hoe ze communiceren. De functie van de fysieke laag is het overdragen van bits. De concrete afspraken over signalen en timing vullen die {term}`functie` in.
+Afspraken over hoe apparaten communiceren heten een {term}`protocol`. De fysieke laag heeft één taak: bits als signalen over een {term}`medium` overbrengen. Protocollen voor die laag leggen onder andere de bitduur en de signaalvorm vast.
 
 ### Voorbeeld
 
-Je spreekt af: iedere seconde één bit, beginnen na twee korte flitsen. Vier seconden licht kan nu vier enen betekenen. Zonder de tijdafspraak blijft dat onduidelijk.
+Je spreekt af: één bit per seconde, beginnen na twee korte flitsen. Vier seconden licht betekent nu vier enen. Zonder de afspraak over de bitduur is dat niet te bepalen.
 
-::: {exercise} Zonder Filius: ontbrekende afspraak
+::: {exercise} Zonder Filius: ontbrekende afspraken
 :label: nw01-o1
 
-1. Een zender verstuurt `1001`. Waarom is alleen ‘aan is 1’ onvoldoende?
-2. Noem twee afspraken die zender en ontvanger naast de bitbetekenis nodig hebben.
-3. Waarom helpt harder of feller zenden niet altijd als berichten verkeerd worden begrepen?
+1. Een zender verstuurt `1001`. Waarom is alleen ‘licht aan is 1’ onvoldoende voor de ontvanger?
+2. Noem twee afspraken die zender en ontvanger naast de betekenis van 0 en 1 nodig hebben.
+3. De zender verkort de bitduur zonder de ontvanger te waarschuwen. Wat gaat er mis?
 :::
 
 ::: {solution} nw01-o1
 :class: dropdown
 
-1. Zonder timing weet de ontvanger niet waar de afzonderlijke bits beginnen en eindigen; ook het begin van het bericht moet herkenbaar zijn.
+1. De ontvanger weet niet waar het ene bit eindigt en het volgende begint, en ook niet waar het bericht start.
 2. Bijvoorbeeld een startteken en een vaste bitduur.
-3. Sterkte lost een ontbrekende code of tijdafspraak niet op; storing of te hoog tempo kan ook een rol spelen.
+3. De ontvanger blijft met de oude bitduur lezen. Daardoor worden bits samengevoegd of overgeslagen en klopt de ontvangen reeks niet meer.
 :::
 
 ## Snelheid en vertraging
 
-De overdrachtssnelheid drukken we uit in {term}`bits per seconde`, bijvoorbeeld 100 Mbit/s. In deze module gebruiken we ‘{term}`bandbreedte`’ voor de beschikbare overdrachtscapaciteit. Eén {term}`byte` bestaat uit acht bits; MB en Mbit betekenen dus niet hetzelfde.
+De snelheid van een verbinding geef je aan in {term}`bits per seconde`, bijvoorbeeld 100 Mbit/s. In deze module noemen we die beschikbare overdrachtscapaciteit de {term}`bandbreedte`. Een {term}`byte` is acht bits, dus MB en Mbit zijn niet hetzelfde.
 
-Vertraging is de tijd die overdracht en verwerking kosten. Een snelle verbinding kan toch een merkbare wachttijd hebben. Ook de route, afstand, wachtrijen en {term}`servers <server>` spelen mee. De langzaamste verbinding onderweg kan de doorvoer beperken.
+De {term}`vertraging` is de tijd tussen verzenden en aankomen. Een verbinding met veel capaciteit kan toch een merkbare vertraging hebben, bijvoorbeeld door een lange route of wachtrijen. De traagste schakel op de route bepaalt hoe snel gegevens maximaal aankomen.
 
 ### Voorbeeld
 
-Een bestand van 20 MB bevat 160 Mbit, gerekend met decimale eenheden. Bij 40 Mbit/s duurt alleen het overbrengen theoretisch 4 seconden. Opstarttijd, protocolinformatie en ander verkeer zijn daarin niet meegerekend.
+Een bestand van 20 MB is 160 Mbit (decimale eenheden). Bij 40 Mbit/s kost het overbrengen minstens 4 seconden. Opstarttijd, extra protocolinformatie en ander verkeer zijn daarbij niet meegerekend.
 
 ::: {exercise} Zonder Filius: sneller of eerder?
 :label: nw01-o2
 
 1. Bereken de minimale overdrachtstijd van 12 MB bij 24 Mbit/s.
-2. Verbinding X heeft 1000 Mbit/s en 80 ms vertraging; Y heeft 100 Mbit/s en 10 ms. Welke is gunstiger voor heel korte interactieve berichten? Welke voor een groot bestand? Licht je aannames toe.
+2. Verbinding X heeft 1000 Mbit/s en 80 ms vertraging; verbinding Y heeft 100 Mbit/s en 10 ms vertraging. Welke is gunstiger voor korte interactieve berichten en welke voor een groot bestand? Geef je aanname erbij.
 :::
 
 ::: {solution} nw01-o2
 :class: dropdown
 
 1. 12 × 8 / 24 = 4 seconden.
-2. Voor korte berichten kan Y prettiger zijn door de lagere vertraging. Voor grote bestanden kan X meer doorvoer bieden. Dit geldt als de andere onderdelen van het pad en de server geen grotere beperking vormen.
+2. Voor korte berichten is Y gunstiger vanwege de lagere vertraging. Voor een groot bestand is X gunstiger vanwege de hogere capaciteit. Dat geldt als de rest van de route en de server geen grotere beperking vormen.
 :::
 
-## In het echt en in Filius
+## Fysieke verbindingen in de praktijk
 
-Bekijk op je apparaat of je wifi of {term}`Ethernet` gebruikt. Bekijk een netwerkkabel en, als die beschikbaar is, een glasvezelaansluiting. Een kabel kan meerdere aders bevatten; één bit hoeft niet letterlijk één puls op één draad te zijn.
+Kijk op je apparaat of je verbonden bent met wifi of met {term}`Ethernet`. Bekijk een netwerkkabel en, als die er is, een glasvezelaansluiting. Een kabel bevat meestal meerdere aders; één bit hoeft dus niet letterlijk één puls op één draad te zijn.
 
 ::: {exercise} Filius: je eerste verbinding
 :label: nw01-o3
 
 1. Maak in de ontwerpmodus twee computers en verbind ze met een kabel. Geef ze de namen A en B. Bewaar als `01-verbinding.fls`.
-2. Klik een computer aan en zoek de instellingen voor {term}`IP-adres` en {term}`subnetmasker`. Je hoeft die nu nog niet te begrijpen of aan te passen.
-3. Wijs aan welk onderdeel in je tekening de fysieke verbinding voorstelt.
-4. Leg uit waarom de tekening nog niet bewijst dat A een webpagina van B kan ophalen.
+2. Wijs aan welk onderdeel in je tekening de fysieke verbinding voorstelt.
+3. Leg uit waarom deze tekening nog niet bewijst dat A een webpagina van B kan ophalen.
 :::
 
 ::: {solution} nw01-o3
 :class: dropdown
 
-De kabel stelt de fysieke verbinding voor. Een kabel alleen maakt nog geen werkende webdienst: ook adressering, protocolafspraken en de benodigde software moeten kloppen. Filius toont een model, geen echte elektrische of optische signalen.
+De kabel stelt de fysieke verbinding voor. Voor een werkende webdienst zijn ook adressering, protocolafspraken en software op beide computers nodig. Filius laat een model zien, geen echte elektrische of optische signalen.
 :::

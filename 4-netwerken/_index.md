@@ -9,7 +9,7 @@ Hoe komt een bericht bij de juiste toepassing terecht? Je bouwt de uitleg op van
 
 De hoofdstukken bevatten korte uitleg, voorbeelden, opdrachten zonder Filius, experimenten in Filius en onderzoek op je eigen apparaat. Bij oefenopdrachten staat het antwoord direct eronder in een uitklapbaar blok. De [begrippenlijst](99-begrippenlijst.md) bevat één centrale definitie per begrip; gekoppelde termen in de hoofdstukken verwijzen daarheen.
 
-De module is bedoeld voor twaalf lessen van zestig minuten met huiswerk. Hoofdstukken zijn geen vaste lesgrenzen: hoofdstuk 4 loopt door over delen van twee lessen en hoofdstuk 11 bevat de volledige beoordeling voor les 11 en 12.
+De module is bedoeld voor twaalf lessen van zestig minuten met huiswerk. Hoofdstukken zijn geen vaste lesgrenzen: hoofdstuk 4 beslaat delen van twee lessen en hoofdstuk 11 bevat de volledige beoordeling voor les 11 en 12.
 
 ## Inhoud
 
