@@ -1,4 +1,4 @@
-(netwerken-h07)=
+(netwerken-h06)=
 # Poorten, TCP en UDP
 
 ## Inleiding
@@ -30,14 +30,14 @@ Een webserver luistert bij gewoon {term}`HTTP` meestal op TCP-poort 80 en bij {t
 Client `192.168.10.10:51000` maakt verbinding met {term}`server` `192.168.20.10:80`. Een tweede verbinding kan bronpoort `51001` gebruiken. Antwoorden gaan van serverpoort 80 terug naar de bijbehorende clientpoort.
 
 ::: {exercise} Zonder Filius: naar welk programma?
-:label: nw07-o1
+:label: nw06-o1
 
 1. Geef de bron- en bestemmingspoort van het antwoord van de server op de verbinding met clientpoort 51000.
 2. Twee clients gebruiken allebei bronpoort 51000 naar dezelfde serverpoort. Waarom raken hun verbindingen niet door elkaar?
 3. Waarom is een TCP-poort iets anders dan poort 3 op een {term}`switch`?
 :::
 
-::: {solution} nw07-o1
+::: {solution} nw06-o1
 :class: dropdown
 
 1. Bronpoort 80, bestemmingspoort 51000.
@@ -73,14 +73,14 @@ UDP verstuurt afzonderlijke {term}`datagrammen <datagram>` met poortnummers. UDP
 HTTP/3 gebruikt QUIC boven UDP; QUIC zorgt zelf voor betrouwbaarheid en beveiliging. ‘Websites gebruiken altijd TCP’ is dus te stellig. In onze Filius-voorbeelden gebruikt HTTP wel TCP.
 
 ::: {exercise} Zonder Filius: kies en onderbouw
-:label: nw07-o2
+:label: nw06-o2
 
 1. Waarom is het belangrijk dat bij een download geen bytes ontbreken?
 2. Waarom is wachten op een oud geluidsfragment vervelend bij een live gesprek?
 3. Iemand zegt: ‘UDP kan nooit betrouwbare communicatie opleveren.’ Verbeter die uitspraak.
 :::
 
-::: {solution} nw07-o2
+::: {solution} nw06-o2
 :class: dropdown
 
 1. Ontbrekende bytes kunnen het bestand onbruikbaar maken. De download moet alle bytes in de goede volgorde afleveren.
@@ -89,16 +89,16 @@ HTTP/3 gebruikt QUIC boven UDP; QUIC zorgt zelf voor betrouwbaarheid en beveilig
 :::
 
 ::: {exercise} Filius: TCP herkennen
-:label: nw07-o3
+:label: nw06-o3
 
 1. Gebruik C als webserver in je bestaande netwerk: installeer en start de webserver. Installeer op A een webbrowser.
 2. Open de gegevensuitwisseling en bezoek vanaf A `http://192.168.20.10`.
 3. Zoek de opbouw van de TCP-verbinding en noteer de gebruikte poorten. Welke kant begon?
 4. Vergelijk met een ping naar hetzelfde adres. Zie je daar ook een TCP-opbouw?
-5. Bewaar als `07-transport.fls`.
+5. Bewaar als `06-transport.fls`.
 :::
 
-::: {solution} nw07-o3
+::: {solution} nw06-o3
 :class: dropdown
 
 De browser is de client en begint de verbinding. De webserver gebruikt normaal TCP-poort 80 en de client een tijdelijke bronpoort. Bij een nieuwe verbinding zijn de opbouwberichten zichtbaar. Ping gebruikt {term}`ICMP` en heeft geen handshake. Een bestaande verbinding kan hergebruikt worden: start de simulatie opnieuw als je juist de eerste verbinding wilt zien.

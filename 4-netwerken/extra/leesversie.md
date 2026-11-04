@@ -151,7 +151,7 @@ Een switch met vier poorten heeft een lege tabel en ontvangt achtereenvolgens: A
 
 ## Een lokaal netwerk bouwen
 
-In Filius gebruik je alvast {term}`IP-adressen <IP-adres>` om met `ping` verkeer te maken. De switch kiest zijn doorstuurpoort niet op basis van het IP-adres, maar op basis van het MAC-adres. Ping gebruikt {term}`ICMP`, niet {term}`TCP`. Hoe een computer het MAC-adres van de ontvanger te weten komt, behandelen we in hoofdstuk 5.
+In Filius gebruik je alvast {term}`IP-adressen <IP-adres>` om met `ping` verkeer te maken. De switch kiest zijn doorstuurpoort niet op basis van het IP-adres, maar op basis van het MAC-adres. Ping gebruikt {term}`ICMP`, niet {term}`TCP`. Hoe een computer het MAC-adres van de ontvanger te weten komt, behandelen we in hoofdstuk 4.
 
 ::: {exercise} Filius: drie computers en een switch
 :label: nw02-o2
@@ -190,113 +190,11 @@ Zoek in het lokaal een Ethernetwandcontactdoos of bekijk samen met de docent een
 ---
 
 (netwerken-h03)=
-# Lagen en inkapseling
+# Een wereldwijd netwerk
 
 ## Inleiding
 
-In hoofdstuk 1 zag je dat bits als signalen worden verstuurd en in hoofdstuk 2 dat een {term}`frame` een apparaat op het lokale netwerk bereikt. Voor een website is meer nodig: het bericht moet bij de juiste computer komen, soms via meerdere netwerken, en daar bij het juiste programma. Die taken zijn verdeeld over lagen. Elke laag gebruikt de diensten van de laag eronder.
-
-**Laag:** alle vijf. **Vraag:** welke taak hoort bij welke laag, en hoe verpakt elke laag de gegevens van de laag erboven?
-
-In dit hoofdstuk krijg je het overzicht. De protocollen van de lagen werk je in de volgende hoofdstukken uit; hun details hoef je nu nog niet te kennen.
-
-## Vijf lagen, vijf vragen
-
-We gebruiken een {term}`lagenmodel` met vijf lagen. Een laag is geen aparte kast: één computer voert taken uit meerdere lagen uit.
-
-| Laag | Welke vraag lost de laag op? | Wat gebruikt de laag daarvoor? |
-| --- | --- | --- |
-| {term}`Toepassingslaag <toepassingslaag>` | Wat vraagt of levert het programma? | Een bericht van het programma, bijvoorbeeld een verzoek om een webpagina |
-| {term}`Transportlaag <transportlaag>` | Voor welk programma zijn de gegevens bedoeld, en hoe betrouwbaar moeten ze aankomen? | {term}`Poortnummers <poortnummer>`; {term}`TCP` regelt ook volgorde en herhaling |
-| {term}`Netwerklaag <netwerklaag>` | Naar welke computer moet het bericht, ook via andere netwerken? | Bron- en bestemmings-IP-adres |
-| {term}`Datalinklaag <datalinklaag>` | Naar welk apparaat op deze lokale verbinding? | Bron- en bestemmings-MAC-adres bij {term}`Ethernet` |
-| {term}`Fysieke laag <fysieke laag>` | Hoe gaan de {term}`bits <bit>` over het {term}`medium`? | Signalen op koper, glasvezel of radio |
-
-Een protocol is een verzameling concrete afspraken. {term}`IP` is bijvoorbeeld het protocol van de netwerklaag, {term}`HTTP` een protocol van de toepassingslaag en TCP en {term}`UDP` zijn protocollen van de transportlaag. Dezelfde taak kan door verschillende protocollen worden uitgevoerd: een browser stuurt hetzelfde HTTP-verzoek via een kabel of via wifi. Alleen de onderste laag verandert.
-
-## Inkapseling: elke laag voegt informatie toe
-
-Een ontvanger moet kunnen herkennen wat hij krijgt en voor wie het bedoeld is. Daarom voegt de zender bij elke laag besturingsinformatie toe, meestal als {term}`header` vóór de gegevens. Dat heet {term}`inkapseling`.
-
-We volgen één klein HTTP-bericht dat via TCP, IPv4 en Ethernet wordt verstuurd:
-
-1. De toepassing maakt het bericht: een verzoek om `/rooster.html`.
-2. TCP voegt een TCP-header toe met onder andere poortnummers en volgnummers. Dit geheel heet een {term}`TCP-segment`.
-3. IP behandelt dat segment als inhoud en voegt een IP-header toe. Dit geheel heet een {term}`IP-pakket`.
-4. Ethernet behandelt het IP-pakket als inhoud en voegt een header ervoor en een {term}`trailer` erachter toe. De trailer bevat de foutcontrole ({term}`FCS`). Dit geheel is het frame.
-5. De fysieke laag zet de bits van het frame om in signalen. Zij voegt geen header toe.
-
-```{figure} ../images/inkapseling.svg
-:alt: Een Ethernetframe bevat een IP-pakket; dat bevat een TCP-segment met de toepassingsgegevens. De Ethernetheader en trailer staan buiten het IP-pakket.
-
-Het segment zit in het pakket en het pakket in het frame. Elke header hoort bij zijn eigen laag.
-```
-
-De inhoud die een laag vervoert heet de {term}`payload`. Voor Ethernet is dat hier het hele IP-pakket, niet alleen de tekst van de webpagina. Eén bericht van een programma kan over meerdere TCP-segmenten worden verdeeld; de figuur toont bewust één klein bericht.
-
-## Ontkapseling: de ontvanger pakt uit
-
-De ontvanger werkt in omgekeerde richting. De netwerkinterface haalt de bits uit de signalen. De datalinklaag controleert het frame, verwerkt de Ethernetheader en geeft de inhoud door aan de netwerklaag. IP verwerkt de IP-header en geeft de inhoud door aan TCP. TCP verwerkt de TCP-header, voegt ontvangen {term}`bytes <byte>` in de goede volgorde samen en levert ze af bij het programma. Dit heet {term}`ontkapseling`. Elke laag gebruikt alleen zijn eigen header.
-
-::: {exercise} Zonder Filius: wat zit waarin?
-:label: nw03-o1
-
-1. Orden van buiten naar binnen: toepassingsgegevens, Ethernetframe, TCP-segment, IP-pakket.
-2. Staan een bestemmings-MAC-adres en een bestemmings-IP-adres in dezelfde header?
-3. Een IP-pakket is 100 bytes. Ethernetheader en -trailer samen zijn in dit voorbeeld 18 bytes. Hoe groot is het frame? Is het IP-pakket zelf nu 118 bytes?
-:::
-
-::: {solution} nw03-o1
-:class: dropdown
-
-1. Ethernetframe → IP-pakket → TCP-segment → toepassingsgegevens.
-2. Nee. Het MAC-adres staat in de Ethernetheader en het IP-adres in de IP-header. De Ethernetheader zit buiten het IP-pakket.
-3. Het frame is 118 bytes. Het IP-pakket blijft 100 bytes: de 18 bytes zijn de buitenste verpakking.
-:::
-
-## Wat doet een router?
-
-Een {term}`router` ontvangt een frame, haalt het IP-pakket eruit en kijkt naar het IP-adres van de bestemming. Daarmee kiest hij de volgende verbinding en verpakt hij het pakket in een nieuw frame. Op Ethernet krijgt dat frame de MAC-adressen voor de volgende stap. De router hoeft de inhoud van de webpagina niet te begrijpen.
-
-Zonder {term}`NAT` blijven de IP-adressen van afzender en bestemming onderweg gelijk. Het IP-pakket verandert wel een klein beetje: de {term}`TTL`, een teller die bij elke router met 1 afneemt, wordt aangepast.
-
-Een {term}`switch` kiest op basis van MAC-adressen, een router op basis van IP-adressen. Dat zijn twee verschillende beslissingen, ook als beide in één apparaat zitten.
-
-## Klassikaal: een bericht inpakken en uitpakken
-
-Maak groepen van negen: vier zenderrollen, vier ontvangerrollen en één routerrol. Aan beide kanten zijn de rollen toepassing, transport, netwerk en datalink. De docent geeft elke rol alleen de velden die die rol invult. De toepassingsrol kent de tekst, de netwerkrol het IP-adres van de bestemming en de datalinkrol het MAC-adres van de eerste ontvanger.
-
-1. Bouw het bericht met gevouwen kaarten: transportinformatie om de toepassingsgegevens, IP-informatie om het segment en een frame om het pakket.
-2. Geef het bericht door aan de ontvangers. Elke ontvangerrol haalt alleen zijn eigen verpakking weg. Alleen de toepassingsrol leest de tekst.
-3. Laat nu de routerrol tussen zender en ontvanger staan. De router haalt het frame weg en verpakt het IP-pakket in een nieuw frame met andere MAC-adressen, zonder de toepassingsgegevens te openen.
-4. Leg het oude en het nieuwe frame naast elkaar. Wat is veranderd en wat is gelijk gebleven?
-
-De fysieke overdracht en de foutcontrole worden niet nagespeeld.
-
-::: {exercise} Filius: twee lagen terugvinden
-:label: nw03-o2
-
-1. Open de gegevensuitwisseling bij een ping tussen twee computers uit je netwerk. Zoek, voor zover jouw versie dat toont, Ethernet- en IP-velden in hetzelfde bericht. Noteer één MAC-adres en één IP-adres en leg uit waarvoor elk adres dient.
-2. Het venster toont de velden niet in elkaar genest. Betekent dat dat een frame geen IP-pakket bevat?
-3. Waarom mag je bij deze ping geen TCP-segment tekenen?
-:::
-
-::: {solution} nw03-o2
-:class: dropdown
-
-1. Het MAC-adres dient voor aflevering op het lokale netwerk, het IP-adres voor de bron of bestemming van het pakket. De waarden komen uit je eigen netwerk.
-2. Nee. Het venster is een weergave; de figuur laat zien hoe de verpakking in elkaar zit.
-3. Ping gebruikt {term}`ICMP`, geen TCP. De figuur toont één HTTP/TCP-voorbeeld, niet de inhoud van elk IP-pakket.
-:::
-
----
-
-(netwerken-h04)=
-# IP-netwerken en subnetten
-
-## Inleiding
-
-Een {term}`switch` stuurt gewone frames gericht door, maar een {term}`broadcast` bereikt elk apparaat in het {term}`broadcastdomein`. Hoe groter het netwerk, hoe meer capaciteit en verwerking dat kost. Daarom splits je een groot netwerk in kleinere IP-netwerken ({term}`subnetten <subnet>`) en verbind je die met een {term}`router`. Daarvoor moet je met IP-adressen en subnetmaskers kunnen rekenen.
+Het internet is een wereldwijd netwerk van netwerken. Dat kan alleen als elk netwerk beperkt van omvang is en je van elk adres kunt zien in welk netwerk het ligt. Een {term}`switch` stuurt gewone frames gericht door, maar een {term}`broadcast` bereikt elk apparaat in het {term}`broadcastdomein`. Hoe groter het netwerk, hoe meer capaciteit en verwerking dat kost. Daarom splits je een groot netwerk in kleinere IP-netwerken ({term}`subnetten <subnet>`) en verbind je die met een {term}`router`. Daarvoor moet je met IP-adressen en subnetmaskers kunnen rekenen.
 
 **Laag:** {term}`netwerklaag`. **Vraag:** hoe deel je een netwerk op in subnetten, en hoe bepaal je met een IP-adres en een masker in welk subnet een apparaat zit?
 
@@ -327,7 +225,7 @@ Broadcast is nuttig: een apparaat kan iets vragen zonder het adres van de ontvan
 Vier switches verbinden samen 80 computers. Eén computer verstuurt een broadcast en alle 79 andere computers ontvangen die. Een extra switch ertussen verandert dat niet.
 
 ::: {exercise} Zonder Filius: wie ontvangt de broadcast?
-:label: nw04-o1
+:label: nw03-o1
 
 Switch S1 is verbonden met S2. A en B zitten op S1; C en D op S2.
 
@@ -336,7 +234,7 @@ Switch S1 is verbonden met S2. A en B zitten op S1; C en D op S2.
 3. Welke kosten heeft een broadcast voor een apparaat dat er niet op antwoordt?
 :::
 
-::: {solution} nw04-o1
+::: {solution} nw03-o1
 :class: dropdown
 
 1. B, C en D.
@@ -401,7 +299,7 @@ Bij prefix /n blijven `32 − n` apparaatbits over. Het aantal adressen per blok
 Blokken beginnen steeds op een veelvoud van de blokgrootte. Zoek het blok waarin het adres valt: het eerste adres is het netwerkadres, het laatste het broadcastadres en alle adressen daartussen zijn bruikbaar.
 
 ::: {exercise} Zonder Filius: adressen berekenen
-:label: nw04-o2
+:label: nw03-o2
 
 Bepaal voor elk adres het netwerkadres, het broadcastadres, de bruikbare reeks en het aantal bruikbare adressen:
 
@@ -410,7 +308,7 @@ Bepaal voor elk adres het netwerkadres, het broadcastadres, de bruikbare reeks e
 3. Kan `192.168.20.159/27` het adres van een computer zijn? Leg uit.
 :::
 
-::: {solution} nw04-o2
+::: {solution} nw03-o2
 :class: dropdown
 
 1. Masker `255.255.255.224`, blokgrootte 32: netwerkadres `192.168.20.128`, broadcastadres `192.168.20.159`, bruikbaar `.129` tot en met `.158`, 30 adressen.
@@ -427,14 +325,14 @@ Zoek het kleinste aantal apparaatbits h waarvoor `2^h − 2` groot genoeg is. Te
 Je hebt 26 computers, twee servers en één routeraansluiting: 29 adressen. Met vijf apparaatbits zijn er 30 bruikbare adressen, dus `/27` past. `/28` heeft er maar 14. Wil je ruimte voor groei, dan is een groter subnet een betere keuze.
 
 ::: {exercise} Zonder Filius: een passend subnet kiezen
-:label: nw04-o3
+:label: nw03-o3
 
 1. Kies het kleinste subnet voor 45 computers, één server en één routeraansluiting. Geef prefix, masker en aantal bruikbare adressen.
 2. Doe hetzelfde voor twaalf computers en één routeraansluiting.
 3. In situatie 2 komen drie computers bij. Wat betekent dat voor je keuze?
 :::
 
-::: {solution} nw04-o3
+::: {solution} nw03-o3
 :class: dropdown
 
 1. 47 adressen: /26, masker `255.255.255.192`, 62 bruikbaar.
@@ -444,20 +342,20 @@ Je hebt 26 computers, twee servers en één routeraansluiting: 29 adressen. Met 
 
 ## Zit de bestemming in mijn subnet?
 
-Een afzender berekent met zijn eigen masker het netwerkadres van zichzelf en van de bestemming. Zijn die gelijk, dan is de bestemming lokaal. Zijn ze verschillend, dan heeft de afzender een router nodig, meestal de standaardgateway. Hoofdstuk 5 werkt dat verder uit.
+Een afzender berekent met zijn eigen masker het netwerkadres van zichzelf en van de bestemming. Zijn die gelijk, dan is de bestemming lokaal. Zijn ze verschillend, dan heeft de afzender een router nodig, meestal de standaardgateway. Hoofdstuk 4 werkt dat verder uit.
 
 Voorbeeld: `192.168.10.65/26` en `192.168.10.100/26` hebben allebei netwerkadres `.64`. Adres `.130` heeft met hetzelfde masker netwerkadres `.128`. Voor de eerste afzender is `.130` dus niet lokaal, ook als beide apparaten op dezelfde switch zitten.
 
 ::: {exercise} Filius: hetzelfde subnet of niet?
-:label: nw04-o4
+:label: nw03-o4
 
 1. Maak twee computers op één switch: A `192.168.10.65` en B `192.168.10.100`, beide met masker `255.255.255.192`. Stel geen gateways in.
 2. Voorspel en test een ping van A naar B.
 3. Geef B het adres `192.168.10.130` (masker blijft `255.255.255.192`). Voorspel en test opnieuw. Leg uit waarom ‘ze zitten op dezelfde switch’ nu niet genoeg is.
-4. Zet het adres van B terug en bewaar als `04-subnetproef.fls`.
+4. Zet het adres van B terug en bewaar als `03-subnetproef.fls`.
 :::
 
-::: {solution} nw04-o4
+::: {solution} nw03-o4
 :class: dropdown
 
 Eerst liggen beide adressen in subnet `192.168.10.64/26` en kunnen ze rechtstreeks communiceren. Daarna ligt B in `192.168.10.128/26`. A beschouwt B dan niet als lokaal en heeft een router nodig. Die is er niet, dus de ping mislukt. De fysieke aansluiting op één switch verandert dat niet: IP-subnetten en de Ethernetstructuur zijn verschillende dingen.
@@ -465,12 +363,12 @@ Eerst liggen beide adressen in subnet `192.168.10.64/26` en kunnen ze rechtstree
 
 ## Eigen apparaat: let op het masker
 
-Het masker op je computer kan op school anders zijn dan thuis. Een adres dat met `10.` begint, heeft niet automatisch masker /8: het ingestelde masker bepaalt de grens. In hoofdstuk 5 zoek je de netwerkgegevens van je eigen apparaat op.
+Het masker op je computer kan op school anders zijn dan thuis. Een adres dat met `10.` begint, heeft niet automatisch masker /8: het ingestelde masker bepaalt de grens. In hoofdstuk 4 zoek je de netwerkgegevens van je eigen apparaat op.
 
 ---
 
-(netwerken-h05)=
-# ARP en de standaardgateway
+(netwerken-h04)=
+# Lokale netwerken en wereldwijde netwerken verbinden
 
 ## Inleiding
 
@@ -512,7 +410,7 @@ A heeft {term}`netwerkadres` `192.168.10.0`. Met het masker van A heeft het adre
 Met het masker van A heeft het adres van C netwerkadres `192.168.20.0`. Dat is een ander subnet, dus A levert de gegevens af bij gateway `192.168.10.1`.
 
 ::: {exercise} Zonder Filius: welke volgende ontvanger?
-:label: nw05-o1
+:label: nw04-o1
 
 Gebruik de instellingen van computer A uit de tabel.
 
@@ -521,7 +419,7 @@ Gebruik de instellingen van computer A uit de tabel.
 3. Een leerling zegt: ‘De eerste twee getallen van de IP-adressen zijn gelijk, dus de computers zitten in hetzelfde subnet.’ Weerleg dat met een bestemming uit vraag 1.
 :::
 
-::: {solution} nw05-o1
+::: {solution} nw04-o1
 :class: dropdown
 
 1. `192.168.10.50`: rechtstreeks. De andere twee: via `192.168.10.1`.
@@ -530,7 +428,7 @@ Gebruik de instellingen van computer A uit de tabel.
 :::
 
 ::: {exercise} Filius: bouwen en voorspellen
-:label: nw05-o2
+:label: nw04-o2
 
 1. Bouw de opstelling uit de tabel: A en B op de linker switch, C op de rechter switch en een router tussen de switches. Gebruik een gewone router met twee aansluitingen.
 2. Stel de IP-adressen en subnetmaskers in. Laat de standaardgateway op de computers voorlopig leeg en gebruik geen automatische adresuitgifte.
@@ -542,7 +440,7 @@ Gebruik de instellingen van computer A uit de tabel.
 Bewaar je netwerk. Je gebruikt het in de volgende opdrachten opnieuw.
 :::
 
-::: {solution} nw05-o2
+::: {solution} nw04-o2
 :class: dropdown
 
 Zonder gateway kan A wel B bereiken, maar C niet. Met de juiste gateways kan het verkeer heen en terug tussen A en C lopen. De router kent beide netwerken via zijn eigen aansluitingen. Een switch heeft hiervoor geen IP-configuratie nodig.
@@ -585,7 +483,7 @@ Na de ARP-uitwisseling verstuurt A een IP-pakket naar B:
 | IP-pakket in dat frame | 192.168.10.10 | 192.168.10.20 |
 
 ::: {exercise} Zonder Filius: wie krijgt welk bericht?
-:label: nw05-o3
+:label: nw04-o3
 
 De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 
@@ -596,7 +494,7 @@ De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 5. Waarom is niet voor elk volgend IP-pakket een nieuwe broadcast nodig?
 :::
 
-::: {solution} nw05-o3
+::: {solution} nw04-o3
 :class: dropdown
 
 1. Wie heeft `192.168.10.20`? Meld je bij `192.168.10.10`.
@@ -607,7 +505,7 @@ De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 :::
 
 ::: {exercise} Filius: ARP waarnemen
-:label: nw05-o4
+:label: nw04-o4
 
 1. Start de simulatie opnieuw en open bij A het venster met de gegevensuitwisseling (via het contextmenu van de computer; de naam kan per taalversie verschillen).
 2. Ping B en zoek in de gegevensuitwisseling naar ARP.
@@ -616,7 +514,7 @@ De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 5. Leg uit waarom ‘bij elke ping gaat eerst een ARP-request uit’ geen goede regel is.
 :::
 
-::: {solution} nw05-o4
+::: {solution} nw04-o4
 :class: dropdown
 
 Het request vraagt naar het IP-adres van B en gaat naar het Ethernetbroadcastadres. Het reply bevat het MAC-adres van B. Bij een directe herhaling is normaal geen nieuw ARP nodig, omdat de koppeling nog in de cache staat. Vergelijk deze verklaring met je eigen waarnemingen.
@@ -642,7 +540,7 @@ De router haalt het IP-pakket uit het frame en bepaalt via welke aansluiting de 
 De IP-adressen blijven gelijk, omdat we hier geen {term}`NAT` gebruiken. Het frame wordt per verbinding vervangen; het IP-pakket gaat verder naar zijn bestemming.
 
 ::: {exercise} Zonder Filius: volg het antwoord
-:label: nw05-o5
+:label: nw04-o5
 
 C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen bekend zijn.
 
@@ -651,7 +549,7 @@ C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen be
 3. Naar welk IP-adres vraagt A met ARP voordat hij naar C kan versturen? Waarom niet naar het IP-adres van C?
 :::
 
-::: {solution} nw05-o5
+::: {solution} nw04-o5
 :class: dropdown
 
 1.
@@ -666,7 +564,7 @@ C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen be
 :::
 
 ::: {exercise} Filius: twee soorten adressen
-:label: nw05-o6
+:label: nw04-o6
 
 1. Start de simulatie opnieuw en open de gegevensuitwisseling bij A en bij de router.
 2. Ping vanaf A naar C.
@@ -676,7 +574,7 @@ C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen be
 6. Leg uit waarom zowel een IP-adres als een MAC-adres nodig is.
 :::
 
-::: {solution} nw05-o6
+::: {solution} nw04-o6
 :class: dropdown
 
 A vraagt naar `192.168.10.1`. Het IP-pakket gaat naar `192.168.20.10`, in een frame naar de linker routeraansluiting. Op de volgende verbinding veranderen beide MAC-adressen; bron- en bestemmings-IP blijven gelijk. De router kan op het rechter netwerk zelf ARP gebruiken om C te vinden. Bij een herhaling is niet altijd nieuw ARP nodig.
@@ -687,7 +585,7 @@ A vraagt naar `192.168.10.1`. Het IP-pakket gaat naar `192.168.20.10`, in een fr
 De soorten adressen uit Filius staan ook op je eigen computer. Een computer kan meerdere netwerkadapters hebben, bijvoorbeeld voor {term}`wifi` en voor Ethernet.
 
 ::: {exercise} Eigen apparaat: vind je IP-adres, MAC-adres en gateway
-:label: nw05-o7
+:label: nw04-o7
 
 1. Open de netwerkgegevens met de aanwijzingen hieronder.
 2. Noteer van je actieve verbinding het IPv4-adres, het subnetmasker (of de {term}`prefixlengte <CIDR-prefix>`), het MAC-adres en de standaardgateway. De gateway kan ook ‘router’ heten.
@@ -713,7 +611,7 @@ MAC-adres         02:00:00:00:10:25
 ```
 :::
 
-::: {solution} nw05-o7
+::: {solution} nw04-o7
 :class: dropdown
 
 Je waarden hangen af van je verbinding. In het voorbeeld hebben zowel `192.168.10.37` als de gateway `192.168.10.1` met het masker netwerkadres `192.168.10.0`, dus de gateway ligt in hetzelfde subnet.
@@ -725,12 +623,12 @@ Voor een website buiten het eigen subnet zoekt de computer met ARP het MAC-adres
 
 ---
 
-(netwerken-h06)=
-# Door meerdere netwerken
+(netwerken-h05)=
+# Routeren
 
 ## Inleiding
 
-In hoofdstuk 5 gaf je computer een {term}`pakket <IP-pakket>` voor een ander netwerk aan de {term}`gateway`. Daarmee is het pakket er nog niet: ook die {term}`router` moet kiezen waar het naartoe gaat, eventueel naar een volgende router. Elke router beslist alleen over de eerstvolgende stap, met behulp van een {term}`routeringstabel`.
+In hoofdstuk 4 gaf je computer een {term}`pakket <IP-pakket>` voor een ander netwerk aan de {term}`gateway`. Daarmee is het pakket er nog niet: ook die {term}`router` moet kiezen waar het naartoe gaat, eventueel naar een volgende router. Elke router beslist alleen over de eerstvolgende stap, met behulp van een {term}`routeringstabel`.
 
 **Laag:** {term}`netwerklaag`. **Vraag:** hoe kiest een router de volgende stap naar een bestemmingsnetwerk, en wat is nodig om ook het antwoord terug te laten komen?
 
@@ -758,7 +656,7 @@ Een router zoekt het IP-adres van de bestemming op in zijn routeringstabel. Een 
 De drie LANs en het aparte verbindingsnetwerk tussen R1 en R2.
 ```
 
-We breiden het netwerk uit hoofdstuk 5 uit met een tweede router en een derde LAN. Er zijn vier subnetten, want ook het verbindingsnetwerk tussen de routers is een subnet.
+We breiden het netwerk uit hoofdstuk 4 uit met een tweede router en een derde LAN. Er zijn vier subnetten, want ook het verbindingsnetwerk tussen de routers is een subnet.
 
 | Netwerk | Aansluitingen |
 | --- | --- |
@@ -783,7 +681,7 @@ R1 heeft drie aansluitingen en R2 twee. A gebruikt gateway `192.168.10.1`, C `19
 Rechtstreeks aangesloten netwerken kent een router uit de instellingen van zijn aansluitingen. Daarvoor hoef je geen next-hopregels toe te voegen.
 
 ::: {exercise} Zonder Filius: volg de route
-:label: nw06-o1
+:label: nw05-o1
 
 1. A verstuurt naar D. Geef de opeenvolgende ontvangers vanaf A.
 2. Welk bron- en bestemmings-IP-adres staan in het pakket tussen R1 en R2? Er is geen {term}`NAT`.
@@ -791,7 +689,7 @@ Rechtstreeks aangesloten netwerken kent een router uit de instellingen van zijn 
 4. Waarom kan R1 voor netwerk `192.168.30.0/24` niet D als next hop invullen?
 :::
 
-::: {solution} nw06-o1
+::: {solution} nw05-o1
 :class: dropdown
 
 1. Eerst R1, dan R2, dan D.
@@ -807,28 +705,28 @@ Een router kan een {term}`standaardroute` hebben: `0.0.0.0/0`. Die wordt gebruik
 Routers kunnen routes automatisch uitwisselen met routeringsprotocollen. In deze module stel je routes handmatig in en behandelen we die protocollen niet.
 
 ::: {exercise} Zonder Filius: welke regel wint?
-:label: nw06-o2
+:label: nw05-o2
 
 Een router heeft `10.0.0.0/8 via X`, `10.2.0.0/16 via Y` en `0.0.0.0/0 via Z`. Bepaal de volgende stap voor `10.2.8.4`, `10.3.8.4` en `203.0.113.8`.
 :::
 
-::: {solution} nw06-o2
+::: {solution} nw05-o2
 :class: dropdown
 
 `10.2.8.4` gaat via Y: /16 is het meest specifiek. `10.3.8.4` gaat via X: /8 past en /16 niet. `203.0.113.8` gaat via Z: alleen de standaardroute past. X, Y en Z zijn hier rechtstreeks bereikbare next hops.
 :::
 
 ::: {exercise} Filius: een tweede router toevoegen
-:label: nw06-o3
+:label: nw05-o3
 
-1. Open een kopie van je netwerk uit hoofdstuk 5 en bouw de uitbreiding uit de tabellen. Gebruik voor het verbindingsnetwerk masker `255.255.255.252`.
+1. Open een kopie van je netwerk uit hoofdstuk 4 en bouw de uitbreiding uit de tabellen. Gebruik voor het verbindingsnetwerk masker `255.255.255.252`.
 2. Schakel automatische {term}`routering` op de routers uit, als die aanstaat. Open de tabel voor handmatige routes.
 3. Voeg eerst alleen op R1 de route naar `192.168.30.0` met masker `255.255.255.0` via `10.0.0.2` toe. Test A→D. Bereikt het verzoek D? Waarom ontbreekt het antwoord nog?
 4. Voeg op R2 de twee ontbrekende routes naar links en midden toe. Test A↔D en C↔D.
-5. Bewaar als `06-routering.fls`. Noteer je ingestelde regels en leg van één ping de heen- en terugweg uit.
+5. Bewaar als `05-routering.fls`. Noteer je ingestelde regels en leg van één ping de heen- en terugweg uit.
 :::
 
-::: {solution} nw06-o3
+::: {solution} nw05-o3
 :class: dropdown
 
 Met alleen de route op R1 kan het verzoek D bereiken, maar R2 weet niet hoe het antwoord bij A komt. Na het toevoegen van beide terugroutes werkt het verkeer in beide richtingen. De aansluitingen en gateways moeten ook kloppen. Gebruik als next hop het adres van de router op het verbindingsnetwerk, niet een adres aan de andere kant van die router.
@@ -842,7 +740,7 @@ Deze opdrachten sturen berichten waarvan de {term}`TTL` stap voor stap oploopt, 
 
 ---
 
-(netwerken-h07)=
+(netwerken-h06)=
 # Poorten, TCP en UDP
 
 ## Inleiding
@@ -874,14 +772,14 @@ Een webserver luistert bij gewoon {term}`HTTP` meestal op TCP-poort 80 en bij {t
 Client `192.168.10.10:51000` maakt verbinding met {term}`server` `192.168.20.10:80`. Een tweede verbinding kan bronpoort `51001` gebruiken. Antwoorden gaan van serverpoort 80 terug naar de bijbehorende clientpoort.
 
 ::: {exercise} Zonder Filius: naar welk programma?
-:label: nw07-o1
+:label: nw06-o1
 
 1. Geef de bron- en bestemmingspoort van het antwoord van de server op de verbinding met clientpoort 51000.
 2. Twee clients gebruiken allebei bronpoort 51000 naar dezelfde serverpoort. Waarom raken hun verbindingen niet door elkaar?
 3. Waarom is een TCP-poort iets anders dan poort 3 op een {term}`switch`?
 :::
 
-::: {solution} nw07-o1
+::: {solution} nw06-o1
 :class: dropdown
 
 1. Bronpoort 80, bestemmingspoort 51000.
@@ -917,14 +815,14 @@ UDP verstuurt afzonderlijke {term}`datagrammen <datagram>` met poortnummers. UDP
 HTTP/3 gebruikt QUIC boven UDP; QUIC zorgt zelf voor betrouwbaarheid en beveiliging. ‘Websites gebruiken altijd TCP’ is dus te stellig. In onze Filius-voorbeelden gebruikt HTTP wel TCP.
 
 ::: {exercise} Zonder Filius: kies en onderbouw
-:label: nw07-o2
+:label: nw06-o2
 
 1. Waarom is het belangrijk dat bij een download geen bytes ontbreken?
 2. Waarom is wachten op een oud geluidsfragment vervelend bij een live gesprek?
 3. Iemand zegt: ‘UDP kan nooit betrouwbare communicatie opleveren.’ Verbeter die uitspraak.
 :::
 
-::: {solution} nw07-o2
+::: {solution} nw06-o2
 :class: dropdown
 
 1. Ontbrekende bytes kunnen het bestand onbruikbaar maken. De download moet alle bytes in de goede volgorde afleveren.
@@ -933,16 +831,16 @@ HTTP/3 gebruikt QUIC boven UDP; QUIC zorgt zelf voor betrouwbaarheid en beveilig
 :::
 
 ::: {exercise} Filius: TCP herkennen
-:label: nw07-o3
+:label: nw06-o3
 
 1. Gebruik C als webserver in je bestaande netwerk: installeer en start de webserver. Installeer op A een webbrowser.
 2. Open de gegevensuitwisseling en bezoek vanaf A `http://192.168.20.10`.
 3. Zoek de opbouw van de TCP-verbinding en noteer de gebruikte poorten. Welke kant begon?
 4. Vergelijk met een ping naar hetzelfde adres. Zie je daar ook een TCP-opbouw?
-5. Bewaar als `07-transport.fls`.
+5. Bewaar als `06-transport.fls`.
 :::
 
-::: {solution} nw07-o3
+::: {solution} nw06-o3
 :class: dropdown
 
 De browser is de client en begint de verbinding. De webserver gebruikt normaal TCP-poort 80 en de client een tijdelijke bronpoort. Bij een nieuwe verbinding zijn de opbouwberichten zichtbaar. Ping gebruikt {term}`ICMP` en heeft geen handshake. Een bestaande verbinding kan hergebruikt worden: start de simulatie opnieuw als je juist de eerste verbinding wilt zien.
@@ -954,58 +852,94 @@ Open in de ontwikkeltools van je browser het tabblad Netwerk en laad een pagina.
 
 ---
 
-(netwerken-h08)=
-# DNS en HTTP: een website opvragen
+(netwerken-h07)=
+# DNS: een naam opzoeken
 
 ## Inleiding
 
-Je typt een websiteadres in de browser. Daarin staan twee soorten informatie: de naam van een {term}`server` en de bron die je bij die server wilt opvragen. Het netwerk heeft eerst een {term}`IP-adres` nodig. Daarna heeft de server een duidelijk verzoek nodig.
+Je typt een websiteadres in de browser, bijvoorbeeld `http://nieuws.school.test/rooster.html`. Zo’n adres heet een {term}`URL`. Het bevat een protocol (`http`), de naam van een computer (de hostnaam `nieuws.school.test`) en een pad (`/rooster.html`). Het netwerk kan niets met een naam: het heeft een {term}`IP-adres` nodig. Het {term}`DNS` zoekt dat IP-adres bij de hostnaam.
 
-**Laag:** {term}`toepassingslaag`. **Vraag:** hoe wordt een naam met een pad een verzoek aan de juiste webserver?
+**Laag:** {term}`toepassingslaag`. **Vraag:** hoe vindt een computer het IP-adres dat bij een naam hoort?
 
-{term}`DNS` zoekt het IP-adres bij een naam. {term}`HTTP` vraagt de pagina op bij de server. Je stelt beide diensten apart in, zodat je ziet wat elk doet.
+## Klassikaal: een naam omzetten in een adres
 
-## Klassikaal: naam, adres en inhoud
+Maak twee rollen: clients en een DNS-balie. De DNS-balie heeft alleen een lijst met namen en bijbehorende adressen. Alle clients krijgen een URL, zoals `http://nieuws.school.test/sport.html`.
 
-Maak vier rollen: browserclients, een DNS-balie, webserver Noord en webserver Zuid. De DNS-balie heeft alleen een lijst met namen en serveradressen. Elke webserver heeft pagina’s met eigen paden. Alleen de servers hebben de inhoud.
+1. Laat de clients eerst de hele URL aan de DNS-balie voorleggen. De balie kent alleen namen en kan niets met het pad.
+2. Spreek af dat clients alleen de hostnaam vragen. De balie antwoordt met een adres.
+3. Verander op de lijst alleen het adres dat bij een naam hoort. De URL van de clients blijft gelijk, maar ze komen nu bij een ander adres uit.
 
-Elke {term}`client` krijgt een {term}`URL`, bijvoorbeeld `http://nieuws.school.test/sport.html`. De client mag de DNS-balie alleen de hostnaam vragen en bezoekt daarna met het gevonden adres de juiste server om het pad op te vragen.
+Bespreek wat de DNS-balie wel en niet weet.
 
-1. Laat clients eerst de hele URL aan de DNS-balie voorleggen. De balie heeft de pagina niet.
-2. Spreek de twee aparte vragen af: eerst naar het adres, dan naar de pagina.
-3. Verander alleen het serveradres op de DNS-lijst en verplaats de pagina naar die server. De URL blijft gelijk.
-
-Bespreek welke rol welke informatie beheert. Het zijn twee diensten, ook als één echte computer beide uitvoert.
-
-## DNS: een naam opzoeken
+## DNS: namen en adressen koppelen
 
 Het Domain Name System koppelt namen aan gegevens, waaronder IP-adressen. Een {term}`A-record` koppelt een naam aan een IPv4-adres; voor IPv6 is er het AAAA-record.
 
 Je computer vraagt dit meestal aan een {term}`resolver <DNS-resolver>`. Die heeft het antwoord misschien al in een {term}`cache`. Zo niet, dan zoekt hij het op, eventueel via verwijzingen naar andere DNS-servers. DNS is wereldwijd verdeeld: geen enkele server kent alle namen. Rootservers en servers voor topleveldomeinen verwijzen door; gezaghebbende servers beheren de gegevens van hun eigen domeinen.
 
-Een eenvoudige DNS-vraag gaat vaak via UDP-poort 53; DNS kan ook {term}`TCP` gebruiken. DNS is een ander protocol dan HTTP.
+Een eenvoudige DNS-vraag gaat vaak via UDP-poort 53; DNS kan ook {term}`TCP` gebruiken.
 
-DNS levert geen webpagina en vertaalt niet de hele URL. Bij `http://nieuws.school.test/sport.html` zoekt DNS alleen de hostnaam `nieuws.school.test` op. Het pad `/sport.html` gaat pas naar de webserver. Namen met `.test` zijn bedoeld voor oefenomgevingen en bestaan niet op het publieke internet.
+DNS levert geen webpagina en vertaalt niet de hele URL. Bij `http://nieuws.school.test/sport.html` zoekt DNS alleen de hostnaam `nieuws.school.test` op. Het pad `/sport.html` gaat pas later naar de webserver. Namen met `.test` zijn bedoeld voor oefenomgevingen en bestaan niet op het publieke internet.
 
 ### Voorbeeld
 
-DNS antwoordt dat `nieuws.school.test` bij `192.168.20.10` hoort. De browser kan nu verbinding maken met de webserver op dat adres. Bij een volgend bezoek kan het antwoord uit een cache komen, dus niet elk bezoek start een nieuwe zoekactie over de hele wereld.
+DNS antwoordt dat `nieuws.school.test` bij `192.168.20.10` hoort. Je computer kan nu verkeer naar dat adres sturen. Bij een volgende vraag kan het antwoord uit een cache komen, dus niet elke vraag start een nieuwe zoekactie over de hele wereld.
 
 ::: {exercise} Zonder Filius: wie weet het?
-:label: nw08-o1
+:label: nw07-o1
 
 1. Welke DNS-vraag hoort bij `http://nieuws.school.test/rooster.html`?
 2. Waarom hoeven links niet te veranderen als een website naar een nieuw IP-adres verhuist?
-3. Het DNS-antwoord is goed, maar de webserver staat uit. Is de naam dan toch goed opgezocht?
+3. Een computer vraagt kort na elkaar twee keer naar dezelfde naam. Waarom kan het tweede antwoord sneller komen?
 :::
 
-::: {solution} nw08-o1
+::: {solution} nw07-o1
 :class: dropdown
 
 1. Vraag naar het adres van `nieuws.school.test`, niet naar `/rooster.html`.
 2. Alleen de DNS-koppeling verandert; de naam blijft hetzelfde. Oude antwoorden kunnen nog tijdelijk in een cache staan.
-3. Ja. DNS en de webserver zijn verschillende diensten. Een goed adres garandeert niet dat de webserver draait.
+3. Het eerste antwoord is bewaard in een cache, dus de resolver hoeft het niet opnieuw op te zoeken.
 :::
+
+::: {exercise} Filius: een DNS-server instellen
+:label: nw07-o2
+
+1. Open `06-transport.fls`. Computer C heeft adres `192.168.20.10`.
+2. Voeg aan het netwerk van C een DNS-server toe met adres `192.168.20.53`, masker `255.255.255.0` en {term}`gateway` `192.168.20.1`.
+3. Installeer en start de DNS-server. Maak een adresrecord voor `nieuws.school.test` naar `192.168.20.10`.
+4. Stel op A het DNS-serveradres `192.168.20.53` in. Laat de gateway goed staan.
+5. Ping vanaf A eerst `192.168.20.10` en daarna `nieuws.school.test`.
+6. Zoek in de gegevensuitwisseling de DNS-vraag, het DNS-antwoord en de daaropvolgende ping. Welke computer geeft het DNS-antwoord?
+7. Bewaar als `07-dns.fls`.
+:::
+
+::: {solution} nw07-o2
+:class: dropdown
+
+Beide pings werken. Bij de ping op naam gaat eerst een DNS-vraag naar `192.168.20.53`, die het adres `192.168.20.10` teruggeeft. Daarna gaat de ping naar `192.168.20.10`. De DNS-server levert alleen het adres en doet zelf niets met de ping. Dit voorbeeld heeft één lokale DNS-server en bootst de wereldwijde DNS-structuur niet na.
+:::
+
+---
+
+(netwerken-h08)=
+# HTTP: een webpagina opvragen
+
+## Inleiding
+
+Met DNS heeft je browser het IP-adres van de webserver. Nu moet de browser nog aan de server duidelijk maken welke pagina hij wil. Daarvoor gebruikt hij {term}`HTTP`: een protocol waarmee een {term}`client` een verzoek doet en een {term}`server` antwoordt.
+
+**Laag:** {term}`toepassingslaag`. **Vraag:** hoe vraagt een browser een pagina op bij een webserver en hoe antwoordt de server?
+
+## Klassikaal: een pagina opvragen bij de juiste server
+
+Maak drie rollen: browserclients, webserver Noord en webserver Zuid. Elke server heeft pagina’s op eigen paden. Clients krijgen een URL, zoals `http://nieuws.school.test/sport.html`, en een DNS-lijst die vertelt welke server bij welke naam hoort.
+
+1. De client zoekt het adres van de server op de DNS-lijst en gaat naar die server.
+2. De client vraagt het pad op. De server antwoordt met de pagina en een kaartje ‘200’, of met een kaartje ‘404’ als hij het pad niet heeft.
+3. Verplaats een pagina naar de andere server, maar laat de DNS-lijst ongewijzigd. Wat gebeurt er als clients dezelfde URL gebruiken?
+4. Pas nu de DNS-lijst aan. Werkt dezelfde URL weer?
+
+Bespreek welke rol welke informatie beheert: DNS weet waar de server is, de server weet welke pagina’s er zijn.
 
 ## HTTP: een verzoek en een antwoord
 
@@ -1027,56 +961,166 @@ Content-Type: text/html
 
 `GET` vraagt een bron op. `200` betekent dat het gelukt is; `404` betekent dat de bron niet is gevonden. Bij een 404 is er dus wel een antwoord van een server gekomen. De headers geven extra informatie en de inhoud staat daarna. Afbeeldingen en CSS-bestanden in de pagina kunnen aparte verzoeken veroorzaken.
 
+DNS en HTTP zijn verschillende diensten. Een goed DNS-antwoord garandeert niet dat de webserver draait, en een 404 betekent niet dat DNS faalde.
+
+::: {note} HTTPS
+HTTP-verkeer is leesbaar voor iedereen die het onderweg onderschept. {term}`HTTPS` is HTTP over een beveiligde verbinding met {term}`TLS`, die het verkeer versleutelt. Je herkent het aan `https://` en het slotje in de adresbalk. We werken HTTPS in deze module niet verder uit.
+:::
+
 ::: {exercise} Zonder Filius: het antwoord lezen
-:label: nw08-o2
+:label: nw08-o1
 
 1. Welke servernaam en welk pad staan in het voorbeeld?
 2. Is een ontvangen 404 hetzelfde als geen netwerkverbinding? Leg uit.
 3. Een pagina bevat twee afbeeldingen. Waarom veroorzaakt die pagina meer dan één verzoek?
+4. Het DNS-antwoord is goed, maar de webserver staat uit. Wat merkt de browser?
 :::
 
-::: {solution} nw08-o2
+::: {solution} nw08-o1
 :class: dropdown
 
 1. Servernaam `nieuws.school.test`, pad `/rooster.html`.
 2. Nee. Bij een 404 is er een antwoord van de server; alleen de gevraagde bron ontbreekt. Zonder verbinding komt er helemaal geen antwoord.
 3. De browser haalt na de HTML ook de afbeeldingen op. Een cache kan het aantal nieuwe verzoeken beperken.
+4. De browser krijgt geen verbinding met de server en dus geen HTTP-antwoord. De naam is wel goed opgezocht.
 :::
 
 ::: {exercise} Filius: een website op naam
-:label: nw08-o3
+:label: nw08-o2
 
-1. Open `07-transport.fls`. Gebruik C (`192.168.20.10`) als webserver. Pas de startpagina aan met een herkenbare titel en start de webserver.
-2. Voeg aan het netwerk van C een DNS-server toe met adres `192.168.20.53`, masker `255.255.255.0` en {term}`gateway` `192.168.20.1`.
-3. Installeer en start de DNS-server. Maak een adresrecord voor `nieuws.school.test` naar `192.168.20.10`.
-4. Stel op A het DNS-serveradres `192.168.20.53` in. Laat de gateway goed staan.
-5. Bezoek eerst `http://192.168.20.10` en daarna `http://nieuws.school.test`.
-6. Zoek in de gegevensuitwisseling de DNS-vraag, het DNS-antwoord en het HTTP-verkeer. Noteer welke server bij welke dienst hoort.
-7. Bewaar als `08-website.fls`.
+1. Open `07-dns.fls`. Gebruik C (`192.168.20.10`) als webserver. Installeer en start de webserver en pas de startpagina aan met een herkenbare titel. Installeer op A een webbrowser.
+2. Bezoek eerst `http://192.168.20.10` en daarna `http://nieuws.school.test`.
+3. Zoek in de gegevensuitwisseling de DNS-vraag, het DNS-antwoord en het HTTP-verkeer. Noteer welke server bij welke dienst hoort.
+4. Zet de webserver uit en bezoek de pagina opnieuw. Wat merk je en wat zegt dat over DNS en HTTP?
+5. Bewaar als `08-website.fls`.
 :::
 
-::: {solution} nw08-o3
+::: {solution} nw08-o2
 :class: dropdown
 
-De website is bereikbaar via het IP-adres én via de naam. De DNS-vraag gaat naar `.53` en levert het adres `.10`; het webverkeer gaat daarna naar `.10`. De DNS-server levert zelf niet de HTML. Ook als één computer beide diensten uitvoert, blijven het twee diensten. Dit voorbeeld heeft één lokale DNS-server en bootst de wereldwijde DNS-structuur niet na.
+De website is bereikbaar via het IP-adres én via de naam. De DNS-vraag gaat naar `.53` en levert het adres `.10`; het webverkeer gaat daarna naar `.10`. De DNS-server levert zelf niet de HTML. Met de webserver uit werkt DNS nog wel, maar de pagina komt niet meer.
 :::
 
 ## Eigen apparaat: webverkeer bekijken
 
 Open de ontwikkeltools van je browser, kies Netwerk en laad de schoolwebsite opnieuw. Klik een verzoek aan en zoek de URL, de statuscode en het inhoudstype. Kies ook een CSS-bestand of afbeelding. Zijn de ontwikkeltools op school geblokkeerd, laat dan de docent het voordoen.
 
-Bij {term}`HTTPS` toont je browser de leesbare inhoud, omdat hij die zelf ontsleutelt. Dat betekent niet dat iemand onderweg dezelfde inhoud kan lezen. HTTPS komt in hoofdstuk 9 aan bod.
+Bij HTTPS toont je browser de leesbare inhoud, omdat hij die zelf ontsleutelt. Dat betekent niet dat iemand onderweg dezelfde inhoud kan lezen.
 
 ---
 
 (netwerken-h09)=
-# NAT, firewall en HTTPS
+# E-mail
 
 ## Inleiding
 
-Thuis delen meerdere apparaten vaak één publiek IPv4-adres. Je wilt ook niet dat onbekenden van buiten zomaar een verbinding met je apparaten beginnen, of dat iemand onderweg de inhoud van je verkeer meeleest. Dat zijn drie verschillende problemen met drie verschillende oplossingen: adresvertaling met {term}`NAT`, filteren met een {term}`firewall` en versleutelen met {term}`TLS` bij {term}`HTTPS`. Een oplossing voor één probleem lost de andere twee niet op.
+Een website vraag je op: jij begint en de server antwoordt. Bij e-mail werkt het anders. Een bericht gaat van jouw programma naar de mailserver van je school of provider, vandaar naar de mailserver van de ontvanger en wordt daar later opgehaald. Er zijn dus meerdere stappen en meerdere protocollen.
 
-**Lagen:** netwerk, transport en toepassing. **Vraag:** hoe kunnen meerdere apparaten één publiek adres delen, wie bepaalt welk verkeer binnenkomt, en hoe blijft de inhoud van webverkeer geheim?
+**Laag:** {term}`toepassingslaag`. **Vraag:** welke protocollen en servers zijn betrokken bij het versturen en ontvangen van e-mail?
+
+## Verzenden en ophalen
+
+Verzenden en ophalen zijn aparte taken met aparte protocollen:
+
+- {term}`SMTP` dient om e-mail aan te bieden aan een mailserver en tussen mailservers door te sturen.
+- IMAP en POP dienen om ontvangen berichten met een mailprogramma op te halen.
+- Bij webmail praat je browser via HTTP met de webmailtoepassing. De mailservers erachter gebruiken onderling nog steeds SMTP.
+
+Een e-mailadres bestaat uit een gebruikersnaam en een domein, bijvoorbeeld `leerling@school.test`. De mailserver van de afzender moet weten welke server mail voor `school.test` ontvangt. Dat staat in DNS, in een {term}`MX-record`. Dat is iets anders dan het A-record van een website.
+
+### Voorbeeld
+
+Je stuurt mail naar `leerling@school.test`:
+
+1. Je mailprogramma biedt het bericht met SMTP aan bij jouw mailserver.
+2. Jouw mailserver vraagt DNS naar het MX-record van `school.test` en krijgt de naam van de mailserver van de school.
+3. Jouw mailserver stuurt het bericht met SMTP naar die server.
+4. De ontvanger haalt het bericht later op met IMAP of POP, of leest het via webmail.
+
+::: {exercise} Zonder Filius: een e-mail volgen
+:label: nw09-o1
+
+1. Bewijst een browser die webmail toont dat alle mail tussen mailservers via HTTP reist?
+2. Welk protocol hoort bij e-mail aanbieden en doorsturen: SMTP of {term}`ARP`?
+3. Waarom bewijst een werkende website op `school.test` niet dat e-mail naar dat domein bezorgd kan worden?
+4. Waarom heeft de mailserver van de afzender DNS nodig om de mail te kunnen bezorgen?
+:::
+
+::: {solution} nw09-o1
+:class: dropdown
+
+1. Nee. HTTP kan de webmailpagina in je browser verzorgen, terwijl mailservers onderling SMTP gebruiken.
+2. SMTP. ARP lost een lokaal adresseringsprobleem op.
+3. De webserver en de mailserver zijn verschillende diensten met eigen instellingen, en ook de DNS-records verschillen (A-record voor de website, MX-record voor de mail).
+4. Hij moet via het MX-record weten welke server de mail voor het domein ontvangt en daarna het IP-adres van die server opzoeken.
+:::
+
+---
+
+(netwerken-h10)=
+# DHCP: automatisch instellen
+
+## Inleiding
+
+Tot nu toe stelde je IP-adressen, maskers en gateways met de hand in. Dat is onwerkbaar als er elke dag nieuwe apparaten bij komen, zoals telefoons en laptops. Met {term}`DHCP` krijgt een apparaat die instellingen automatisch van een server.
+
+**Laag:** {term}`toepassingslaag`. **Vraag:** hoe krijgt een apparaat zonder instellingen toch een IP-adres, masker, gateway en DNS-server?
+
+## DHCP: wie stelt al die adressen in?
+
+Een {term}`client` die op een netwerk wordt aangesloten, kent nog geen netwerkgegevens. Hij zoekt een {term}`server` met vier berichten:
+
+1. **Discover:** de client roept naar iedereen dat hij een configuratie zoekt.
+2. **Offer:** een DHCP-server biedt een adres en andere instellingen aan.
+3. **Request:** de client vraagt dat aanbod aan.
+4. **Acknowledge:** de server bevestigt.
+
+Behalve het {term}`IP-adres` kan de configuratie onder andere het {term}`masker <subnetmasker>`, de {term}`gateway` en DNS-serveradressen bevatten. Het adres wordt voor beperkte tijd uitgeleend: de {term}`lease`. Een DHCP-server is geen DNS-server, ook al kan één computer beide diensten uitvoeren.
+
+De eerste berichten zijn broadcasts, want de client heeft nog geen adres en kent de server niet. {term}`Routers <router>` sturen broadcasts niet vanzelf door naar andere netwerken. In grotere netwerken kan een speciaal ingestelde DHCP-relay dat oplossen; dat stel je hier niet in.
+
+::: {exercise} Zonder Filius: DHCP volgen
+:label: nw10-o1
+
+1. Waarom kan een nieuwe client zijn DHCP-vraag niet rechtstreeks aan één server richten?
+2. Welke vier instellingen kan een client via DHCP krijgen?
+3. Waarom bewijst een geslaagde DHCP-configuratie niet dat DNS en de webserver werken?
+:::
+
+::: {solution} nw10-o1
+:class: dropdown
+
+1. Hij heeft nog geen IP-adres en kent het adres van de server niet. Daarom begint hij met een broadcast.
+2. IP-adres, subnetmasker, gateway en DNS-serveradres.
+3. DHCP stelt alleen de netwerkinstellingen in. DNS en de webserver zijn aparte diensten.
+:::
+
+::: {exercise} Filius: automatische instellingen
+:label: nw10-o2
+
+1. Werk in een kopie van `08-website.fls`. Installeer op de DNS-server ook de DHCP-server, als jouw Filius-versie die heeft.
+2. Kies voor het server-LAN een pool van `192.168.20.100` tot en met `192.168.20.120`, masker `255.255.255.0`, gateway `192.168.20.1` en DNS `192.168.20.53`. Houd vaste serveradressen buiten de pool.
+3. Voeg één nieuwe client toe op dezelfde {term}`switch` en stel die in op automatische adresconfiguratie. Start de DHCP-server en vraag de configuratie aan.
+4. Controleer de ontvangen instellingen en bezoek de oefenwebsite op naam. Wat heeft DHCP ingesteld en welke dienst levert nog steeds de pagina?
+5. Bewaar als `10-dhcp.fls`.
+:::
+
+::: {solution} nw10-o2
+:class: dropdown
+
+De client krijgt een vrij adres uit de pool en de ingestelde extra gegevens. DHCP levert de netwerkconfiguratie, DNS de naamkoppeling en de webserver de pagina. Menunamen en opties kunnen per Filius-versie verschillen.
+:::
+
+---
+
+(netwerken-h11)=
+# NAT en firewall
+
+## Inleiding
+
+Thuis delen meerdere apparaten vaak één publiek IPv4-adres. Je wilt ook niet dat onbekenden van buiten zomaar een verbinding met je apparaten beginnen. Dat zijn twee verschillende problemen met twee verschillende oplossingen: adresvertaling met {term}`NAT` en filteren met een {term}`firewall`. Een oplossing voor één probleem lost het andere niet op.
+
+**Lagen:** netwerk en transport. **Vraag:** hoe kunnen meerdere apparaten één publiek adres delen, en wie bepaalt welk verkeer binnenkomt?
 
 ## Klassikaal: één buitenadres voor meerdere clients
 
@@ -1118,14 +1162,14 @@ Beide clients gebruiken dezelfde interne bronpoort, maar krijgen een andere buit
 NAT vervangt {term}`routering` niet: na het vertalen moet het {term}`pakket <IP-pakket>` nog steeds worden doorgestuurd. NAT versleutelt ook niets. Onze Filius-netwerken gebruiken private adressen zonder NAT; in zo’n afgesloten netwerk is gewone routering genoeg.
 
 ::: {exercise} Zonder Filius: de vertaling volgen
-:label: nw09-o1
+:label: nw11-o1
 
 1. Bij welke client hoort een antwoord naar `203.0.113.5:40001`?
 2. Waarom zou de router buitenpoort 40001 niet ook voor de tweede verbinding naar dezelfde server gebruiken?
 3. Is `172.40.2.8` een privaat adres? En `172.20.2.8`?
 :::
 
-::: {solution} nw09-o1
+::: {solution} nw11-o1
 :class: dropdown
 
 1. `192.168.10.10:51000`.
@@ -1140,7 +1184,7 @@ Een firewall bepaalt aan de hand van regels welk verkeer wordt doorgelaten. De r
 Een router stuurt door, NAT vertaalt en een firewall filtert. Die taken zitten vaak in één apparaat, maar het blijven verschillende beslissingen. Een firewall die {term}`TCP` naar poort 443 toestaat, beoordeelt daarmee niet of een website betrouwbaar is.
 
 ::: {exercise} Zonder Filius: de regels toepassen
-:label: nw09-o2
+:label: nw11-o2
 
 Een stateful firewall past deze regels in volgorde toe: (1) antwoorden bij toegestane verbindingen toelaten; (2) interne clients nieuwe TCP-verbindingen naar externe poort 443 laten beginnen; (3) alle andere nieuwe verbindingen blokkeren.
 
@@ -1150,7 +1194,7 @@ Een stateful firewall past deze regels in volgorde toe: (1) antwoorden bij toege
 4. Versleutelt deze firewall het verkeer?
 :::
 
-::: {solution} nw09-o2
+::: {solution} nw11-o2
 :class: dropdown
 
 1. Ja, volgens regel 2.
@@ -1159,58 +1203,123 @@ Een stateful firewall past deze regels in volgorde toe: (1) antwoorden bij toege
 4. Nee. Filteren en versleutelen zijn verschillende taken.
 :::
 
-## HTTPS: de verbinding beveiligen
-
-HTTPS is {term}`HTTP` over een beveiligde verbinding. Bij HTTP/1.1 en HTTP/2 doet TLS dat boven TCP. De browser controleert onder andere of het {term}`certificaat` bij de domeinnaam past en door een vertrouwde partij is uitgegeven. Beide kanten spreken daarna cryptografische sleutels af.
-
-TLS beschermt de inhoud tegen meelezen en ongemerkt aanpassen onderweg en helpt de identiteit van de server vast te stellen. Een frauduleuze website wordt daardoor niet eerlijk: ook een verkeerde website kan een geldig certificaat voor haar eigen domeinnaam hebben. Andere gegevens, zoals IP-adressen en de hoeveelheid verkeer, kunnen onderweg zichtbaar blijven. HTTP/3 gebruikt QUIC met TLS-beveiliging.
-
-::: {exercise} Eigen apparaat: wat bewijst een certificaat?
-:label: nw09-o3
-
-1. Open de schoolwebsite via HTTPS. Open via de sloticoon bij de adresbalk de verbindings- of certificaatinformatie (de menunamen verschillen per browser). Noteer voor welke domeinnaam het certificaat geldt en, als dat zichtbaar is, de geldigheidsperiode.
-2. Leg uit waarom een geldig certificaat geen kwaliteitskeurmerk voor de inhoud is.
-3. Waarom kun je in je eigen ontwikkeltools de inhoud van HTTPS-antwoorden wel lezen?
-:::
-
-::: {solution} nw09-o3
-:class: dropdown
-
-1. De waarden verschillen; controleer de bezochte naam en de namen in het certificaat.
-2. Een certificaat zegt iets over de identiteit bij een domeinnaam en over de beveiligde verbinding, niet over de waarheid of de bedoelingen van de inhoud.
-3. Je browser is het eindpunt en ontsleutelt de gegevens. Een tussenliggende router is dat niet.
-:::
-
 ::: {exercise} Filius: wat laat het model zien?
-:label: nw09-o4
+:label: nw11-o3
 
 1. Open je HTTP-website uit hoofdstuk 8 en lees een verzoek of antwoord in de gegevensuitwisseling. Zoek je eigen paginatitel.
-2. Vergelijk dit met HTTPS in een echte browser: wie kan daar de ontsleutelde inhoud bekijken?
-3. Welke van routering, NAT, firewall en TLS heb je in je eigen Filius-netwerk daadwerkelijk ingesteld en aangetoond?
+2. Waaraan zie je dat dit verkeer niet versleuteld is?
+3. Welke van routering, NAT en firewall heb je in je eigen Filius-netwerk daadwerkelijk ingesteld en aangetoond?
 :::
 
-::: {solution} nw09-o4
+::: {solution} nw11-o3
 :class: dropdown
 
-Je hebt routering en een gewone HTTP-dienst ingesteld. De leesbare paginatitel in de HTTP-uitwisseling laat zien dat dit verkeer niet versleuteld is. Private adressen gebruiken is geen bewijs dat NAT actief is. In deze module stel je TLS, NAT en firewall niet in Filius in; je beoordeelt ze met de uitgewerkte modellen en regels.
+Je hebt routering en een gewone HTTP-dienst ingesteld. De leesbare paginatitel in de HTTP-uitwisseling laat zien dat dit verkeer niet versleuteld is. Private adressen gebruiken is geen bewijs dat NAT actief is. In deze module stel je NAT en firewall niet in Filius in; je beoordeelt ze met de uitgewerkte modellen en regels.
 :::
 
 ---
 
-(netwerken-h10)=
-# Van URL naar webpagina
+(netwerken-h12)=
+# Lagen en inkapseling
 
 ## Inleiding
 
-Je kent nu de taken van alle lagen. In dit hoofdstuk volg je één websitebezoek van de tekst in de adresbalk tot de ontvangen pagina en gebruik je daarvoor alles uit de vorige hoofdstukken.
+In de vorige hoofdstukken heb je de lagen één voor één leren kennen: bits en signalen (hoofdstuk 1), frames en MAC-adressen (2), IP-adressen en subnetten (3), ARP (4), routeren (5), poorten, TCP en UDP (6), DNS (7), HTTP (8), e-mail (9), DHCP (10) en NAT en firewall (11). In dit hoofdstuk zet je ze naast elkaar. Eerst leer je hoe de lagen samen één bericht verpakken. Daarna volg je een volledig websitebezoek van de adresbalk tot de ontvangen pagina en leg je je verklaring naast berichten die je zelf in de simulatie ziet.
 
-**Vraag:** welke stappen zijn voor dit bezoek nodig, en welke velden in de berichten laten dat zien?
+**Lagen:** alle vijf. **Vraag:** welke taak heeft elke laag, hoe wordt een bericht verpakt en welke stappen zijn voor een websitebezoek nodig?
 
-Het [hoofdstuk over lagen en inkapseling](#netwerken-h03) beschrijft hoe berichten worden verpakt. Hier pas je dat toe op {term}`DNS`, {term}`TCP`, {term}`HTTP`, {term}`ARP` en {term}`routering`. Je vergelijkt je verklaring met berichten die je zelf in de simulatie ziet.
+## Vijf lagen, vijf vragen
+
+We gebruiken een {term}`lagenmodel` met vijf lagen. Een laag is geen aparte kast: één computer voert taken uit meerdere lagen uit.
+
+| Laag | Welke vraag lost de laag op? | Wat gebruikt de laag daarvoor? |
+| --- | --- | --- |
+| {term}`Toepassingslaag <toepassingslaag>` | Wat vraagt of levert het programma? | Een bericht van het programma, bijvoorbeeld een verzoek om een webpagina |
+| {term}`Transportlaag <transportlaag>` | Voor welk programma zijn de gegevens bedoeld, en hoe betrouwbaar moeten ze aankomen? | {term}`Poortnummers <poortnummer>`; {term}`TCP` regelt ook volgorde en herhaling |
+| {term}`Netwerklaag <netwerklaag>` | Naar welke computer moet het bericht, ook via andere netwerken? | Bron- en bestemmings-IP-adres |
+| {term}`Datalinklaag <datalinklaag>` | Naar welk apparaat op deze lokale verbinding? | Bron- en bestemmings-MAC-adres bij {term}`Ethernet` |
+| {term}`Fysieke laag <fysieke laag>` | Hoe gaan de {term}`bits <bit>` over het {term}`medium`? | Signalen op koper, glasvezel of radio |
+
+Een protocol is een verzameling concrete afspraken. {term}`IP` is bijvoorbeeld het protocol van de netwerklaag, {term}`HTTP` een protocol van de toepassingslaag en TCP en {term}`UDP` zijn protocollen van de transportlaag. Dezelfde taak kan door verschillende protocollen worden uitgevoerd: een browser stuurt hetzelfde HTTP-verzoek via een kabel of via wifi. Alleen de onderste laag verandert.
+
+## Inkapseling: elke laag voegt informatie toe
+
+Een ontvanger moet kunnen herkennen wat hij krijgt en voor wie het bedoeld is. Daarom voegt de zender bij elke laag besturingsinformatie toe, meestal als {term}`header` vóór de gegevens. Dat heet {term}`inkapseling`.
+
+We volgen één klein HTTP-bericht dat via TCP, IPv4 en Ethernet wordt verstuurd:
+
+1. De toepassing maakt het bericht: een verzoek om `/rooster.html`.
+2. TCP voegt een TCP-header toe met onder andere poortnummers en volgnummers. Dit geheel heet een {term}`TCP-segment`.
+3. IP behandelt dat segment als inhoud en voegt een IP-header toe. Dit geheel heet een {term}`IP-pakket`.
+4. Ethernet behandelt het IP-pakket als inhoud en voegt een header ervoor en een {term}`trailer` erachter toe. De trailer bevat de foutcontrole ({term}`FCS`). Dit geheel is het frame.
+5. De fysieke laag zet de bits van het frame om in signalen. Zij voegt geen header toe.
+
+```{figure} ../images/inkapseling.svg
+:alt: Een Ethernetframe bevat een IP-pakket; dat bevat een TCP-segment met de toepassingsgegevens. De Ethernetheader en trailer staan buiten het IP-pakket.
+
+Het segment zit in het pakket en het pakket in het frame. Elke header hoort bij zijn eigen laag.
+```
+
+De inhoud die een laag vervoert heet de {term}`payload`. Voor Ethernet is dat hier het hele IP-pakket, niet alleen de tekst van de webpagina. Eén bericht van een programma kan over meerdere TCP-segmenten worden verdeeld; de figuur toont bewust één klein bericht.
+
+## Ontkapseling: de ontvanger pakt uit
+
+De ontvanger werkt in omgekeerde richting. De netwerkinterface haalt de bits uit de signalen. De datalinklaag controleert het frame, verwerkt de Ethernetheader en geeft de inhoud door aan de netwerklaag. IP verwerkt de IP-header en geeft de inhoud door aan TCP. TCP verwerkt de TCP-header, voegt ontvangen {term}`bytes <byte>` in de goede volgorde samen en levert ze af bij het programma. Dit heet {term}`ontkapseling`. Elke laag gebruikt alleen zijn eigen header.
+
+::: {exercise} Zonder Filius: wat zit waarin?
+:label: nw12-l1
+
+1. Orden van buiten naar binnen: toepassingsgegevens, Ethernetframe, TCP-segment, IP-pakket.
+2. Staan een bestemmings-MAC-adres en een bestemmings-IP-adres in dezelfde header?
+3. Een IP-pakket is 100 bytes. Ethernetheader en -trailer samen zijn in dit voorbeeld 18 bytes. Hoe groot is het frame? Is het IP-pakket zelf nu 118 bytes?
+:::
+
+::: {solution} nw12-l1
+:class: dropdown
+
+1. Ethernetframe → IP-pakket → TCP-segment → toepassingsgegevens.
+2. Nee. Het MAC-adres staat in de Ethernetheader en het IP-adres in de IP-header. De Ethernetheader zit buiten het IP-pakket.
+3. Het frame is 118 bytes. Het IP-pakket blijft 100 bytes: de 18 bytes zijn de buitenste verpakking.
+:::
+
+## Wat doet een router?
+
+Een {term}`router` ontvangt een frame, haalt het IP-pakket eruit en kijkt naar het IP-adres van de bestemming. Daarmee kiest hij de volgende verbinding en verpakt hij het pakket in een nieuw frame. Op Ethernet krijgt dat frame de MAC-adressen voor de volgende stap. De router hoeft de inhoud van de webpagina niet te begrijpen.
+
+Zonder {term}`NAT` blijven de IP-adressen van afzender en bestemming onderweg gelijk. Het IP-pakket verandert wel een klein beetje: de {term}`TTL`, een teller die bij elke router met 1 afneemt, wordt aangepast.
+
+Een {term}`switch` kiest op basis van MAC-adressen, een router op basis van IP-adressen. Dat zijn twee verschillende beslissingen, ook als beide in één apparaat zitten.
+
+## Klassikaal: een bericht inpakken en uitpakken
+
+Maak groepen van negen: vier zenderrollen, vier ontvangerrollen en één routerrol. Aan beide kanten zijn de rollen toepassing, transport, netwerk en datalink. De docent geeft elke rol alleen de velden die die rol invult. De toepassingsrol kent de tekst, de netwerkrol het IP-adres van de bestemming en de datalinkrol het MAC-adres van de eerste ontvanger.
+
+1. Bouw het bericht met gevouwen kaarten: transportinformatie om de toepassingsgegevens, IP-informatie om het segment en een frame om het pakket.
+2. Geef het bericht door aan de ontvangers. Elke ontvangerrol haalt alleen zijn eigen verpakking weg. Alleen de toepassingsrol leest de tekst.
+3. Laat nu de routerrol tussen zender en ontvanger staan. De router haalt het frame weg en verpakt het IP-pakket in een nieuw frame met andere MAC-adressen, zonder de toepassingsgegevens te openen.
+4. Leg het oude en het nieuwe frame naast elkaar. Wat is veranderd en wat is gelijk gebleven?
+
+De fysieke overdracht en de foutcontrole worden niet nagespeeld.
+
+::: {exercise} Filius: twee lagen terugvinden
+:label: nw12-l2
+
+1. Open de gegevensuitwisseling bij een ping tussen twee computers uit je netwerk. Zoek, voor zover jouw versie dat toont, Ethernet- en IP-velden in hetzelfde bericht. Noteer één MAC-adres en één IP-adres en leg uit waarvoor elk adres dient.
+2. Het venster toont de velden niet in elkaar genest. Betekent dat dat een frame geen IP-pakket bevat?
+3. Waarom mag je bij deze ping geen TCP-segment tekenen?
+:::
+
+::: {solution} nw12-l2
+:class: dropdown
+
+1. Het MAC-adres dient voor aflevering op het lokale netwerk, het IP-adres voor de bron of bestemming van het pakket. De waarden komen uit je eigen netwerk.
+2. Nee. Het venster is een weergave; de figuur laat zien hoe de verpakking in elkaar zit.
+3. Ping gebruikt {term}`ICMP`, geen TCP. De figuur toont één HTTP/TCP-voorbeeld, niet de inhoud van elk IP-pakket.
+:::
 
 ## Eén bezoek stap voor stap
 
-We nemen een vereenvoudigd HTTP-bezoek met {term}`IPv4`, {term}`Ethernet` en TCP. De {term}`client` is A (`192.168.10.10/24`) met {term}`gateway` `192.168.10.1`. De DNS-server is `192.168.20.53` en de webserver `192.168.20.10`. Er is geen {term}`NAT`, alle {term}`caches <cache>` zijn leeg en er is nog geen TCP-verbinding.
+Nu pas je het lagenmodel toe op {term}`DNS`, {term}`TCP`, {term}`HTTP`, {term}`ARP` en {term}`routering`. We nemen een vereenvoudigd HTTP-bezoek met {term}`IPv4`, {term}`Ethernet` en TCP. De {term}`client` is A (`192.168.10.10/24`) met {term}`gateway` `192.168.10.1`. De DNS-server is `192.168.20.53` en de webserver `192.168.20.10`. Er is geen {term}`NAT`, alle {term}`caches <cache>` zijn leeg en er is nog geen TCP-verbinding.
 
 1. De browser haalt uit de {term}`URL` `http://nieuws.school.test/rooster.html` de hostnaam en het pad.
 2. De client vraagt DNS naar het adres bij de hostnaam. De DNS-server ligt buiten het subnet van de client, dus dit verzoek gaat via de gateway. Is het MAC-adres van de gateway onbekend, dan gaat ARP aan de DNS-vraag vooraf.
@@ -1223,7 +1332,7 @@ We nemen een vereenvoudigd HTTP-bezoek met {term}`IPv4`, {term}`Ethernet` en TCP
 Dit is een uitlegvolgorde. In de praktijk kunnen caches, hergebruikte verbindingen en nieuwere protocollen het verloop veranderen. Bij {term}`HTTPS` volgt na de TCP-handshake eerst een beveiligde verbindingsopbouw en pas daarna de HTTP-uitwisseling; HTTP/3 gebruikt een ander transport.
 
 ::: {exercise} Zonder Filius: één frame onderzoeken
-:label: nw10-o1
+:label: nw12-o1
 
 1. A verstuurt het HTTP-verzoek. Geef op de verbinding van A naar de gateway het bron-IP, bestemmings-IP, de bestemmingspoort en het bestemmings-MAC-adres.
 2. Welke adressen veranderen als de router het pakket naar de server verstuurt?
@@ -1231,7 +1340,7 @@ Dit is een uitlegvolgorde. In de praktijk kunnen caches, hergebruikte verbinding
 4. Waarom kan een browser dezelfde server blijven bereiken als de client van kabel naar {term}`wifi` overstapt?
 :::
 
-::: {solution} nw10-o1
+::: {solution} nw12-o1
 :class: dropdown
 
 1. Bron-IP `192.168.10.10`, bestemmings-IP `192.168.20.10`, TCP-bestemmingspoort 80 en het MAC-adres van de linker routeraansluiting (de gateway).
@@ -1241,7 +1350,7 @@ Dit is een uitlegvolgorde. In de praktijk kunnen caches, hergebruikte verbinding
 :::
 
 ::: {exercise} Filius: een onderbouwd verslag maken
-:label: nw10-o2
+:label: nw12-o2
 
 1. Open `08-website.fls` en start een nieuwe simulatie.
 2. Bezoek de website op naam. Leg maximaal zes berichten vast of noteer hun velden: ARP, DNS, TCP-opbouw, HTTP-verzoek, HTTP-antwoord en doorsturen door de router.
@@ -1249,7 +1358,7 @@ Dit is een uitlegvolgorde. In de praktijk kunnen caches, hergebruikte verbinding
 4. Bezoek de pagina nogmaals. Welke stappen worden herhaald en welke informatie wordt hergebruikt? Baseer je antwoord op wat je ziet.
 :::
 
-::: {solution} nw10-o2
+::: {solution} nw12-o2
 :class: dropdown
 
 Een goed verslag koppelt elk bericht aan zijn taak: ARP vindt lokaal een MAC-adres, DNS vindt een serveradres bij een naam, TCP bouwt een verbinding op, HTTP vraagt en levert de pagina en de router verzorgt de stap tussen de netwerken. Bij een herhaling kunnen caches en bestaande verbindingen stappen overbodig maken. Niet elke Filius-versie wist bij een nieuwe start alle informatie; schrijf op wat je werkelijk ziet.
@@ -1262,14 +1371,14 @@ De router thuis of op school is niet ‘het {term}`internet`’. Hij geeft verke
 Ons Filius-model is kleiner en gebruikt handmatige routes. Op internet wisselen routers routes grotendeels automatisch uit. Ook DNS is verdeeld over organisaties. Het {term}`web` is één toepassing op internet; internet bestaat uit meer dan websites.
 
 ::: {exercise} Zonder Filius: dezelfde vraag op grotere schaal
-:label: nw10-o3
+:label: nw12-o3
 
 1. Welke taak heeft de provider die in het kleine Filius-model niet als aparte organisatie voorkomt?
 2. Moet jouw computer het MAC-adres van een server in een datacenter kennen? Leg uit.
 3. Zijn internet, het web en wifi drie woorden voor hetzelfde?
 :::
 
-::: {solution} nw10-o3
+::: {solution} nw12-o3
 :class: dropdown
 
 1. De provider verzorgt de aansluiting op andere netwerken en daarmee de bereikbaarheid van de rest van het internet. De routers in het model beelden een klein stuk daarvan af.
@@ -1279,12 +1388,12 @@ Ons Filius-model is kleiner en gebruikt handmatige routes. Op internet wisselen 
 
 ---
 
-(netwerken-h11)=
+(netwerken-h13)=
 # Praktische eindopdracht: ontwerp en bouw
 
 Een kleine organisatie heeft een werkruimte, een serverruimte en een tweede vestiging. Jij ontwerpt de adressering en maakt de communicatie tussen de netwerken werkend in Filius.
 
-Dit is de praktische beoordeling. Je werkt individueel, tenzij de docent anders aangeeft. Dit hoofdstuk beslaat les 11 en 12. Je levert een werkend netwerk én verklaringen in. Je hoeft niet tientallen computers te tekenen, maar je adresplan moet er wel ruimte voor bieden.
+Dit is de praktische beoordeling. Je werkt individueel, tenzij de docent anders aangeeft. Dit hoofdstuk beslaat les 15 en 16. Je levert een werkend netwerk én verklaringen in. Je hoeft niet tientallen computers te tekenen, maar je adresplan moet er wel ruimte voor bieden.
 
 ## De opdracht
 
@@ -1362,7 +1471,7 @@ Gebruik je eigen netwerk als bewijs. ‘De router stuurt het door’ is te algem
 
 ## Inleveren en demonstreren
 
-Lever het Filius-bestand, het adres- en routeplan en je testverslag met verklaringen in. In les 12 rond je af en demonstreer je een communicatie die de docent kiest. Je legt uit hoe je die hebt gecontroleerd.
+Lever het Filius-bestand, het adres- en routeplan en je testverslag met verklaringen in. In les 16 rond je af en demonstreer je een communicatie die de docent kiest. Je legt uit hoe je die hebt gecontroleerd.
 
 Open je opgeslagen bestand vooraf en controleer dat je diensten na het starten van de simulatie actief zijn. Houd je adresplan en testverslag bij de hand. De docent kiest een client en een bestemming uit jouw opstelling. Je toont de communicatie en verklaart de betrokken lagen. Voor extra servers of protocollen zijn geen punten te halen als de gevraagde werking en uitleg nog niet kloppen.
 
@@ -1385,7 +1494,7 @@ De docent wijzigt in een kopie van je netwerk één instelling uit een bekende c
 3. Voer de controle uit en leg uit wat de uitkomst wel en niet aantoont.
 4. Herstel de oorzaak en toon de bedoelde werking opnieuw aan.
 
-Dit is een kort individueel onderdeel, geen nieuwe stof. Het gaat om een beredeneerde keuze uit bekende controles, niet om willekeurig instellingen veranderen of alles opnieuw bouwen. Bij een grote klas kan dit onderdeel tijdens het zelfstandig werken in les 11 en 12 worden afgenomen.
+Dit is een kort individueel onderdeel, geen nieuwe stof. Het gaat om een beredeneerde keuze uit bekende controles, niet om willekeurig instellingen veranderen of alles opnieuw bouwen. Bij een grote klas kan dit onderdeel tijdens het zelfstandig werken in les 15 en 16 worden afgenomen.
 
 ## Beoordeling
 
@@ -1402,55 +1511,3 @@ Dit is een kort individueel onderdeel, geen nieuwe stof. Het gaat om een bereden
 Bij een deels werkend netwerk verdien je punten voor de onderdelen die aantoonbaar kloppen. Een werkend bestand zonder verklaringen levert niet automatisch de punten voor begrip op. Zorg dat elke schermafbeelding een doel en een uitleg heeft en voeg geen complete lijst netwerkberichten toe zonder aan te geven welke regels het bewijs vormen.
 
 De docent vertelt hoe punten naar een cijfer worden omgerekend en hoe lang de individuele demonstratie duurt.
-
----
-
-(netwerken-verdieping)=
-# Verdieping: DHCP en e-mail
-
-Dit hoofdstuk is optioneel en valt buiten de twaalf lessen van de kern. Je onderzoekt twee extra protocollen van de toepassingslaag.
-
-## DHCP: automatisch adressen instellen
-
-In de kernmodule stel je adressen met de hand in. In een echt netwerk krijgt een {term}`client` zijn IPv4-instellingen meestal automatisch via {term}`DHCP`. De client zoekt een {term}`server`, krijgt een aanbod, vraagt dat aanbod aan en krijgt een bevestiging. De berichten heten Discover, Offer, Request en Acknowledge.
-
-Behalve het {term}`IP-adres` kan de configuratie onder andere het {term}`masker <subnetmasker>`, de {term}`gateway` en DNS-serveradressen bevatten. Het adres wordt voor beperkte tijd uitgeleend: de {term}`lease`. Een DHCP-server is geen DNS-server, ook al kan één computer beide diensten uitvoeren.
-
-Een nieuwe client kent nog geen netwerkgegevens en begint daarom met een broadcast. {term}`Routers <router>` sturen die niet vanzelf door naar andere netwerken. In grotere netwerken kan een speciaal ingestelde DHCP-relay dat oplossen; dat stel je hier niet in.
-
-::: {exercise} Filius: automatische instellingen
-:label: nw90-o1
-
-1. Werk in een kopie van het netwerk uit hoofdstuk 8. Installeer op de DNS-server ook de DHCP-server, als jouw Filius-versie die heeft.
-2. Kies voor het server-LAN een pool van `192.168.20.100` tot en met `192.168.20.120`, masker `255.255.255.0`, gateway `192.168.20.1` en {term}`DNS` `192.168.20.53`. Houd vaste serveradressen buiten de pool.
-3. Voeg één nieuwe client toe op dezelfde {term}`switch` en stel die in op automatische adresconfiguratie. Start de DHCP-server en vraag de configuratie aan.
-4. Controleer de ontvangen instellingen en bezoek de oefenwebsite op naam. Wat heeft DHCP ingesteld en welke dienst levert nog steeds de pagina?
-:::
-
-::: {solution} nw90-o1
-:class: dropdown
-
-De client krijgt een vrij adres uit de pool en de ingestelde extra gegevens. DHCP levert de netwerkconfiguratie, DNS de naamkoppeling en de webserver de pagina. Dat de automatische configuratie werkt, bewijst dus nog niet dat DNS en de webserver werken. Menunamen en opties kunnen per Filius-versie verschillen.
-:::
-
-## E-mail: verzenden is iets anders dan ophalen
-
-Bij e-mail zijn meerdere protocollen betrokken. {term}`SMTP` dient om e-mail aan te bieden en door te sturen. IMAP en POP dienen om ontvangen berichten met een mailprogramma op te halen. Bij webmail praat je browser via HTTP(S) met de webmailtoepassing; de mailservers erachter gebruiken de mailprotocollen.
-
-Een e-mailadres bestaat uit een gebruikersnaam en een domein, bijvoorbeeld `leerling@school.test`. Voor het bezorgen tussen mailservers wijst een {term}`MX-record` in DNS aan welke mailservers bij een domein horen. Dat is iets anders dan het A-record van een website.
-
-::: {exercise} Zonder Filius: een e-mail volgen
-:label: nw90-o2
-
-1. Bewijst een browser die webmail toont dat alle mail tussen mailservers via HTTP reist?
-2. Welk protocol hoort bij e-mail aanbieden en doorsturen: SMTP of {term}`ARP`?
-3. Waarom bewijst een werkende website op `school.test` niet dat e-mail naar dat domein bezorgd kan worden?
-:::
-
-::: {solution} nw90-o2
-:class: dropdown
-
-1. Nee. HTTP(S) kan de webmailpagina in je browser verzorgen, terwijl mailservers onderling mailprotocollen gebruiken.
-2. SMTP. ARP lost een lokaal adresseringsprobleem op.
-3. De webserver en de mailserver zijn verschillende diensten met eigen instellingen, en ook de DNS-records verschillen.
-:::

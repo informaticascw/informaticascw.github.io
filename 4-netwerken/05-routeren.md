@@ -1,9 +1,9 @@
-(netwerken-h06)=
-# Door meerdere netwerken
+(netwerken-h05)=
+# Routeren
 
 ## Inleiding
 
-In hoofdstuk 5 gaf je computer een {term}`pakket <IP-pakket>` voor een ander netwerk aan de {term}`gateway`. Daarmee is het pakket er nog niet: ook die {term}`router` moet kiezen waar het naartoe gaat, eventueel naar een volgende router. Elke router beslist alleen over de eerstvolgende stap, met behulp van een {term}`routeringstabel`.
+In hoofdstuk 4 gaf je computer een {term}`pakket <IP-pakket>` voor een ander netwerk aan de {term}`gateway`. Daarmee is het pakket er nog niet: ook die {term}`router` moet kiezen waar het naartoe gaat, eventueel naar een volgende router. Elke router beslist alleen over de eerstvolgende stap, met behulp van een {term}`routeringstabel`.
 
 **Laag:** {term}`netwerklaag`. **Vraag:** hoe kiest een router de volgende stap naar een bestemmingsnetwerk, en wat is nodig om ook het antwoord terug te laten komen?
 
@@ -31,7 +31,7 @@ Een router zoekt het IP-adres van de bestemming op in zijn routeringstabel. Een 
 De drie LANs en het aparte verbindingsnetwerk tussen R1 en R2.
 ```
 
-We breiden het netwerk uit hoofdstuk 5 uit met een tweede router en een derde LAN. Er zijn vier subnetten, want ook het verbindingsnetwerk tussen de routers is een subnet.
+We breiden het netwerk uit hoofdstuk 4 uit met een tweede router en een derde LAN. Er zijn vier subnetten, want ook het verbindingsnetwerk tussen de routers is een subnet.
 
 | Netwerk | Aansluitingen |
 | --- | --- |
@@ -56,7 +56,7 @@ R1 heeft drie aansluitingen en R2 twee. A gebruikt gateway `192.168.10.1`, C `19
 Rechtstreeks aangesloten netwerken kent een router uit de instellingen van zijn aansluitingen. Daarvoor hoef je geen next-hopregels toe te voegen.
 
 ::: {exercise} Zonder Filius: volg de route
-:label: nw06-o1
+:label: nw05-o1
 
 1. A verstuurt naar D. Geef de opeenvolgende ontvangers vanaf A.
 2. Welk bron- en bestemmings-IP-adres staan in het pakket tussen R1 en R2? Er is geen {term}`NAT`.
@@ -64,7 +64,7 @@ Rechtstreeks aangesloten netwerken kent een router uit de instellingen van zijn 
 4. Waarom kan R1 voor netwerk `192.168.30.0/24` niet D als next hop invullen?
 :::
 
-::: {solution} nw06-o1
+::: {solution} nw05-o1
 :class: dropdown
 
 1. Eerst R1, dan R2, dan D.
@@ -80,28 +80,28 @@ Een router kan een {term}`standaardroute` hebben: `0.0.0.0/0`. Die wordt gebruik
 Routers kunnen routes automatisch uitwisselen met routeringsprotocollen. In deze module stel je routes handmatig in en behandelen we die protocollen niet.
 
 ::: {exercise} Zonder Filius: welke regel wint?
-:label: nw06-o2
+:label: nw05-o2
 
 Een router heeft `10.0.0.0/8 via X`, `10.2.0.0/16 via Y` en `0.0.0.0/0 via Z`. Bepaal de volgende stap voor `10.2.8.4`, `10.3.8.4` en `203.0.113.8`.
 :::
 
-::: {solution} nw06-o2
+::: {solution} nw05-o2
 :class: dropdown
 
 `10.2.8.4` gaat via Y: /16 is het meest specifiek. `10.3.8.4` gaat via X: /8 past en /16 niet. `203.0.113.8` gaat via Z: alleen de standaardroute past. X, Y en Z zijn hier rechtstreeks bereikbare next hops.
 :::
 
 ::: {exercise} Filius: een tweede router toevoegen
-:label: nw06-o3
+:label: nw05-o3
 
-1. Open een kopie van je netwerk uit hoofdstuk 5 en bouw de uitbreiding uit de tabellen. Gebruik voor het verbindingsnetwerk masker `255.255.255.252`.
+1. Open een kopie van je netwerk uit hoofdstuk 4 en bouw de uitbreiding uit de tabellen. Gebruik voor het verbindingsnetwerk masker `255.255.255.252`.
 2. Schakel automatische {term}`routering` op de routers uit, als die aanstaat. Open de tabel voor handmatige routes.
 3. Voeg eerst alleen op R1 de route naar `192.168.30.0` met masker `255.255.255.0` via `10.0.0.2` toe. Test A→D. Bereikt het verzoek D? Waarom ontbreekt het antwoord nog?
 4. Voeg op R2 de twee ontbrekende routes naar links en midden toe. Test A↔D en C↔D.
-5. Bewaar als `06-routering.fls`. Noteer je ingestelde regels en leg van één ping de heen- en terugweg uit.
+5. Bewaar als `05-routering.fls`. Noteer je ingestelde regels en leg van één ping de heen- en terugweg uit.
 :::
 
-::: {solution} nw06-o3
+::: {solution} nw05-o3
 :class: dropdown
 
 Met alleen de route op R1 kan het verzoek D bereiken, maar R2 weet niet hoe het antwoord bij A komt. Na het toevoegen van beide terugroutes werkt het verkeer in beide richtingen. De aansluitingen en gateways moeten ook kloppen. Gebruik als next hop het adres van de router op het verbindingsnetwerk, niet een adres aan de andere kant van die router.

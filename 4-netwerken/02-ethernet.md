@@ -53,7 +53,7 @@ Een switch met vier poorten heeft een lege tabel en ontvangt achtereenvolgens: A
 
 ## Een lokaal netwerk bouwen
 
-In Filius gebruik je alvast {term}`IP-adressen <IP-adres>` om met `ping` verkeer te maken. De switch kiest zijn doorstuurpoort niet op basis van het IP-adres, maar op basis van het MAC-adres. Ping gebruikt {term}`ICMP`, niet {term}`TCP`. Hoe een computer het MAC-adres van de ontvanger te weten komt, behandelen we in hoofdstuk 5.
+In Filius gebruik je alvast {term}`IP-adressen <IP-adres>` om met `ping` verkeer te maken. De switch kiest zijn doorstuurpoort niet op basis van het IP-adres, maar op basis van het MAC-adres. Ping gebruikt {term}`ICMP`, niet {term}`TCP`. Hoe een computer het MAC-adres van de ontvanger te weten komt, behandelen we in hoofdstuk 4.
 
 ::: {exercise} Filius: drie computers en een switch
 :label: nw02-o2

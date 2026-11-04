@@ -1,9 +1,9 @@
-(netwerken-h11)=
+(netwerken-h13)=
 # Praktische eindopdracht: ontwerp en bouw
 
 Een kleine organisatie heeft een werkruimte, een serverruimte en een tweede vestiging. Jij ontwerpt de adressering en maakt de communicatie tussen de netwerken werkend in Filius.
 
-Dit is de praktische beoordeling. Je werkt individueel, tenzij de docent anders aangeeft. Dit hoofdstuk beslaat les 11 en 12. Je levert een werkend netwerk én verklaringen in. Je hoeft niet tientallen computers te tekenen, maar je adresplan moet er wel ruimte voor bieden.
+Dit is de praktische beoordeling. Je werkt individueel, tenzij de docent anders aangeeft. Dit hoofdstuk beslaat les 15 en 16. Je levert een werkend netwerk én verklaringen in. Je hoeft niet tientallen computers te tekenen, maar je adresplan moet er wel ruimte voor bieden.
 
 ## De opdracht
 
@@ -81,7 +81,7 @@ Gebruik je eigen netwerk als bewijs. ‘De router stuurt het door’ is te algem
 
 ## Inleveren en demonstreren
 
-Lever het Filius-bestand, het adres- en routeplan en je testverslag met verklaringen in. In les 12 rond je af en demonstreer je een communicatie die de docent kiest. Je legt uit hoe je die hebt gecontroleerd.
+Lever het Filius-bestand, het adres- en routeplan en je testverslag met verklaringen in. In les 16 rond je af en demonstreer je een communicatie die de docent kiest. Je legt uit hoe je die hebt gecontroleerd.
 
 Open je opgeslagen bestand vooraf en controleer dat je diensten na het starten van de simulatie actief zijn. Houd je adresplan en testverslag bij de hand. De docent kiest een client en een bestemming uit jouw opstelling. Je toont de communicatie en verklaart de betrokken lagen. Voor extra servers of protocollen zijn geen punten te halen als de gevraagde werking en uitleg nog niet kloppen.
 
@@ -104,7 +104,7 @@ De docent wijzigt in een kopie van je netwerk één instelling uit een bekende c
 3. Voer de controle uit en leg uit wat de uitkomst wel en niet aantoont.
 4. Herstel de oorzaak en toon de bedoelde werking opnieuw aan.
 
-Dit is een kort individueel onderdeel, geen nieuwe stof. Het gaat om een beredeneerde keuze uit bekende controles, niet om willekeurig instellingen veranderen of alles opnieuw bouwen. Bij een grote klas kan dit onderdeel tijdens het zelfstandig werken in les 11 en 12 worden afgenomen.
+Dit is een kort individueel onderdeel, geen nieuwe stof. Het gaat om een beredeneerde keuze uit bekende controles, niet om willekeurig instellingen veranderen of alles opnieuw bouwen. Bij een grote klas kan dit onderdeel tijdens het zelfstandig werken in les 15 en 16 worden afgenomen.
 
 ## Beoordeling
 

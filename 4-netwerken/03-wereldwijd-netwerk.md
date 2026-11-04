@@ -1,9 +1,9 @@
-(netwerken-h04)=
-# IP-netwerken en subnetten
+(netwerken-h03)=
+# Een wereldwijd netwerk
 
 ## Inleiding
 
-Een {term}`switch` stuurt gewone frames gericht door, maar een {term}`broadcast` bereikt elk apparaat in het {term}`broadcastdomein`. Hoe groter het netwerk, hoe meer capaciteit en verwerking dat kost. Daarom splits je een groot netwerk in kleinere IP-netwerken ({term}`subnetten <subnet>`) en verbind je die met een {term}`router`. Daarvoor moet je met IP-adressen en subnetmaskers kunnen rekenen.
+Het internet is een wereldwijd netwerk van netwerken. Dat kan alleen als elk netwerk beperkt van omvang is en je van elk adres kunt zien in welk netwerk het ligt. Een {term}`switch` stuurt gewone frames gericht door, maar een {term}`broadcast` bereikt elk apparaat in het {term}`broadcastdomein`. Hoe groter het netwerk, hoe meer capaciteit en verwerking dat kost. Daarom splits je een groot netwerk in kleinere IP-netwerken ({term}`subnetten <subnet>`) en verbind je die met een {term}`router`. Daarvoor moet je met IP-adressen en subnetmaskers kunnen rekenen.
 
 **Laag:** {term}`netwerklaag`. **Vraag:** hoe deel je een netwerk op in subnetten, en hoe bepaal je met een IP-adres en een masker in welk subnet een apparaat zit?
 
@@ -34,7 +34,7 @@ Broadcast is nuttig: een apparaat kan iets vragen zonder het adres van de ontvan
 Vier switches verbinden samen 80 computers. Eén computer verstuurt een broadcast en alle 79 andere computers ontvangen die. Een extra switch ertussen verandert dat niet.
 
 ::: {exercise} Zonder Filius: wie ontvangt de broadcast?
-:label: nw04-o1
+:label: nw03-o1
 
 Switch S1 is verbonden met S2. A en B zitten op S1; C en D op S2.
 
@@ -43,7 +43,7 @@ Switch S1 is verbonden met S2. A en B zitten op S1; C en D op S2.
 3. Welke kosten heeft een broadcast voor een apparaat dat er niet op antwoordt?
 :::
 
-::: {solution} nw04-o1
+::: {solution} nw03-o1
 :class: dropdown
 
 1. B, C en D.
@@ -108,7 +108,7 @@ Bij prefix /n blijven `32 − n` apparaatbits over. Het aantal adressen per blok
 Blokken beginnen steeds op een veelvoud van de blokgrootte. Zoek het blok waarin het adres valt: het eerste adres is het netwerkadres, het laatste het broadcastadres en alle adressen daartussen zijn bruikbaar.
 
 ::: {exercise} Zonder Filius: adressen berekenen
-:label: nw04-o2
+:label: nw03-o2
 
 Bepaal voor elk adres het netwerkadres, het broadcastadres, de bruikbare reeks en het aantal bruikbare adressen:
 
@@ -117,7 +117,7 @@ Bepaal voor elk adres het netwerkadres, het broadcastadres, de bruikbare reeks e
 3. Kan `192.168.20.159/27` het adres van een computer zijn? Leg uit.
 :::
 
-::: {solution} nw04-o2
+::: {solution} nw03-o2
 :class: dropdown
 
 1. Masker `255.255.255.224`, blokgrootte 32: netwerkadres `192.168.20.128`, broadcastadres `192.168.20.159`, bruikbaar `.129` tot en met `.158`, 30 adressen.
@@ -134,14 +134,14 @@ Zoek het kleinste aantal apparaatbits h waarvoor `2^h − 2` groot genoeg is. Te
 Je hebt 26 computers, twee servers en één routeraansluiting: 29 adressen. Met vijf apparaatbits zijn er 30 bruikbare adressen, dus `/27` past. `/28` heeft er maar 14. Wil je ruimte voor groei, dan is een groter subnet een betere keuze.
 
 ::: {exercise} Zonder Filius: een passend subnet kiezen
-:label: nw04-o3
+:label: nw03-o3
 
 1. Kies het kleinste subnet voor 45 computers, één server en één routeraansluiting. Geef prefix, masker en aantal bruikbare adressen.
 2. Doe hetzelfde voor twaalf computers en één routeraansluiting.
 3. In situatie 2 komen drie computers bij. Wat betekent dat voor je keuze?
 :::
 
-::: {solution} nw04-o3
+::: {solution} nw03-o3
 :class: dropdown
 
 1. 47 adressen: /26, masker `255.255.255.192`, 62 bruikbaar.
@@ -151,20 +151,20 @@ Je hebt 26 computers, twee servers en één routeraansluiting: 29 adressen. Met 
 
 ## Zit de bestemming in mijn subnet?
 
-Een afzender berekent met zijn eigen masker het netwerkadres van zichzelf en van de bestemming. Zijn die gelijk, dan is de bestemming lokaal. Zijn ze verschillend, dan heeft de afzender een router nodig, meestal de standaardgateway. Hoofdstuk 5 werkt dat verder uit.
+Een afzender berekent met zijn eigen masker het netwerkadres van zichzelf en van de bestemming. Zijn die gelijk, dan is de bestemming lokaal. Zijn ze verschillend, dan heeft de afzender een router nodig, meestal de standaardgateway. Hoofdstuk 4 werkt dat verder uit.
 
 Voorbeeld: `192.168.10.65/26` en `192.168.10.100/26` hebben allebei netwerkadres `.64`. Adres `.130` heeft met hetzelfde masker netwerkadres `.128`. Voor de eerste afzender is `.130` dus niet lokaal, ook als beide apparaten op dezelfde switch zitten.
 
 ::: {exercise} Filius: hetzelfde subnet of niet?
-:label: nw04-o4
+:label: nw03-o4
 
 1. Maak twee computers op één switch: A `192.168.10.65` en B `192.168.10.100`, beide met masker `255.255.255.192`. Stel geen gateways in.
 2. Voorspel en test een ping van A naar B.
 3. Geef B het adres `192.168.10.130` (masker blijft `255.255.255.192`). Voorspel en test opnieuw. Leg uit waarom ‘ze zitten op dezelfde switch’ nu niet genoeg is.
-4. Zet het adres van B terug en bewaar als `04-subnetproef.fls`.
+4. Zet het adres van B terug en bewaar als `03-subnetproef.fls`.
 :::
 
-::: {solution} nw04-o4
+::: {solution} nw03-o4
 :class: dropdown
 
 Eerst liggen beide adressen in subnet `192.168.10.64/26` en kunnen ze rechtstreeks communiceren. Daarna ligt B in `192.168.10.128/26`. A beschouwt B dan niet als lokaal en heeft een router nodig. Die is er niet, dus de ping mislukt. De fysieke aansluiting op één switch verandert dat niet: IP-subnetten en de Ethernetstructuur zijn verschillende dingen.
@@ -172,4 +172,4 @@ Eerst liggen beide adressen in subnet `192.168.10.64/26` en kunnen ze rechtstree
 
 ## Eigen apparaat: let op het masker
 
-Het masker op je computer kan op school anders zijn dan thuis. Een adres dat met `10.` begint, heeft niet automatisch masker /8: het ingestelde masker bepaalt de grens. In hoofdstuk 5 zoek je de netwerkgegevens van je eigen apparaat op.
+Het masker op je computer kan op school anders zijn dan thuis. Een adres dat met `10.` begint, heeft niet automatisch masker /8: het ingestelde masker bepaalt de grens. In hoofdstuk 4 zoek je de netwerkgegevens van je eigen apparaat op.

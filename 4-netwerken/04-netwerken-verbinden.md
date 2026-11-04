@@ -1,9 +1,9 @@
 ---
-title: ARP en de standaardgateway
+title: Lokale netwerken en wereldwijde netwerken verbinden
 ---
 
-(netwerken-h05)=
-# ARP en de standaardgateway
+(netwerken-h04)=
+# Lokale netwerken en wereldwijde netwerken verbinden
 
 ## Inleiding
 
@@ -45,7 +45,7 @@ A heeft {term}`netwerkadres` `192.168.10.0`. Met het masker van A heeft het adre
 Met het masker van A heeft het adres van C netwerkadres `192.168.20.0`. Dat is een ander subnet, dus A levert de gegevens af bij gateway `192.168.10.1`.
 
 ::: {exercise} Zonder Filius: welke volgende ontvanger?
-:label: nw05-o1
+:label: nw04-o1
 
 Gebruik de instellingen van computer A uit de tabel.
 
@@ -54,7 +54,7 @@ Gebruik de instellingen van computer A uit de tabel.
 3. Een leerling zegt: ‘De eerste twee getallen van de IP-adressen zijn gelijk, dus de computers zitten in hetzelfde subnet.’ Weerleg dat met een bestemming uit vraag 1.
 :::
 
-::: {solution} nw05-o1
+::: {solution} nw04-o1
 :class: dropdown
 
 1. `192.168.10.50`: rechtstreeks. De andere twee: via `192.168.10.1`.
@@ -63,7 +63,7 @@ Gebruik de instellingen van computer A uit de tabel.
 :::
 
 ::: {exercise} Filius: bouwen en voorspellen
-:label: nw05-o2
+:label: nw04-o2
 
 1. Bouw de opstelling uit de tabel: A en B op de linker switch, C op de rechter switch en een router tussen de switches. Gebruik een gewone router met twee aansluitingen.
 2. Stel de IP-adressen en subnetmaskers in. Laat de standaardgateway op de computers voorlopig leeg en gebruik geen automatische adresuitgifte.
@@ -75,7 +75,7 @@ Gebruik de instellingen van computer A uit de tabel.
 Bewaar je netwerk. Je gebruikt het in de volgende opdrachten opnieuw.
 :::
 
-::: {solution} nw05-o2
+::: {solution} nw04-o2
 :class: dropdown
 
 Zonder gateway kan A wel B bereiken, maar C niet. Met de juiste gateways kan het verkeer heen en terug tussen A en C lopen. De router kent beide netwerken via zijn eigen aansluitingen. Een switch heeft hiervoor geen IP-configuratie nodig.
@@ -118,7 +118,7 @@ Na de ARP-uitwisseling verstuurt A een IP-pakket naar B:
 | IP-pakket in dat frame | 192.168.10.10 | 192.168.10.20 |
 
 ::: {exercise} Zonder Filius: wie krijgt welk bericht?
-:label: nw05-o3
+:label: nw04-o3
 
 De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 
@@ -129,7 +129,7 @@ De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 5. Waarom is niet voor elk volgend IP-pakket een nieuwe broadcast nodig?
 :::
 
-::: {solution} nw05-o3
+::: {solution} nw04-o3
 :class: dropdown
 
 1. Wie heeft `192.168.10.20`? Meld je bij `192.168.10.10`.
@@ -140,7 +140,7 @@ De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 :::
 
 ::: {exercise} Filius: ARP waarnemen
-:label: nw05-o4
+:label: nw04-o4
 
 1. Start de simulatie opnieuw en open bij A het venster met de gegevensuitwisseling (via het contextmenu van de computer; de naam kan per taalversie verschillen).
 2. Ping B en zoek in de gegevensuitwisseling naar ARP.
@@ -149,7 +149,7 @@ De ARP-cache van A is leeg. A wil een IP-pakket naar B sturen.
 5. Leg uit waarom ‘bij elke ping gaat eerst een ARP-request uit’ geen goede regel is.
 :::
 
-::: {solution} nw05-o4
+::: {solution} nw04-o4
 :class: dropdown
 
 Het request vraagt naar het IP-adres van B en gaat naar het Ethernetbroadcastadres. Het reply bevat het MAC-adres van B. Bij een directe herhaling is normaal geen nieuw ARP nodig, omdat de koppeling nog in de cache staat. Vergelijk deze verklaring met je eigen waarnemingen.
@@ -175,7 +175,7 @@ De router haalt het IP-pakket uit het frame en bepaalt via welke aansluiting de 
 De IP-adressen blijven gelijk, omdat we hier geen {term}`NAT` gebruiken. Het frame wordt per verbinding vervangen; het IP-pakket gaat verder naar zijn bestemming.
 
 ::: {exercise} Zonder Filius: volg het antwoord
-:label: nw05-o5
+:label: nw04-o5
 
 C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen bekend zijn.
 
@@ -184,7 +184,7 @@ C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen be
 3. Naar welk IP-adres vraagt A met ARP voordat hij naar C kan versturen? Waarom niet naar het IP-adres van C?
 :::
 
-::: {solution} nw05-o5
+::: {solution} nw04-o5
 :class: dropdown
 
 1.
@@ -199,7 +199,7 @@ C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen be
 :::
 
 ::: {exercise} Filius: twee soorten adressen
-:label: nw05-o6
+:label: nw04-o6
 
 1. Start de simulatie opnieuw en open de gegevensuitwisseling bij A en bij de router.
 2. Ping vanaf A naar C.
@@ -209,7 +209,7 @@ C stuurt een antwoord naar A. Ga ervan uit dat alle benodigde ARP-koppelingen be
 6. Leg uit waarom zowel een IP-adres als een MAC-adres nodig is.
 :::
 
-::: {solution} nw05-o6
+::: {solution} nw04-o6
 :class: dropdown
 
 A vraagt naar `192.168.10.1`. Het IP-pakket gaat naar `192.168.20.10`, in een frame naar de linker routeraansluiting. Op de volgende verbinding veranderen beide MAC-adressen; bron- en bestemmings-IP blijven gelijk. De router kan op het rechter netwerk zelf ARP gebruiken om C te vinden. Bij een herhaling is niet altijd nieuw ARP nodig.
@@ -220,7 +220,7 @@ A vraagt naar `192.168.10.1`. Het IP-pakket gaat naar `192.168.20.10`, in een fr
 De soorten adressen uit Filius staan ook op je eigen computer. Een computer kan meerdere netwerkadapters hebben, bijvoorbeeld voor {term}`wifi` en voor Ethernet.
 
 ::: {exercise} Eigen apparaat: vind je IP-adres, MAC-adres en gateway
-:label: nw05-o7
+:label: nw04-o7
 
 1. Open de netwerkgegevens met de aanwijzingen hieronder.
 2. Noteer van je actieve verbinding het IPv4-adres, het subnetmasker (of de {term}`prefixlengte <CIDR-prefix>`), het MAC-adres en de standaardgateway. De gateway kan ook ‘router’ heten.
@@ -246,7 +246,7 @@ MAC-adres         02:00:00:00:10:25
 ```
 :::
 
-::: {solution} nw05-o7
+::: {solution} nw04-o7
 :class: dropdown
 
 Je waarden hangen af van je verbinding. In het voorbeeld hebben zowel `192.168.10.37` als de gateway `192.168.10.1` met het masker netwerkadres `192.168.10.0`, dus de gateway ligt in hetzelfde subnet.

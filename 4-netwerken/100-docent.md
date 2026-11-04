@@ -6,32 +6,36 @@ numbering: false
 
 ## Opbouw
 
-Hoofdstuknummers en lesnummers zijn niet hetzelfde. De kern heeft tien inhoudelijke hoofdstukken en één beoordelingshoofdstuk. De startpagina, verdieping, begrippenlijst en deze docentpagina worden niet meegeteld.
+Hoofdstuknummers en lesnummers zijn niet hetzelfde. De module heeft twaalf inhoudelijke hoofdstukken en één beoordelingshoofdstuk. De startpagina, begrippenlijst en deze docentpagina worden niet meegeteld.
 
-Hoofdstuk 3 introduceert het lagenmodel en inkapseling: toepassingsgegevens in een TCP-segment, in een IP-pakket, in een Ethernetframe met header en trailer. De fysieke laag zet bits om in signalen en voegt geen header toe. Hoofdstuk 10 past dat model toe op één websitebezoek.
+Hoofdstuk 12 vat de lagen samen en introduceert inkapseling: toepassingsgegevens in een TCP-segment, in een IP-pakket, in een Ethernetframe met header en trailer. De fysieke laag zet bits om in signalen en voegt geen header toe. Het hoofdstuk past dat model daarna toe op één websitebezoek.
 
-Hoofdstuk 4 bevat de klassikale oefening met één druk netwerk, splitsen en weer koppelen. Die motiveert de overgang naar afzonderlijke IP-netwerken. Hoofdstuk 5 behandelt daarna alleen nog hoe een computer het MAC-adres bij de gekozen lokale ontvanger vindt; daar is geen tweede broadcastspel.
+Hoofdstuk 3 bevat de klassikale oefening met één druk netwerk, splitsen en weer koppelen. Die motiveert de overgang naar afzonderlijke IP-netwerken. Hoofdstuk 4 behandelt daarna alleen nog hoe een computer het MAC-adres bij de gekozen lokale ontvanger vindt; daar is geen tweede broadcastspel.
 
 De begrippenlijst bevat vaktermen die leerlingen moeten kunnen uitleggen en die op meer dan één plek voorkomen. De hoofdstukken linken de eerste vermelding van een term.
 
-## Planning van twaalf lessen
+## Planning van zestien lessen
 
 | Les | Hoofdstuk | Activiteiten en richttijden | Huiswerk/voorbereiding |
 | --- | --- | --- | --- |
 | 1 | 1 Bits | 15 min signalenspel, 15 min uitleg, 30 min rekenen en eerste verbinding | Rekenen afronden |
-| 2 | 2 Ethernet | 15 min switchspel, 15 min uitleg, 30 min lokaal netwerk en frames | Leertabel verklaren |
-| 3 | 3 Lagen en begin 4 IP | 20 min lagen/uitleg, 10 min verpakkingen in groepen, 15 min broadcastspel, 15 min netwerkgrens | Eerste uitleg hoofdstuk 4 lezen |
-| 4 | 4 IP en subnetten | 20 min uitgewerkte berekeningen, 25 min oefenen, 15 min subnetproef | Subnetberekeningen afronden |
-| 5 | 5 ARP | 10 min keuze volgende ontvanger, 15 min ARP, 20 min routerpad en Filius, 15 min eigen apparaat | Schriftelijke verklaringen afronden |
-| 6 | 6 Routering | 10 min lokale routekaarten, 15 min uitleg, 35 min handmatige routes | Heen- en terugweg verklaren |
-| 7 | 7 Poorten, TCP en UDP | 10 min ontbrekende delen, 20 min poorten en TCP/UDP, 30 min vragen en waarneming | Begripsvragen afronden |
-| 8 | 8 DNS en HTTP | 10 min naam/adres/inhoud, 15 min uitleg, 35 min DNS en HTTP instellen | Verzoek en antwoord verklaren |
-| 9 | 9 NAT, firewall en HTTPS | 10 min vertaaltabelspel, 25 min uitleg, 25 min regels en eigen browser | Beveiligingsfuncties vergelijken |
-| 10 | 10 Van URL naar webpagina | 15 min uitgewerkt bezoek, 35 min bewijsverslag, 10 min introductie beoordeling | Adresplan eindopdracht voorbereiden |
-| 11 | 11 Eindopdracht | 5 min afspraken, 55 min bouwen en testen | Verslag volgens schoolafspraak afronden |
-| 12 | 11 Eindopdracht | 5 min afspraken, 55 min afronden en individueel aantonen | Inleveren |
+| 2 | 2 Een lokaal netwerk | 15 min switchspel, 15 min uitleg, 30 min lokaal netwerk en frames | Leertabel verklaren |
+| 3 | 3 Een wereldwijd netwerk | 15 min broadcastspel, 15 min netwerkgrens, 30 min uitleg en berekeningen | Eerste berekeningen afronden |
+| 4 | 3 Een wereldwijd netwerk | 20 min uitgewerkte berekeningen, 25 min oefenen, 15 min subnetproef | Subnetberekeningen afronden |
+| 5 | 4 Netwerken verbinden | 10 min keuze volgende ontvanger, 15 min ARP, 20 min routerpad en Filius, 15 min eigen apparaat | Schriftelijke verklaringen afronden |
+| 6 | 5 Routeren | 10 min lokale routekaarten, 15 min uitleg, 35 min handmatige routes | Heen- en terugweg verklaren |
+| 7 | 6 Poorten, TCP en UDP | 10 min ontbrekende delen, 20 min poorten en TCP/UDP, 30 min vragen en waarneming | Begripsvragen afronden |
+| 8 | 7 DNS | 10 min DNS-balie, 15 min uitleg, 35 min DNS-server instellen | Vragen over naam en adres afronden |
+| 9 | 8 HTTP | 10 min pagina opvragen, 15 min uitleg, 35 min website op naam | Verzoek en antwoord verklaren |
+| 10 | 9 E-mail | 20 min uitleg, 25 min vragen, 15 min eigen mailprogramma of webmail bekijken | Vragen afronden |
+| 11 | 10 DHCP | 20 min uitleg, 30 min DHCP instellen, 10 min nabespreken | Instellingen vergelijken met handmatige configuratie |
+| 12 | 11 NAT en firewall | 10 min vertaaltabelspel, 30 min uitleg, 20 min regels toepassen | Verschil NAT en firewall verklaren |
+| 13 | 12 Lagen en inkapseling | 20 min lagen en inkapseling, 15 min verpakkingen in groepen, 25 min uitgewerkt bezoek | Uitgewerkt bezoek nalopen |
+| 14 | 12 en 13 | 25 min bewijsverslag, 10 min introductie beoordeling, 25 min start eindopdracht | Adresplan eindopdracht voorbereiden |
+| 15 | 13 Eindopdracht | 5 min afspraken, 55 min bouwen en testen | Verslag volgens schoolafspraak afronden |
+| 16 | 13 Eindopdracht | 5 min afspraken, 55 min afronden en individueel aantonen | Inleveren |
 
-Dit zijn richttijden, geen gemeten uitvoertijden. Hoofdstuk 4 vraagt flink oefenen; gebruik huiswerk voor aanvullende berekeningen en stel de kern boven verdieping. Een correct startbestand kan helpen als Filius-bediening de conceptuele leertijd verdringt. Er zijn nog geen praktisch geteste .fls-startbestanden meegeleverd.
+Dit zijn richttijden, geen gemeten uitvoertijden. Hoofdstuk 3 vraagt flink oefenen; gebruik huiswerk voor aanvullende berekeningen en stel de kern boven verdieping. Een correct startbestand kan helpen als Filius-bediening de conceptuele leertijd verdringt. Er zijn nog geen praktisch geteste .fls-startbestanden meegeleverd.
 
 ## Klassikale voorbereiding
 
@@ -41,7 +45,7 @@ Voor het signalenspel: per vier leerlingen een zender, ontvanger, tijdwaarnemer 
 
 Voor de switch: vier apparaatcodes, vier poortstapels, frames en een lege leertabel. Laat de switch uit de bronadressen leren en onbekende bestemmingen kopiëren. De waarnemer telt kopieën; doel is gericht doorsturen begrijpen, niet zo snel mogelijk papier verplaatsen.
 
-### Hoofdstuk 3: lagen en verpakkingen
+### Hoofdstuk 12: lagen en verpakkingen
 
 Werk per groep van negen met vier zenderrollen, vier ontvangerrollen en één routerrol. Gebruik bij een andere groepsgrootte een waarnemer of combineer zender- en ontvangerrollen na elkaar. Geef iedere rol alleen de benodigde informatie:
 
@@ -55,7 +59,7 @@ Werk per groep van negen met vier zenderrollen, vier ontvangerrollen en één ro
 
 Gebruik drie groottes gevouwen kaarten: transport, IP en Ethernet. De toepassingsgegevens staan op het binnenste kaartje. De Ethernetverpakking heeft een apart gemarkeerde trailer; er wordt geen echte CRC berekend. Laat de ontvanger eerst zonder router ontkapselen; laat daarna met nieuwe MAC-adressen dezelfde inhoud door een router gaan. Bespreek dat echte TCP-verdeling en de fysieke signalen niet worden nagespeeld.
 
-### Hoofdstuk 4: broadcastbelasting en netwerkgrenzen
+### Hoofdstuk 3: broadcastbelasting en netwerkgrenzen
 
 Gebruik de hele klas. Geef de helft unieke IP-adressen 192.168.10.10 en verder; de andere helft 192.168.20.10 en verder. Reserveer .1 voor de twee routerinterfaces en geef iedere kaart een eigen fictief MAC-adres. Eén waarnemer wordt in de derde ronde router.
 
@@ -63,31 +67,33 @@ Eerst is de hele klas één /16-netwerk. Daarna maak je twee daadwerkelijk gesch
 
 Tel hoeveel leerlingen zoekvragen moeten verwerken. De winst hoeft niet als snellere stopwatchtijd zichtbaar te zijn: de oefening heeft ook uitvoeringskosten. Eerst belast iedere vraag beide groepen, daarna alleen de eigen groep. Geef pas dan een bestemming buiten de groep en introduceer de router als oplossing. De router zoekt lokaal aan beide kanten; de oorspronkelijke broadcast gaat niet automatisch door.
 
-Benadruk de grenzen van de vergelijking: alleen andere IP-instellingen scheiden geen Ethernetbroadcasts; hetzelfde wifi-SSID zegt niet genoeg over subnetten; radio-interferentie is niet hetzelfde als een broadcastdomein. Deze oefening richt zich alleen op netwerkgrenzen; het inpakken van berichten kwam al in hoofdstuk 3 aan bod.
+Benadruk de grenzen van de vergelijking: alleen andere IP-instellingen scheiden geen Ethernetbroadcasts; hetzelfde wifi-SSID zegt niet genoeg over subnetten; radio-interferentie is niet hetzelfde als een broadcastdomein. Deze oefening richt zich alleen op netwerkgrenzen; het inpakken van berichten komt in hoofdstuk 12 aan bod.
 
-### Hoofdstuk 5: geen tweede klassikale introductie
+### Hoofdstuk 4: geen tweede klassikale introductie
 
 De inleiding benoemt de resterende adreskoppeling. Gebruik het bestaande lokale netwerk en de nieuwe tweede LAN-opstelling. Laat de leerling eerst het IP-adres van de volgende ontvanger kiezen, en pas daarna met ARP het MAC-adres daarvan zoeken. Controleer vooraf waar de netwerkgegevens van het eigen schoolapparaat zichtbaar zijn. Demonstreer anders op een docentcomputer.
 
-### Hoofdstuk 6 tot en met 10
+### Hoofdstuk 5 tot en met 12
 
 | Hoofdstuk | Voorbereiding | Didactische focus |
 | --- | --- | --- |
-| 6 Routering | Lokale tabellen voor R1 en R2 uit het hoofdstuk | Eerst ontbreekt de heenroute, dan de terugroute; geen centraal inzicht voor iedere routerrol |
-| 7 Transport | Zes genummerde tekstdelen, kopieën en twee poortpostvakken | Volgorde, ontbrekende gegevens en doublures; TCP nummert bytes, niet deze papieren berichtdelen |
-| 8 Web | URL-kaarten, DNS-adreslijst en twee servers met pagina’s | DNS bezit geen HTML; naam vinden en bron opvragen zijn aparte diensten |
-| 9 Beveiliging | Twee clients, één buitenadres, poortkaartjes, vertaaltabel en filterregel | Eerst een ambigu antwoord; daarna onderscheid door buitenpoorten; filteren blijft een aparte beslissing |
-| 10 Samenhang | Werkende DNS/HTTP-opstelling en berichtvensters | Geen extra spel: leerlingen verbinden bestaande waarnemingen met de verklaringen |
+| 5 Routeren | Lokale tabellen voor R1 en R2 uit het hoofdstuk | Eerst ontbreekt de heenroute, dan de terugroute; geen centraal inzicht voor iedere routerrol |
+| 6 Poorten, TCP en UDP | Zes genummerde tekstdelen, kopieën en twee poortpostvakken | Volgorde, ontbrekende gegevens en doublures; TCP nummert bytes, niet deze papieren berichtdelen |
+| 7 DNS | Namenlijst met adressen en clients met URL-kaarten | DNS kent alleen hostnamen en adressen, niet het pad |
+| 8 HTTP | URL-kaarten, DNS-lijst en twee servers met pagina’s | De server bepaalt of een pad bestaat (200 of 404); verplaatsen vraagt ook een aangepaste DNS-lijst |
+| 9 E-mail en 10 DHCP | Geen | Verzenden en ophalen zijn aparte taken; DHCP stelt alleen netwerkinstellingen in |
+| 11 NAT en firewall | Twee clients, één buitenadres, poortkaartjes, vertaaltabel en filterregel | Eerst een ambigu antwoord; daarna onderscheid door buitenpoorten; filteren blijft een aparte beslissing |
+| 12 Lagen en inkapseling | Verpakkingskaarten (zie hierboven), werkende DNS/HTTP-opstelling en berichtvensters | Eerst verpakken en uitpakken met kaarten; daarna verbinden leerlingen bestaande waarnemingen met de verklaringen |
 
-Voor optionele DHCP- en mailverdieping is geen aparte klassikale oefening toegevoegd omdat die hier weinig extra oplevert ten opzichte van het nieuwe dienstvoorbeeld.
+Voor e-mail en DHCP is geen klassikale oefening toegevoegd; beide hoofdstukken werken met uitleg en vragen, en DHCP daarnaast met een Filius-opdracht.
 
 ## Praktijk en beoordeling
 
-De doorlopende opstelling ontstaat in hoofdstuk 1–2. Hoofdstuk 3 onderzoekt dezelfde verbinding. Hoofdstuk 4 gebruikt een aparte subnetproef; overschrijf de basisopstelling daarmee niet. Hoofdstuk 5 bouwt de twee LAN’s met één router, hoofdstuk 6 voegt een tweede router toe, en hoofdstuk 7–8 voegen web en DNS toe.
+De doorlopende opstelling ontstaat in hoofdstuk 1–2. Hoofdstuk 3 gebruikt een aparte subnetproef; overschrijf de basisopstelling daarmee niet. Hoofdstuk 4 bouwt de twee LAN’s met één router, hoofdstuk 5 voegt een tweede router toe, en hoofdstuk 7–8 voegen DNS en web toe.
 
 Controleer in de schoolversie vooraf: lokale ping, gerouteerde ping, twee routers met handmatige routes, HTTP op IP en naam, en de zichtbaarheid van ARP/TCP/HTTP. Exacte menunamen en cachegedrag zijn nog niet praktisch getest. Een verloren eerste ping kan door adresresolutie komen; kies geen conclusie op basis van één losse meting.
 
-Gebruik de rubric uit hoofdstuk 11. De fysieke laag, TCP-dienst en beveiligingsfuncties zijn niet allemaal aan een werkend bestand af te lezen: neem de verklaringen mee. Bij een grote klas zijn dertig mondelinge gesprekken van vijf minuten niet in één les haalbaar. Laat het korte foutonderzoek zo nodig schriftelijk doen in individuele kopieën en controleer mondeling één gekozen stap tijdens les 11 of 12.
+Gebruik de rubric uit hoofdstuk 13. De fysieke laag, TCP-dienst en beveiligingsfuncties zijn niet allemaal aan een werkend bestand af te lezen: neem de verklaringen mee. Bij een grote klas zijn dertig mondelinge gesprekken van vijf minuten niet in één les haalbaar. Laat het korte foutonderzoek zo nodig schriftelijk doen in individuele kopieën en controleer mondeling één gekozen stap tijdens les 15 of 16.
 
 ## Begrippenlijst onderhouden
 
