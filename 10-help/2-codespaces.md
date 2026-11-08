@@ -283,6 +283,17 @@ Deze functie is bedoeld om samen snel een klein probleem op te lossen. Gebruik h
 Login op GitHub en druk daarna nogmaals op de link.
 ```
 
+```{tip} Codespaces start niet en meldt "Oh no, it looks like you're offline"
+:class: dropdown
+Op sommige scholen blokkeert de firewall het gebruik van Codespaces. De firewall beheerder kan de blokkade opheffen. 
+
+Tijdelijk oplossing:
+1. Verbind de computer waarop je Codespaces gebruikt met het internet via een hotspot van je mobiel.
+
+Permanente oplossing:
+1. Vraag de firewall beheerder om de blokkage op te heffen. 
+```
+
 ```{tip} Automatisch inspringen
 :class: dropdown
 
