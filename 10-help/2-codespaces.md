@@ -137,7 +137,6 @@ Branches
 
 ### Werken met Codespaces en repositories
 
-(howto-open-codespace)=
 ```{tip} Hoe open ik mijn laatste Codespace?
 :class: dropdown
 1. Open GitHub en login.
@@ -146,7 +145,6 @@ Branches
 4. Klik op de Codespace die je wilt openen. Het openen duurt één a twee minuten.
 ```
 
-(howto-create-codespace)=
 ```{tip} Hoe maak ik een nieuwe Codespace?
 :class: dropdown
 1. Open GitHub en login. Ga naar je repository.
@@ -156,7 +154,6 @@ Branches
 5. De nieuwe Codespace wordt gemaakt en al je code uit GitHub wordt naar de Codespace gekopieerd. Dit duurt één a twee minuten.
 ```
 
-(howto-find-repo)=
 ```{tip} Waar staat mijn repository?
 :class: dropdown
 1. Open GitHub en login
@@ -164,14 +161,12 @@ Branches
 3. Als je in een team aan een repo werkt, klik dan links op het team, daarna bovenin je scherm op repositories
 ```
 
-(howto-show-conmits)=
 ```{tip} Lijst met commits bekijken
 :class: dropdown
 1. Open GitHub, ga naar de pagina met je repository.
 2. Een lijst met de laatste wijzigingen krijg je door te klikken op het aantal commits, onder de groene knop met "Code". Van elke commit kun je zien wat er is gewijzigd, klik daarvoor op het nummer van de commit aan het einde van de regel.
 ```
 
-(howto-show-old)=
 ```{tip} Oude versie van je repository bekijken
 :class: dropdown
 1. Open GitHub, ga naar de pagina met je repository.
