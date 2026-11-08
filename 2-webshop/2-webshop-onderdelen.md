@@ -30,9 +30,9 @@ Tijdens opdracht a) wordt gevraagd om in te loggen op GitHub.
 
 :::{note} Opdracht a)
 ### Maak een Codespace met startcode
-1. De docent deelt een link naar GitHub Classroom waarmee jij je kunt inschrijven voor een opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
+1. De docent legt uit hoe jij je kunt inschrijven voor deze opdracht. Na inschrijven krijg je automatisch een repository met startcode voor de opdracht. 
 2. Als je in een groepje werkt dan maakt het eerste groepslid die zich inschrijft een team aan. De naam van dat team bestaat uit alle voornamen van de groepsleden gescheiden door een streepje. Bijvoorbeeld `anne-jasmin-noah`. De andere groepsleden joinen bij inschrijven het team dat is aangemaakt.
-3. Je maakt je eigen codespace door op de knop `Create Codespace` te klikken. Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
+3. Je maakt je eigen codespace. Alle bestanden uit de GitHub repository worden gekopieerd naar jouw codespace. Dit kan enkele minuten duren.
 :::
 
 ```{hint} Tips
