@@ -43,7 +43,7 @@ jobs:
           myst build --html
           # Replace localhost references with custom domain in robots.txt and sitemap.xml
           find ./_build/html \( -name "robots.txt" -o -name "sitemap.xml" \) \
-            -exec sed -i -e "s|http://localhost:3000|$CUSTOM_DOMAIN|g" {} +
+            -exec sed -i -e "s|http://pre.render|$CUSTOM_DOMAIN|g" {} +
           # Inject simple analytics script into all HTML pages
           find ./_build/html -name "*.html" \
             -exec sed -i -e 's|</body>|<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script></body>|g' {} +
